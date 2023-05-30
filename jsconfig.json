@@ -1,7 +1,15 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
-    }
-  }
+      "@/*": ["./src/*"], // якщо є папка src
+      // "components": ["src/components"],
+      // "app/*": ["src/app/*"],
+      "utils/*": ["src/utils/*"]
+      // "@/public/*": ["public/*"]
+    },
+    "resolveJsonModule": true // дозволяє бачити файли json під час імпорту
+  },
+  "include": ["**/*.js", "**/*.jsx"],
+  "exclude": ["node_modules"]
 }
