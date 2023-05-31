@@ -3,9 +3,11 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"], // якщо є папка src
-      "components": ["src/components"],
+      "components/*": ["src/components/*"],
       "views/*": ["src/views/*"],
       "layout/*": ["src/layout/*"],
+      "lib/*": ["src/lib/*"],
+      "content/*": ["src/content/*"],
       "utils/*": ["src/utils/*"]
     },
     "resolveJsonModule": true // дозволяє бачити файли json під час імпорту

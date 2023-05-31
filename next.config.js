@@ -10,15 +10,6 @@ const nextConfig = {
     });
     return config;
   },
-
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'cdn.pixabay.com',
-      },
-    ],
-  },
 };
 
 module.exports = nextConfig;
