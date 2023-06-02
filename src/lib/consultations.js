@@ -11,7 +11,5 @@ export const getConsultationsData = () => {
 
   const parsedContent = matter(fileContentsStr);
 
-  return {
-    data: parsedContent.data,
-  };
+  return parsedContent.data;
 };
