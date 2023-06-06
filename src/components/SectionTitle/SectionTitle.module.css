@@ -1,0 +1,7 @@
+.sectionTitle {
+}
+
+.centered {
+  composes: sectionTitle;
+  text-align: center;
+}

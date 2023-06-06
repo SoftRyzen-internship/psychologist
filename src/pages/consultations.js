@@ -6,10 +6,11 @@ const ConsultationsPage = ({ individual, online, requirements, factors }) => {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>Юлія Сулаєва | Консультації</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+
       <div>
         <ReactMarkdown>{requirements.description}</ReactMarkdown>
         <ReactMarkdown>{online.list}</ReactMarkdown>

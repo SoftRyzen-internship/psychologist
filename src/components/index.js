@@ -1,2 +1,2 @@
 export * from './FirstComponent/FirstComponent';
-export * from './Container/Container';
+export * from './Container';
