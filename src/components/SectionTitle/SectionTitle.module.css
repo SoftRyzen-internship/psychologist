@@ -1,4 +1,25 @@
 .sectionTitle {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+
+  color: --text-color;
+}
+
+@media screen and (min-width: 768px) {
+  .sectionTitle {
+    font-size: 52px;
+    line-height: 0.92;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .sectionTitle {
+    font-size: 64px;
+    line-height: 0.88;
+  }
 }
 
 .centered {
