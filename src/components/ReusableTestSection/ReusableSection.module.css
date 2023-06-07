@@ -237,11 +237,24 @@
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .utilityFinderStudy {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .studyList ul {
     gap: 16px;
   }
 }
+
+/* @media screen and (min-width: 1280px) {
+  .studyList ul {
+    width: auto;
+  }
+} */
 
 @media screen and (min-width: 1280px) {
   .desktopWrapper {
@@ -300,14 +313,14 @@
 
 @media screen and (min-width: 1280px) {
   .study.img.imgLarge {
-    width: 560px;
+    min-width: 560px;
     height: 608px;
   }
 }
 
-.utilityFinderStudy > div > p:nth-child(3) {
+.utilityFinderStudy > div > div > div:nth-child(2) > p:nth-child(1) {
   font-style: normal;
-  font-weight: 600;
+  /* font-weight: 600; */
   font-size: 18px;
   line-height: calc(28 / 18);
   /* width: 320px; */
@@ -317,7 +330,13 @@
   margin-bottom: 24px;
 }
 
-.utilityFinderStudy > div > p:nth-child(4) {
+@media screen and (min-width: 1280px) {
+  .utilityFinderStudy > div > div > div:nth-child(2) > p:nth-child(1) {
+    margin-bottom: 36px;
+  }
+}
+
+.utilityFinderStudy > div > div > div:nth-child(2) > p:nth-child(2) {
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -329,30 +348,57 @@
   margin-bottom: 24px;
 }
 
+@media screen and (min-width: 1280px) {
+  .utilityFinderStudy > div > div > div:nth-child(2) > p:nth-child(2) {
+    margin-bottom: 20px;
+  }
+}
+
 @media screen and (min-width: 768px) {
-  .utilityFinderStudy > div > p:nth-child(3),
-  .utilityFinderStudy > div > p:nth-child(4) {
+  .utilityFinderStudy > div > div > div:nth-child(2) > p:nth-child(1),
+  .utilityFinderStudy > div > div > div:nth-child(2) > p:nth-child(2) {
     font-size: 20px;
     line-height: calc(28 / 20);
   }
 }
 
-.utilityFinderStudy > div > ul {
+@media screen and (min-width: 1280px) {
+  .utilityFinderStudy > div > div > div:nth-child(2) > p:nth-child(1) {
+    font-size: 24px;
+    line-height: calc(32 / 24);
+    margin-top: 0;
+  }
+}
+
+.utilityFinderStudy > div > div > div:nth-child(2) > ul {
   counter-reset: my-counter;
 }
 
-.utilityFinderStudy > div > ul > li > ul > li {
+@media screen and (min-width: 1280px) {
+  .utilityFinderStudy > div > div > div:nth-child(2) > ul {
+    width: auto;
+    height: auto;
+  }
+}
+
+.utilityFinderStudy > div > div > div:nth-child(2) > ul > li > ul > li {
   position: relative;
   padding-left: 32px;
 }
 
 @media screen and (min-width: 768px) {
-  .utilityFinderStudy > div > ul > li > ul > li {
+  .utilityFinderStudy > div > div > div:nth-child(2) > ul > li > ul > li {
     padding-left: 42px;
   }
 }
 
-.utilityFinderStudy > div > ul > li > ul > li::before {
+@media screen and (min-width: 1280px) {
+  .utilityFinderStudy > div > div > div:nth-child(2) > ul > li > ul > li {
+    padding-left: 50px;
+  }
+}
+
+.utilityFinderStudy > div > div > div:nth-child(2) > ul > li > ul > li::before {
   content: counter(my-counter) '.';
   counter-increment: my-counter;
   position: absolute;
@@ -377,13 +423,42 @@
 }
 
 @media screen and (min-width: 768px) {
-  .utilityFinderStudy > div > ul > li > ul > li::before {
+  .utilityFinderStudy
+    > div
+    > div
+    > div:nth-child(2)
+    > ul
+    > li
+    > ul
+    > li::before {
     font-size: 32px;
     line-height: calc(36 / 32);
     height: 36px;
   }
 }
 
-.utilityFinderStudy > div > button {
+@media screen and (min-width: 1280px) {
+  .utilityFinderStudy
+    > div
+    > div
+    > div:nth-child(2)
+    > ul
+    > li
+    > ul
+    > li::before {
+    font-size: 40px;
+    line-height: calc(48 / 40);
+    height: 48px;
+  }
+}
+
+.utilityFinderStudy > div > div > div:nth-child(2) > button {
   margin-bottom: 0;
+}
+
+@media screen and (min-width: 1280px) {
+  .flexWrapperMain {
+    display: flex;
+    gap: 65px;
+  }
 }

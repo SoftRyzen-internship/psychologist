@@ -3,7 +3,6 @@ import Image from 'next/image';
 import s from './ReusableSection.module.css';
 import classNames from 'classnames';
 import { Container } from '..';
-import { Racing_Sans_One } from 'next/font/google';
 
 const CustomComponent = ({ caseName, whatido, study }) => {
   switch (caseName) {
@@ -61,28 +60,35 @@ const CustomComponent = ({ caseName, whatido, study }) => {
                 <ReactMarkdown>{study.heading}</ReactMarkdown>
               </span>
             </h2>
-            <Image
-              className={classNames(s.img, s.whatido, s.imgLarge, s.study)}
-              src="/main/Study2x.png"
-              alt="something"
-              width={256}
-              height={281}
-            />
-            <ReactMarkdown>{study.title}</ReactMarkdown>
-            <ReactMarkdown>{study.subtitle}</ReactMarkdown>
-
-            <ul className={classNames(s.whatidoList, s.studyList)}>
-              {study.list.map(({ content, id }) => {
-                return (
-                  <li key={id} className={s.plashka}>
-                    <ReactMarkdown>{content}</ReactMarkdown>
-                  </li>
-                );
-              })}
-            </ul>
-            <button type="button" className={s.buttonTest}>
-              REGISTRATION
-            </button>
+            <div className={s.flexWrapperMain}>
+              {' '}
+              <div>
+                <Image
+                  className={classNames(s.img, s.whatido, s.imgLarge, s.study)}
+                  src="/main/Study2x.png"
+                  alt="something"
+                  width={256}
+                  height={281}
+                />
+              </div>
+              <div>
+                {' '}
+                <ReactMarkdown>{study.title}</ReactMarkdown>
+                <ReactMarkdown>{study.subtitle}</ReactMarkdown>
+                <ul className={classNames(s.whatidoList, s.studyList)}>
+                  {study.list.map(({ content, id }) => {
+                    return (
+                      <li key={id} className={s.plashka}>
+                        <ReactMarkdown>{content}</ReactMarkdown>
+                      </li>
+                    );
+                  })}
+                </ul>
+                <button type="button" className={s.buttonTest}>
+                  REGISTRATION
+                </button>
+              </div>
+            </div>
           </Container>
         </section>
       );
