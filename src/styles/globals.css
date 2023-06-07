@@ -67,6 +67,10 @@ ol {
 a {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
+}
+button {
+  cursor: pointer;
 }
 
 .container {
