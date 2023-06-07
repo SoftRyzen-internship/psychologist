@@ -1,7 +1,9 @@
 import Head from 'next/head';
-import { FirstView } from '@/views';
+// import { FirstView } from '@/views';
+import { getMainData } from '@/lib/main';
+import CustomComponent from '@/components/ReusableTestSection/ReusableSection';
 
-export default function Home() {
+export default function Home({ whatido, study }) {
   return (
     <>
       <Head>
@@ -11,16 +13,22 @@ export default function Home() {
       </Head>
 
       <main className="main">
-        <FirstView />
+        {/* <FirstView /> */}
+        <CustomComponent caseName="one" study={study} whatido={whatido} />
       </main>
     </>
   );
 }
 
 export async function getStaticProps() {
+  const main = getMainData();
+
+  const { study, whatido } = main;
   return {
     props: {
       // Will be passed to the page component as props
+      study,
+      whatido,
     },
   };
 }

@@ -1,0 +1,96 @@
+/**
+  |============================
+  | What i do
+  |============================
+*/
+
+.whatido.title {
+  font-family: var(-font-alegreya);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: calc(36 / 32);
+
+  margin-top: 60px;
+  margin-bottom: 32px;
+  color: var(--accent-text-color);
+}
+
+.spanTitle p {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: calc(28 / 18);
+
+  margin-bottom: 24px;
+}
+
+.spanSubtitle p {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+
+  color: var(--accent-text-color);
+  position: relative;
+}
+
+.spanSubtitle p::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 280px;
+  height: 1px;
+  background-color: var(--main-whatido-plashka);
+}
+
+/* .plashkaLine {
+  width: 280px;
+  height: 1px;
+  margin-top: 8px;
+  background: var(--main-whatido-plashka);
+} */
+
+.plashka {
+  margin-bottom: 40px;
+}
+
+.whatidoList ul {
+  gap: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.whatidoList li {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+}
+
+.whatidoList li > strong {
+  font-weight: 600;
+}
+
+.buttonTest {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 44px;
+  gap: 36px;
+
+  /* position: absolute; */
+  width: 320px;
+  height: 60px;
+  left: 20px;
+  top: 768px;
+
+  /* Button */
+
+  background: #2670c4;
+  border-radius: 8px;
+
+  margin-bottom: 24px;
+}
