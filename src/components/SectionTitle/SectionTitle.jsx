@@ -1,13 +1,23 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-export const SectionTitle = ({ h1 = false, title, centered = false }) => {
+export const SectionTitle = ({ h1 = false, title, centered = false, className }) => {
   return h1 ? (
-    <h1 className={classNames('sectionTitle', centered && 'centered')}>
+    <h1
+      className={classNames(
+        className ? className : 'sectionTitleH1',
+        centered && 'centered',
+      )}
+    >
       {title}
     </h1>
   ) : (
-    <h2 className={classNames('sectionTitle', centered && 'centered')}>
+    <h2
+      className={classNames(
+        className ? className : 'sectionTitleH2',
+        centered && 'centered',
+      )}
+    >
       {title}
     </h2>
   );

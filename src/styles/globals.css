@@ -73,7 +73,7 @@ a {
   padding-right: 20px;
 }
 
-h1 .sectionTitle {
+.sectionTitleH1 {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 700;
@@ -83,7 +83,7 @@ h1 .sectionTitle {
   color: var(--main-color);
 }
 
-h2 .sectionTitle {
+.sectionTitleH2 {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 700;
@@ -98,9 +98,9 @@ h2 .sectionTitle {
   text-align: center;
 }
 
-@media screen and (min-width: 360px) {
+@media screen and (min-width: 480px) {
   .container {
-    width: 360px;
+    width: 480px;
   }
 }
 
@@ -110,37 +110,29 @@ h2 .sectionTitle {
     padding-left: 32px;
     padding-right: 32px;
   }
-}
 
-@media screen and (min-width: 1280px) {
-  .container {
-    width: 1280px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  h1 .sectionTitle {
+  .sectionTitleH1 {
     font-size: 52px;
     line-height: 0.92;
   }
-}
 
-@media screen and (min-width: 1280px) {
-  h1 .sectionTitle {
-    font-size: 64px;
-    line-height: 0.88;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  h2 .sectionTitle {
+  .sectionTitleH2 {
     font-size: 48px;
     line-height: 1;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  h2 .sectionTitle {
+  .container {
+    width: 1280px;
+  }
+
+  .sectionTitleH1 {
+    font-size: 64px;
+    line-height: 0.88;
+  }
+
+  .sectionTitleH2 {
     font-size: 60px;
     line-height: 0.80;
   }
