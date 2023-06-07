@@ -2,41 +2,32 @@ import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
 import s from './ReusableSection.module.css';
 import classNames from 'classnames';
-// import MarkSvg from '../../../public/main/Vector.svg';
 
 const CustomComponent = ({ caseName, whatido }) => {
   switch (caseName) {
     case 'one':
       return (
-        <section>
+        <section className={s.utilityFinder}>
           {' '}
           <div className="container">
             <h2 className={classNames(s.whatido, s.title)}>
               {' '}
-              <ReactMarkdown>{whatido.heading}</ReactMarkdown>
+              <span>
+                {' '}
+                <ReactMarkdown>{whatido.heading}</ReactMarkdown>
+              </span>
             </h2>
-            <span className={s.spanTitle}>
-              <ReactMarkdown>{whatido.title}</ReactMarkdown>
-            </span>
-            {whatido.list.map(({ content }) => {
-              return (
-                <>
-                  {' '}
-                  <div className={s.plashka}>
-                    {' '}
-                    <span className={classNames(s.whatidoList)}>
-                      {/* <MarkSvg /> */}
-                      {/* ul was here */}
-                      <ReactMarkdown>{content}</ReactMarkdown>
-                    </span>
-                    <span className={s.spanSubtitle}>
-                      <ReactMarkdown>{whatido.subtitle}</ReactMarkdown>
-                    </span>
-                    {/* <div className={s.plashkaLine}></div> */}
-                  </div>
-                </>
-              );
-            })}
+            <ReactMarkdown>{whatido.title}</ReactMarkdown>
+            <ul className={s.whatidoList}>
+              {whatido.list.map(({ content, index }) => {
+                return (
+                  <li key={index} className={s.plashka}>
+                    <ReactMarkdown>{content}</ReactMarkdown>
+                    <ReactMarkdown>{whatido.subtitle}</ReactMarkdown>
+                  </li>
+                );
+              })}
+            </ul>
             <button type="button" className={s.buttonTest}>
               REGISTRATION
             </button>
@@ -46,7 +37,6 @@ const CustomComponent = ({ caseName, whatido }) => {
               alt="something"
               width={320}
               height={246}
-              // layout="responsive"
             />
           </div>
         </section>

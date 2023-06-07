@@ -16,7 +16,7 @@
   color: var(--accent-text-color);
 }
 
-.spanTitle p {
+.utilityFinder p:nth-child(2) {
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -25,17 +25,18 @@
   margin-bottom: 24px;
 }
 
-.spanSubtitle p {
+.plashka p {
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: calc(24 / 16);
 
+  margin-top: 24px;
   color: var(--accent-text-color);
   position: relative;
 }
 
-.spanSubtitle p::after {
+.plashka p::after {
   content: '';
   position: absolute;
   bottom: -8px;
@@ -45,15 +46,12 @@
   background-color: var(--main-whatido-plashka);
 }
 
-/* .plashkaLine {
-  width: 280px;
-  height: 1px;
-  margin-top: 8px;
-  background: var(--main-whatido-plashka);
-} */
-
 .plashka {
   margin-bottom: 40px;
+}
+
+.whatidoList {
+  list-style: none;
 }
 
 .whatidoList ul {
@@ -78,6 +76,10 @@
   margin-right: 16px;
   vertical-align: middle;
   background-image: url('/main/Check.svg');
+}
+
+.whatidoList > li:only-child::before {
+  content: none;
 }
 
 .whatidoList li > strong {
@@ -105,3 +107,9 @@
 
   margin-bottom: 24px;
 }
+
+/**
+  |============================
+  | Study for psiho
+  |============================
+*/
