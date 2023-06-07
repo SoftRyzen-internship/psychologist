@@ -1,14 +1,13 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import s from './SectionTitle.module.css';
 
 export const SectionTitle = ({ h1 = false, title, centered = false }) => {
   return h1 ? (
-    <h1 className={classNames(s.sectionTitle, centered && s.centered)}>
+    <h1 className={classNames('sectionTitle', centered && 'centered')}>
       {title}
     </h1>
   ) : (
-    <h2 className={classNames(s.sectionTitle, centered && s.centered)}>
+    <h2 className={classNames('sectionTitle', centered && 'centered')}>
       {title}
     </h2>
   );

@@ -19,6 +19,12 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  font-family: var(--font-open-sans);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--text-color)
 }
 
 body {
@@ -74,7 +80,7 @@ h1 .sectionTitle {
   font-size: 36px;
   line-height: 1.11;
 
-  color: --main-color;
+  color: var(--main-color);
 }
 
 h2 .sectionTitle {
@@ -84,7 +90,7 @@ h2 .sectionTitle {
   font-size: 32px;
   line-height: 1.25;
 
-  color: --main-color;
+  color: var(--main-color);
 }
 
 .centered {
