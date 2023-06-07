@@ -61,8 +61,81 @@ a {
 }
 
 .container {
-  width: 1280px;
+  width: 100vw;
   margin: 0 auto;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+h1 .sectionTitle {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+
+  color: --main-color;
+}
+
+h2 .sectionTitle {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.25;
+
+  color: --main-color;
+}
+
+.centered {
+  composes: sectionTitle;
+  text-align: center;
+}
+
+@media screen and (min-width: 360px) {
+  .container {
+    width: 360px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1280px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h1 .sectionTitle {
+    font-size: 52px;
+    line-height: 0.92;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  h1 .sectionTitle {
+    font-size: 64px;
+    line-height: 0.88;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h2 .sectionTitle {
+    font-size: 48px;
+    line-height: 1;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  h2 .sectionTitle {
+    font-size: 60px;
+    line-height: 0.80;
+  }
 }
