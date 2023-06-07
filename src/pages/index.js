@@ -13,7 +13,7 @@ export default function Home() {
 
       <main className="main">
         <FirstView />
-        <ActionButton/>
+        <ActionButton />
       </main>
     </>
   );
