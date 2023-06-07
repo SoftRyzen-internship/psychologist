@@ -5,7 +5,7 @@
 */
 
 .whatido.title {
-  font-family: var(-font-alegreya);
+  font-family: var(--font-alegreya);
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -16,13 +16,48 @@
   color: var(--accent-text-color);
 }
 
+@media screen and (min-width: 768px) {
+  .whatido.title {
+    font-size: 48px;
+    line-height: calc(62 / 48);
+
+    margin-top: 80px;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .whatido.title {
+    font-size: 60px;
+    line-height: calc(60 / 60);
+
+    margin-top: 100px;
+    margin-bottom: 60px;
+  }
+}
+
 .utilityFinder p:nth-child(2) {
   font-style: normal;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
   line-height: calc(28 / 18);
 
   margin-bottom: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .utilityFinder p:nth-child(2) {
+    font-size: 20px;
+    line-height: calc(28 / 20);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .utilityFinder p:nth-child(2) {
+    font-size: 24px;
+    line-height: calc(32 / 24);
+    margin-bottom: 36px;
+  }
 }
 
 .plashka p {
@@ -50,8 +85,33 @@
   margin-bottom: 40px;
 }
 
+@media screen and (min-width: 768px) {
+  .plashka {
+    margin-bottom: 41px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .plashka {
+    margin-bottom: 40px;
+  }
+}
+
 .whatidoList {
   list-style: none;
+}
+
+@media screen and (min-width: 1280px) {
+  .whatidoList {
+    width: 592px;
+    height: 421px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .flexWrapper {
+    display: flex;
+  }
 }
 
 .whatidoList ul {
@@ -66,6 +126,20 @@
   font-weight: 400;
   font-size: 16px;
   line-height: calc(24 / 16);
+}
+
+@media screen and (min-width: 768px) {
+  .whatidoList li {
+    font-size: 18px;
+    line-height: calc(28 / 18);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .whatidoList li {
+    font-size: 20px;
+    line-height: calc(28 / 20);
+  }
 }
 
 .whatidoList li::before {
@@ -106,6 +180,43 @@
   border-radius: 8px;
 
   margin-bottom: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .whatido.img.imgLarge {
+    width: 504px;
+    height: 389px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .whatido.img.imgLarge {
+    width: 642px;
+    height: 511px;
+  }
+}
+
+.utilityFinder {
+  position: relative;
+}
+
+.utilityFinder::before {
+  content: '';
+  position: absolute;
+  top: -9px;
+  left: 18px;
+  width: 268px;
+  left: 73.85%;
+  right: -27.7%;
+  top: -12.98%;
+  bottom: 70.21%;
+  height: 388px;
+  background-image: url(/main/Flower.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 /**
