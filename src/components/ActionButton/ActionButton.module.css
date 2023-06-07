@@ -1,12 +1,13 @@
 .actionButton {
+  width: 320px;
+  height: 60px;
+  padding: 16px 44px;
+
   font-family: var(--font-open-sans);
   font-weight: 600;
   font-size: 16px;
   line-height: calc(24 / 16);
-
-  width: 320px;
-  height: 60px;
-  padding: 16px 44px;
+  text-align: center;
 
   color: var(--white-color);
   background-color: var(--accent-color);
@@ -33,14 +34,16 @@
 
 .actionLink404 {
   composes: actionButton;
+
+  display: inline-block;
 }
 
 @media screen and (min-width: 768px) {
   .actionButton {
+    width: 280px;
+
     font-size: 18px;
     line-height: calc(28 / 18);
-
-    width: 280px;
   }
   .actionButtonModal {
     width: 360px;
