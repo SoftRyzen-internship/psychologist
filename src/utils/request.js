@@ -3,18 +3,16 @@ const { GraphQLClient, gql } = require('graphql-request');
 export const query = gql`
   query MyQuery {
     allNews {
-      id
-      title
-      slug
-      text {
-        value
+      newsDetail {
+        id
+        articleTitle(markdown: true)
+        articleText(markdown: true)
+        articleImage {
+          title
+          alt
+          url
+        }
       }
-      image {
-        url
-        alt
-        title
-      }
-      _publishedAt
     }
   }
 `;

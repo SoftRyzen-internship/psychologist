@@ -25,10 +25,10 @@ export async function getStaticProps() {
       notFound: true,
     };
   }
-  console.log(news);
+  // console.log(news.allNews);
   return {
     props: {
-      news
+      AllNews: news.allNews
     },
   };
 }
