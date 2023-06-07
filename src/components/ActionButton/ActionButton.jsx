@@ -4,7 +4,7 @@ import s from './ActionButton.module.css';
 export const ActionButton = ({
   clickHandler,
   inModalForm = true,
-  is404 = true,
+  is404 = false,
   text = 'Залишити заявку',
 }) => {
   return is404 ? (

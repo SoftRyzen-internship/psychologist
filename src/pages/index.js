@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { FirstView } from '@/views';
-import { ActionButton } from '@/components/ActionButton/ActionButton';
+import { ActionButton } from '@/components';
 
 export default function Home() {
   return (

@@ -1,24 +1,24 @@
 .actionButton {
-  width: 320px;
-  height: 60px;
-  border-radius: 8px;
-  padding: 16px 44px;
-
-  color: var(--white-color);
-  background-color: var(--accent-color);
-  border-color: transparent;
-
   font-family: var(--font-open-sans);
   font-weight: 600;
   font-size: 16px;
   line-height: calc(24 / 16);
 
-  transition: background-color 300ms ease;
+  width: 320px;
+  height: 60px;
+  padding: 16px 44px;
+
+  color: var(--white-color);
+  background-color: var(--accent-color);
+  border-color: transparent;
+  border-radius: 8px;
+
+  transition: var(--fast-btn-animation);
 }
 
 .actionButton:hover,
 .actionButton:focus {
-  background-color: var(--btn-accent-color);
+  background-color: var(--btn-hover-color);
 }
 
 .actionButton:disabled {
@@ -35,12 +35,12 @@
   composes: actionButton;
 }
 
-@media screen and (min-width: 766.98px) {
+@media screen and (min-width: 768px) {
   .actionButton {
-    width: 280px;
-
     font-size: 18px;
     line-height: calc(28 / 18);
+
+    width: 280px;
   }
   .actionButtonModal {
     width: 360px;
@@ -50,7 +50,7 @@
   }
 }
 
-@media screen and (min-width: 1279.98px) {
+@media screen and (min-width: 1280px) {
   .actionButton {
     font-size: 20px;
     line-height: calc(28 / 20);
