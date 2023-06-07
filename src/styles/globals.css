@@ -2,12 +2,12 @@
   --white-color: #ffffff;
   --bg1-color: #fdfdfd;
   --bg2-color: #f9f9f9;
-  --input-color: #d8dfef;
+  --input-border-color: #d8dfef;
   --plaska-color: #174172;
-  --button-color: #2670c4;
-  --main-color: #2361a8;
+  --accent-color: #2670c4;
+  --accent-text-color: #2361a8;
   --footer-color: #a3a9b2;
-  --text-color: #111111;
+  --main-text-color: #111111;
   --error-color: #ca381f;
 }
 
@@ -67,15 +67,14 @@ a {
 }
 
 .container {
-  width: 100vw;
+  width: 100%;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
 }
 
 .sectionTitleH1 {
-  font-family: 'Open Sans';
-  font-style: normal;
+  font-family: var(--font-alegreya);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -84,8 +83,7 @@ a {
 }
 
 .sectionTitleH2 {
-  font-family: 'Open Sans';
-  font-style: normal;
+  font-family: var(--font-alegreya);
   font-weight: 700;
   font-size: 32px;
   line-height: 1.25;
@@ -94,7 +92,6 @@ a {
 }
 
 .centered {
-  composes: sectionTitle;
   text-align: center;
 }
 

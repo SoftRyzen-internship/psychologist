@@ -22,7 +22,7 @@ export default function App({ Component, pageProps }) {
     <>
       <style jsx global>
         {`
-          html {
+          :root {
             --font-open-sans: ${open_sans.style.fontFamily};
             --font-alegreya: ${alegreya.style.fontFamily};
           }
