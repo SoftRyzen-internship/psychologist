@@ -1,3 +1,16 @@
+:root {
+  --white-color: #ffffff;
+  --bg1-color: #fdfdfd;
+  --bg2-color: #f9f9f9;
+  --input-border-color: #d8dfef;
+  --plaska-color: #174172;
+  --accent-color: #2670c4;
+  --accent-text-color: #2361a8;
+  --footer-color: #a3a9b2;
+  --main-text-color: #111111;
+  --error-color: #ca381f;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -6,6 +19,12 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  font-family: var(--font-open-sans);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--text-color)
 }
 
 body {
@@ -48,8 +67,70 @@ a {
 }
 
 .container {
-  width: 1280px;
+  width: 100%;
   margin: 0 auto;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.sectionTitleH1 {
+  font-family: var(--font-alegreya);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+
+  color: var(--main-color);
+}
+
+.sectionTitleH2 {
+  font-family: var(--font-alegreya);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.25;
+
+  color: var(--main-color);
+}
+
+.centered {
+  text-align: center;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .sectionTitleH1 {
+    font-size: 52px;
+    line-height: 0.92;
+  }
+
+  .sectionTitleH2 {
+    font-size: 48px;
+    line-height: 1;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1280px;
+  }
+
+  .sectionTitleH1 {
+    font-size: 64px;
+    line-height: 0.88;
+  }
+
+  .sectionTitleH2 {
+    font-size: 60px;
+    line-height: 0.80;
+  }
 }
