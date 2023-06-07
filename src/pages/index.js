@@ -14,7 +14,8 @@ export default function Home({ whatido, study }) {
 
       <main className="main">
         {/* <FirstView /> */}
-        <CustomComponent caseName="whatido" study={study} whatido={whatido} />
+        {/* <CustomComponent caseName="whatido" study={study} whatido={whatido} /> */}
+        <CustomComponent caseName="study" study={study} whatido={whatido} />
       </main>
     </>
   );

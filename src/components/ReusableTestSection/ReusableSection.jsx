@@ -3,8 +3,9 @@ import Image from 'next/image';
 import s from './ReusableSection.module.css';
 import classNames from 'classnames';
 import { Container } from '..';
+import { Racing_Sans_One } from 'next/font/google';
 
-const CustomComponent = ({ caseName, whatido }) => {
+const CustomComponent = ({ caseName, whatido, study }) => {
   switch (caseName) {
     case 'whatido':
       return (
@@ -51,8 +52,40 @@ const CustomComponent = ({ caseName, whatido }) => {
           </Container>
         </section>
       );
-    case 'two':
-      return <div></div>;
+    case 'study':
+      return (
+        <section className={s.utilityFinderStudy}>
+          <Container>
+            <h2 className={s.studyTitle}>
+              <span>
+                <ReactMarkdown>{study.heading}</ReactMarkdown>
+              </span>
+            </h2>
+            <Image
+              className={classNames(s.img, s.whatido, s.imgLarge, s.study)}
+              src="/main/Study2x.png"
+              alt="something"
+              width={256}
+              height={281}
+            />
+            <ReactMarkdown>{study.title}</ReactMarkdown>
+            <ReactMarkdown>{study.subtitle}</ReactMarkdown>
+
+            <ul className={classNames(s.whatidoList, s.studyList)}>
+              {study.list.map(({ content, id }) => {
+                return (
+                  <li key={id} className={s.plashka}>
+                    <ReactMarkdown>{content}</ReactMarkdown>
+                  </li>
+                );
+              })}
+            </ul>
+            <button type="button" className={s.buttonTest}>
+              REGISTRATION
+            </button>
+          </Container>
+        </section>
+      );
     default:
       return null;
   }
