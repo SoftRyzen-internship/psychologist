@@ -1,0 +1,56 @@
+.actionButton {
+  min-width: 320px;
+  height: 60px;
+  border-radius: 8px;
+  padding: 16px 44px;
+
+  color: #fff;
+  background-color: #2670c4;
+  border-color: transparent;
+
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+
+  transition: background-color 300ms ease;
+
+  @media screen and (min-width: 766.98px) {
+    min-width: 280px;
+
+    font-size: 18px;
+    line-height: calc(28 / 18);
+  }
+
+  @media screen and (min-width: 1279.98px) {
+    font-size: 20px;
+    line-height: calc(28 / 20);
+  }
+}
+
+.actionButton:hover,
+.actionButton:focus {
+  background-color: #2f8bf6;
+}
+
+.actionButton:disabled {
+  background-color: #a3a9b2;
+}
+
+.actionButtonModal {
+  composes: actionButton;
+
+  min-width: 280px;
+
+  @media screen and (min-width: 766.98px) {
+    min-width: 360px;
+  }
+}
+
+.actionButton404 {
+  composes: actionButton;
+
+  @media screen and (min-width: 766.98px) {
+    min-width: 360px;
+  }
+}
