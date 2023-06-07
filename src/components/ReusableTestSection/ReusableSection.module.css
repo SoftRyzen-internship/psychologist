@@ -60,6 +60,7 @@
   gap: 24px;
   display: flex;
   flex-direction: column;
+  list-style: none;
 }
 
 .whatidoList li {
@@ -67,6 +68,16 @@
   font-weight: 400;
   font-size: 16px;
   line-height: calc(24 / 16);
+}
+
+.whatidoList li::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  vertical-align: middle;
+  background-image: url('/main/Check.svg');
 }
 
 .whatidoList li > strong {
