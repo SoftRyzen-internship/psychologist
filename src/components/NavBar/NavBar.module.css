@@ -1,0 +1,44 @@
+.list {
+  list-style-type: none;
+  display: flex;
+  gap: 40px;
+  font-family: var(--font-open-sans);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.56;
+  letter-spacing: 0em;
+}
+
+@media screen and (max-width: 1279.98px) {
+  .list {
+    flex-direction: column;
+    font-size: 24px;
+    line-height: 1.33;
+  }
+
+  .linkActive::after {
+    content: '';
+    top: 25px;
+   
+  }
+}
+
+.link {
+  color: #2361a8;
+}
+
+.linkActive {
+  color: #2361a8;
+  position: relative;
+}
+
+.linkActive::after {
+  content: '';
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+
+  background-color: #2670c4;
+}

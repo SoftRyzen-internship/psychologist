@@ -1,0 +1,11 @@
+.burger{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width:1279.98px) {
+    .burger{
+        display: none;
+    } 
+}
