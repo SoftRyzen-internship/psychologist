@@ -3,7 +3,7 @@ import s from './ActionButton.module.css';
 
 export const ActionButton = ({
   clickHandler,
-  inModalForm = true,
+  inModalForm = false,
   is404 = false,
   text = 'Залишити заявку',
 }) => {
