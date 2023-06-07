@@ -9,6 +9,9 @@
   --footer-color: #a3a9b2;
   --main-text-color: #111111;
   --error-color: #ca381f;
+  --btn-hover-color: #2f8bf6;
+  --btn-disabled-color: #a3a9b2;
+  --fast-btn-animation: background-color 300ms ease;
 }
 
 * {
@@ -24,7 +27,7 @@ body {
   font-weight: 400;
   font-size: 20px;
   line-height: 1.4;
-  color: var(--text-color)
+  color: var(--main-text-color);
 }
 
 body {
@@ -64,6 +67,10 @@ ol {
 a {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
+}
+button {
+  cursor: pointer;
 }
 
 .container {
@@ -131,6 +138,6 @@ a {
 
   .sectionTitleH2 {
     font-size: 60px;
-    line-height: 0.80;
+    line-height: 0.8;
   }
 }
