@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { FirstView } from '@/views';
+import { ActionButton } from '@/components/ActionButton/ActionButton';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
 
       <main className="main">
         <FirstView />
+        <ActionButton/>
       </main>
     </>
   );

@@ -1,14 +1,14 @@
 .actionButton {
-  min-width: 320px;
+  width: 320px;
   height: 60px;
   border-radius: 8px;
   padding: 16px 44px;
 
-  color: #fff;
-  background-color: #2670c4;
+  color: var(--white-color);
+  background-color: var(--accent-color);
   border-color: transparent;
 
-  font-family: 'Open Sans';
+  font-family: var(--font-open-sans);
   font-weight: 600;
   font-size: 16px;
   line-height: calc(24 / 16);
@@ -16,7 +16,7 @@
   transition: background-color 300ms ease;
 
   @media screen and (min-width: 766.98px) {
-    min-width: 280px;
+    width: 280px;
 
     font-size: 18px;
     line-height: calc(28 / 18);
@@ -30,20 +30,20 @@
 
 .actionButton:hover,
 .actionButton:focus {
-  background-color: #2f8bf6;
+  background-color: var(--btn-accent-color);
 }
 
 .actionButton:disabled {
-  background-color: #a3a9b2;
+  background-color: var(--btn-disabled-color);
 }
 
 .actionButtonModal {
   composes: actionButton;
 
-  min-width: 280px;
+  width: 280px;
 
   @media screen and (min-width: 766.98px) {
-    min-width: 360px;
+    width: 360px;
   }
 }
 
@@ -51,6 +51,6 @@
   composes: actionButton;
 
   @media screen and (min-width: 766.98px) {
-    min-width: 360px;
+    width: 360px;
   }
 }

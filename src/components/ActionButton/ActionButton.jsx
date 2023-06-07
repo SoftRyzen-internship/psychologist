@@ -2,7 +2,7 @@ import s from './ActionButton.module.css';
 
 export const ActionButton = ({
   clickHandler,
-  isRenderInModal = true,
+  isRenderInModal = false,
   is404 = false,
 }) => {
   return (
@@ -12,7 +12,7 @@ export const ActionButton = ({
           ? s.actionButtonModal
           : is404
           ? s.actionButton404
-          : s.ActionButton
+          : s.actionButton
       }
       type="button"
       onClick={clickHandler}
