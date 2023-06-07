@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { FirstView } from '@/views';
+import { getNewsList } from '@/utils/request';
 
 export default function Home() {
   return (
@@ -18,9 +19,16 @@ export default function Home() {
 }
 
 export async function getStaticProps() {
+  const news = await getNewsList();
+  if (!news) {
+    return {
+      notFound: true,
+    };
+  }
+  console.log(news);
   return {
     props: {
-      // Will be passed to the page component as props
+      news
     },
   };
 }
