@@ -1,23 +1,23 @@
+import Link from 'next/link';
 import s from './ActionButton.module.css';
 
 export const ActionButton = ({
   clickHandler,
-  isRenderInModal = false,
-  is404 = false,
+  inModalForm = true,
+  is404 = true,
+  text = 'Залишити заявку',
 }) => {
-  return (
+  return is404 ? (
+    <Link className={s.actionLink404} href={'/'}>
+      {text !== 'Залишити заявку' ? text : 'Повернутись на головну'}
+    </Link>
+  ) : (
     <button
-      className={
-        isRenderInModal
-          ? s.actionButtonModal
-          : is404
-          ? s.actionButton404
-          : s.actionButton
-      }
-      type="button"
+      className={inModalForm ? s.actionButtonModal : s.actionButton}
+      type={inModalForm ? 'submit' : 'button'}
       onClick={clickHandler}
     >
-      {is404 ? 'Повернутись на головну' : 'Залишити заявку'}
+      {text}
     </button>
   );
 };
