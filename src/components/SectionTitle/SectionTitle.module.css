@@ -8,6 +8,11 @@
   color: --text-color;
 }
 
+.centered {
+  composes: sectionTitle;
+  text-align: center;
+}
+
 @media screen and (min-width: 768px) {
   .sectionTitle {
     font-size: 52px;
@@ -20,9 +25,4 @@
     font-size: 64px;
     line-height: 0.88;
   }
-}
-
-.centered {
-  composes: sectionTitle;
-  text-align: center;
 }
