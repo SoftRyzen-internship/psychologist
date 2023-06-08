@@ -1,8 +1,8 @@
 import Head from 'next/head';
 
 import { FirstView } from '@/views';
-import { getNewsList } from '@/utils/request';
 
+import { getNewsList } from '@/utils/request';
 import { ActionButton } from '@/components';
 
 export default function Home() {
