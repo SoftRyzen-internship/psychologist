@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import ReactMarkdown from 'react-markdown';
+// import ReactMarkdown from 'react-markdown';
 import { getData } from '@/lib/getData';
 import { folderPaths } from '@/utils/folderPaths';
 

@@ -122,6 +122,41 @@
   }
 }
 
+/* universal */
+
+.flexWrapperReverse {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-content: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .flexWrapperReverse {
+    gap: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .flexWrapperReverse {
+    /* display: flex;
+    flex-direction: row-reverse;
+    gap: 65px; */
+
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 65px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
+
+/*  */
+
 .whatidoList ul {
   gap: 24px;
   display: flex;
@@ -340,8 +375,44 @@
   margin-bottom: 24px;
 }
 
+/* universal */
+
+.utilityFinderStudy > div > div > div:nth-child(1) > p:nth-child(1) {
+  font-style: normal;
+  /* font-weight: 600; */
+  font-size: 18px;
+  line-height: calc(28 / 18);
+  /* width: 320px; */
+
+  text-align: inherit;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+/* only for desktop universal */
+@media screen and (min-width: 1280px) {
+  .utilityFinderStudy > div > div > div:nth-child(1) > p:nth-child(1) {
+    font-style: normal;
+    /* font-weight: 600; */
+    font-size: 18px;
+    line-height: calc(28 / 18);
+    /* width: 320px; */
+
+    text-align: inherit;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+}
+
 @media screen and (min-width: 1280px) {
   .utilityFinderStudy > div > div > div:nth-child(2) > p:nth-child(1) {
+    margin-bottom: 36px;
+  }
+}
+
+/* universal */
+@media screen and (min-width: 1280px) {
+  .utilityFinderStudy > div > div > div:nth-child(1) > p:nth-child(1) {
     margin-bottom: 36px;
   }
 }
@@ -358,8 +429,45 @@
   margin-bottom: 24px;
 }
 
+/* universal */
+
+.utilityFinderStudy > div > div > div:nth-child(1) > p:nth-child(2) {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+
+  /* width: 320px; */
+
+  text-align: inherit;
+  margin-bottom: 24px;
+}
+
+/* universal */
+@media screen and (min-width: 1280px) {
+  .utilityFinderStudy > div > div > div:nth-child(1) > p:nth-child(2) {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: calc(24 / 16);
+
+    /* width: 320px; */
+
+    text-align: inherit;
+    margin-bottom: 24px;
+  }
+}
+
 @media screen and (min-width: 1280px) {
   .utilityFinderStudy > div > div > div:nth-child(2) > p:nth-child(2) {
+    margin-bottom: 20px;
+  }
+}
+
+/* universal */
+
+@media screen and (min-width: 1280px) {
+  .utilityFinderStudy > div > div > div:nth-child(1) > p:nth-child(2) {
     margin-bottom: 20px;
   }
 }
@@ -380,12 +488,54 @@
   }
 }
 
+/* universal */
+
+@media screen and (min-width: 1280px) {
+  .utilityFinderStudy > div > div > div:nth-child(1) > p:nth-child(1) {
+    font-size: 24px;
+    line-height: calc(32 / 24);
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .utilityFinderStudy > div > div > div:nth-child(1) > p:nth-child(1),
+  .utilityFinderStudy > div > div > div:nth-child(1) > p:nth-child(2) {
+    font-size: 20px;
+    line-height: calc(28 / 20);
+  }
+}
+
+/*  */
+
 .utilityFinderStudy > div > div > div:nth-child(2) > ul {
   counter-reset: my-counter;
 }
 
+/* universal */
+@media screen and (min-width: 1280px) {
+  .utilityFinderStudy > div > div > div:nth-child(1) > ul {
+    counter-reset: my-counter;
+  }
+}
+
+.utilityFinderStudy > div > div > div:nth-child(1) > ul {
+  counter-reset: my-counter;
+}
+
+/*  */
+
 @media screen and (min-width: 1280px) {
   .utilityFinderStudy > div > div > div:nth-child(2) > ul {
+    width: auto;
+    height: auto;
+  }
+}
+
+/* universal */
+
+@media screen and (min-width: 1280px) {
+  .utilityFinderStudy > div > div > div:nth-child(1) > ul {
     width: auto;
     height: auto;
   }
@@ -395,6 +545,24 @@
   position: relative;
   padding-left: 32px;
 }
+
+/* universal */
+
+.utilityFinderStudy > div > div > div:nth-child(1) > ul > li > ul > li {
+  position: relative;
+  padding-left: 32px;
+}
+
+/* universal */
+
+@media screen and (min-width: 1280px) {
+  .utilityFinderStudy > div > div > div:nth-child(1) > ul > li > ul > li {
+    position: relative;
+    padding-left: 32px;
+  }
+}
+
+/*  */
 
 @media screen and (min-width: 768px) {
   .utilityFinderStudy > div > div > div:nth-child(2) > ul > li > ul > li {
@@ -407,6 +575,22 @@
     padding-left: 50px;
   }
 }
+
+/* universal */
+
+@media screen and (min-width: 1280px) {
+  .utilityFinderStudy > div > div > div:nth-child(1) > ul > li > ul > li {
+    padding-left: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .utilityFinderStudy > div > div > div:nth-child(1) > ul > li > ul > li {
+    padding-left: 42px;
+  }
+}
+
+/*  */
 
 .utilityFinderStudy > div > div > div:nth-child(2) > ul > li > ul > li::before {
   content: counter(my-counter) '.';
@@ -430,6 +614,66 @@
   /* text-align: center; */
 
   color: var(--accent-text-color);
+}
+
+/* universal */
+
+.utilityFinderStudy > div > div > div:nth-child(1) > ul > li > ul > li::before {
+  content: counter(my-counter) '.';
+  counter-increment: my-counter;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 0;
+
+  background-image: none;
+
+  font-family: 'Alegreya';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: calc(32 / 24);
+
+  /* width: 16px;
+  height: 32px; */
+  /* text-align: center; */
+
+  color: var(--accent-text-color);
+}
+
+/* universal */
+@media screen and (min-width: 1280px) {
+  .utilityFinderStudy
+    > div
+    > div
+    > div:nth-child(1)
+    > ul
+    > li
+    > ul
+    > li::before {
+    content: counter(my-counter) '.';
+    counter-increment: my-counter;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 0;
+
+    background-image: none;
+
+    font-family: 'Alegreya';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: calc(32 / 24);
+
+    /* width: 16px;
+  height: 32px; */
+    /* text-align: center; */
+
+    color: var(--accent-text-color);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -462,8 +706,54 @@
   }
 }
 
+/* universal */
+
+@media screen and (min-width: 1280px) {
+  .utilityFinderStudy
+    > div
+    > div
+    > div:nth-child(1)
+    > ul
+    > li
+    > ul
+    > li::before {
+    font-size: 40px;
+    line-height: calc(48 / 40);
+    height: 48px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .utilityFinderStudy
+    > div
+    > div
+    > div:nth-child(1)
+    > ul
+    > li
+    > ul
+    > li::before {
+    font-size: 32px;
+    line-height: calc(36 / 32);
+    height: 36px;
+  }
+}
+
+/*  */
+
 .utilityFinderStudy > div > div > div:nth-child(2) > button {
   margin-bottom: 0;
+}
+
+/* universal */
+
+.utilityFinderStudy > div > div > div:nth-child(1) > button {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 1280px) {
+  .utilityFinderStudy > div > div > div:nth-child(1) > button {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 1280px) {
