@@ -1,5 +1,6 @@
 import Head from 'next/head';
 
+
 import { FirstView } from '@/views';
 import { getNewsList } from '@/utils/request';
 
