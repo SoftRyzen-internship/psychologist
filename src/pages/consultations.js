@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import ReactMarkdown from 'react-markdown';
-import { getConsultationsData } from '@/lib/consults';
+import { getData } from '@/lib/getData';
+import { folderPaths } from '@/utils/foldersPath';
 
 const ConsultationsPage = ({ individual, online, requirements, factors }) => {
   return (
@@ -43,7 +44,7 @@ const ConsultationsPage = ({ individual, online, requirements, factors }) => {
 };
 
 export const getStaticProps = async () => {
-  const consults = getConsultationsData();
+  const consults = getData(folderPaths.CONSULTATIONS);
 
   const { individual, online, requirements, faq1, factors, method } = consults;
 

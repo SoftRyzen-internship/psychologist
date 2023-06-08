@@ -1,15 +1,11 @@
 import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
-// import * as path from 'path';
-
-const folderPathTemplate = 'src/content/';
 
 export const getData = folder => {
-  const folderPath = `${folderPathTemplate}${folder}`;
-  // const folderPath = path.join(__dirname, 'content', folder);
+  const cwd = process.cwd();
+  const folderPath = join(cwd, 'src', 'content', folder);
 
-  console.log(folderPath);
   const filesContentsArray = fs.readdirSync(folderPath).map(fileName => {
     const fullPath = join(folderPath, fileName);
 
