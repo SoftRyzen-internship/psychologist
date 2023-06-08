@@ -1,11 +1,14 @@
-.burger{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
-@media screen and (min-width:1279.98px) {
-    .burger{
-        display: none;
-    } 
+@media screen and (min-width: 1279px) {
+  .burger {
+    display: none;
+  }
 }

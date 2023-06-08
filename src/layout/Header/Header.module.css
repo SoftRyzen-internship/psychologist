@@ -1,5 +1,5 @@
 .header {
-  background: #ffffff;
+  background: var(--white-color);
   border-bottom: 2px solid #d4dae7;
 }
 
@@ -7,13 +7,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   padding-top: 15px;
   padding-bottom: 15px;
   position: relative;
-}
-
-@media screen and (max-width: 1279.98px) {
-  .nav {
-    display: none;
-  }
 }

@@ -1,10 +1,20 @@
+import { routes } from 'routes';
 import Image from 'next/image';
-import st from './Logo.module.css';
+import * as st from './Logo.module.css';
+import Link from 'next/link';
 
 export const Logo = () => {
   return (
     <div className={st.logo}>
-      <Image src="/icons/logoHeader.svg" alt="Logo" width="81" height="54" />
+      <Link href={routes.HOME}>
+        <Image
+          src="/icons/logoHeader.svg"
+          alt="Logo"
+          width={60}
+          height={40}
+          className={st.logoIcon}
+        />
+      </Link>
     </div>
   );
 };
