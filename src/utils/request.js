@@ -2,7 +2,7 @@ const { GraphQLClient, gql } = require('graphql-request');
 
 export const query = gql`
   query MyQuery {
-    allNews(orderBy: _createdAt_ASC) {
+    allNews(orderBy: _createdAt_DESC) {
       id
       title
       text(markdown: true)
@@ -10,6 +10,7 @@ export const query = gql`
         alt
         url
       }
+      _publishedAt
     }
   }
 `;
