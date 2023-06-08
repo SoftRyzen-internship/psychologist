@@ -60,6 +60,14 @@
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .subtitleFinder p:last-child {
+    font-size: 28px;
+    line-height: calc(32 / 28);
+    margin-bottom: 40px;
+  }
+}
+
 .plashka p {
   font-style: normal;
   font-weight: 600;
@@ -202,21 +210,23 @@
   position: relative;
 }
 
-.utilityFinder::before {
-  content: '';
-  position: absolute;
-  top: -9px;
-  left: 18px;
-  width: 268px;
-  left: 73.85%;
-  right: -27.7%;
-  top: -12.98%;
-  bottom: 70.21%;
-  height: 388px;
-  background-image: url(/icons/Flower.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+@media screen and (min-width: 1280px) {
+  .utilityFinder::before {
+    content: '';
+    position: absolute;
+    top: -9px;
+    left: 18px;
+    width: 268px;
+    left: 73.85%;
+    right: -27.7%;
+    top: -12.98%;
+    bottom: 70.21%;
+    height: 388px;
+    background-image: url(/icons/Flower.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 }
 
 /**

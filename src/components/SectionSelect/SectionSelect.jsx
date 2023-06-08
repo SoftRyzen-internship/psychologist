@@ -1,12 +1,12 @@
-import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
-import s from './SectionSelect.module.css';
+import ReactMarkdown from 'react-markdown';
 import classNames from 'classnames';
 import { Container } from '..';
+import s from './SectionSelect.module.css';
 
-const SectionSelect = ({ caseName, whatido, study }) => {
-  switch (caseName) {
-    case 'whatido':
+const SectionSelect = ({ whatido, study }) => {
+  switch (true) {
+    case Boolean(whatido):
       return (
         <section className={s.utilityFinder}>
           {/* Section component */}
@@ -22,7 +22,7 @@ const SectionSelect = ({ caseName, whatido, study }) => {
               role="container for flex"
               aria-label="wrapper for list and image"
             >
-              <div>
+              <div className={s.subtitleFinder}>
                 <ul className={s.whatidoList}>
                   {whatido.list.map(({ content, id }) => {
                     return (
@@ -51,7 +51,7 @@ const SectionSelect = ({ caseName, whatido, study }) => {
           </Container>
         </section>
       );
-    case 'study':
+    case Boolean(study):
       return (
         <section className={s.utilityFinderStudy}>
           <Container>
@@ -61,7 +61,6 @@ const SectionSelect = ({ caseName, whatido, study }) => {
               </span>
             </h2>
             <div className={s.flexWrapperMain}>
-              {' '}
               <div>
                 <Image
                   className={classNames(s.img, s.whatido, s.imgLarge, s.study)}
@@ -72,7 +71,6 @@ const SectionSelect = ({ caseName, whatido, study }) => {
                 />
               </div>
               <div>
-                {' '}
                 <ReactMarkdown>{study.title}</ReactMarkdown>
                 <ReactMarkdown>{study.subtitle}</ReactMarkdown>
                 <ul className={classNames(s.whatidoList, s.studyList)}>

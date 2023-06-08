@@ -1,6 +1,6 @@
 import Head from 'next/head';
 // import { FirstView } from '@/views';
-import SectionSelect from '@/components/SectionSelectSection/SectionSelect';
+import SectionSelect from '@/components/SectionSelect/SectionSelect';
 import { folderPaths } from '@/utils/folderPaths';
 import { getData } from '@/lib/getData';
 
@@ -15,7 +15,7 @@ export default function Home(props) {
 
       <main className="main">
         {/* <FirstView /> */}
-        <SectionSelect caseName="whatido" {...props} />
+        <SectionSelect whatido={props.whatido} />
         {/* You can send props as an object data={{ study: study, whatido: whatido }} */}
         {/* <SectionSelect caseName="study" study={study} whatido={whatido} /> */}
       </main>
