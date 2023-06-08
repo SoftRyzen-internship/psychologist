@@ -19,16 +19,16 @@ export default function Home() {
 }
 
 export async function getStaticProps() {
-  const news = await getNewsList();
-  if (!news) {
+  const { allNews } = await getNewsList();
+  if (!allNews) {
     return {
       notFound: true,
     };
   }
-  // console.log(news.allNews);
+  
   return {
     props: {
-      AllNews: news.allNews
+      allNews,
     },
   };
 }
