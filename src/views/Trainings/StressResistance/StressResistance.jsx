@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 
-import s from './ConflictologyView.module.css';
+// import s from './StressResistance.module.css';
 import { Container } from '@/components';
 import { TrainingsSection } from '@/components/TrainingsSection/TrainingsSection';
 
-const ConflictologyView = ({ markdown, imgPath }) => {
+const StressResistanceView = ({ markdown, imgPath }) => {
   return (
-    <section className={`trainingSection ${s.conflictologySection}`}>
+    <section className="trainingSection">
       <Container>
         <TrainingsSection markdown={markdown} img={imgPath} />
       </Container>
@@ -14,9 +14,9 @@ const ConflictologyView = ({ markdown, imgPath }) => {
   );
 };
 
-export default ConflictologyView;
+export default StressResistanceView;
 
-ConflictologyView.propTypes = {
+StressResistanceView.propTypes = {
   markdown: PropTypes.shape().isRequired,
   imgPath: PropTypes.string,
 };

@@ -12,7 +12,6 @@ export const TrainingsSection = ({
   btnClickHandler,
 }) => {
   const { heading, goal, timePeriod, list } = markdown;
-  console.log(markdown);
   return (
     <>
       {isHeroSection && (
