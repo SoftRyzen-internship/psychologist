@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import ReactMarkdown from 'react-markdown';
 import { getData } from '@/lib/getData';
-import { folderPaths } from '@/utils/foldersPath';
+import { folderPaths } from '@/utils/folderPaths';
 
 const ConsultationsPage = ({ individual, online, requirements, factors }) => {
   return (

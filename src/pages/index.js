@@ -1,4 +1,5 @@
 import Head from 'next/head';
+
 import { FirstView } from '@/views';
 import { ActionButton } from '@/components';
 
