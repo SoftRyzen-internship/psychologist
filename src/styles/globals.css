@@ -81,7 +81,7 @@ button {
 }
 
 .sectionTitleH1 {
-  font-family: var(--font-alegreya);
+  font-family: var(--accent-text-color);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -90,7 +90,7 @@ button {
 }
 
 .sectionTitleH2 {
-  font-family: var(--font-alegreya);
+  font-family: var(--accent-text-color);
   font-weight: 700;
   font-size: 32px;
   line-height: 1.25;
