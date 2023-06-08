@@ -1,25 +1,19 @@
 import Head from 'next/head';
 import ReactMarkdown from 'react-markdown';
 import { getData } from '@/lib/getData';
-
+import { folderPaths } from '@/utils/foldersPath';
 const TrainingsPage = ({
-  conflictology,
-  educationWithLove,
+  // conflictology,
+  // educationWithLove,
   publicSpeaking,
-  selfHelp,
-  stressResistance,
-  strongSides,
-  timeManagement,
+  // selfHelp,
+  // stressResistance,
+  // strongSides,
+  // timeManagement,
 }) => {
-  console.log(
-    conflictology,
-    educationWithLove,
-    publicSpeaking,
-    selfHelp,
-    stressResistance,
-    strongSides,
-    timeManagement,
-  );
+  // console.log(path.join(__dirname, '..', '..', 'src', 'content'));
+  // console.log(__dirname);
+
   return (
     <>
       <Head>
@@ -63,8 +57,8 @@ const TrainingsPage = ({
 };
 
 export const getStaticProps = async () => {
-  const trainings = getData('trainings');
-  console.log(trainings);
+  const trainings = getData(folderPaths.TRAININGS);
+  // console.log(trainings);
   const {
     conflictology,
     educationWithLove,
