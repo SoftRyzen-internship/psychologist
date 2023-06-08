@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { getMainData } from '@/lib/main';
 import SectionSelect from '@/components/SectionSelectSection/SectionSelect';
 
-export default function Home({ whatido, study }) {
+export default function Home(props) {
   return (
     <>
       <Head>
@@ -14,8 +14,8 @@ export default function Home({ whatido, study }) {
 
       <main className="main">
         {/* <FirstView /> */}
-        <SectionSelect caseName="whatido" study={study} whatido={whatido} />
-        {/* You can send props as an object data={} */}
+        <SectionSelect caseName="whatido" {...props} />
+        {/* You can send props as an object data={{ study: study, whatido: whatido }} */}
         {/* <SectionSelect caseName="study" study={study} whatido={whatido} /> */}
       </main>
     </>
