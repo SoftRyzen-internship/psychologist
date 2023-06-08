@@ -1,10 +1,10 @@
 import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
-import s from './ReusableSection.module.css';
+import s from './SectionSelect.module.css';
 import classNames from 'classnames';
 import { Container } from '..';
 
-const CustomComponent = ({ caseName, whatido, study }) => {
+const SectionSelect = ({ caseName, whatido, study }) => {
   switch (caseName) {
     case 'whatido':
       return (
@@ -97,4 +97,4 @@ const CustomComponent = ({ caseName, whatido, study }) => {
   }
 };
 
-export default CustomComponent;
+export default SectionSelect;

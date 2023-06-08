@@ -1,7 +1,7 @@
 import Head from 'next/head';
 // import { FirstView } from '@/views';
 import { getMainData } from '@/lib/main';
-import CustomComponent from '@/components/ReusableTestSection/ReusableSection';
+import SectionSelect from '@/components/SectionSelectSection/SectionSelect';
 
 export default function Home({ whatido, study }) {
   return (
@@ -14,8 +14,9 @@ export default function Home({ whatido, study }) {
 
       <main className="main">
         {/* <FirstView /> */}
-        {/* <CustomComponent caseName="whatido" study={study} whatido={whatido} /> */}
-        <CustomComponent caseName="study" study={study} whatido={whatido} />
+        <SectionSelect caseName="whatido" study={study} whatido={whatido} />
+        {/* You can send props as an object data={} */}
+        {/* <SectionSelect caseName="study" study={study} whatido={whatido} /> */}
       </main>
     </>
   );

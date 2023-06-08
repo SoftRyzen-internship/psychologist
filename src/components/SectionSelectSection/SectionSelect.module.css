@@ -149,7 +149,7 @@
   height: 24px;
   margin-right: 16px;
   vertical-align: middle;
-  background-image: url('/main/Check.svg');
+  background-image: url('/icons/Check.svg');
 }
 
 .whatidoList > li:only-child::before {
@@ -213,7 +213,7 @@
   top: -12.98%;
   bottom: 70.21%;
   height: 388px;
-  background-image: url(/main/Flower.svg);
+  background-image: url(/icons/Flower.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
