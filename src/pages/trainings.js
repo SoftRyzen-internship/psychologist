@@ -1,10 +1,13 @@
 import Head from 'next/head';
-import ReactMarkdown from 'react-markdown';
 
 import { getData } from '@/lib/getData';
 import { folderPaths } from '@/utils/folderPaths';
+import { imgPaths } from '@/utils/imgPaths';
+import PublicSpeakingView from '@/views/Trainings/PublicSpeaking/PublicSpeakingView';
+import ConflictologyView from '@/views/Trainings/Conflictology/ConflictologyView';
+
 const TrainingsPage = ({
-  // conflictology,
+  conflictology,
   // educationWithLove,
   publicSpeaking,
   // selfHelp,
@@ -22,44 +25,17 @@ const TrainingsPage = ({
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-
-      <div>
-        <ReactMarkdown className="sectionTitleH1">
-          {publicSpeaking.heading}
-        </ReactMarkdown>
-        <ReactMarkdown>{publicSpeaking.list[0].content}</ReactMarkdown>
-        {/* <ReactMarkdown>{online.list}</ReactMarkdown>
-        <ReactMarkdown>{online.description}</ReactMarkdown> */}
-
-        {/* <ul style={{ display: 'flex' }}>
-          {individual.list.map(({ id, content }) => {
-            return (
-              <li key={id}>
-                <ReactMarkdown>{content}</ReactMarkdown>
-              </li>
-            );
-          })}
-        </ul>
-
-        <h2>CARDS</h2>
-        <ul style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
-          {factors.cards.map(({ title, content }, index) => (
-            <li key={index}>
-              <h3>{title}</h3>
-              <span>
-                <ReactMarkdown>{content}</ReactMarkdown>
-              </span>
-            </li>
-          ))}
-        </ul> */}
-      </div>
+      <PublicSpeakingView markdown={publicSpeaking} />
+      <ConflictologyView
+        markdown={conflictology}
+        imgPath={imgPaths.TRAININGS.CONFLICTOLOGY.IMAGE}
+      />
     </>
   );
 };
 
 export const getStaticProps = async () => {
   const trainings = getData(folderPaths.TRAININGS);
-  // console.log(trainings);
   const {
     conflictology,
     educationWithLove,

@@ -1,0 +1,76 @@
+.title {
+  font-family: var(--font-alegreya);
+  color: var(--accent-text-color);
+}
+/* Hero section */
+.heroTitle {
+  composes: title;
+
+  margin-bottom: 32px;
+
+  font-weight: 500;
+  font-size: 36px;
+  line-height: calc(40 / 36);
+}
+/*  */
+.textMargin {
+  margin-bottom: 24px;
+}
+.goal {
+  font-size: 18px;
+  line-height: calc(28 / 18);
+}
+.goal strong {
+  font-weight: 600;
+}
+.timePeriod {
+  display: block;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: calc(28 / 18);
+
+  color: var(--accent-text-color);
+}
+.sectionTitle {
+  composes: title;
+
+  font-size: 32px;
+  line-height: calc(36 / 32);
+}
+.programTitle {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: calc(28 / 18);
+}
+
+.programList {
+  margin-bottom: 40px;
+}
+
+.programList > ul {
+  list-style-type: none;
+}
+
+.programList > ul > li {
+  padding-left: 40px;
+  background-image: url(/images/icons/Check.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.programList > ul > li:not(:last-child) {
+  margin-bottom: 20px;
+}
+.imageWrapper {
+  composes: textMargin;
+
+  position: unset;
+}
+.image {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
