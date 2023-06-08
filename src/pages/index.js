@@ -15,18 +15,18 @@ export default function Home(props) {
 
       <main className="main">
         {/* <FirstView /> */}
-        <SectionSelect
+        {/* <SectionSelect
           data={props.whatido}
-          src={'/main/Psychotherapy@2x.png'}
+          src={'/icons/whatidoVector.svg'}
           alt={'Psycho vector'}
           pos="whatido"
-        />
-        {/* <SectionSelect
+        /> */}
+        <SectionSelect
           data={props.study}
-          src={'/main/Study2x.png'}
+          src={'/icons/studyVector.svg'}
           alt={'Study vector'}
           pos="study"
-        /> */}
+        />
         {/* You can send props as an object data={{ study: study, whatido: whatido }} */}
         {/* <SectionSelect caseName="study" study={study} whatido={whatido} /> */}
       </main>
