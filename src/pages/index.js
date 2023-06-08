@@ -1,7 +1,8 @@
 import Head from 'next/head';
 // import { FirstView } from '@/views';
-import { getMainData } from '@/lib/main';
 import SectionSelect from '@/components/SectionSelectSection/SectionSelect';
+import { folderPaths } from '@/utils/folderPaths';
+import { getData } from '@/lib/getData';
 
 export default function Home(props) {
   return (
@@ -23,8 +24,7 @@ export default function Home(props) {
 }
 
 export async function getStaticProps() {
-  const main = getMainData();
-
+  const main = getData(folderPaths.INDEX);
   const { study, whatido } = main;
   return {
     props: {

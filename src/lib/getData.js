@@ -2,9 +2,10 @@ import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
 
-const folderPath = 'src/content/main';
+export const getData = folder => {
+  const cwd = process.cwd();
+  const folderPath = join(cwd, 'src', 'content', folder);
 
-export const getMainData = () => {
   const filesContentsArray = fs.readdirSync(folderPath).map(fileName => {
     const fullPath = join(folderPath, fileName);
 
