@@ -16,13 +16,13 @@ export const query = gql`
 `;
 
 export const getNewsList = () => {
-    const endpoint = 'https://graphql.datocms.com/';
-    const graphQLClient = new GraphQLClient(endpoint, {
-        headers: {
-            'content-type': 'application/json',
-            authorization: 'Bearer ' + process.env.DATOCMS_API_KEY,
-            },
-        });
-    const news = graphQLClient.request(query);
-    return news;
-}
+  const endpoint = 'https://graphql.datocms.com/';
+  const graphQLClient = new GraphQLClient(endpoint, {
+    headers: {
+      'content-type': 'application/json',
+      authorization: 'Bearer ' + process.env.DATOCMS_API_KEY,
+    },
+  });
+  const news = graphQLClient.request(query);
+  return news;
+};
