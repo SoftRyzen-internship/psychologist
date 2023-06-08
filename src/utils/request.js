@@ -10,7 +10,6 @@ export const query = gql`
         alt
         url
       }
-      _publishedAt
     }
   }
 `;
