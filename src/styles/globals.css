@@ -60,7 +60,7 @@ p {
 
 ul,
 ol {
-  padding: 18px;
+  padding: 0;
   margin: 0;
 }
 
@@ -69,6 +69,7 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+
 button {
   cursor: pointer;
 }
