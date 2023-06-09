@@ -1,0 +1,126 @@
+/**
+  |============================
+  | Online consultations
+  |============================
+*/
+
+.personalConsSection {
+  background-image: url(/icons/OnlineVector.svg);
+  background-size: cover;
+  background-color: #e2eaf3;
+
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279.98px) {
+  .personalConsSection {
+    background-image: url(/icons/TabletOnlineVector.svg);
+  }
+}
+
+.container {
+  padding: 36px 20px 36px 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 36px 88px 36px 88px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    padding: 48px 85px 48px 85px;
+  }
+}
+
+.personalConsSection p,
+.mainPageSection p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: calc(28 / 18);
+
+  /* z-index: 1; */
+
+  color: var(--plaska-color);
+
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .personalConsSection p,
+  .mainPageSection p {
+    font-size: 20px;
+    line-height: calc(28 / 20);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .personalConsSection p,
+  .mainPageSection p {
+    font-size: 24px;
+    line-height: calc(32 / 24);
+  }
+}
+
+/**
+  |============================
+  | Main page
+  |============================
+*/
+
+.mainPageSection {
+  background-image: url(/icons/MobileMain.svg), url(/icons/MainElipseVector.svg);
+  background-size: cover;
+  background-color: #e2eaf3;
+  background-position: left, top left;
+
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .mainPageSection {
+    background-image: url(/icons/TabletMainVector.svg),
+      url(/icons/MainElipseVector.svg);
+    background-position: left, top left;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .mainPageSection {
+    background-image: url(/icons/PCMainVector.svg),
+      url(/icons/MainElipseVector.svg);
+    background-position: bottom, top left;
+  }
+}
+
+.containerX {
+  padding: 36px 20px 36px 20px;
+
+  /* position: relative; */
+}
+
+@media screen and (min-width: 768px) {
+  .containerX {
+    padding: 36px 96px 36px 96px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .containerX {
+    padding: 48px 188px 48px 188px;
+  }
+}
+
+/* .hello {
+  z-index: -1;
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+} */
