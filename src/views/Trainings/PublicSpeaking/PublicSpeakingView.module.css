@@ -1,0 +1,19 @@
+.heroImg {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .heroTrainingSection {
+    position: relative;
+
+    background-image: url('/images/trainingsPage/publicSpeakingBackground.svg');
+    background-size: 343px 866px;
+    background-repeat: no-repeat;
+    background-position: right 0px top 35.26%;
+  }
+  .heroImg {
+    display: block;
+    position: absolute;
+    right: 0px;
+    bottom: 60px;
+  }
+}

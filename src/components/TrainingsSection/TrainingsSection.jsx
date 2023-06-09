@@ -33,7 +33,15 @@ export const TrainingsSection = ({
       )}
       <em className={classNames(s.timePeriod, s.textMargin)}>{timePeriod}</em>
       <h3 className={s.programTitle}>Програма:</h3>
-      <ReactMarkdown className={s.programList}>{list[0].content}</ReactMarkdown>
+      <ReactMarkdown
+        className={
+          isHeroSection
+            ? `${s.programList} ${s.heroProgramList}`
+            : s.programList
+        }
+      >
+        {list[0].content}
+      </ReactMarkdown>
       <ActionButton clickHandler={btnClickHandler} />
     </>
   );

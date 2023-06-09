@@ -74,3 +74,9 @@
   position: relative !important;
   height: unset !important;
 }
+
+@media screen and (min-width: 768px) {
+  .heroProgramList {
+    width: 369px;
+  }
+}

@@ -30,7 +30,10 @@ const TrainingsPage = ({
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <PublicSpeakingView markdown={publicSpeaking} />
+      <PublicSpeakingView
+        markdown={publicSpeaking}
+        imgPath={imgPaths.TRAININGS.HERO.IMAGE}
+      />
       <ConflictologyView
         markdown={conflictology}
         imgPath={imgPaths.TRAININGS.CONFLICTOLOGY.IMAGE}

@@ -1,8 +1,8 @@
 export const imgPaths = {
   TRAININGS: {
     HERO: {
-      IMAGE: '/images/trainingsPage/conflictology.svg',
-      BACKGROUND: '',
+      IMAGE: '/images/trainingsPage/publicSpeaking.png',
+      BACKGROUND: '/images/trainingsPage/publicSpeakingBackground.svg',
     },
     CONFLICTOLOGY: {
       IMAGE: '/images/trainingsPage/conflictology.svg',
