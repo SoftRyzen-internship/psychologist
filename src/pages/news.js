@@ -1,24 +1,19 @@
-import Head from 'next/head';
-import { FirstView } from '@/views';
 import { getNewsList } from '@/lib/request';
-import { ActionButton } from '@/components';
+import Head from 'next/head';
+import NewsView from '@/views/News/NewsView';
 
-export default function Home() {
+const NewsPage = ({ allNews }) => {
   return (
     <>
       <Head>
-        <title>Юлія Сулаєва | Головна</title>
+        <title>Юлія Сулаєва | Новини</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-
-      <main className="main">
-        <FirstView />
-        <ActionButton />
-      </main>
+      <NewsView allNews={allNews} />
     </>
   );
-}
+};
 
 export async function getStaticProps() {
   const { allNews } = await getNewsList();
@@ -34,3 +29,5 @@ export async function getStaticProps() {
     },
   };
 }
+
+export default NewsPage;

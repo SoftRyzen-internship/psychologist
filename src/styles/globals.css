@@ -16,6 +16,8 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html,
@@ -60,7 +62,6 @@ p {
 
 ul,
 ol {
-  padding: 18px;
   margin: 0;
 }
 
@@ -73,6 +74,10 @@ button {
   cursor: pointer;
 }
 
+img {
+  display: block;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
@@ -81,21 +86,21 @@ button {
 }
 
 .sectionTitleH1 {
-  font-family: var(--accent-text-color);
-  font-weight: 700;
+  font-family: var(--font-alegreya);
+  font-weight: 500;
   font-size: 36px;
   line-height: 1.11;
 
-  color: var(--main-color);
+  color: var(--accent-text-color);
 }
 
 .sectionTitleH2 {
-  font-family: var(--accent-text-color);
+  font-family: var(--font-alegreya);
   font-weight: 500;
   font-size: 32px;
   line-height: 1.25;
 
-  color: var(--main-color);
+  color: var(--accent-text-color);
 }
 
 .centered {

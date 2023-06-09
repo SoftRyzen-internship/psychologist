@@ -1,0 +1,55 @@
+.offsetImageLeft {
+    position: relative;
+    margin-top: 24px;
+    border: 1px solid #E9E9E9;
+    border-radius: 12px;
+    margin-left: 12px;
+}
+
+.offsetImageLeft > img {
+    position: absolute;
+    top: 12px;
+    left: -12px;
+}
+
+.offsetImageRight {
+    position: relative;
+    margin-top: 24px;
+    border: 1px solid #E9E9E9;
+    border-radius: 12px;
+    margin-right: 12px;
+}
+
+.offsetImageRight > img {
+    position: absolute;
+    top: 12px;
+    right: -12px;
+}
+
+@media screen and (min-width: 768px) {
+    .offsetImageLeft {
+        border-radius: 16px;
+        margin-left: 16px;
+    }
+    .offsetImageLeft > img {
+        top: 16px;
+        left: -16px;
+    }
+    .offsetImageRight {
+        border-radius: 16px;
+        margin-right: 16px;
+    }
+    .offsetImageRight > img {
+        top: 16px;
+        right: -16px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .offsetImageLeft {
+        border-radius: 20px;
+    }
+    .offsetImageRight {
+        border-radius: 20px;
+    }
+}
