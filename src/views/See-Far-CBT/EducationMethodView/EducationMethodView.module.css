@@ -7,10 +7,11 @@
   margin-bottom: 24px;
 }
 
-.wrap .textWrap p:first-child {
+.students {
   margin-bottom: 20px;
 
   font-size: 18px;
+  font-weight: 600;
   line-height: calc(28 / 18);
 }
 
@@ -94,7 +95,7 @@
     margin-bottom: 36px;
   }
 
-  .wrap .textWrap p:first-child {
+  .students {
     margin-bottom: 24px;
 
     font-size: 24px;
@@ -136,8 +137,10 @@
     width: 696px;
   }
 
-  .wrap .textWrap p:first-child {
+  .students {
+    /* display: block; */
     margin-bottom: 36px;
+    /* width: 600px; */
   }
 
   .imgWrap {
@@ -181,7 +184,3 @@
     padding-bottom: 100px;
   }
 } */
-
-.eduTitle {
-  color: red;
-}

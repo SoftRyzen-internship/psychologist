@@ -1,3 +1,3 @@
 export * from './FirstView/FirstView';
-export * from './EducationMethodView/EducationMethodView';
-export * from './EducationProgramView/EducationProgramView';
+export * from './See-Far-CBT/EducationMethodView/EducationMethodView';
+export * from './See-Far-CBT/EducationProgramView/EducationProgramView';
