@@ -16,7 +16,6 @@
   "dependencies": {
     "@svgr/webpack": "^8.0.1",
     "classnames": "^2.3.2",
-    "clsx": "^1.2.1",
     "graphql-request": "^6.1.0",
     "gray-matter": "^4.0.3",
     "next": "13.2.3",

@@ -10,7 +10,7 @@ export const EducationProgramView = ({ program }) => {
       <Container>
         <SectionTitle title={program.heading} centered={true} />
 
-        <div classname={s.educationProgrammUpperWrap}>
+        <div className={s.educationProgrammUpperWrap}>
           <ReactMarkdown>{program.general}</ReactMarkdown>
           <ReactMarkdown>{program.title}</ReactMarkdown>
           <ReactMarkdown>{program.list}</ReactMarkdown>
@@ -22,7 +22,7 @@ export const EducationProgramView = ({ program }) => {
           />
         </div>
 
-        <div classname={s.educationProgrammLowerWrap}>
+        <div className={s.educationProgrammLowerWrap}>
           <ReactMarkdown>{program.list2}</ReactMarkdown>
           <Image
             alt="color drawing photo"

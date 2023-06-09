@@ -1,8 +1,7 @@
-import ReactMarkdown from 'react-markdown';
-import s from './EducationMethodView.module.css';
-import { SectionTitle } from '@/components/SectionTitle/SectionTitle';
 import Image from 'next/image';
-import { Container } from '@/components';
+import ReactMarkdown from 'react-markdown';
+import { Container, SectionTitle } from '@/components';
+import s from './EducationMethodView.module.css';
 
 export const EducationMethodView = ({ method }) => {
   return (
@@ -17,6 +16,7 @@ export const EducationMethodView = ({ method }) => {
 
           <div className={s.imgWrap}>
             <Image
+              priority={true}
               alt="teacher on lection photo"
               src="/images/education_teacher.jpg"
               className={s.image}

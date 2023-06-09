@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { getData } from '@/lib/getData';
 import { EducationMethodView, EducationProgramView } from '@/views';
+import { folderPaths } from '@/utils/folderPaths';
 
 const EducationPage = ({ method, program }) => {
   return (
@@ -19,8 +20,14 @@ const EducationPage = ({ method, program }) => {
 };
 
 export const getStaticProps = async () => {
-  const education = getData('education');
+  const { SEE_FAR_CBT } = folderPaths;
+  const education = getData(SEE_FAR_CBT);
   const { method, program } = education;
+  if (!education) {
+    return {
+      notFound: true,
+    };
+  }
 
   return {
     props: { method, program },
