@@ -1,6 +1,7 @@
 .header {
   background: var(--white-color);
   border-bottom: 2px solid #d4dae7;
+  position: relative;
 }
 
 .headerBox {
@@ -10,5 +11,5 @@
   align-items: center;
   padding-top: 15px;
   padding-bottom: 15px;
-  position: relative;
+  /* position: relative; */
 }

@@ -1,5 +1,4 @@
 .list {
-  list-style-type: none;
   display: flex;
   gap: 40px;
   font-family: var(--font-open-sans);
@@ -7,19 +6,7 @@
   font-weight: 600;
   line-height: 1.56;
   letter-spacing: 0em;
-}
-
-@media screen and (max-width: 1279px) {
-  .list {
-    flex-direction: column;
-    font-size: 24px;
-    line-height: 1.33;
-  }
-
-  .linkActive::after {
-    content: '';
-    top: 25px;
-  }
+  list-style-type: none;
 }
 
 .link {
@@ -40,4 +27,17 @@
   height: 1px;
 
   background-color: var(--accent-color);
+}
+
+@media screen and (max-width: 1279px) {
+  .list {
+    flex-direction: column;
+    font-size: 24px;
+    line-height: 1.33;
+  }
+
+  .linkActive::after {
+    content: '';
+    top: 25px;
+  }
 }

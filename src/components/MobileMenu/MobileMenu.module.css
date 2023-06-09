@@ -4,17 +4,41 @@
   position: absolute;
   top: 86px;
   left: 0;
+  /* transform: translateX(100%); */
+  opacity: 0;
+  transition: opacity 800ms ease-in-out;
+  background-color: var(--bg2-color);
+  background-image: url('../../../public/images/mobileBackground.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* padding-left: 32px;
+  padding-top: 100px; */
+}
+
+.wrapperMenuOpen {
+  composes: wrapper;
+  opacity: 1;
+}
+
+.isClose {
+  /* position: absolute; */
+  /* top: 86px; */
+  /* left: 0; */
   transform: translateX(100%);
   opacity: 0;
   transition: transform 800ms ease-in-out, opacity 800ms ease-in-out;
-  background-color: var(--bg2-color);
+  /* background-color: var(--bg2-color);
+  background-image: url('../../../public/images/mobileBackground.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; */
 
   padding-left: 32px;
   padding-top: 100px;
 }
 
 .isOpen {
-  composes: wrapper;
+  composes: isClose;
   transform: translateX(0);
   opacity: 1;
 }

@@ -1,10 +1,18 @@
-import { usePathname } from 'next/navigation';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { useMediaQuery } from 'react-responsive';
+import navPaths from 'utils/navPaths.json';
 import * as st from './NavBar.module.css';
-import navPaths from '../../utils/navPaths.json';
 
-export const NavBar = ({ mobileOpen }) => {
-  const currentPath = usePathname();
+export const NavBar = ({ setIsMenuOpen }) => {
+  const isDesktop = useMediaQuery({ minWidth: 1280 });
+  const router = useRouter();
+  const currentPath = router.pathname;
+  const handleClick = () => {
+    if (!isDesktop) {
+      setIsMenuOpen(false);
+    }
+  };
   return (
     <>
       <ul className={st.list}>
@@ -14,7 +22,7 @@ export const NavBar = ({ mobileOpen }) => {
               <Link
                 href={item.route}
                 className={currentPath === item.route ? st.linkActive : st.link}
-                onClick={() => mobileOpen(false)}
+                onClick={handleClick}
               >
                 {item.title}
               </Link>

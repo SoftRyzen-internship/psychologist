@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import * as st from './MobBurger.module.css';
 
-export const MobBurger = ({ mobileOpen, mobile }) => {
+export const MobBurger = ({ setIsMenuOpen, isMenuOpen }) => {
   return (
     <>
-      <button className={st.burger} onClick={() => mobileOpen(!mobile)}>
-        {!mobile && (
+      <button className={st.burger} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        {!isMenuOpen && (
           <Image
             src="/icons/menu.svg"
             alt="mobile menu"
@@ -13,7 +13,7 @@ export const MobBurger = ({ mobileOpen, mobile }) => {
             height="36"
           />
         )}
-        {mobile && (
+        {isMenuOpen && (
           <Image
             src="/icons/menuX.svg"
             alt="mobile menu"

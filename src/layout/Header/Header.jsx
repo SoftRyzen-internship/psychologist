@@ -9,17 +9,19 @@ import { MobileMenu } from '@/components/MobileMenu/MobileMenu';
 
 export const Header = () => {
   const isDesktop = useMediaQuery({ minWidth: 1280 });
-  const [mobile, setMobile] = useState(false);
-  const mobileOpen = stat => {
-    setMobile(stat);
-  };
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <header className={st.header}>
       <Container className={st.headerBox}>
         <Logo />
-        {isDesktop && <NavBar mobileOpen={mobileOpen} />}
-        {!isDesktop && <MobBurger mobileOpen={mobileOpen} mobile={mobile} />}
-        {!isDesktop && <MobileMenu mobile={mobile} mobileOpen={mobileOpen} />}
+        {isDesktop && <NavBar setIsMenuOpen={setIsMenuOpen} />}
+        {!isDesktop && (
+          <MobBurger setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
+        )}
+        {!isDesktop && (
+          <MobileMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+        )}
       </Container>
     </header>
   );
