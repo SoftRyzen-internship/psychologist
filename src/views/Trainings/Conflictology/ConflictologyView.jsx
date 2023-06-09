@@ -8,7 +8,11 @@ const ConflictologyView = ({ markdown, imgPath }) => {
   return (
     <section className={`trainingSection ${s.conflictologySection}`}>
       <Container>
-        <TrainingsSection markdown={markdown} img={imgPath} />
+        <TrainingsSection
+          markdown={markdown}
+          img={imgPath}
+          isTitleCentered={true}
+        />
       </Container>
     </section>
   );

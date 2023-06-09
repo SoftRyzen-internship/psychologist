@@ -14,15 +14,17 @@ const PublicSpeakingView = ({ markdown, imgPath }) => {
             markdown={markdown}
             isHeroSection={true}
             img={imgPath}
+          />{' '}
+          <Image
+            className={s.heroImg}
+            src={imgPath}
+            width={499}
+            height={676}
+            // width={1007}
+            // height={950}
+            alt="Психолог Юлія Сулаєва"
           />
         </Container>
-        <Image
-          className={s.heroImg}
-          src={imgPath}
-          width={303}
-          height={676}
-          alt="Психолог Юлія Сулаєва"
-        />
       </section>
     </div>
   );

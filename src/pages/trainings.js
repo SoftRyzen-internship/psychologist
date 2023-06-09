@@ -20,9 +20,6 @@ const TrainingsPage = ({
   strongSides,
   timeManagement,
 }) => {
-  // console.log(path.join(__dirname, '..', '..', 'src', 'content'));
-  // console.log(__dirname);
-
   return (
     <>
       <Head>

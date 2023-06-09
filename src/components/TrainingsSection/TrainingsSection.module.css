@@ -1,22 +1,8 @@
-.title {
-  font-family: var(--font-alegreya);
-  color: var(--accent-text-color);
-}
-/* Hero section */
-.heroTitle {
-  composes: title;
-
-  margin-bottom: 32px;
-
-  font-weight: 500;
-  font-size: 36px;
-  line-height: calc(40 / 36);
-}
-/*  */
 .textMargin {
   margin-bottom: 24px;
 }
 .goal {
+  margin-top: 32px;
   font-size: 18px;
   line-height: calc(28 / 18);
 }
@@ -32,12 +18,7 @@
 
   color: var(--accent-text-color);
 }
-.sectionTitle {
-  composes: title;
 
-  font-size: 32px;
-  line-height: calc(36 / 32);
-}
 .programTitle {
   margin-bottom: 20px;
   font-weight: 600;
@@ -78,5 +59,20 @@
 @media screen and (min-width: 768px) {
   .heroProgramList {
     width: 369px;
+  }
+  .formatText {
+    font-size: 20px;
+    line-height: calc(28 / 20);
+  }
+  .goal {
+    margin-top: 40px;
+
+    font-size: 24px;
+    line-height: calc(32 / 24);
+  }
+  .timePeriod {
+    width: 328px;
+    font-size: 24px;
+    line-height: calc(32 / 24);
   }
 }

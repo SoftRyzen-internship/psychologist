@@ -8,7 +8,11 @@ const StressResistanceView = ({ markdown, imgPath }) => {
   return (
     <section className="trainingSection">
       <Container>
-        <TrainingsSection markdown={markdown} img={imgPath} />
+        <TrainingsSection
+          markdown={markdown}
+          img={imgPath}
+          isTitleCentered={true}
+        />
       </Container>
     </section>
   );
