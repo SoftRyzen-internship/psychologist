@@ -9,16 +9,16 @@
 }
 
 .imgIcon {
+  width: 36px;
+  height: 36px;
   border-radius: 10px;
   stroke: #2361ab;
   /* stroke: #ff0000; */
-  background-color: #fbfbfb;
+  /* background-color: #fbfbfb; */
 }
 
 .imgIcon:hover {
-  border-radius: 10px;
-  fill: #2361ab;
+  /* fill: #2361ab; */
   /* stroke: #ff0000; */
-
-  /* background-color: #2361ab; */
+  background-color: #2361ab;
 }

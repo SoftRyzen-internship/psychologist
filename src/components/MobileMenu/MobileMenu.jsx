@@ -1,6 +1,4 @@
-import { Container } from '..';
-import { NavBar } from '../NavBar/NavBar';
-import { Socials } from '../Socials/Socials';
+import { Container, NavBar, Socials } from '..';
 import * as st from './MobileMenu.module.css';
 
 export const MobileMenu = ({ isMenuOpen, setIsMenuOpen }) => {

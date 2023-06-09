@@ -1,11 +1,7 @@
 import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import { Container } from '@/components';
-import { Logo } from '@/components/Logo/Logo';
+import { Container, Logo, NavBar, MobBurger, MobileMenu } from '@/components';
 import * as st from './Header.module.css';
-import { NavBar } from '@/components/NavBar/NavBar';
-import { MobBurger } from '@/components/MobBurger/MobBurger';
-import { MobileMenu } from '@/components/MobileMenu/MobileMenu';
 
 export const Header = () => {
   const isDesktop = useMediaQuery({ minWidth: 1280 });

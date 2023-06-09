@@ -1,14 +1,15 @@
 .wrapper {
   width: 100dvw;
-  height: 91dvh;
   position: absolute;
-  top: 86px;
+  top: 71px;
+  height: calc(100vh - 71px);
+
   left: 0;
   /* transform: translateX(100%); */
   opacity: 0;
   transition: opacity 800ms ease-in-out;
   background-color: var(--bg2-color);
-  background-image: url('../../../public/images/mobileBackground.jpg');
+  background-image: url('/icons/mobMenuBg_mob.svg');
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -41,4 +42,15 @@
   composes: isClose;
   transform: translateX(0);
   opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper,
+  .wrapperMenuOpen {
+    top: 86px;
+    height: calc(100vh - 86px);
+  }
+  .wrapper {
+    background-image: url('/icons/mobMenuBg_tab.svg');
+  }
 }

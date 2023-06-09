@@ -1,7 +1,7 @@
 .header {
+  position: relative;
   background: var(--white-color);
   border-bottom: 2px solid #d4dae7;
-  position: relative;
 }
 
 .headerBox {

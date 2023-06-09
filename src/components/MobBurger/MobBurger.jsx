@@ -2,9 +2,12 @@ import Image from 'next/image';
 import * as st from './MobBurger.module.css';
 
 export const MobBurger = ({ setIsMenuOpen, isMenuOpen }) => {
+  const handleClick = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
     <>
-      <button className={st.burger} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+      <button className={st.burger} onClick={handleClick}>
         {!isMenuOpen && (
           <Image
             src="/icons/menu.svg"
