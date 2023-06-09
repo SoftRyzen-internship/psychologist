@@ -76,6 +76,13 @@ button {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .container {
@@ -114,6 +121,11 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+  section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
   .container {
     width: 768px;
     padding-left: 32px;
@@ -121,27 +133,40 @@ img {
   }
 
   .sectionTitleH1 {
+    margin-bottom: 40px;
+
     font-size: 52px;
     line-height: 0.92;
   }
 
   .sectionTitleH2 {
+    margin-bottom: 40px;
+
     font-size: 48px;
     line-height: 1;
   }
 }
 
 @media screen and (min-width: 1280px) {
+  section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
   .container {
     width: 1280px;
   }
 
   .sectionTitleH1 {
+    margin-bottom: 60px;
+
     font-size: 64px;
     line-height: 0.88;
   }
 
   .sectionTitleH2 {
+    margin-bottom: 60px;
+
     font-size: 60px;
     line-height: 0.8;
   }
