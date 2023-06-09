@@ -8,4 +8,4 @@ const NewsText = ({ newsTextProp }) => {
   );
 };
 
-export default NewsText
+export default NewsText;

@@ -16,14 +16,14 @@ function NewsView({ allNews }) {
                 <SectionTitle h1={true} title={news.title} />
                 <NewsText newsTextProp={news.text} />
                 <OffsetImageBorder>
-                    <Image
-                            src={news.image.url}
-                            alt={news.image.alt}
-                            width={308}
-                            height={193}
-                            className={s.imageStyle}
-                            style={{display: "block"}}
-                    />
+                  <Image
+                    src={news.image.url}
+                    alt={news.image.alt}
+                    width={308}
+                    height={193}
+                    className={s.imageStyle}
+                    style={{ display: 'block' }}
+                  />
                 </OffsetImageBorder>
               </li>
             ))}
@@ -33,4 +33,4 @@ function NewsView({ allNews }) {
   );
 }
 
-export default NewsView
+export default NewsView;
