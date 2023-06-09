@@ -1,0 +1,138 @@
+@media screen and (min-width: 1280px) {
+  .image {
+    width: 468px;
+    height: 304px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .utilityFinder > div > h2 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .image {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+}
+
+.utilityFinder p,
+.utilityFinder li {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+}
+
+.utilityFinder p > strong {
+  font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+  .utilityFinder p,
+  .utilityFinder li {
+    font-size: 18px;
+    line-height: calc(28 / 18);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .utilityFinder p,
+  .utilityFinder li {
+    font-size: 20px;
+    line-height: calc(28 / 20);
+  }
+}
+
+.utilityFinder ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1280px) {
+  .utilityFinder ul {
+    gap: 36px;
+  }
+}
+
+.utilityFinder li {
+  position: relative;
+  padding-left: 36px;
+  min-width: 320px;
+  height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .utilityFinder li {
+    min-width: auto;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .utilityFinder li {
+    width: 547px;
+  }
+
+  .textWrapper > ul > li:first-child {
+    width: 549px;
+  }
+}
+
+.utilityFinder li::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  position: absolute;
+  left: 0;
+  /* vertical-align: middle; */
+  background-image: url('/icons/Check.svg');
+}
+
+.flexWrapper {
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .flexWrapper {
+    display: flex;
+    gap: 52px;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .flexWrapper {
+    margin-bottom: 0;
+    gap: 60px;
+    align-items: center;
+  }
+}
+
+.utilityFinder > div > ul > li > p {
+  margin-left: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .textWrapper {
+    min-width: 335px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .textWrapper > p:nth-child(1) {
+    width: 637px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .textWrapper > p:nth-child(2) {
+    margin-bottom: 36px;
+  }
+}
