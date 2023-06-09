@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import SectionSelect from '@/components/SectionSelect/SectionSelect';
+import { SectionSelect } from '@/components/index';
 import { folderPaths } from '@/utils/folderPaths';
 import { getData } from '@/lib/getData';
 

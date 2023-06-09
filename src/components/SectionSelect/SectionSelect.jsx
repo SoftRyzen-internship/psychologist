@@ -6,7 +6,7 @@ import { ActionButton, Container } from '..';
 import { SectionTitle } from '../SectionTitle/SectionTitle';
 import s from './SectionSelect.module.css';
 
-const SectionSelect = ({ data, src, alt, position }) => {
+export const SectionSelect = ({ data, src, alt, position }) => {
   return (
     <section
       className={position === 'study' ? s.utilityFinderStudy : s.utilityFinder}
@@ -77,8 +77,6 @@ const SectionSelect = ({ data, src, alt, position }) => {
     </section>
   );
 };
-
-export default SectionSelect;
 
 SectionSelect.propTypes = {
   data: PropTypes.shape({
