@@ -1,4 +1,4 @@
 export * from './FirstComponent/FirstComponent';
 export * from './Container';
 export * from './ActionButton/ActionButton';
-// export * from './TrainingsSection/TrainingsSection.jsx';
+export * from './SectionTitle/SectionTitle';
