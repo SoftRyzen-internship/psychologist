@@ -1,8 +1,7 @@
 import Head from 'next/head';
-// import ReactMarkdown from 'react-markdown';
 import { getData } from '@/lib/getData';
 import { folderPaths } from '@/utils/folderPaths';
-import PersonalConsultations from '@/views/Consultations/PersonalConsultations/PersonalConsultations';
+import { PersonalConsultationsView } from '@/views';
 
 const ConsultationsPage = props => {
   return (
@@ -12,7 +11,7 @@ const ConsultationsPage = props => {
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <PersonalConsultations data={props.individual} />
+      <PersonalConsultationsView data={props.individual} />
     </>
   );
 };

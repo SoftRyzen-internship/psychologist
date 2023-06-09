@@ -1,10 +1,10 @@
-import { Container } from '@/components';
-import s from './PersonalConsult.module.css';
-import { SectionTitle } from '@/components/SectionTitle/SectionTitle';
-import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
+import ReactMarkdown from 'react-markdown';
+import { SectionTitle } from '@/components';
+import { Container } from '@/components';
+import s from './PersonalConsultationsView.module.css';
 
-const PersonalConsult = ({ data }) => {
+export const PersonalConsultationsView = ({ data }) => {
   return (
     <>
       <section className={s.sectionBG}>
@@ -31,13 +31,9 @@ const PersonalConsult = ({ data }) => {
                 );
               })}
             </ul>
-            {/* <ReactMarkdown>{data.list[0].content}</ReactMarkdown>
-          <ReactMarkdown>{data.list[1].content}</ReactMarkdown> */}
           </div>
         </Container>
       </section>
     </>
   );
 };
-
-export default PersonalConsult;
