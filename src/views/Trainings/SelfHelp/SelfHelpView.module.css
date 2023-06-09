@@ -3,4 +3,15 @@
   background-image: url('/images/trainingsPage/selfHelpBackground.svg');
   background-repeat: no-repeat;
   background-position: top right;
+  background-size: 112px, 115px;
+}
+@media screen and (min-width: 768px) {
+  .selfHelpSection {
+    background-size: 134px, 189px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .selfHelpSection {
+    background-size: 460px, 280px;
+  }
 }

@@ -2,7 +2,6 @@ import Head from 'next/head';
 
 import { getData } from '@/lib/getData';
 import { folderPaths } from '@/utils/folderPaths';
-import { imgPaths } from '@/utils/imgPaths';
 import PublicSpeakingView from '@/views/Trainings/PublicSpeaking/PublicSpeakingView';
 import ConflictologyView from '@/views/Trainings/Conflictology/ConflictologyView';
 import StressResistanceView from '@/views/Trainings/StressResistance/StressResistance';
@@ -10,6 +9,7 @@ import SelfHelpView from '@/views/Trainings/SelfHelp/SelfHelpView';
 import EducationWithLoveView from '@/views/Trainings/EducationWithLove/EducationWithLoveView';
 import TimeManagementView from '@/views/Trainings/TimeManagement/TimeManagementView';
 import StrongSidesView from '@/views/Trainings/StrongSides/StrongSidesView';
+import { imgProperties } from '@/utils/imgProperties';
 
 const TrainingsPage = ({
   conflictology,
@@ -29,31 +29,32 @@ const TrainingsPage = ({
       </Head>
       <PublicSpeakingView
         markdown={publicSpeaking}
-        imgPath={imgPaths.TRAININGS.HERO.IMAGE}
+        img={imgProperties.TRAININGS.HERO.IMAGE}
+        bgrImg={imgProperties.TRAININGS.HERO.BACKGROUND}
       />
       <ConflictologyView
         markdown={conflictology}
-        imgPath={imgPaths.TRAININGS.CONFLICTOLOGY.IMAGE}
+        img={imgProperties.TRAININGS.CONFLICTOLOGY.IMAGE}
       />
       <StressResistanceView
         markdown={stressResistance}
-        imgPath={imgPaths.TRAININGS.STRESSRESISTANCE.IMAGE}
+        img={imgProperties.TRAININGS.STRESSRESISTANCE.IMAGE}
       />
       <SelfHelpView
         markdown={selfHelp}
-        imgPath={imgPaths.TRAININGS.SELFHELP.IMAGE}
+        img={imgProperties.TRAININGS.SELFHELP.IMAGE}
       />
       <EducationWithLoveView
         markdown={educationWithLove}
-        imgPath={imgPaths.TRAININGS.EDUCATIONWITHLOVE.IMAGE}
+        img={imgProperties.TRAININGS.EDUCATIONWITHLOVE.IMAGE}
       />
       <TimeManagementView
         markdown={timeManagement}
-        imgPath={imgPaths.TRAININGS.TIMEMANAGEMENT.IMAGE}
+        img={imgProperties.TRAININGS.TIMEMANAGEMENT.IMAGE}
       />
       <StrongSidesView
         markdown={strongSides}
-        imgPath={imgPaths.TRAININGS.STRONGSIDES.IMAGE}
+        img={imgProperties.TRAININGS.STRONGSIDES.IMAGE}
       />
     </>
   );

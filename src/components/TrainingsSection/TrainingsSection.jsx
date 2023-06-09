@@ -2,7 +2,6 @@ import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import s from './TrainingsSection.module.css';
 import { ActionButton } from '@/components';
 
-import classNames from 'classnames';
 import Image from 'next/image';
 import { SectionTitle } from '../SectionTitle/SectionTitle';
 
@@ -27,10 +26,10 @@ export const TrainingsSection = ({
             title={heading}
             className="sectionTitleH1"
           />
-          <ReactMarkdown className={classNames(s.textMargin, s.goal)}>
+          <ReactMarkdown className={`${s.goal} ${s.textMargin}`}>
             {goal}
           </ReactMarkdown>
-          <em className={classNames(s.timePeriod, s.textMargin)}>
+          <em className={`${s.timePeriodHero} ${s.textMargin}`}>
             {timePeriod}
           </em>
           <h3 className={s.programTitle}>Програма:</h3>
@@ -43,15 +42,30 @@ export const TrainingsSection = ({
       {!isHeroSection && (
         <>
           <SectionTitle centered={isTitleCentered} title={heading} />
-          <ReactMarkdown className={classNames(s.textMargin, s.goal)}>
+          <ReactMarkdown className={`${s.goal} ${s.textMargin}`}>
             {goal}
           </ReactMarkdown>
-          <div className={s.imageWrapper}>
-            <Image className={s.image} src={img} fill alt="conflict" />
-          </div>
-          <em className={classNames(s.timePeriod, s.textMargin)}>
-            {timePeriod}
-          </em>
+          {img.PATH && (
+            <div className={`${s.imageWrapper} dynamicImgWrapper`}>
+              <style jsx>{`
+                .dynamicImgWrapper {
+                  width: ${img.SIZES.WIDTH.MOBILE || '100%'};
+                  height: ${img.SIZES.HEIGHT.MOBILE || '100%'};
+                  @media screen and (min-width: 768px) {
+                    width: ${img.SIZES.WIDTH.TABLET};
+                    height: ${img.SIZES.HEIGHT.TABLET || '100%'};
+                  }
+                }
+              `}</style>
+              <Image
+                className={s.image}
+                src={img.PATH}
+                fill
+                alt={img.ALTERNATIVETEXT}
+              />
+            </div>
+          )}
+          <em className={`${s.timePeriod} ${s.textMargin}`}>{timePeriod}</em>
           <h3 className={s.programTitle}>Програма:</h3>
           <ReactMarkdown className={s.programList}>
             {list[0].content}

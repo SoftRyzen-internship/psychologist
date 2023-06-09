@@ -47,6 +47,8 @@
 .imageWrapper {
   composes: textMargin;
 
+  margin-left: auto;
+  margin-right: auto;
   position: unset;
 }
 .image {
@@ -71,8 +73,12 @@
     line-height: calc(32 / 24);
   }
   .timePeriod {
-    width: 328px;
     font-size: 24px;
     line-height: calc(32 / 24);
+  }
+  .timePeriodHero {
+    composes: timePeriod;
+
+    width: 328px;
   }
 }

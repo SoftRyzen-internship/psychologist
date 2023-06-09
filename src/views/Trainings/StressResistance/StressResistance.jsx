@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 import { Container } from '@/components';
 import { TrainingsSection } from '@/components/TrainingsSection/TrainingsSection';
 
-const StressResistanceView = ({ markdown, imgPath }) => {
+const StressResistanceView = ({ markdown, img }) => {
   return (
     <section className="trainingSection">
       <Container>
         <TrainingsSection
           markdown={markdown}
-          img={imgPath}
+          img={img}
           isTitleCentered={true}
         />
       </Container>

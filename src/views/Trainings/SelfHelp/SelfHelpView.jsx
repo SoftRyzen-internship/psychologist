@@ -4,11 +4,11 @@ import s from './SelfHelpView.module.css';
 import { Container } from '@/components';
 import { TrainingsSection } from '@/components/TrainingsSection/TrainingsSection';
 
-const SelfHelpView = ({ markdown, imgPath }) => {
+const SelfHelpView = ({ markdown, img }) => {
   return (
     <section className={`trainingSection ${s.selfHelpSection}`}>
       <Container>
-        <TrainingsSection markdown={markdown} img={imgPath} />
+        <TrainingsSection markdown={markdown} img={img} />
       </Container>
     </section>
   );

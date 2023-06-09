@@ -5,28 +5,25 @@ import { TrainingsSection } from '@/components/TrainingsSection/TrainingsSection
 import s from './PublicSpeakingView.module.css';
 import Image from 'next/image';
 
-const PublicSpeakingView = ({ markdown, imgPath }) => {
+const PublicSpeakingView = ({ markdown, img }) => {
+  const heroImgWidth = parseInt(img.SIZES.WIDTH.TABLET, 10);
+  const heroImgHeight = parseInt(img.SIZES.HEIGHT.TABLET, 10);
+
   return (
-    <div className={s.publicSpeakingWrapper}>
-      <section className={`trainingSection ${s.heroTrainingSection}`}>
-        <Container>
-          <TrainingsSection
-            markdown={markdown}
-            isHeroSection={true}
-            img={imgPath}
-          />{' '}
-          <Image
-            className={s.heroImg}
-            src={imgPath}
-            width={499}
-            height={676}
-            // width={1007}
-            // height={950}
-            alt="Психолог Юлія Сулаєва"
-          />
-        </Container>
-      </section>
-    </div>
+    <section
+      className={`trainingSection dynamicSectionWrapper ${s.heroTrainingSection}`}
+    >
+      <Container>
+        <TrainingsSection markdown={markdown} isHeroSection={true} />{' '}
+        <Image
+          className={s.heroImg}
+          src={img.PATH}
+          width={heroImgWidth}
+          height={heroImgHeight}
+          alt={img.ALTERNATIVETEXT}
+        />
+      </Container>
+    </section>
   );
 };
 
