@@ -5,7 +5,7 @@ import { TrainingsSection } from '@/components/TrainingsSection/TrainingsSection
 import s from './PublicSpeakingView.module.css';
 import Image from 'next/image';
 
-const PublicSpeakingView = ({ markdown, img }) => {
+export const PublicSpeakingView = ({ markdown, img, btnClickHandler }) => {
   const heroImgWidth = parseInt(img.SIZES.WIDTH.TABLET, 10);
   const heroImgHeight = parseInt(img.SIZES.HEIGHT.TABLET, 10);
 
@@ -14,7 +14,11 @@ const PublicSpeakingView = ({ markdown, img }) => {
       className={`trainingSection dynamicSectionWrapper ${s.heroTrainingSection}`}
     >
       <Container>
-        <TrainingsSection markdown={markdown} isHeroSection={true} />{' '}
+        <TrainingsSection
+          markdown={markdown}
+          isHeroSection={true}
+          btnClickHandler={btnClickHandler}
+        />
         <Image
           className={s.heroImg}
           src={img.PATH}
@@ -27,9 +31,8 @@ const PublicSpeakingView = ({ markdown, img }) => {
   );
 };
 
-export default PublicSpeakingView;
-
 PublicSpeakingView.propTypes = {
-  markdown: PropTypes.shape().isRequired,
+  markdown: PropTypes.object.isRequired,
   imgPath: PropTypes.string,
+  btnClickHandler: PropTypes.func.isRequired,
 };

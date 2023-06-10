@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types';
 
-// import s from './StressResistance.module.css';
 import { Container } from '@/components';
 import { TrainingsSection } from '@/components/TrainingsSection/TrainingsSection';
 
-const StressResistanceView = ({ markdown, img }) => {
+export const StressResistanceView = ({ markdown, img, btnClickHandler }) => {
   return (
     <section className="trainingSection">
       <Container>
@@ -12,15 +11,15 @@ const StressResistanceView = ({ markdown, img }) => {
           markdown={markdown}
           img={img}
           isTitleCentered={true}
+          btnClickHandler={btnClickHandler}
         />
       </Container>
     </section>
   );
 };
 
-export default StressResistanceView;
-
 StressResistanceView.propTypes = {
-  markdown: PropTypes.shape().isRequired,
+  markdown: PropTypes.object.isRequired,
   imgPath: PropTypes.string,
+  btnClickHandler: PropTypes.func.isRequired,
 };

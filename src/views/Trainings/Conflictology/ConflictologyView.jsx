@@ -4,7 +4,7 @@ import s from './ConflictologyView.module.css';
 import { Container } from '@/components';
 import { TrainingsSection } from '@/components/TrainingsSection/TrainingsSection';
 
-const ConflictologyView = ({ markdown, img }) => {
+export const ConflictologyView = ({ markdown, img, btnClickHandler }) => {
   return (
     <section className={`trainingSection ${s.conflictologySection}`}>
       <Container>
@@ -12,15 +12,15 @@ const ConflictologyView = ({ markdown, img }) => {
           markdown={markdown}
           img={img}
           isTitleCentered={true}
+          btnClickHandler={btnClickHandler}
         />
       </Container>
     </section>
   );
 };
 
-export default ConflictologyView;
-
 ConflictologyView.propTypes = {
-  markdown: PropTypes.shape().isRequired,
+  markdown: PropTypes.object.isRequired,
   imgPath: PropTypes.string,
+  btnClickHandler: PropTypes.func.isRequired,
 };

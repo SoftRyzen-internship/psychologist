@@ -2,13 +2,15 @@ import Head from 'next/head';
 
 import { getData } from '@/lib/getData';
 import { folderPaths } from '@/utils/folderPaths';
-import PublicSpeakingView from '@/views/Trainings/PublicSpeaking/PublicSpeakingView';
-import ConflictologyView from '@/views/Trainings/Conflictology/ConflictologyView';
-import StressResistanceView from '@/views/Trainings/StressResistance/StressResistance';
-import SelfHelpView from '@/views/Trainings/SelfHelp/SelfHelpView';
-import EducationWithLoveView from '@/views/Trainings/EducationWithLove/EducationWithLoveView';
-import TimeManagementView from '@/views/Trainings/TimeManagement/TimeManagementView';
-import StrongSidesView from '@/views/Trainings/StrongSides/StrongSidesView';
+import {
+  PublicSpeakingView,
+  ConflictologyView,
+  EducationWithLoveView,
+  SelfHelpView,
+  StressResistanceView,
+  StrongSidesView,
+  TimeManagementView,
+} from '@/views';
 import { imgProperties } from '@/utils/imgProperties';
 
 const TrainingsPage = ({

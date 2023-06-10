@@ -1,8 +1,9 @@
+import PropTypes from 'prop-types';
+import Image from 'next/image';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
+
 import s from './TrainingsSection.module.css';
 import { ActionButton } from '@/components';
-
-import Image from 'next/image';
 import { SectionTitle } from '../SectionTitle/SectionTitle';
 
 export const TrainingsSection = ({
@@ -75,4 +76,12 @@ export const TrainingsSection = ({
       )}
     </>
   );
+};
+
+TrainingsSection.propTypes = {
+  markdown: PropTypes.object,
+  img: PropTypes.object,
+  isHeroSection: PropTypes.bool,
+  isTitleCentered: PropTypes.bool,
+  btnClickHandler: PropTypes.func,
 };
