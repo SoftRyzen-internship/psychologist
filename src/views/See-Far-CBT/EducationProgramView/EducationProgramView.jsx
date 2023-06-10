@@ -46,7 +46,7 @@ export const EducationProgramView = ({ program }) => {
         <div className={s.lowerWrap}>
           <div className={s.textWrap}>
             <ReactMarkdown>{program.list2}</ReactMarkdown>
-            <ActionButton />
+            <ActionButton is404={false} />
           </div>
           <div className={s.imgWrap}>
             <MediaQuery maxWidth={1279}>

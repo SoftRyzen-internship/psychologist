@@ -12,7 +12,7 @@ export const EducationMethodView = ({ method }) => {
   return (
     <section className={s.section}>
       <Container>
-        <SectionTitle title={method.heading} h1={true} />
+        <SectionTitle title="Навчання роботі в методі SEE FAR CBT" h1={true} />
         <div className={s.wrap}>
           <div className={s.textWrap}>
             <p className={s.students}>
