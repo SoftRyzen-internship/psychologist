@@ -118,9 +118,9 @@ section {
   margin-bottom: 32px;
 
   font-family: var(--font-alegreya);
-  font-weight: 700;
+  font-weight: 500;
   font-size: 36px;
-  line-height: 1.11;
+  line-height: calc(40 / 36);
 
   color: var(--accent-text-color);
 }
@@ -131,7 +131,7 @@ section {
   font-family: var(--font-alegreya);
   font-weight: 500;
   font-size: 32px;
-  line-height: 1.25;
+  line-height: calc(36 / 32);
 
   color: var(--accent-text-color);
 }
@@ -162,14 +162,14 @@ section {
     margin-bottom: 40px;
 
     font-size: 52px;
-    line-height: 0.92;
+    line-height: 1;
   }
 
   .sectionTitleH2 {
     margin-bottom: 40px;
 
     font-size: 48px;
-    line-height: 1;
+    line-height: calc(62 / 48);
   }
   .trainingSection {
     padding-top: 80px;
@@ -197,13 +197,12 @@ section {
     margin-bottom: 60px;
 
     font-size: 64px;
-    line-height: 0.88;
   }
 
   .sectionTitleH2 {
     margin-bottom: 60px;
 
     font-size: 60px;
-    line-height: 0.8;
+    line-height: 1;
   }
 }
