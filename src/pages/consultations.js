@@ -19,6 +19,16 @@ const ConsultationsPage = props => {
         data={props.blue}
         className={{ section: 'mainPageSection', div: 'containerX' }}
       />
+      {/* <BlueSectionComponent
+        data={props.faq1}
+        reusable
+        className={{ section: 'reusableSection', div: 'containerX' }}
+      /> */}
+      {/* <BlueSectionComponent
+        data={props.faq2}
+        reusable
+        className={{ section: 'reusableSection2', div: 'containerX' }}
+      /> */}
     </>
   );
 };
@@ -26,11 +36,28 @@ const ConsultationsPage = props => {
 export const getStaticProps = async () => {
   const consults = getData(folderPaths.CONSULTATIONS);
 
-  const { individual, online, requirements, faq1, factors, method, blue } =
-    consults;
+  const {
+    individual,
+    online,
+    requirements,
+    faq1,
+    faq2,
+    factors,
+    method,
+    blue,
+  } = consults;
 
   return {
-    props: { individual, online, requirements, faq1, factors, method, blue },
+    props: {
+      individual,
+      online,
+      requirements,
+      faq1,
+      faq2,
+      factors,
+      method,
+      blue,
+    },
   };
 };
 

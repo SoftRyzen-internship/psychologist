@@ -124,3 +124,156 @@
   width: 100%;
   height: 100%;
 } */
+
+/**
+  |============================
+  | Personal consulting re-use
+  |============================
+*/
+
+.reusableSection {
+  background-image: url(/icons/MobileConsult.svg);
+  background-size: cover;
+  background-color: var(--bg2-color);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 768px) {
+  .reusableSection {
+    background-image: url(/icons/TabletConsult.svg);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .reusableSection {
+    background-image: url(/icons/PCConsult.svg);
+    background-position: bottom;
+  }
+}
+
+.reusableSection2 {
+  background-image: url(/icons/MobileTime.svg);
+  background-size: cover;
+  background-color: var(--bg2-color);
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 768px) {
+  .reusableSection2 {
+    background-image: url(/icons/TabletTime.svg);
+  }
+
+  .reusableSection2 > div > div:first-of-type {
+    gap: 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .reusableSection2 {
+    background-image: url(/icons/PCTime.svg);
+    background-position: bottom;
+  }
+
+  .reusableSection2 > div > div:first-of-type {
+    gap: 104px;
+  }
+}
+
+/* .reusableSection p:not(:first-of-type) {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(24/16);
+}
+
+@media screen and (min-width: 768px) {
+  .reusableSection p:not(:first-of-type) {
+    font-size: 18px;
+    line-height: calc(28/18);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .reusableSection p:not(:first-of-type) {
+    font-size: 20px;
+    line-height: calc(28/20);
+  }
+} */
+
+.universalWrapper p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+}
+
+@media screen and (min-width: 768px) {
+  .universalWrapper p {
+    font-size: 18px;
+    line-height: calc(28 / 18);
+
+    width: 378px;
+  }
+
+  .reusableSection2 > div > .universalWrapper > div:nth-of-type(2) p {
+    width: 336px;
+  }
+
+  .universalWrapper > p:first-of-type {
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .universalWrapper p {
+    font-size: 20px;
+    line-height: calc(28 / 20);
+
+    width: 592px;
+  }
+
+  .reusableSection2 > div > .universalWrapper > div:nth-of-type(2) p {
+    width: 448px;
+  }
+}
+
+.reusableSection p > strong {
+  font-weight: 600;
+}
+
+.reusableSection p:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .universalWrapper {
+    display: flex;
+    gap: 48px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .universalWrapper {
+    gap: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .universalWrapper > div:first-of-type {
+    padding-left: 80px;
+    padding-top: 40px;
+  }
+
+  .reusableSection2 > div > .universalWrapper > div:nth-of-type(1) {
+    padding-left: 13px;
+    padding-top: 40px;
+  }
+
+  .reusableSection2 > div > .universalWrapper > div:nth-of-type(2) {
+    padding-right: 28px;
+  }
+}
