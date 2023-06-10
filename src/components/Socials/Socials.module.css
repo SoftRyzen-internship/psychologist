@@ -3,6 +3,7 @@
   gap: 20px;
   list-style-type: none;
   /* color: #2361ab; */
+  padding: 0;
 }
 
 .item {

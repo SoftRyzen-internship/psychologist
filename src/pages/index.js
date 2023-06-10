@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { FirstView } from '@/views';
 import { getNewsList } from '@/utils/request';
 import { ActionButton } from '@/components';
+import { MainFixedSocials } from '@/views';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <main className="main">
         <FirstView />
         <ActionButton />
+        <MainFixedSocials />
       </main>
     </>
   );
