@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Container, Logo, NavBar, MobBurger, MobileMenu } from '@/components';
 import * as st from './Header.module.css';
@@ -6,16 +6,28 @@ import * as st from './Header.module.css';
 export const Header = () => {
   const isDesktop = useMediaQuery({ minWidth: 1280 });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuRendered, setIsMenuRendered] = useState(false);
+  const [isNavBarRendered, setIsNavBarRendered] = useState(false);
+
+  useEffect(() => {
+    if (isDesktop) {
+      setIsNavBarRendered(true);
+      setIsMenuRendered(false);
+    } else {
+      setIsNavBarRendered(false);
+      setIsMenuRendered(true);
+    }
+  }, [isDesktop]);
 
   return (
     <header className={st.header}>
       <Container className={st.headerBox}>
         <Logo />
-        {isDesktop && <NavBar setIsMenuOpen={setIsMenuOpen} />}
-        {!isDesktop && (
+        {isNavBarRendered && <NavBar setIsMenuOpen={setIsMenuOpen} />}
+        {isMenuRendered && (
           <MobBurger setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
         )}
-        {!isDesktop && (
+        {isMenuRendered && (
           <MobileMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
         )}
       </Container>

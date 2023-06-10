@@ -3,10 +3,10 @@ import * as st from './MobileMenu.module.css';
 
 export const MobileMenu = ({ isMenuOpen, setIsMenuOpen }) => {
   const wrapStat = isMenuOpen ? st.wrapperMenuOpen : st.wrapper;
-  const classStat = isMenuOpen ? st.isOpen : st.isClose;
+  // const classStat = isMenuOpen ? st.isOpen : st.isClose;
   return (
     <div className={wrapStat}>
-      <Container className={classStat}>
+      <Container className={st.menu}>
         <NavBar setIsMenuOpen={setIsMenuOpen} />
         <Socials />
       </Container>

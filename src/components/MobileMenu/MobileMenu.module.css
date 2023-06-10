@@ -1,54 +1,33 @@
 .wrapper {
   width: 100dvw;
   position: absolute;
-  top: 71px;
-  height: calc(100vh - 71px);
+  top: 80px;
+  height: calc(100vh - 80px);
 
   left: 0;
-  /* transform: translateX(100%); */
-  opacity: 0;
-  transition: opacity 800ms ease-in-out;
+  transform: translateX(100%);
+  transition: transform 800ms ease-in-out;
   background-color: var(--bg2-color);
   background-image: url('/icons/mobMenuBg_mob.svg');
   background-repeat: no-repeat;
   background-size: cover;
-
-  /* padding-left: 32px;
-  padding-top: 100px; */
 }
 
 .wrapperMenuOpen {
   composes: wrapper;
-  opacity: 1;
+  transform: translateX(0);
 }
 
-.isClose {
-  /* position: absolute; */
-  /* top: 86px; */
-  /* left: 0; */
-  transform: translateX(100%);
-  opacity: 0;
-  transition: transform 800ms ease-in-out, opacity 800ms ease-in-out;
-  /* background-color: var(--bg2-color);
-  background-image: url('../../../public/images/mobileBackground.jpg');
-  background-repeat: no-repeat;
-  background-size: cover; */
-
+.menu {
   padding-left: 32px;
   padding-top: 100px;
-}
-
-.isOpen {
-  composes: isClose;
-  transform: translateX(0);
-  opacity: 1;
 }
 
 @media screen and (min-width: 768px) {
   .wrapper,
   .wrapperMenuOpen {
-    top: 86px;
-    height: calc(100vh - 86px);
+    top: 93px;
+    height: calc(100vh - 93px);
   }
   .wrapper {
     background-image: url('/icons/mobMenuBg_tab.svg');
