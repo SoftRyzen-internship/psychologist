@@ -9,7 +9,7 @@ function NewsView({ allNews }) {
   return (
     <section className={s.newsSection}>
       <Container>
-        <SectionTitle h1 className={s.hidden} title={'Новини'} />
+        <SectionTitle h1 className={s.visuallyHidden} title={'Новини'} />
         <ul className={s.newsList}>
           {allNews.length > 0 &&
             allNews.map(news => (
