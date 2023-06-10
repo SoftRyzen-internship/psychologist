@@ -16,7 +16,7 @@ function NewsView({ allNews }) {
               <li key={news.id} className={s.newsItem}>
                 <SectionTitle h2 title={news.title} />
                 <NewsText newsTextProp={news.text} />
-                <OffsetImageBorder>
+                <OffsetImageBorder className={s.aspectRatio}>
                   <Image
                     src={news.image.url}
                     alt={news.image.alt}

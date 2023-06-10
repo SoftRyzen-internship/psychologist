@@ -1,10 +1,14 @@
+.aspectRatio {
+    aspect-ratio: 308 / 193;
+}
+
 .hidden {
     display: none;
 }
 
 .newsSection {
-    background-position: top right;
     background: var(--bg2-color) url('/icons/news-bg-image-mobile.svg') no-repeat;
+    background-position: top right;
 }
 
 .newsList {
@@ -26,8 +30,8 @@
 
 @media screen and (min-width: 768px) {
   .newsSection {
-      background-position: top right;
       background: var(--bg2-color) url('/icons/news-bg-image-tablet.svg') no-repeat;
+      background-position: top right;
   }
 
   .newsItem {
@@ -41,8 +45,8 @@
 
 @media screen and (min-width: 1280px) {
   .newsSection {
-      background-position: top right;
       background: var(--white-color) url('/icons/news-bg-image-desktop.svg') no-repeat;
+      background-position: top right;
   }
 
   .newsItem {

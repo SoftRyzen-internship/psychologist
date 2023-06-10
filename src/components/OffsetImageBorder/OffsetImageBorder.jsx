@@ -1,12 +1,14 @@
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import s from './OffsetImageBorder.module.css';
 
-function OffsetImageBorder({ children, reverse = false }) {
-  const { width, height } = children.props;
+function OffsetImageBorder({ children, reverse = false, className }) {
   return (
     <div
-      className={reverse ? s.offsetImageRight : s.offsetImageLeft}
-      style={{ aspectRatio: `${width} / ${height}` }}
+      className={classNames(
+        reverse ? s.offsetImageRight : s.offsetImageLeft,
+        className,
+      )}
     >
       {children}
     </div>
