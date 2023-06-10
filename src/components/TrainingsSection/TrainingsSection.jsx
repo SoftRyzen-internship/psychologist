@@ -3,8 +3,7 @@ import Image from 'next/image';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 
 import s from './TrainingsSection.module.css';
-import { ActionButton } from '@/components';
-import { SectionTitle } from '../SectionTitle/SectionTitle';
+import { ActionButton, SectionTitle } from '@/components';
 
 export const TrainingsSection = ({
   markdown,

@@ -2,7 +2,6 @@
   margin-bottom: 24px;
 }
 .goal {
-  margin-top: 32px;
   font-size: 18px;
   line-height: calc(28 / 18);
 }
@@ -67,8 +66,6 @@
     line-height: calc(28 / 20);
   }
   .goal {
-    margin-top: 40px;
-
     font-size: 24px;
     line-height: calc(32 / 24);
   }
