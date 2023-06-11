@@ -1,0 +1,108 @@
+.DialogOverlay {
+  background-image: linear-gradient(
+      rgba(223, 220, 220, 0.5),
+      rgba(223, 220, 220, 0.5)
+    ),
+    url('/images/modal-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+  inset: 0;
+  animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.DialogContent {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 488px;
+  max-height: 680px;
+  animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.DialogContent:focus {
+  outline: none;
+}
+
+.DialogTitle {
+  margin: 0 auto 24px;
+  font-family: var(--font-alegreya);
+  font-weight: 500;
+  font-size: 36px;
+  line-height: calc(40 / 36);
+  color: var(--accent-text-color);
+}
+
+.Button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 0 15px;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 500;
+  height: 35px;
+}
+.Button.violet {
+  background-color: white;
+  color: violet;
+  box-shadow: 0 2px 10px black;
+}
+.Button.violet:hover {
+  background-color: rgb(170, 17, 241);
+}
+.Button.violet:focus {
+  box-shadow: 0 0 0 2px black;
+}
+.Button.green {
+  background-color: green;
+  color: greenyellow;
+}
+.Button.green:hover {
+  background-color: goldenrod;
+}
+.Button.green:focus {
+  box-shadow: 0 0 0 2px gold;
+}
+
+.IconButton {
+  font-family: inherit;
+  border-radius: 100%;
+  height: 25px;
+  width: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: violet;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.IconButton:hover {
+  background-color: rgb(156, 8, 156);
+}
+.IconButton:focus {
+  box-shadow: 0 0 0 2px rgb(221, 164, 221);
+}
+
+@keyframes overlayShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes contentShow {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
