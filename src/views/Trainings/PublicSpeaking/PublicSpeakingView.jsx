@@ -8,7 +8,6 @@ import Image from 'next/image';
 export const PublicSpeakingView = ({ markdown, img, btnClickHandler }) => {
   const heroImgWidth = parseInt(img.SIZES.WIDTH.TABLET, 10);
   const heroImgHeight = parseInt(img.SIZES.HEIGHT.TABLET, 10);
-
   return (
     <section
       className={`trainingSection dynamicSectionWrapper ${s.heroTrainingSection}`}

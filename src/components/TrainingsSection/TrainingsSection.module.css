@@ -48,7 +48,8 @@
 
   margin-left: auto;
   margin-right: auto;
-  position: unset;
+  /* position: unset; */
+  position: relative;
 }
 .image {
   object-fit: contain;

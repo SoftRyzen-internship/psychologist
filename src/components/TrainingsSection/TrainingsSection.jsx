@@ -13,6 +13,14 @@ export const TrainingsSection = ({
   btnClickHandler,
 }) => {
   const { heading, goal, timePeriod, list } = markdown;
+
+  const combineList = () => {
+    let completeList = list[0].content;
+
+    return list
+      .slice(1)
+      .reduce((acc, currentList) => acc + currentList.content, completeList);
+  };
   return (
     <>
       {isHeroSection && (
@@ -68,7 +76,7 @@ export const TrainingsSection = ({
           <em className={`${s.timePeriod} ${s.textMargin}`}>{timePeriod}</em>
           <h3 className={s.programTitle}>Програма:</h3>
           <ReactMarkdown className={s.programList}>
-            {list[0].content}
+            {list.length > 1 ? combineList() : list[0].content}
           </ReactMarkdown>
           <ActionButton clickHandler={btnClickHandler} />
         </>
