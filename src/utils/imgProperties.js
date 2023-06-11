@@ -10,6 +10,7 @@ export const imgProperties = {
     HERO: {
       IMAGE: {
         PATH: '/images/trainingsPage/publicSpeaking.png',
+        PATHDESKTOP: '/images/trainingsPage/publicSpeakingDesktop.png',
         ALTERNATIVETEXT: 'Психолог Юлія Сулаєва',
         SIZES: {
           WIDTH: {

@@ -34,16 +34,21 @@ export const TrainingsSection = ({
             title={heading}
             className="sectionTitleH1"
           />
-          <ReactMarkdown className={`${s.goal} ${s.textMargin}`}>
-            {goal}
-          </ReactMarkdown>
-          <em className={`${s.timePeriodHero} ${s.textMargin}`}>
-            {timePeriod}
-          </em>
-          <h3 className={s.programTitle}>Програма:</h3>
-          <ReactMarkdown className={`${s.programList} ${s.heroProgramList}`}>
-            {list[0].content}
-          </ReactMarkdown>
+          <div className={s.heroContentWrapper}>
+            {' '}
+            <ReactMarkdown
+              className={`${s.goal} ${s.textMargin} ${s.goalHero}`}
+            >
+              {goal}
+            </ReactMarkdown>
+            <em className={`${s.timePeriodHero} ${s.textMargin}`}>
+              {timePeriod}
+            </em>
+            <h3 className={s.programTitle}>Програма:</h3>
+            <ReactMarkdown className={`${s.programList} ${s.heroProgramList}`}>
+              {list[0].content}
+            </ReactMarkdown>
+          </div>
           <ActionButton clickHandler={btnClickHandler} />
         </>
       )}

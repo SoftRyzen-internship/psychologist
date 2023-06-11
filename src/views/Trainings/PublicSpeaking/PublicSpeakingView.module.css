@@ -27,3 +27,19 @@
     margin: 0;
   }
 }
+
+@media screen and (min-width: 1280px) {
+  .heroTrainingSection h2 {
+    width: 940px;
+    white-space: pre-wrap;
+  }
+  .heroImg {
+    right: -34px;
+  }
+  .heroTrainingSection > div:after {
+    width: 908px;
+    height: 842px;
+    right: -322px;
+    background-image: url('/images/trainingsPage/publicSpeakingBackgroundDesktop.svg');
+  }
+}

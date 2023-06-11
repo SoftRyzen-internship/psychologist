@@ -62,6 +62,10 @@
   .heroProgramList {
     width: 369px;
   }
+  .programTitle {
+    font-size: 20px;
+    line-height: calc(28 / 18);
+  }
   .formatText {
     font-size: 20px;
     line-height: calc(28 / 20);
@@ -78,5 +82,27 @@
     composes: timePeriod;
 
     width: 328px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .heroContentWrapper {
+    width: 696px;
+  }
+  .textMargin {
+    margin-bottom: 36px;
+  }
+  .heroProgramList {
+    width: 100%;
+  }
+  .programTitle {
+    font-size: 24px;
+    line-height: calc(32 / 24);
+  }
+  .goalHero {
+    width: 100%;
+  }
+  .timePeriodHero {
+    width: 100%;
   }
 }
