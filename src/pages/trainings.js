@@ -12,6 +12,8 @@ import {
   TimeManagementView,
 } from '@/views';
 import { imgProperties } from '@/utils/imgProperties';
+import { useMediaQuery } from 'react-responsive';
+import { useEffect, useState } from 'react';
 
 const TrainingsPage = ({
   conflictology,
@@ -22,6 +24,11 @@ const TrainingsPage = ({
   strongSides,
   timeManagement,
 }) => {
+  const isDesktopSize = useMediaQuery({ query: '(min-width: 1280px)' });
+  const [isDesktop, setIsDesktop] = useState(false);
+  useEffect(() => {
+    setIsDesktop(isDesktopSize);
+  }, [isDesktopSize]);
   return (
     <>
       <Head>
@@ -33,30 +40,37 @@ const TrainingsPage = ({
         markdown={publicSpeaking}
         img={imgProperties.TRAININGS.HERO.IMAGE}
         bgrImg={imgProperties.TRAININGS.HERO.BACKGROUND}
+        isDesktop={isDesktop}
       />
       <ConflictologyView
         markdown={conflictology}
         img={imgProperties.TRAININGS.CONFLICTOLOGY.IMAGE}
+        isDesktop={isDesktop}
       />
       <StressResistanceView
         markdown={stressResistance}
         img={imgProperties.TRAININGS.STRESSRESISTANCE.IMAGE}
+        isDesktop={isDesktop}
       />
       <SelfHelpView
         markdown={selfHelp}
         img={imgProperties.TRAININGS.SELFHELP.IMAGE}
+        isDesktop={isDesktop}
       />
       <EducationWithLoveView
         markdown={educationWithLove}
         img={imgProperties.TRAININGS.EDUCATIONWITHLOVE.IMAGE}
+        isDesktop={isDesktop}
       />
       <TimeManagementView
         markdown={timeManagement}
         img={imgProperties.TRAININGS.TIMEMANAGEMENT.IMAGE}
+        isDesktop={isDesktop}
       />
       <StrongSidesView
         markdown={strongSides}
         img={imgProperties.TRAININGS.STRONGSIDES.IMAGE}
+        isDesktop={isDesktop}
       />
     </>
   );

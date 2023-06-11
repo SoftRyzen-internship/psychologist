@@ -7,13 +7,24 @@ import { ActionButton, SectionTitle } from '@/components';
 
 export const TrainingsSection = ({
   markdown,
-  img,
+  img = null,
   isHeroSection = false,
   isTitleCentered = false,
   btnClickHandler,
 }) => {
   const { heading, goal, timePeriod, list } = markdown;
-
+  const mobileImgWidth = img?.SIZES.WIDTH.MOBILE
+    ? `${img.SIZES.WIDTH.MOBILE}px`
+    : '100%';
+  const mobileImgHeight = img?.SIZES.HEIGHT.MOBILE
+    ? `${img.SIZES.HEIGHT.MOBILE}px`
+    : '100%';
+  const tabletImgWidth = img?.SIZES.WIDTH.TABLET
+    ? `${img.SIZES.WIDTH.TABLET}px`
+    : '100%';
+  const tabletImgHeight = img?.SIZES.HEIGHT.TABLET
+    ? `${img.SIZES.HEIGHT.TABLET}px`
+    : '100%';
   const combineList = () => {
     let completeList = list[0].content;
 
@@ -58,21 +69,21 @@ export const TrainingsSection = ({
           <ReactMarkdown className={`${s.goal} ${s.textMargin}`}>
             {goal}
           </ReactMarkdown>
-          {img.PATH && (
+          {img.PATH.MOBILE && (
             <div className={`${s.imageWrapper} dynamicImgWrapper`}>
               <style jsx>{`
                 .dynamicImgWrapper {
-                  width: ${img.SIZES.WIDTH.MOBILE || '100%'};
-                  height: ${img.SIZES.HEIGHT.MOBILE || '100%'};
+                  width: ${mobileImgWidth};
+                  height: ${mobileImgHeight};
                   @media screen and (min-width: 768px) {
-                    width: ${img.SIZES.WIDTH.TABLET};
-                    height: ${img.SIZES.HEIGHT.TABLET || '100%'};
+                    width: ${tabletImgWidth};
+                    height: ${tabletImgHeight};
                   }
                 }
               `}</style>
               <Image
                 className={s.image}
-                src={img.PATH}
+                src={img.PATH.MOBILE}
                 fill
                 alt={img.ALTERNATIVETEXT}
               />

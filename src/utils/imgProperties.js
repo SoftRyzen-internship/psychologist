@@ -9,19 +9,21 @@ export const imgProperties = {
   TRAININGS: {
     HERO: {
       IMAGE: {
-        PATH: '/images/trainingsPage/publicSpeaking.png',
-        PATHDESKTOP: '/images/trainingsPage/publicSpeakingDesktop.png',
+        PATH: {
+          MOBILE: '/images/trainingsPage/publicSpeaking.png',
+          DESKTOP: '/images/trainingsPage/publicSpeakingDesktop.png',
+        },
         ALTERNATIVETEXT: 'Психолог Юлія Сулаєва',
         SIZES: {
           WIDTH: {
             MOBILE: '',
-            TABLET: '499px',
-            DESKTOP: '633px',
+            TABLET: 499,
+            DESKTOP: 633,
           },
           HEIGHT: {
             MOBILE: '',
-            TABLET: '676px',
-            DESKTOP: '804px',
+            TABLET: 676,
+            DESKTOP: 804,
           },
         },
       },
@@ -31,12 +33,12 @@ export const imgProperties = {
         SIZES: {
           WIDTH: {
             MOBILE: '',
-            TABLET: '901px',
+            TABLET: 901,
             DESKTOP: '',
           },
           HEIGHT: {
             MOBILE: '',
-            TABLET: '950px',
+            TABLET: 950,
             DESKTOP: '',
           },
         },
@@ -44,18 +46,21 @@ export const imgProperties = {
     },
     CONFLICTOLOGY: {
       IMAGE: {
-        PATH: '/images/trainingsPage/conflictology.svg',
+        PATH: {
+          MOBILE: '/images/trainingsPage/conflictology.svg',
+          DESKTOP: '/images/trainingsPage/conflictologyDesktop.svg',
+        },
         ALTERNATIVETEXT: 'Дві дівчини розмовляють',
         SIZES: {
           WIDTH: {
             MOBILE: '',
-            TABLET: '580px',
-            DESKTOP: '',
+            TABLET: 580,
+            DESKTOP: 592,
           },
           HEIGHT: {
             MOBILE: '',
-            TABLET: '303px',
-            DESKTOP: '',
+            TABLET: 303,
+            DESKTOP: 360,
           },
         },
       },
@@ -63,18 +68,21 @@ export const imgProperties = {
     },
     STRESSRESISTANCE: {
       IMAGE: {
-        PATH: '/images/trainingsPage/stressResistance.svg',
+        PATH: {
+          MOBILE: '/images/trainingsPage/stressResistance.svg',
+          DESKTOP: '/images/trainingsPage/stressResistanceDesktop.svg',
+        },
         ALTERNATIVETEXT: 'Чоловік, який балансує на годиннику',
         SIZES: {
           WIDTH: {
             MOBILE: '',
-            TABLET: '377px',
-            DESKTOP: '',
+            TABLET: 377,
+            DESKTOP: 592,
           },
           HEIGHT: {
             MOBILE: '',
-            TABLET: '356px',
-            DESKTOP: '',
+            TABLET: 356,
+            DESKTOP: 456,
           },
         },
       },
@@ -83,18 +91,21 @@ export const imgProperties = {
     },
     SELFHELP: {
       IMAGE: {
-        PATH: '/images/trainingsPage/selfHelp.svg',
+        PATH: {
+          MOBILE: '/images/trainingsPage/selfHelp.svg',
+          DESKTOP: '/images/trainingsPage/selfHelpDesktop.svg',
+        },
         ALTERNATIVETEXT: 'Дівчина з піднятою рукою до гори',
         SIZES: {
           WIDTH: {
             MOBILE: '',
-            TABLET: '486px',
-            DESKTOP: '',
+            TABLET: 486,
+            DESKTOP: 592,
           },
           HEIGHT: {
             MOBILE: '',
-            TABLET: '374px',
-            DESKTOP: '',
+            TABLET: 374,
+            DESKTOP: 581.49,
           },
         },
       },
@@ -103,18 +114,21 @@ export const imgProperties = {
     },
     EDUCATIONWITHLOVE: {
       IMAGE: {
-        PATH: '/images/trainingsPage/educationWithLove.svg',
+        PATH: {
+          MOBILE: '/images/trainingsPage/educationWithLove.svg',
+          DESKTOP: '/images/trainingsPage/educationWithLoveDesktop.svg',
+        },
         ALTERNATIVETEXT: 'Батько з дитиною',
         SIZES: {
           WIDTH: {
             MOBILE: '',
-            TABLET: '542px',
-            DESKTOP: '',
+            TABLET: 542,
+            DESKTOP: 592,
           },
           HEIGHT: {
             MOBILE: '',
-            TABLET: '369px',
-            DESKTOP: '',
+            TABLET: 369,
+            DESKTOP: 396,
           },
         },
       },
@@ -123,18 +137,21 @@ export const imgProperties = {
     },
     TIMEMANAGEMENT: {
       IMAGE: {
-        PATH: '/images/trainingsPage/timeManagement.svg',
+        PATH: {
+          MOBILE: '/images/trainingsPage/timeManagement.svg',
+          DESKTOP: '/images/trainingsPage/timeManagementDesktop.svg',
+        },
         ALTERNATIVETEXT: 'Хлопець на горі дивиться в далечінь',
         SIZES: {
           WIDTH: {
             MOBILE: '',
-            TABLET: '548px',
-            DESKTOP: '',
+            TABLET: 548,
+            DESKTOP: 592,
           },
           HEIGHT: {
             MOBILE: '',
-            TABLET: '360px',
-            DESKTOP: '',
+            TABLET: 360,
+            DESKTOP: 348,
           },
         },
       },
@@ -143,26 +160,27 @@ export const imgProperties = {
     },
     STRONGSIDES: {
       IMAGE: {
-        PATH: '/images/trainingsPage/strongSides.svg',
+        PATH: {
+          MOBILE: '/images/trainingsPage/strongSides.svg',
+          DESKTOP: '/images/trainingsPage/strongSidesDesktop.svg',
+        },
         ALTERNATIVETEXT: 'Дівчина з ідеями за ноутбуком',
         SIZES: {
           WIDTH: {
             MOBILE: '',
-            TABLET: '432px',
-            DESKTOP: '',
+            TABLET: 432,
+            DESKTOP: 416,
           },
           HEIGHT: {
             MOBILE: '',
-            TABLET: '340px',
-            DESKTOP: '',
+            TABLET: 340,
+            DESKTOP: 271,
           },
         },
       },
       BACKGROUND: '',
     },
   },
-  SEE_FAR_CBT: 'education',
-  NEWS: 'news',
 };
 
 Object.freeze(imgProperties);

@@ -105,4 +105,11 @@
   .timePeriodHero {
     width: 100%;
   }
+  .contentDesktopContainer {
+    display: flex;
+    gap: 32px;
+  }
+  .contentDesktopContainer > div {
+    width: 592px;
+  }
 }

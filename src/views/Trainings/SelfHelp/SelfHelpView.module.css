@@ -12,6 +12,14 @@
 }
 @media screen and (min-width: 1280px) {
   .selfHelpSection {
-    background-size: 460px, 280px;
+    background-image: url('/images/trainingsPage/selfHelpBackgroundDesktop.svg');
+
+    background-size: 460px, 268px;
+  }
+  .selfHelpSection > div > h2 {
+    width: 783px;
+  }
+  .image {
+    margin-top: 60px;
   }
 }
