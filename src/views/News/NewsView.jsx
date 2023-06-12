@@ -35,7 +35,7 @@ function NewsView({ allNews }) {
 }
 
 NewsView.propTypes = {
-  allNews: PropTypes.array.isRequired
-}
+  allNews: PropTypes.array.isRequired,
+};
 
 export default NewsView;

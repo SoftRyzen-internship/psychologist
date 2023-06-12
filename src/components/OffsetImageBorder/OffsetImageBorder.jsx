@@ -18,5 +18,5 @@ export function OffsetImageBorder({ children, reverse = false, className }) {
 OffsetImageBorder.propTypes = {
   reverse: PropTypes.bool,
   children: PropTypes.node.isRequired,
-  className: PropTypes.string.isRequired
+  className: PropTypes.string.isRequired,
 };
