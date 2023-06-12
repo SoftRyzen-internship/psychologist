@@ -3,4 +3,5 @@ export const folderPaths = {
   TRAININGS: 'trainings',
   SEE_FAR_CBT: 'education',
   NEWS: 'news',
+  HOME: 'home',
 };

@@ -1,0 +1,27 @@
+[
+  {
+    "id": 100,
+    "route": "/",
+    "title": "Головна"
+  },
+  {
+    "id": 101,
+    "route": "/consultations",
+    "title": "Індивідуальні консультації"
+  },
+  {
+    "id": 102,
+    "route": "/trainings",
+    "title": "Тренінги"
+  },
+  {
+    "id": 103,
+    "route": "/see-far-cbt",
+    "title": "See Far CBT"
+  },
+  {
+    "id": 104,
+    "route": "/news",
+    "title": "Новини"
+  }
+]
