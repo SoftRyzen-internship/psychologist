@@ -1,0 +1,243 @@
+.cardWrapper {
+  width: 320px;
+  height: auto;
+
+  background: #fdfdfd;
+  border: 1px solid #d0e2ff;
+  border-radius: 0px 16px;
+
+  padding: 24px 20px 24px 20px;
+  /* position: relative; */
+}
+
+@media screen and (min-width: 768px) {
+  .cardWrapper {
+    width: 592px;
+    margin: 0 auto;
+
+    padding: 40px;
+  }
+}
+
+.cardWrapper > p:first-of-type {
+  width: 280px;
+  height: 56px;
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .cardWrapper > p:first-of-type {
+    width: 354px;
+    height: 64px;
+  }
+}
+
+.cardWrapper p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+}
+
+@media screen and (min-width: 768px) {
+  .cardWrapper p {
+    font-size: 18px;
+    line-height: calc(28 / 18);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .cardWrapper p {
+    font-size: 20px;
+    line-height: calc(28 / 20);
+  }
+}
+
+.cardWrapper > p:first-of-type {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: calc(28 / 18);
+
+  color: var(--accent-text-color);
+}
+
+@media screen and (min-width: 768px) {
+  .cardWrapper > p:first-of-type {
+    font-size: 24px;
+    line-height: calc(32 / 24);
+  }
+}
+
+.cardWrapper > p:last-of-type {
+  position: relative;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+
+  width: 157px;
+  color: var(--accent-text-color);
+}
+
+.cardWrapper > p:last-of-type::after {
+  position: absolute;
+  content: '';
+
+  width: 24px;
+  height: 24px;
+  top: 0;
+  margin-left: 8px;
+
+  background-image: url('/icons/chevronRight.svg');
+  background-repeat: no-repeat;
+}
+
+.cardWrapper:last-of-type {
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .cardWrapper:last-of-type {
+    margin-bottom: 32px;
+  }
+}
+
+/**
+  |============================
+  | backgrounds
+  |============================
+*/
+
+.cardWrapper:nth-child(1) {
+  background-position: top;
+  background-image: url('/icons/firstLiMobile.svg');
+  background-repeat: no-repeat;
+
+  /* background-size: 320px 179px; */
+}
+
+.cardWrapper:nth-child(2) {
+  background-position: bottom;
+  background-image: url('/icons/secondLiMobile.svg');
+  background-repeat: no-repeat;
+
+  /* background-size: 320px 164px; */
+}
+
+.cardWrapper:nth-child(3) {
+  background-position: top right;
+  background-image: url('/icons/thirdLiMobile.svg');
+  background-repeat: no-repeat;
+
+  /* background-size: 320px 117px; */
+}
+
+.cardWrapper:nth-child(4) {
+  background-position: bottom;
+  background-image: url('/icons/fourthLiMobile.svg');
+  background-repeat: no-repeat;
+
+  /* background-size: 320px 164px; */
+}
+
+.cardWrapper:nth-child(5) {
+  background-position: top;
+  background-image: url('/icons/fifthLiMobile.svg');
+  background-repeat: no-repeat;
+
+  /* background-size: 320px 158px; */
+}
+
+@media screen and (min-width: 768px) {
+  .cardWrapper:nth-child(1) {
+    background-image: url('/icons/firstLiTablet.svg');
+  }
+
+  .cardWrapper:nth-child(2) {
+    background-image: url('/icons/secondLiTablet.svg');
+  }
+
+  .cardWrapper:nth-child(3) {
+    background-image: url('/icons/thirdLiTablet.svg');
+  }
+
+  .cardWrapper:nth-child(4) {
+    background-image: url('/icons/fourthLiTablet.svg');
+  }
+
+  .cardWrapper:nth-child(5) {
+    background-position: top left;
+    background-image: url('/icons/fifthLiTablet.svg');
+  }
+}
+
+/**
+  |============================
+  | 
+  |============================
+*/
+
+.cardBox {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  list-style-type: none;
+}
+
+@media screen and (min-width: 768px) {
+  .cardBox {
+    gap: 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .cardBox {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.contentWrapper {
+  margin-bottom: 16px;
+
+  width: 284px;
+  height: auto;
+
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+
+  /* overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; */
+}
+
+@media screen and (min-width: 768px) {
+  .contentWrapper {
+    -webkit-line-clamp: 7;
+    width: 512px;
+  }
+}
+
+.image {
+  display: block;
+  height: auto;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .image {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .image {
+    width: 592px;
+    height: 396px;
+    margin: 0 auto;
+  }
+}
