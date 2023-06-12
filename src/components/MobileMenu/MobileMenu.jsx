@@ -8,7 +8,9 @@ export const MobileMenu = ({ isMenuOpen, setIsMenuOpen }) => {
     <div className={wrapStat}>
       <Container className={st.menu}>
         <NavBar setIsMenuOpen={setIsMenuOpen} />
-        <Socials />
+        <div className={st.social}>
+          <Socials />
+        </div>
       </Container>
     </div>
   );

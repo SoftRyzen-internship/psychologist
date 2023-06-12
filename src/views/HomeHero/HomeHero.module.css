@@ -1,0 +1,22 @@
+.section {
+  background: url('/icons/homeHeroBg_desk.svg') no-repeat;
+  background-size: contain;
+  width: 100vw;
+}
+
+.wrapper {
+  display: flex;
+  /* background: url('/icons/homeHeroBg_desk.svg') no-repeat; */
+}
+
+.image {
+  width: 458px;
+  height: 734px;
+}
+
+.descr {
+  width: 70%;
+  padding-top: 150px;
+  padding-left: 62px;
+  padding-right: 72px;
+}

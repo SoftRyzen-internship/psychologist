@@ -1,7 +1,12 @@
 .header {
-  position: relative;
-  background: var(--white-color);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 16px;
+  padding-bottom: 14px;
   border-bottom: 2px solid #d4dae7;
+  background: var(--white-color);
 }
 
 .headerBox {
@@ -9,7 +14,11 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  /* position: relative; */
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding-top: 15px;
+    padding-bottom: 13px;
+  }
 }

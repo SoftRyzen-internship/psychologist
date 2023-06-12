@@ -1,6 +1,8 @@
 .list {
   display: flex;
-  gap: 40px;
+  flex-direction: column;
+  gap: 36px;
+  padding: 62px 37px 108px 37px;
   font-family: var(--font-open-sans);
   font-size: 18px;
   font-weight: 600;
@@ -29,10 +31,24 @@
   background-color: var(--accent-color);
 }
 
-@media screen and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .list {
-    flex-direction: column;
+    /* padding: 100px auto 92px 0; */
+    padding-top: 100px;
+    padding-bottom: 92px;
+    padding-left: 0;
+
     font-size: 24px;
     line-height: 1.33;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .list {
+    flex-direction: row;
+    gap: 40px;
+    padding: 18px;
+    font-size: 18px;
+    line-height: 1.56;
   }
 }

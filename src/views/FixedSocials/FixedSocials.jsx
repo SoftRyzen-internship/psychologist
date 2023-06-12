@@ -6,7 +6,10 @@ import * as st from './FixedSocials.module.css';
 export const MainFixedSocials = () => {
   const isDesktop = useMediaQuery({ minWidth: 1280 });
   const [showElem, setShowElem] = useState(false);
-  useEffect(() => setShowElem(true), [isDesktop]);
+  useEffect(() => {
+    if (isDesktop) setShowElem(true);
+    else setShowElem(false);
+  }, [isDesktop]);
   return (
     <>
       {showElem && (
