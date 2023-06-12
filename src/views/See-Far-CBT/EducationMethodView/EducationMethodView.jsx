@@ -15,11 +15,11 @@ export const EducationMethodView = ({ method }) => {
         <SectionTitle title="Навчання роботі в методі SEE FAR CBT" h1={true} />
         <div className={s.wrap}>
           <div className={s.textWrap}>
-            <p className={s.students}>
-              для практикуючих психологів <br />
-              та психотерапевтів, які стикаються
-              <br />у роботі з ПТСР та тривожними розладами
-            </p>
+            <ReactMarkdown>{method.fff}</ReactMarkdown>
+
+            <div className={s.students}>
+              <ReactMarkdown>{method.students}</ReactMarkdown>
+            </div>
             <ReactMarkdown>{method.intro}</ReactMarkdown>
           </div>
 
