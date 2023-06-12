@@ -24,6 +24,7 @@ function NewsView({ allNews }) {
                     width={308}
                     height={193}
                     className={s.imageStyle}
+                    unoptimized={true}
                   />
                 </OffsetImageBorder>
               </li>
