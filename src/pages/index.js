@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { getData } from '@/lib/getData';
 import { folderPaths } from '@/utils/folderPaths';
 import { HomeHero } from '@/views';
-import { getNewsList } from '@/utils/request';
+import { getNewsList } from '@/lib/request';
 // import { ActionButton } from '@/components';
 import { MainFixedSocials } from '@/components';
 

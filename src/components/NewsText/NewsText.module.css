@@ -1,0 +1,43 @@
+.newsText {
+  display: block;
+  margin-top: 32px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+
+  color: var(--main-text-color);
+}
+
+.newsText > p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.newsText > p:last-child {
+  margin-bottom: 24px;
+}
+
+.newsText > p > a {
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+
+@media screen and (min-width: 768px) {
+  .newsText {
+    margin-top: 40px;
+  }
+  .newsText > p:last-child {
+    margin-bottom: 36px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .newsText {
+    margin-top: 60px;
+    max-width: 903px;
+  }
+  .newsText > p:last-child {
+    margin-bottom: 56px;
+  }
+}
