@@ -1,8 +1,9 @@
 import Image from 'next/image';
-import { Container } from '@/components';
+import PropTypes from 'prop-types';
+import { Container, OffsetImageBorder } from '@/components';
 import { SectionTitle } from '@/components/SectionTitle/SectionTitle';
 import NewsText from '@/components/NewsText/NewsText';
-import OffsetImageBorder from '@/components/OffsetImageBorder/OffsetImageBorder';
+
 import s from './NewsView.module.css';
 
 function NewsView({ allNews }) {
@@ -31,6 +32,10 @@ function NewsView({ allNews }) {
       </Container>
     </section>
   );
+}
+
+NewsView.propTypes = {
+  allNews: PropTypes.array.isRequired
 }
 
 export default NewsView;

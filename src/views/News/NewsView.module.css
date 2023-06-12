@@ -1,5 +1,12 @@
 .aspectRatio {
     aspect-ratio: 308 / 193;
+    margin-bottom: 6px;
+}
+
+@media screen and (min-width: 768px) {
+  .aspectRatio {
+    margin-bottom: 8px;
+  }
 }
 
 .visuallyHidden {

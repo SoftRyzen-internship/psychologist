@@ -10,7 +10,7 @@ const NewsText = ({ newsTextProp }) => {
 };
 
 NewsText.propTypes = {
-  newsTextProp: PropTypes.string,
+  newsTextProp: PropTypes.string.isRequired,
 };
 
 export default NewsText;
