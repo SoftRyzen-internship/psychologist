@@ -34,6 +34,7 @@ body {
 
 body {
   margin: 0;
+  padding-top: 72px;
 }
 
 .layout {
@@ -121,6 +122,10 @@ section {
 }
 
 @media screen and (min-width: 768px) {
+  body {
+    padding-top: 84px;
+  }
+
   section {
     padding-top: 80px;
     padding-bottom: 80px;
