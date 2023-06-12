@@ -10,6 +10,14 @@ const nextConfig = {
     });
     return config;
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'www.datocms-assets.com',
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;

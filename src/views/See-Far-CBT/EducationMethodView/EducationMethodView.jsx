@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
-import { Container, SectionTitle } from '@/components';
+import { Container, OffsetImageBorder, SectionTitle } from '@/components';
 import s from './EducationMethodView.module.css';
 
 const MediaQuery = dynamic(() => import('react-responsive'), {
@@ -25,13 +25,15 @@ export const EducationMethodView = ({ method }) => {
 
           <div className={s.imgWrap}>
             <MediaQuery maxWidth={1279}>
-              <Image
-                alt="teacher on lection photo"
-                src="/images/education-teacher-small.jpg"
-                className={s.image}
-                fill
-                priority
-              />
+              <OffsetImageBorder>
+                <Image
+                  alt="teacher on lection photo"
+                  src="/images/education-teacher-small.jpg"
+                  className={s.image}
+                  fill
+                  priority
+                />
+              </OffsetImageBorder>
             </MediaQuery>
 
             <MediaQuery minWidth={1280}>
