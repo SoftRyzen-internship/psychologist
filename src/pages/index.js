@@ -4,7 +4,7 @@ import { folderPaths } from '@/utils/folderPaths';
 import { HomeHero } from '@/views';
 import { getNewsList } from '@/utils/request';
 // import { ActionButton } from '@/components';
-import { MainFixedSocials } from '@/views';
+import { MainFixedSocials } from '@/components';
 
 export default function Home({ hero }) {
   return (
@@ -15,7 +15,7 @@ export default function Home({ hero }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <main className="main" style={{ paddingTop: '80px' }}>
+      <main className="main">
         <HomeHero hero={hero} />
         {/* <FirstView />
         <ActionButton /> */}

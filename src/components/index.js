@@ -7,3 +7,4 @@ export * from './MobBurger/MobBurger';
 export * from './NavBar/NavBar';
 export * from './MobileMenu/MobileMenu';
 export * from './Socials/Socials';
+export * from './FixedSocials/FixedSocials';
