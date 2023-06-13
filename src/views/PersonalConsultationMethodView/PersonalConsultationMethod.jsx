@@ -1,8 +1,9 @@
 import Image from 'next/image';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 import { Container, SectionTitle } from '@/components';
 import s from './PersonalConsultationMethodView.module.css';
-import classNames from 'classnames';
 
 export const PersonalConsultationMethodView = ({ data }) => {
   return (
@@ -16,7 +17,7 @@ export const PersonalConsultationMethodView = ({ data }) => {
           <Image
             className={classNames(s.image1, s.image)}
             src="/icons/Method1.svg"
-            alt="method1 img"
+            alt="Робочий метод 1 опис"
             width={320}
             height={284}
           />
@@ -28,7 +29,7 @@ export const PersonalConsultationMethodView = ({ data }) => {
           <Image
             className={classNames(s.image2, s.image)}
             src="/icons/Method2.svg"
-            alt="method2 img"
+            alt="Робочий метод 2 опис"
             width={320}
             height={249}
           />
@@ -36,4 +37,15 @@ export const PersonalConsultationMethodView = ({ data }) => {
       </Container>
     </section>
   );
+};
+
+PersonalConsultationMethodView.propTypes = {
+  data: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    description: PropTypes.arrayOf(
+      PropTypes.shape({
+        content: PropTypes.string.isRequired,
+      }),
+    ).isRequired,
+  }).isRequired,
 };
