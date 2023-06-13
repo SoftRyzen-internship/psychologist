@@ -3,12 +3,14 @@ import Link from 'next/link';
 
 import { routes } from 'routes';
 import s from './ActionButton.module.css';
+// import { useState } from 'react';
 
 export const ActionButton = ({
   clickHandler,
   inModalForm = false,
   is404 = true,
 }) => {
+  // const [open, setOpen] = useState(false);
   return (
     <>
       {is404 && (
