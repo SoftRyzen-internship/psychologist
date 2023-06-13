@@ -9,7 +9,7 @@ export const MobileMenu = ({ isMenuOpen, setIsMenuOpen }) => {
       <Container className={st.menu}>
         <NavBar setIsMenuOpen={setIsMenuOpen} />
         <div className={st.social}>
-          <Socials />
+          <Socials component="mobile" />
         </div>
       </Container>
     </div>
