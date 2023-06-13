@@ -8,8 +8,13 @@ import s from './Slider.module.css';
 
 import { Pagination, Mousewheel, Keyboard } from 'swiper';
 import { NewsCard, SlideButton } from '@/components';
+import { useMediaQuery } from '@/utils/hooks/useMediaQuery';
+
 
 export const Slider = ({ allNews }) => {
+  const isBreakPoint = useMediaQuery(768);
+  console.log(isBreakPoint);
+  
   const pagination = {
     clickable: true,
     dynamicBullets: true
@@ -19,12 +24,20 @@ export const Slider = ({ allNews }) => {
       <Swiper
         // rewind={true}
         loop={true}
-        cssMode={true}
+        // cssMode={true}
         pagination={pagination}
-        mousewheel={true}
+        // mousewheel={true}
         keyboard={true}
         modules={[Pagination, Mousewheel, Keyboard]}
         spaceBetween={50}
+        // breakpoints={{
+        //   768: {
+        //     pagination: false
+        //   },
+          
+        //   1280: {
+        //     pagination: false
+        // } }}
       >
         {allNews.map(newsContent => (
           <SwiperSlide

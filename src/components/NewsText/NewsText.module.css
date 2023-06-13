@@ -10,7 +10,32 @@
   color: var(--main-text-color);
 }
 
+.newsTextSection {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 143px;
+
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6; /* start showing ellipsis when 3rd line is reached */
+  white-space: pre-wrap; /* let the text wrap preserving spaces */
+
+  color: var(--main-text-color);
+}
+
 .newsText > p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.newsTextSection > p:not(:last-child) {
   margin-bottom: 20px;
 }
 
@@ -18,7 +43,16 @@
   margin-bottom: 24px;
 }
 
+.newsTextSection > p:last-child {
+  margin-bottom: 20px;
+}
+
 .newsText > p > a {
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+
+.newsTextSection > p > a {
   text-decoration: underline;
   color: var(--accent-color);
 }
@@ -34,6 +68,13 @@
   .newsText > p:last-child {
     margin-bottom: 36px;
   }
+  .newsTextSection {
+    margin-top: 24px;
+  }
+  .newsTextSection > p {
+    font-size: 18px;
+    line-height: 1.56;
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -47,5 +88,13 @@
   }
   .newsText > p:last-child {
     margin-bottom: 56px;
+  }
+
+  .newsTextSection {
+    max-width: 592px;
+  }
+  .newsTextSection > p {
+    font-size: 20px;
+    line-height: 1.4;
   }
 }

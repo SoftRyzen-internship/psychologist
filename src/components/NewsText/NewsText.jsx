@@ -1,9 +1,9 @@
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import PropTypes from 'prop-types';
 import s from './NewsText.module.css';
-const NewsText = ({ newsTextProp }) => {
+const NewsText = ({ newsTextProp, section = false }) => {
   return (
-    <span className={s.newsText}>
+    <span className={section ? s.newsTextSection : s.newsText}>
       <ReactMarkdown>{newsTextProp}</ReactMarkdown>
     </span>
   );
