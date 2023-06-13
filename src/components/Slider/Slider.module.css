@@ -1,0 +1,6 @@
+.swiperSlideButtons {
+    display: flex;
+    justify-content: space-between;
+    width: 164px;
+    margin: 0 auto;
+}

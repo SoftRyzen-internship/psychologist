@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { getNewsList } from '@/lib/request';
-import NewsView from '@/views/News/NewsView';
+import { NewsView } from '@/views';
 
 const NewsPage = ({ allNews }) => {
   return (

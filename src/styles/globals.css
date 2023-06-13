@@ -12,6 +12,15 @@
   --btn-hover-color: #2f8bf6;
   --btn-disabled-color: #a3a9b2;
   --fast-btn-animation: background-color 300ms ease;
+
+  --swiper-pagination-color: #a3a9b2;
+  --swiper-pagination-bullet-width: 8px;
+  --swiper-pagination-bullet-height: 8px;
+  --swiper-pagination-bullet-inactive-color: #D9D9D9;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 6px;
+  --swiper-pagination-top: auto;
+  --swiper-pagination-bottom: 13px;
 }
 
 * {

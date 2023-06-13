@@ -27,6 +27,10 @@
   .newsText {
     margin-top: 40px;
   }
+  .newsText > p {
+    font-size: 18px;
+    line-height: 1.56;
+  }
   .newsText > p:last-child {
     margin-bottom: 36px;
   }
@@ -36,6 +40,10 @@
   .newsText {
     margin-top: 60px;
     max-width: 903px;
+  }
+  .newsText > p {
+    font-size: 20px;
+    line-height: 1.4;
   }
   .newsText > p:last-child {
     margin-bottom: 56px;

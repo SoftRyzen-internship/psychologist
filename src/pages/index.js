@@ -1,12 +1,12 @@
 import Head from 'next/head';
 import { getData } from '@/lib/getData';
 import { folderPaths } from '@/utils/folderPaths';
-import { HomeHero } from '@/views';
+import { HomeHero, HomeNews } from '@/views';
 import { getNewsList } from '@/lib/request';
 // import { ActionButton } from '@/components';
 import { MainFixedSocials } from '@/components';
 
-export default function Home({ hero }) {
+export default function Home({ hero, allNews }) {
   return (
     <>
       <Head>
@@ -19,6 +19,7 @@ export default function Home({ hero }) {
         <HomeHero hero={hero} />
         {/* <FirstView />
         <ActionButton /> */}
+        <HomeNews allNews={allNews} />
         <MainFixedSocials />
       </main>
     </>

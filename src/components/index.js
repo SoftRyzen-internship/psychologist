@@ -8,4 +8,6 @@ export * from './NavBar/NavBar';
 export * from './MobileMenu/MobileMenu';
 export * from './Socials/Socials';
 export * from './FixedSocials/FixedSocials';
-export * from './OffsetImageBorder/OffsetImageBorder'
+export * from './OffsetImageBorder/OffsetImageBorder';
+export * from './SlideButton/SlideButton';
+export * from './NewsCard/NewsCard';

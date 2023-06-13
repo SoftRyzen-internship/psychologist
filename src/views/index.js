@@ -3,3 +3,5 @@ export * from './EducationMethodView/EducationMethodView';
 export * from './EducationProgramView/EducationProgramView';
 export * from '../components/FixedSocials/FixedSocials';
 export * from './HomeHero/HomeHero';
+export * from './HomeNews/HomeNews';
+export * from './News/NewsView';

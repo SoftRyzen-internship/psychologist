@@ -6,7 +6,7 @@ import NewsText from '@/components/NewsText/NewsText';
 
 import s from './NewsView.module.css';
 
-function NewsView({ allNews }) {
+export function NewsView({ allNews }) {
   return (
     <section className={s.newsSection}>
       <Container>
@@ -21,10 +21,9 @@ function NewsView({ allNews }) {
                   <Image
                     src={news.image.url}
                     alt={news.image.alt}
-                    width={308}
-                    height={193}
+                    width={1200}
+                    height={748}
                     className={s.imageStyle}
-                    unoptimized={true}
                   />
                 </OffsetImageBorder>
               </li>
@@ -38,5 +37,3 @@ function NewsView({ allNews }) {
 NewsView.propTypes = {
   allNews: PropTypes.array.isRequired
 }
-
-export default NewsView;
