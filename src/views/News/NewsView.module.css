@@ -16,7 +16,7 @@
   margin: -1px;
   border: 0;
   padding: 0;
-  
+
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
@@ -24,8 +24,8 @@
 }
 
 .newsSection {
-    background: var(--bg2-color) url('/icons/news-bg-image-mobile.svg') no-repeat;
-    background-position: top right;
+  background: var(--bg2-color) url('/icons/news-bg-image-mobile.svg') no-repeat;
+  background-position: top right;
 }
 
 .newsList {
@@ -47,8 +47,9 @@
 
 @media screen and (min-width: 768px) {
   .newsSection {
-      background: var(--bg2-color) url('/icons/news-bg-image-tablet.svg') no-repeat;
-      background-position: top right;
+    background: var(--bg2-color) url('/icons/news-bg-image-tablet.svg')
+      no-repeat;
+    background-position: top right;
   }
 
   .newsItem {
@@ -62,8 +63,9 @@
 
 @media screen and (min-width: 1280px) {
   .newsSection {
-      background: var(--white-color) url('/icons/news-bg-image-desktop.svg') no-repeat;
-      background-position: top right;
+    background: var(--white-color) url('/icons/news-bg-image-desktop.svg')
+      no-repeat;
+    background-position: top right;
   }
 
   .newsItem {

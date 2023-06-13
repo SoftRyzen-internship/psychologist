@@ -10,4 +10,5 @@ export * from './Socials/Socials';
 export * from './FixedSocials/FixedSocials';
 export * from './OffsetImageBorder/OffsetImageBorder';
 export * from './SlideButton/SlideButton';
-export * from './NewsCard/NewsCard';
+export * from './NewsCard/NewsCard';;
+export * from './ReusableSection/ReusableSection';
