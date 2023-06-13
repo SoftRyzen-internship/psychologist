@@ -2,6 +2,9 @@ import Head from 'next/head';
 import { getData } from '@/lib/getData';
 import { EducationMethodView, EducationProgramView } from '@/views';
 import { folderPaths } from '@/utils/folderPaths';
+// import * as Dialog from '@radix-ui/react-dialog';
+// import { useState } from 'react';
+// import { ContactForm, Modal } from '@/components';
 
 const EducationPage = ({ method, program }) => {
   return (
@@ -22,12 +25,13 @@ const EducationPage = ({ method, program }) => {
 export const getStaticProps = async () => {
   const { SEE_FAR_CBT } = folderPaths;
   const education = getData(SEE_FAR_CBT);
-  const { method, program } = education;
+
   if (!education) {
     return {
       notFound: true,
     };
   }
+  const { method, program } = education;
 
   return {
     props: { method, program },

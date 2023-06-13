@@ -1,15 +1,12 @@
 import Head from 'next/head';
-import { FirstView } from '@/views';
-import { getNewsList } from '@/utils/request';
-import { ActionButton, ContactForm } from '@/components';
-import * as Dialog from '@radix-ui/react-dialog';
-// import s from '../components/Modal/Modal.module.css';
-// import { ContactForm } from '@/components';
-import { useState } from 'react';
-import { Modal } from '@/components/Modal/Modal';
+import { getData } from '@/lib/getData';
+import { folderPaths } from '@/utils/folderPaths';
+import { HomeHero } from '@/views';
+import { getNewsList } from '@/lib/request';
+// import { ActionButton } from '@/components';
+import { MainFixedSocials } from '@/components';
 
-export default function Home() {
-  const [open, setOpen] = useState(false);
+export default function Home({ hero }) {
   return (
     <>
       <Head>
@@ -19,19 +16,10 @@ export default function Home() {
       </Head>
 
       <main className="main">
-        <FirstView />
-
-        <Dialog.Root open={open} onOpenChange={setOpen}>
-          <Dialog.Trigger asChild>
-            <ActionButton is404={false} clickHandler={setOpen} />
-          </Dialog.Trigger>
-
-          <Dialog.Portal>
-            <Modal>
-              <ContactForm />
-            </Modal>
-          </Dialog.Portal>
-        </Dialog.Root>
+        <HomeHero hero={hero} />
+        {/* <FirstView />
+        <ActionButton /> */}
+        <MainFixedSocials />
       </main>
     </>
   );
@@ -39,7 +27,15 @@ export default function Home() {
 
 export async function getStaticProps() {
   const { allNews } = await getNewsList();
+  const { HOME } = folderPaths;
+  const homeData = getData(HOME);
+  const { hero } = homeData;
   if (!allNews) {
+    return {
+      notFound: true,
+    };
+  }
+  if (!homeData) {
     return {
       notFound: true,
     };
@@ -48,6 +44,7 @@ export async function getStaticProps() {
   return {
     props: {
       allNews,
+      hero,
     },
   };
 }

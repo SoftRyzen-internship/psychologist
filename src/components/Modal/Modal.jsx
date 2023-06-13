@@ -6,19 +6,22 @@ import CloseSVG from 'public/icons/close.svg';
 export const Modal = ({ children }) => {
   return (
     <>
-      <Dialog.Overlay className={s.DialogOverlay} />
+      <Dialog.Portal>
+        <Dialog.Overlay className={s.DialogOverlay} />
 
-      <Dialog.Content className={s.DialogContent}>
-        {/* <ContactForm /> */}
+        <Dialog.Content className={s.DialogContent}>
+          {children}
 
-        {children}
-
-        <Dialog.Close className={s.closeButton} aria-label="Close">
-          {/* <button className={s.closeButton} aria-label="Close"> */}
-          <CloseSVG className={s.iconClose} />
-          {/* </button> */}
-        </Dialog.Close>
-      </Dialog.Content>
+          <Dialog.Close className={s.closeButton} aria-label="Close">
+            {/* <button className={s.closeButton} aria-label="Close"> */}
+            <CloseSVG className={s.iconClose} />
+            <svg className={s.iconClose} width="16" height="16">
+              <use href="/icons/close.svg" />{' '}
+            </svg>
+            {/* </button> */}
+          </Dialog.Close>
+        </Dialog.Content>
+      </Dialog.Portal>
     </>
   );
 };
