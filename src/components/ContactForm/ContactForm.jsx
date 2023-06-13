@@ -1,9 +1,9 @@
 // import { memo } from 'react';
 import { Formik, Field, Form } from 'formik';
 import { ActionButton } from '..';
-import { contactValidationShema } from './ContactValidationShema';
 import AgreeSVG from 'public/icons/tick.svg';
 import s from './ContactForm.module.css';
+import { contactValidationShema } from './contactValidationShema';
 
 export const ContactForm = () => {
   return (
