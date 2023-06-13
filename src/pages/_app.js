@@ -2,6 +2,7 @@ import { Open_Sans, Alegreya } from 'next/font/google';
 import classNames from 'classnames';
 import { Layout } from '@/layout';
 import '@/styles/globals.css';
+import { useRouter } from 'next/router';
 
 const open_sans = Open_Sans({
   subsets: ['cyrillic'],
@@ -18,6 +19,7 @@ const alegreya = Alegreya({
 });
 
 export default function App({ Component, pageProps }) {
+  const router = useRouter();
   return (
     <>
       <style jsx global>
@@ -28,9 +30,12 @@ export default function App({ Component, pageProps }) {
           }
         `}
       </style>
-      <Layout data={pageProps} className={classNames('layout')}>
-        <Component {...pageProps} />
-      </Layout>
+      {router.pathname === '/404' && <Component {...pageProps} />}
+      {router.pathname !== '/404' && (
+        <Layout data={pageProps} className={classNames('layout')}>
+          <Component {...pageProps} />
+        </Layout>
+      )}
     </>
   );
 }

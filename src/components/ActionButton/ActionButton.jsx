@@ -7,7 +7,7 @@ import s from './ActionButton.module.css';
 export const ActionButton = ({
   clickHandler,
   inModalForm = false,
-  is404 = true,
+  is404 = false,
 }) => {
   return (
     <>
