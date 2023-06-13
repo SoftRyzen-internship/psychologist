@@ -1,4 +1,4 @@
-.bluePlashka {
+.blueText {
   display: block;
   width: max-content;
   position: relative;
@@ -10,7 +10,7 @@
   color: #2361a8;
 }
 
-.bluePlashka:after {
+.blueText:after {
   width: 280px;
   height: 1%;
   position: absolute;
@@ -21,7 +21,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .bluePlashka {
+  .blueText {
     margin-bottom: 50px;
     font-size: 20px;
     line-height: 1.4;

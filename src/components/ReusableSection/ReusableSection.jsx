@@ -1,4 +1,5 @@
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
+import PropTypes from 'prop-types';
 import { ActionButton, Container, SectionTitle } from '..';
 import s from './ReusableSection.module.css';
 import classNames from 'classnames';
@@ -24,7 +25,7 @@ export const ReusableSection = ({
                 </ReactMarkdown>
 
                 {data?.subtitle && (
-                  <span className={s.bluePlashka}>
+                  <span className={s.blueText}>
                     <ReactMarkdown>{data?.subtitle}</ReactMarkdown>
                   </span>
                 )}
@@ -32,16 +33,20 @@ export const ReusableSection = ({
                 <ActionButton type="button" />
               </div>
 
+              {/* put an image with or without wrapper inside the component  */}
               {children}
-              {/* 
-          {!boxForImage
-          <div className={imgWrapperClassName}>
-            <Image src={src} width={600} height={300} alt={alt} />
-          </div>} */}
             </div>
           </Container>
         </section>
       )}
     </>
   );
+};
+
+ReusableSection.propTypes = {
+  data: PropTypes.object.isRequired,
+  sectionClassName: PropTypes.string,
+  flexBoxClassName: PropTypes.string,
+  mdClassName: PropTypes.string,
+  children: PropTypes.node.isRequired,
 };

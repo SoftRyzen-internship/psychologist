@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-
 import { routes } from 'routes';
 import s from './ActionButton.module.css';
 
