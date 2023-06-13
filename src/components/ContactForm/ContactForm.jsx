@@ -116,8 +116,8 @@ export const ContactForm = () => {
                       ? 'var(--accent-text-color)'
                       : 'var(--white-color)'
                   }
-                  width="16px"
-                  height="16px"
+                  width="16"
+                  height="16"
                 />
               </span>
             </label>

@@ -12,7 +12,7 @@ export const Modal = ({ children }) => {
         <Dialog.Content className={s.DialogContent}>
           {children}
 
-          <Dialog.Close className={s.closeButton} aria-label="Close">
+          <Dialog.Close className={s.buttonClose} aria-label="Close">
             {/* <button className={s.closeButton} aria-label="Close"> */}
             <CloseSVG className={s.iconClose} />
             <svg className={s.iconClose} width="16" height="16">

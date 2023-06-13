@@ -11,3 +11,4 @@ export * from './FixedSocials/FixedSocials';
 export * from './OffsetImageBorder/OffsetImageBorder';
 export * from './ContactForm/ContactForm';
 export * from './Modal/Modal';
+export * from './ModalButton/ModalButton';

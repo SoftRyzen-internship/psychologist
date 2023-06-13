@@ -1,6 +1,7 @@
 .section :global .sectionTitleH2 {
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 32px;
 }
 .upperWrap {
   display: flex;
@@ -49,7 +50,6 @@
 }
 
 .textWrap ol {
-  /* margin-left: 47px; */
   padding: 0;
   list-style: none;
   counter-reset: my-awesome-counter;
@@ -99,6 +99,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  .section :global .sectionTitleH2 {
+    margin-bottom: 40px;
+  }
+
   .timing {
     font-size: 24px;
     line-height: calc(32 / 24);
@@ -120,10 +124,6 @@
     flex-direction: column;
   }
 
-  .textWrap ol {
-    margin-left: 41px;
-  }
-
   .textWrap li::marker {
     font-size: large;
   }
@@ -136,6 +136,7 @@
 @media screen and (min-width: 1280px) {
   .section :global .sectionTitleH2 {
     width: 808px;
+    margin-bottom: 60px;
   }
 
   .upperWrap {
@@ -159,10 +160,6 @@
     margin-bottom: 0;
 
     width: 592px;
-  }
-
-  .textWrap ol {
-    margin-left: 51px;
   }
 
   .lowerWrap {

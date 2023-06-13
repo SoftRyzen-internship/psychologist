@@ -3,6 +3,7 @@ import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import {
   Container,
+  OffsetImageBorder,
   //  OffsetImageBorder,
   SectionTitle,
 } from '@/components';
@@ -27,57 +28,67 @@ export const EducationMethodView = ({ method }) => {
             <ReactMarkdown>{method.intro}</ReactMarkdown>
           </div>
 
-          <div className={s.imgWrap}>
-            <MediaQuery maxWidth={1279}>
-              {/* <OffsetImageBorder> */}
+          <MediaQuery maxWidth={1279}>
+            <OffsetImageBorder className={s.aspectRatioTeacherMob}>
               <Image
                 alt="teacher on lection photo"
                 src="/images/education-teacher-small.jpg"
                 className={s.image}
-                fill
+                width="690"
+                height="710"
                 priority
               />
-              {/* </OffsetImageBorder> */}
-            </MediaQuery>
+            </OffsetImageBorder>
+          </MediaQuery>
+          {/* <div className={s.imgWrap}> */}
 
-            <MediaQuery minWidth={1280}>
+          <MediaQuery minWidth={1280}>
+            <OffsetImageBorder className={s.aspectRatioTeacherDesk}>
               <Image
                 alt="teacher on lection photo"
                 src="/images/education-teacher.jpg"
                 className={s.image}
-                fill
+                width="472"
+                height="680"
                 priority
               />
-            </MediaQuery>
-          </div>
+            </OffsetImageBorder>
+          </MediaQuery>
+          {/* </div> */}
         </div>
 
         <div className={s.lowerWrap}>
-          <div className={s.textWrap}>
+          <div className={s.textLowerWrap}>
             <ReactMarkdown>{method.model}</ReactMarkdown>
           </div>
 
-          <div className={s.imgWrap}>
-            <MediaQuery maxWidth={1279}>
+          {/* <div className={s.imgWrap}> */}
+          <MediaQuery maxWidth={1279}>
+            <OffsetImageBorder className={s.aspectRatioTeacherMob}>
               <Image
                 alt="color drawing photo"
                 src="/images/education-drawing-small.jpg"
                 className={s.image}
-                fill
+                width="688"
+                height="728"
                 priority
               />
-            </MediaQuery>
+            </OffsetImageBorder>
+          </MediaQuery>
 
-            <MediaQuery minWidth={1280}>
+          <MediaQuery minWidth={1280}>
+            <OffsetImageBorder reverse className={s.aspectRatioTeacherDesk}>
               <Image
                 alt="color drawing photo"
                 src="/images/education-drawing.jpg"
                 className={s.image}
-                fill
+                width="472"
+                height="660"
                 priority
               />
-            </MediaQuery>
-          </div>
+            </OffsetImageBorder>
+          </MediaQuery>
+          {/* </div> */}
         </div>
       </Container>
     </section>

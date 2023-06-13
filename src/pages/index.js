@@ -17,8 +17,8 @@ export default function Home({ hero }) {
 
       <main className="main">
         <HomeHero hero={hero} />
-        {/* <FirstView />
-        <ActionButton /> */}
+        {/* <FirstView /> */}
+        {/* <ActionButton /> */}
         <MainFixedSocials />
       </main>
     </>
