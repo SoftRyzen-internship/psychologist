@@ -9,7 +9,7 @@
   opacity: 0;
   transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
   background-color: var(--bg2-color);
-  background-image: url('/icons/mobMenuBg_mob.svg');
+  background-image: url('/images/mobMenuBg_mob.svg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -38,7 +38,7 @@
     height: calc(100vh - 84px);
   }
   .wrapper {
-    background-image: url('/icons/mobMenuBg_tab.svg');
+    background-image: url('/images/mobMenuBg_tab.svg');
   }
 
   .social {

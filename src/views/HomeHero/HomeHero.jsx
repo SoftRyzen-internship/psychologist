@@ -8,21 +8,20 @@ export const HomeHero = ({ hero }) => {
     <section className={st.section}>
       <Container>
         <div className={st.wrapper}>
-          <div className="">
-            <Image
-              alt="main hero photo"
-              src="/images/main_hero_desk.png"
-              height={734}
-              width={458}
-              className={st.image}
-            />
-          </div>
+          <Image
+            alt="main hero photo"
+            src="/images/main_hero.png"
+            className={st.image}
+            priority
+            width={458}
+            height={745}
+          />
           <div className={st.descr}>
             <SectionTitle title={hero.heading} h1={true} />
 
-            <ReactMarkdown>{hero.intro}</ReactMarkdown>
-            <ReactMarkdown>{hero.first}</ReactMarkdown>
-            <ReactMarkdown>{hero.second}</ReactMarkdown>
+            <ReactMarkdown className={st.intro}>{hero.intro}</ReactMarkdown>
+            <ReactMarkdown className={st.first}>{hero.first}</ReactMarkdown>
+            <ReactMarkdown className={st.second}>{hero.second}</ReactMarkdown>
           </div>
         </div>
       </Container>
