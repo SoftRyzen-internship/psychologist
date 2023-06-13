@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 import { SectionTitle } from '@/components';
 import { Container } from '@/components';
@@ -14,7 +15,7 @@ export const PersonalConsultationsView = ({ data }) => {
             <Image
               className={s.image}
               src="/icons/personalConsult.svg"
-              alt="1"
+              alt="Пісочний годинник"
               width={218}
               height={89}
             />
@@ -36,4 +37,18 @@ export const PersonalConsultationsView = ({ data }) => {
       </section>
     </>
   );
+};
+
+PersonalConsultationsView.propTypes = {
+  data: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    format: PropTypes.string.isRequired,
+    requests: PropTypes.string.isRequired,
+    list: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        content: PropTypes.string.isRequired,
+      }),
+    ).isRequired,
+  }).isRequired,
 };
