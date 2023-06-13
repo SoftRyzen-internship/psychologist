@@ -1,0 +1,29 @@
+.bluePlashka {
+  display: block;
+  width: max-content;
+  position: relative;
+  margin-bottom: 49px;
+
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: #2361a8;
+}
+
+.bluePlashka:after {
+  width: 280px;
+  height: 1%;
+  position: absolute;
+  bottom: -8px;
+
+  content: '';
+  background-color: #d9d9d9;
+}
+
+@media screen and (min-width: 768px) {
+  .bluePlashka {
+    margin-bottom: 50px;
+    font-size: 20px;
+    line-height: 1.4;
+  }
+}
