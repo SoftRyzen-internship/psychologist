@@ -1,0 +1,164 @@
+/**
+  |============================
+  | Personal consulting re-use
+  |============================
+*/
+
+.containerX {
+  padding: 36px 20px 36px 20px;
+
+  /* position: relative; */
+}
+
+.reusableSection p > strong {
+  font-weight: 600;
+}
+
+.reusableSection p:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+.reusableSection {
+  background-image: url(/icons/MobileConsult.svg);
+  background-size: cover;
+  background-color: var(--bg2-color);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.reusableSection2 {
+  background-image: url(/icons/MobileTime.svg);
+  background-size: cover;
+  background-color: var(--bg2-color);
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+.universalWrapper p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+}
+
+/**
+  |============================
+  | 768px
+  |============================
+*/
+
+@media screen and (min-width: 768px) {
+  .containerX {
+    padding: 36px 96px 36px 96px;
+  }
+
+  .reusableSection {
+    background-image: url(/icons/TabletConsult.svg);
+  }
+
+  .reusableSection2 {
+    background-image: url(/icons/TabletTime.svg);
+  }
+
+  .reusableSection2 > div > div:first-of-type {
+    gap: 32px;
+  }
+
+  .universalWrapper p {
+    font-size: 18px;
+    line-height: calc(28 / 18);
+
+    width: 378px;
+  }
+
+  .reusableSection2 > div > .universalWrapper > div:nth-of-type(2) p {
+    width: 336px;
+  }
+
+  .universalWrapper > p:first-of-type {
+    margin-bottom: 32px;
+  }
+
+  .universalWrapper {
+    display: flex;
+    gap: 48px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/**
+  |============================
+  | 1280px
+  |============================
+*/
+
+@media screen and (min-width: 1280px) {
+  .containerX {
+    padding: 48px 188px 48px 188px;
+  }
+
+  .reusableSection {
+    background-image: url(/icons/PCConsult.svg);
+    background-position: bottom;
+  }
+
+  .reusableSection2 {
+    background-image: url(/icons/PCTime.svg);
+    background-position: bottom;
+  }
+
+  .reusableSection2 > div > div:first-of-type {
+    gap: 104px;
+  }
+
+  .universalWrapper p {
+    font-size: 20px;
+    line-height: calc(28 / 20);
+
+    width: 592px;
+  }
+
+  .reusableSection2 > div > .universalWrapper > div:nth-of-type(2) p {
+    width: 448px;
+  }
+
+  .universalWrapper {
+    gap: 0;
+  }
+
+  .universalWrapper > div:first-of-type {
+    padding-left: 80px;
+    padding-top: 40px;
+  }
+
+  .reusableSection2 > div > .universalWrapper > div:nth-of-type(1) {
+    padding-left: 13px;
+    padding-top: 40px;
+  }
+
+  .reusableSection2 > div > .universalWrapper > div:nth-of-type(2) {
+    padding-right: 28px;
+  }
+}
+
+/* .reusableSection p:not(:first-of-type) {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(24/16);
+}
+
+@media screen and (min-width: 768px) {
+  .reusableSection p:not(:first-of-type) {
+    font-size: 18px;
+    line-height: calc(28/18);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .reusableSection p:not(:first-of-type) {
+    font-size: 20px;
+    line-height: calc(28/20);
+  }
+} */
