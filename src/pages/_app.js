@@ -1,8 +1,9 @@
-import { Open_Sans, Alegreya } from 'next/font/google';
+import { useRouter } from 'next/router';
 import classNames from 'classnames';
+import { Open_Sans, Alegreya } from 'next/font/google';
+
 import { Layout } from '@/layout';
 import '@/styles/globals.css';
-import { useRouter } from 'next/router';
 
 const open_sans = Open_Sans({
   subsets: ['cyrillic'],

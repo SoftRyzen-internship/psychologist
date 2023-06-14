@@ -60,15 +60,15 @@
     background-color: var(--bg2-color);
   }
   .contentWrapper {
-    margin: 0 0 0 auto;
-
     align-items: flex-start;
     flex-direction: row;
     gap: 28px;
   }
   .image {
-    width: 925px;
-    height: 438px;
+    position: relative;
+    left: 32px;
+    width: 822px;
+    height: 100%;
     margin-bottom: 0px;
   }
 }
