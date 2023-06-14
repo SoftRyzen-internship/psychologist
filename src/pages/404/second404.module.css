@@ -18,6 +18,7 @@
 }
 .image {
   margin-bottom: 40px;
+  flex-shrink: 0;
 }
 .title {
   margin-bottom: 20px;
