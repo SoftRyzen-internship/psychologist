@@ -34,8 +34,8 @@
 
 .itemPanel {
   composes: item;
-  border-color: #ffffff;
-  color: #ffffff;
+  border-color: var(--white-color);
+  color: var(--white-color);
   background-color: #2361ab;
 }
 
@@ -48,26 +48,26 @@
 
 .itemFooter {
   composes: item;
-  border-color: #ffffff;
-  color: #ffffff;
-  background-color: #a3a9b2;
+  border-color: var(--white-color);
+  color: var(--white-color);
+  background-color: var(--footer-color);
 }
 
 .itemPanel:hover {
   color: #2361ab;
-  background-color: #ffffff;
+  background-color: var(--white-color);
 }
 
 .itemMobile:hover {
   border-color: #2361ab;
-  color: #ffffff;
+  color: var(--white-color);
   background-color: #2361ab;
 }
 
 .itemFooter:hover {
-  border-color: #a3a9b2;
-  color: #a3a9b2;
-  background-color: #ffffff;
+  border-color: var(--footer-color);
+  color: var(--footer-color);
+  background-color: var(--white-color);
 }
 
 .imgIcon {
