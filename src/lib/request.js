@@ -5,7 +5,7 @@ export const query = gql`
     allNews(orderBy: _createdAt_DESC) {
       id
       title
-      text(markdown: true)
+      text
       image {
         alt
         url

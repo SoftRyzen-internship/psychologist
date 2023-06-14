@@ -16,6 +16,8 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html,
@@ -32,6 +34,7 @@ body {
 
 body {
   margin: 0;
+  padding-top: 72px;
 }
 
 .layout {
@@ -83,7 +86,6 @@ p {
 
 ul,
 ol {
-  padding: 0;
   margin: 0;
 }
 
@@ -115,8 +117,6 @@ section {
 }
 
 .sectionTitleH1 {
-  margin-bottom: 32px;
-
   font-family: var(--font-alegreya);
   font-weight: 500;
   font-size: 36px;
@@ -127,7 +127,6 @@ section {
 
 .sectionTitleH2 {
   margin-bottom: 32px;
-
   font-family: var(--font-alegreya);
   font-weight: 500;
   font-size: 32px;
@@ -147,6 +146,10 @@ section {
 }
 
 @media screen and (min-width: 768px) {
+  body {
+    padding-top: 84px;
+  }
+
   section {
     padding-top: 80px;
     padding-bottom: 80px;
