@@ -34,13 +34,13 @@ body {
 
 body {
   margin: 0;
-  padding-top: 72px;
 }
 
 .layout {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  padding-top: 72px;
 }
 
 .main {
@@ -123,7 +123,7 @@ section {
 }
 
 @media screen and (min-width: 768px) {
-  body {
+  .layout {
     padding-top: 84px;
   }
 
