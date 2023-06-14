@@ -4,7 +4,6 @@ import { routes } from 'routes';
 import s from './ActionButton.module.css';
 
 export const ActionButton = ({ clickHandler, is404 = true }) => {
-
   return (
     <>
       {is404 && (

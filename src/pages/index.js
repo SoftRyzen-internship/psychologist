@@ -16,7 +16,7 @@ export default function Home({ hero, whatIDo, study }) {
 
       <main className="main">
         <HomeHero hero={hero} />
-       
+
         <WhatIDo whatIDo={whatIDo} />
 
         <StudyView study={study} />

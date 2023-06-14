@@ -2,36 +2,25 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
   padding: 48px 20px 40px;
+
   background-color: var(--white-color);
   border-radius: 12px;
 
   width: 100%;
-  /* @include tablet {
-    padding: 34px 50px 32px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    width: 400px;
-
-    transform: scale(1) translate(-50%, -50%);
-
-    background-color: $dark-blue;
-    box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.14),
-      0px 9px 46px rgba(0, 0, 0, 0.12), 0px 11px 15px rgba(0, 0, 0, 0.2);
-    border-radius: 18px;
-  } */
 }
 
 .title {
   margin: 0 auto 20px;
-  width: 100%px;
+  width: 100%;
+
   text-align: center;
   font-family: var(--font-alegreya);
   font-weight: 500;
   font-size: 28px;
   line-height: calc(36 / 28);
+
   color: var(--accent-text-color);
 }
 
@@ -41,16 +30,14 @@
   align-items: flex-start;
   gap: 4px;
   position: relative;
+
+  margin-bottom: 24px;
   min-width: 278px;
   width: 100%;
-  padding-bottom: 24px;
 
   font-weight: 400;
   font-size: 14px;
   line-height: calc(20 / 14);
-  /* @media screen and (max-width: 374px) {
-    width: 100%;
-  } */
 }
 
 .inputLabel {
@@ -61,14 +48,20 @@
   display: inline-flex;
   align-items: flex-start;
   justify-content: center;
+
   width: 100%;
   flex: 1;
   padding: 12px 10px;
 
-  background: #ffffff;
+  background-color: var(--white-color);
   border: none;
   outline: 1px solid var(--input-border-color);
   border-radius: 8px;
+
+  font-family: var(--font-open-sans);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(20 / 14);
 }
 
 .inputField::placeholder {
@@ -77,8 +70,7 @@
 
 .error {
   position: absolute;
-  left: 0;
-  bottom: 0;
+  bottom: -24px;
 
   margin-top: 4px;
   margin-bottom: 4px;
@@ -95,12 +87,12 @@
   display: flex;
   flex-direction: row-reverse;
   gap: 12px;
+
   margin-top: 8px;
   margin-bottom: 28px;
 
   font-size: 12px;
   line-height: calc(12 / 16);
-  /* identical to box height, or 143% */
 
   color: var(--label-text-color);
 }
@@ -113,6 +105,7 @@
   width: 0;
   display: none;
 }
+
 .acceptSpan {
   height: 16px;
   width: 16px;
@@ -127,19 +120,15 @@
   width: 16px;
   height: 16px;
   margin-right: 8px;
-  /* color: #ffffff;
-  border: 2px solid #000;
-  border-radius: 2px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 @media screen and (min-width: 768px) {
   .form {
     padding: 80px 64px;
   }
+
   .title {
-    margin: 0 auto 24px;
+    margin: 0 auto 32px;
 
     font-size: 36px;
     line-height: calc(40 / 36);
@@ -154,6 +143,9 @@
 
   .inputField {
     padding: 16px 20px;
+
+    font-size: 16px;
+    line-height: calc(24 / 16);
   }
 
   .inputField::placeholder {
@@ -162,11 +154,11 @@
 
   .checkboxLabel {
     gap: 10px;
+
     margin-top: 4px;
+    margin-bottom: 40px;
 
     font-size: 14px;
     line-height: calc(20 / 14);
-
-    margin-bottom: 40px;
   }
 }

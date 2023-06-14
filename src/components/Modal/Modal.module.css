@@ -1,5 +1,7 @@
 .DialogOverlay {
   z-index: 15;
+  position: fixed;
+
   background-image: linear-gradient(
       rgba(223, 220, 220, 0.5),
       rgba(223, 220, 220, 0.5)
@@ -7,9 +9,8 @@
     url('/images/modal-bg.jpg');
   background-position: center;
   background-size: cover;
-  position: fixed;
+
   inset: 0;
-  animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .DialogContent {
@@ -18,9 +19,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
   max-width: 488px;
   max-height: 680px;
-  animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .DialogContent:focus {
@@ -42,15 +43,7 @@
 
   background-color: var(--white-color);
   border: none;
-  color: green;
-  /* transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
-
-  /* color: var(--accent-text-color); */
 }
-/* .closeButton:hover {
-  /* color: var(--btn-hover-color); */
-/* color: red; */
-/* } */
 
 .iconClose {
   display: block;
@@ -61,27 +54,8 @@
   .buttonClose {
     top: 24px;
     right: 24px;
+
     height: 32px;
     width: 32px;
-  }
-}
-
-@keyframes overlayShow {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes contentShow {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -48%) scale(0.96);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
   }
 }

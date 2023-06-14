@@ -1,9 +1,8 @@
-// import { memo } from 'react';
 import { Formik, Field, Form } from 'formik';
 import { ActionButton } from '..';
-import AgreeSVG from 'public/icons/tick.svg';
-import s from './ContactForm.module.css';
 import { contactValidationShema } from './contactValidationShema';
+import AgreeSVG from 'public/icons/check-mark.svg';
+import s from './ContactForm.module.css';
 
 export const ContactForm = () => {
   return (
@@ -109,27 +108,13 @@ export const ContactForm = () => {
                   }
                 }
               >
-                <AgreeSVG
-                  className={s.icon}
-                  fill={
-                    values.acceptedTerms
-                      ? 'var(--accent-text-color)'
-                      : 'var(--white-color)'
-                  }
-                  width="16"
-                  height="16"
-                />
+                {values.acceptedTerms && (
+                  <AgreeSVG className={s.icon} width="16" height="16" />
+                )}
               </span>
             </label>
-            {/* {touched.acceptedTerms && errors.acceptedTerms ? (
-                <div className={s.error}>{errors.acceptedTerms}</div>
-              ) : null} */}
-            {/* </div> */}
 
             <ActionButton inModalForm={true} is404={false} />
-            {/* <button className={s.button} type="submit">
-              {btnSubmit}
-            </button> */}
           </Form>
         )}
       </Formik>

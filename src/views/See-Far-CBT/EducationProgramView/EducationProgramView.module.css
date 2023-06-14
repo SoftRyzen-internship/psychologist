@@ -42,11 +42,16 @@
   margin-bottom: 20px;
 
   font-weight: 600;
+  font-size: 18px;
+  line-height: calc(28 / 18);
 }
 
 .textWrap {
   display: flex;
   flex-direction: column;
+
+  font-size: 16px;
+  line-height: calc(24 / 16);
 }
 
 .textWrap ol {
@@ -67,16 +72,17 @@
 .textWrap li::before {
   display: block;
 
+  margin-right: 28px;
   width: 31px;
 
   content: counter(my-awesome-counter) '. ';
+
   font-family: var(--font-alegreya);
+  font-weight: 500;
   font-size: 32px;
-  font-weight: 600;
   line-height: calc(36 / 32);
+
   color: var(--accent-text-color);
-  /* text-align: center; */
-  margin-right: 28px;
 }
 
 .lowerWrap ol {
@@ -108,6 +114,11 @@
     line-height: calc(32 / 24);
   }
 
+  .programm {
+    font-size: 20px;
+    line-height: calc(28 / 20);
+  }
+
   .imgWrap {
     display: flex;
 
@@ -122,10 +133,9 @@
   .textWrap {
     display: flex;
     flex-direction: column;
-  }
 
-  .textWrap li::marker {
-    font-size: large;
+    font-size: 18px;
+    line-height: calc(28 / 18);
   }
 
   .lowerWrap .imgWrap {
@@ -158,13 +168,22 @@
   .timing {
     margin-bottom: 36px;
   }
-
+  .programm {
+    font-size: 24px;
+    line-height: calc(32 / 24);
+  }
   .textWrap {
     margin-bottom: 0;
 
     width: 592px;
-  }
 
+    font-size: 20px;
+    line-height: calc(28 / 20);
+  }
+  .textWrap li::before {
+    font-size: 40px;
+    line-height: calc(40 / 40);
+  }
   .lowerWrap {
     display: flex;
     flex-direction: row-reverse;

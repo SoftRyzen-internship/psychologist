@@ -1,12 +1,8 @@
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
+import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
-import {
-  Container,
-  OffsetImageBorder,
-  //  OffsetImageBorder,
-  SectionTitle,
-} from '@/components';
+import { Container, OffsetImageBorder, SectionTitle } from '@/components';
 import s from './EducationMethodView.module.css';
 
 const MediaQuery = dynamic(() => import('react-responsive'), {
@@ -20,8 +16,6 @@ export const EducationMethodView = ({ method }) => {
         <SectionTitle title="Навчання роботі в методі SEE FAR CBT" h1={true} />
         <div className={s.wrap}>
           <div className={s.textWrap}>
-            <ReactMarkdown>{method.fff}</ReactMarkdown>
-
             <div className={s.students}>
               <ReactMarkdown>{method.students}</ReactMarkdown>
             </div>
@@ -31,7 +25,7 @@ export const EducationMethodView = ({ method }) => {
           <MediaQuery maxWidth={1279}>
             <OffsetImageBorder className={s.aspectRatioTeacherMob}>
               <Image
-                alt="teacher on lection photo"
+                alt="Вчитель з трибуни читає лекцію"
                 src="/images/education-teacher-small.jpg"
                 className={s.image}
                 width="690"
@@ -40,12 +34,11 @@ export const EducationMethodView = ({ method }) => {
               />
             </OffsetImageBorder>
           </MediaQuery>
-          {/* <div className={s.imgWrap}> */}
 
           <MediaQuery minWidth={1280}>
             <OffsetImageBorder className={s.aspectRatioTeacherDesk}>
               <Image
-                alt="teacher on lection photo"
+                alt="Вчитель з трибуни читає лекцію"
                 src="/images/education-teacher.jpg"
                 className={s.image}
                 width="472"
@@ -54,7 +47,6 @@ export const EducationMethodView = ({ method }) => {
               />
             </OffsetImageBorder>
           </MediaQuery>
-          {/* </div> */}
         </div>
 
         <div className={s.lowerWrap}>
@@ -62,16 +54,14 @@ export const EducationMethodView = ({ method }) => {
             <ReactMarkdown>{method.model}</ReactMarkdown>
           </div>
 
-          {/* <div className={s.imgWrap}> */}
           <MediaQuery maxWidth={1279}>
             <OffsetImageBorder className={s.aspectRatioTeacherMob}>
               <Image
-                alt="color drawing photo"
+                alt="Дитячий малюнок і кольорові олівці"
                 src="/images/education-drawing-small.jpg"
                 className={s.image}
                 width="688"
                 height="728"
-                priority
               />
             </OffsetImageBorder>
           </MediaQuery>
@@ -79,18 +69,25 @@ export const EducationMethodView = ({ method }) => {
           <MediaQuery minWidth={1280}>
             <OffsetImageBorder reverse className={s.aspectRatioTeacherDesk}>
               <Image
-                alt="color drawing photo"
+                alt="Дитячий малюнок і кольорові олівці"
                 src="/images/education-drawing.jpg"
                 className={s.image}
                 width="472"
                 height="660"
-                priority
               />
             </OffsetImageBorder>
           </MediaQuery>
-          {/* </div> */}
         </div>
       </Container>
     </section>
   );
+};
+
+EducationMethodView.propTypes = {
+  method: PropTypes.shape({
+    heading: PropTypes.string,
+    students: PropTypes.string.isRequired,
+    intro: PropTypes.string.isRequired,
+    model: PropTypes.string.isRequired,
+  }),
 };

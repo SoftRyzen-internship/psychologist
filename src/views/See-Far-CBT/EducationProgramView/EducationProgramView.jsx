@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
+import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 import { Container, ModalButton, SectionTitle } from '@/components';
 import s from './EducationProgramView.module.css';
@@ -18,23 +19,21 @@ export const EducationProgramView = ({ program }) => {
           <div className={s.imgWrap}>
             <MediaQuery maxWidth={1279}>
               <Image
-                alt="contour drawing of of team watching to laptop"
+                alt="Контурний малюнок трьох людей біля ноутбука"
                 src="/images/education-team-small.svg"
                 className={s.image}
                 width="620"
                 height="280"
-                priority
               />
             </MediaQuery>
 
             <MediaQuery minWidth={1280}>
               <Image
-                alt="contour drawing of of team watching to laptop"
+                alt="Контурний малюнок трьох людей біля ноутбука"
                 src="/images/education-team.svg"
                 className={s.image}
                 width="592"
                 height="364"
-                priority
               />
             </MediaQuery>
           </div>
@@ -56,23 +55,21 @@ export const EducationProgramView = ({ program }) => {
           <div className={s.imgWrap}>
             <MediaQuery maxWidth={1279}>
               <Image
-                alt="contour drawing of wooman with a book"
+                alt="Контурний малюнок жінки з книгою"
                 src="/images/education-woman-small.svg"
                 className={s.image}
                 width="420"
                 height="312"
-                priority
               />
             </MediaQuery>
 
             <MediaQuery minWidth={1280}>
               <Image
-                alt="contour drawing of wooman with a book"
+                alt="Контурний малюнок жінки з книгою"
                 src="/images/education-woman.svg"
                 className={s.image}
                 width="520"
                 height="316"
-                priority
               />
             </MediaQuery>
           </div>
@@ -80,4 +77,12 @@ export const EducationProgramView = ({ program }) => {
       </Container>
     </section>
   );
+};
+
+EducationProgramView.propTypes = {
+  program: PropTypes.shape({
+    heading: PropTypes.string,
+    list: PropTypes.string.isRequired,
+    list2: PropTypes.string.isRequired,
+  }),
 };
