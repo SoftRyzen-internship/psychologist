@@ -1,13 +1,13 @@
 .slidePrevBtn {
-    width: 36px;
-    height: 36px;
-    border: none;
-    background: url('/icons/slide-prev-btn.svg');
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: url('/icons/slide-prev-btn.svg');
 }
 
 .slideNextBtn {
-    width: 36px;
-    height: 36px;
-    border: none;
-    background: url('/icons/slide-next-btn.svg');
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: url('/icons/slide-next-btn.svg');
 }

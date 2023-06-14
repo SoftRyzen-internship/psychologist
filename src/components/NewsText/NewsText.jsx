@@ -11,5 +11,5 @@ export const NewsText = ({ newsTextProp, section = false }) => {
 
 NewsText.propTypes = {
   newsTextProp: PropTypes.string.isRequired,
-  section: PropTypes.bool
+  section: PropTypes.bool,
 };

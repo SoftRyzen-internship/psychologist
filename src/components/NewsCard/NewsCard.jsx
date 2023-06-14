@@ -31,5 +31,5 @@ NewsCard.propTypes = {
     url: PropTypes.string.isRequired,
   }),
   title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired
+  text: PropTypes.string.isRequired,
 };

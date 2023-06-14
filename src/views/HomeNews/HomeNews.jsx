@@ -14,16 +14,16 @@ export function HomeNews({ allNews }) {
 }
 
 HomeNews.propTypes = {
-    allNews: PropTypes.shape([
-        {
-            id: PropTypes.number.isRequired,
-            title: PropTypes.string.isRequired,
-            text: PropTypes.string.isRequired,
-            image: PropTypes.shape({
-                alt: PropTypes.string.isRequired,
-                url: PropTypes.string.isRequired
-            }),
-            _publishedAt: PropTypes.string.isRequired
-      }
+  allNews: PropTypes.shape([
+    {
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
+      image: PropTypes.shape({
+        alt: PropTypes.string.isRequired,
+        url: PropTypes.string.isRequired,
+      }),
+      _publishedAt: PropTypes.string.isRequired,
+    },
   ]),
 };
