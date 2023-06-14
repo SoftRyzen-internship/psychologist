@@ -1,7 +1,11 @@
 import Image from 'next/image';
 import PropTypes from 'prop-types';
-import { Container, SectionTitle, OffsetImageBorder } from '@/components';
-import NewsText from '@/components/NewsText/NewsText';
+import {
+  Container,
+  SectionTitle,
+  OffsetImageBorder,
+  NewsText,
+} from '@/components';
 
 import s from './NewsView.module.css';
 
