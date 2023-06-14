@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import { useMediaQuery } from 'react-responsive';
+import { useEffect, useState } from 'react';
 
 import { getData } from '@/lib/getData';
 import { folderPaths } from '@/utils/folderPaths';
@@ -12,8 +14,6 @@ import {
   TimeManagementView,
 } from '@/views';
 import { imgProperties } from '@/utils/imgProperties';
-import { useMediaQuery } from 'react-responsive';
-import { useEffect, useState } from 'react';
 
 const TrainingsPage = ({
   conflictology,
@@ -25,10 +25,13 @@ const TrainingsPage = ({
   timeManagement,
 }) => {
   const isDesktopSize = useMediaQuery({ query: '(min-width: 1280px)' });
+
   const [isDesktop, setIsDesktop] = useState(false);
+
   useEffect(() => {
     setIsDesktop(isDesktopSize);
   }, [isDesktopSize]);
+
   return (
     <>
       <Head>

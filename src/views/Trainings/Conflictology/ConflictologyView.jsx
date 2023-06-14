@@ -1,11 +1,16 @@
 import PropTypes from 'prop-types';
+import Image from 'next/image';
+import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
+
+import {
+  ActionButton,
+  Container,
+  SectionTitle,
+  TrainingsSection,
+} from '@/components';
 
 import vs from './ConflictologyView.module.css';
 import s from '@/components/TrainingsSection/TrainingsSection.module.css';
-import { ActionButton, Container, SectionTitle } from '@/components';
-import { TrainingsSection } from '@/components/TrainingsSection/TrainingsSection';
-import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
-import Image from 'next/image';
 
 export const ConflictologyView = ({
   markdown,
@@ -16,10 +21,10 @@ export const ConflictologyView = ({
   const { heading, goal, timePeriod, list } = markdown;
 
   return (
-    <>
-      {isDesktop && (
-        <section className={`trainingSection ${vs.conflictologySection}`}>
-          <Container>
+    <section className={`trainingSection ${vs.conflictologySection}`}>
+      <Container>
+        {isDesktop && (
+          <>
             <SectionTitle title={heading} centered={true} />
             <div className={s.contentDesktopContainer}>
               <div>
@@ -35,9 +40,9 @@ export const ConflictologyView = ({
                 />
               </div>
               <div>
-                <em className={`${s.timePeriod} ${s.textMargin}`}>
+                <p className={`${s.timePeriod} ${s.textMargin}`}>
                   {timePeriod}
-                </em>
+                </p>
                 <h3 className={s.programTitle}>Програма:</h3>
                 <ReactMarkdown className={s.programList}>
                   {list[0].content}
@@ -45,28 +50,24 @@ export const ConflictologyView = ({
                 <ActionButton clickHandler={btnClickHandler} />
               </div>
             </div>
-          </Container>
-        </section>
-      )}
-      {!isDesktop && (
-        <section className={`trainingSection ${vs.conflictologySection}`}>
-          <Container>
-            <TrainingsSection
-              markdown={markdown}
-              img={img}
-              isTitleCentered={true}
-              btnClickHandler={btnClickHandler}
-            />
-          </Container>
-        </section>
-      )}
-    </>
+          </>
+        )}
+        {!isDesktop && (
+          <TrainingsSection
+            markdown={markdown}
+            img={img}
+            isTitleCentered={true}
+            btnClickHandler={btnClickHandler}
+          />
+        )}
+      </Container>
+    </section>
   );
 };
 
 ConflictologyView.propTypes = {
   markdown: PropTypes.object.isRequired,
   imgPath: PropTypes.string,
-  btnClickHandler: PropTypes.func.isRequired,
+  btnClickHandler: PropTypes.func,
   isDesktop: PropTypes.bool.isRequired,
 };

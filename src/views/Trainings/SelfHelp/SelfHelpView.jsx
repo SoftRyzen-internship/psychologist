@@ -10,17 +10,19 @@ import s from '@/components/TrainingsSection/TrainingsSection.module.css';
 
 export const SelfHelpView = ({ markdown, img, btnClickHandler, isDesktop }) => {
   const { heading, goal, timePeriod, list } = markdown;
+
   return (
-    <>
-      {isDesktop && (
-        <section className={`trainingSection ${vs.selfHelpSection}`}>
-          <Container>
+    <section className={`trainingSection ${vs.selfHelpSection}`}>
+      <Container>
+        {isDesktop && (
+          <>
             <SectionTitle title={heading} />
             <div className={s.contentDesktopContainer}>
               <div>
                 <ReactMarkdown className={`${s.goal} ${s.textMargin}`}>
                   {goal}
-                </ReactMarkdown>{' '}
+                </ReactMarkdown>
+
                 <Image
                   className={vs.image}
                   src={img.PATH.DESKTOP}
@@ -28,12 +30,12 @@ export const SelfHelpView = ({ markdown, img, btnClickHandler, isDesktop }) => {
                   height={img.SIZES.HEIGHT.DESKTOP}
                   alt={img.ALTERNATIVETEXT}
                 />
-              </div>{' '}
+              </div>
+
               <div>
-                {' '}
-                <em className={`${s.timePeriod} ${s.textMargin}`}>
+                <p className={`${s.timePeriod} ${s.textMargin}`}>
                   {timePeriod}
-                </em>
+                </p>
                 <h3 className={s.programTitle}>Програма:</h3>
                 <ReactMarkdown className={s.programList}>
                   {list[0].content}
@@ -41,27 +43,23 @@ export const SelfHelpView = ({ markdown, img, btnClickHandler, isDesktop }) => {
                 <ActionButton clickHandler={btnClickHandler} />
               </div>
             </div>
-          </Container>
-        </section>
-      )}
-      {!isDesktop && (
-        <section className={`trainingSection ${vs.selfHelpSection}`}>
-          <Container>
-            <TrainingsSection
-              markdown={markdown}
-              img={img}
-              btnClickHandler={btnClickHandler}
-            />
-          </Container>
-        </section>
-      )}
-    </>
+          </>
+        )}
+        {!isDesktop && (
+          <TrainingsSection
+            markdown={markdown}
+            img={img}
+            btnClickHandler={btnClickHandler}
+          />
+        )}
+      </Container>
+    </section>
   );
 };
 
 SelfHelpView.propTypes = {
   markdown: PropTypes.object.isRequired,
   imgPath: PropTypes.string,
-  btnClickHandler: PropTypes.func.isRequired,
+  btnClickHandler: PropTypes.func,
   isDesktop: PropTypes.bool.isRequired,
 };

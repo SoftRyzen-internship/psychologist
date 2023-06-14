@@ -1,5 +1,5 @@
 .timeManagementSection {
-  background-color: #fdfdfd;
+  background-color: var(--bg1-color);
 }
 
 @media screen and (min-width: 1280px) {

@@ -1,9 +1,13 @@
 import PropTypes from 'prop-types';
 import Image from 'next/image';
-
-import { ActionButton, Container, SectionTitle } from '@/components';
-import { TrainingsSection } from '@/components/TrainingsSection/TrainingsSection';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
+
+import {
+  ActionButton,
+  Container,
+  SectionTitle,
+  TrainingsSection,
+} from '@/components';
 
 import vs from './StressResistance.module.css';
 import s from '@/components/TrainingsSection/TrainingsSection.module.css';
@@ -17,25 +21,31 @@ export const StressResistanceView = ({
   const { heading, goal, timePeriod, list } = markdown;
 
   return (
-    <>
-      {isDesktop && (
-        <section className={`trainingSection`}>
-          <Container>
+    <section
+      className={
+        isDesktop
+          ? `trainingSection`
+          : `trainingSection ${vs.conflictologySection}`
+      }
+    >
+      <Container>
+        {isDesktop && (
+          <>
             <SectionTitle title={heading} centered={true} />
             <div className={s.contentDesktopContainer}>
               <div>
                 <ReactMarkdown className={`${s.goal} ${s.textMargin}`}>
                   {goal}
                 </ReactMarkdown>
-                <em className={`${s.timePeriod} ${s.textMargin}`}>
+                <p className={`${s.timePeriod} ${s.textMargin}`}>
                   {timePeriod}
-                </em>
+                </p>
                 <h3 className={s.programTitle}>Програма:</h3>
                 <ReactMarkdown className={s.programList}>
                   {list[0].content}
                 </ReactMarkdown>
                 <ActionButton clickHandler={btnClickHandler} />
-              </div>{' '}
+              </div>
               <div>
                 <Image
                   className={vs.image}
@@ -49,28 +59,24 @@ export const StressResistanceView = ({
                 </ReactMarkdown>
               </div>
             </div>
-          </Container>
-        </section>
-      )}
-      {!isDesktop && (
-        <section className={`trainingSection ${vs.conflictologySection}`}>
-          <Container>
-            <TrainingsSection
-              markdown={markdown}
-              img={img}
-              isTitleCentered={true}
-              btnClickHandler={btnClickHandler}
-            />
-          </Container>
-        </section>
-      )}
-    </>
+          </>
+        )}
+        {!isDesktop && (
+          <TrainingsSection
+            markdown={markdown}
+            img={img}
+            isTitleCentered={true}
+            btnClickHandler={btnClickHandler}
+          />
+        )}
+      </Container>
+    </section>
   );
 };
 
 StressResistanceView.propTypes = {
   markdown: PropTypes.object.isRequired,
   imgPath: PropTypes.string,
-  btnClickHandler: PropTypes.func.isRequired,
+  btnClickHandler: PropTypes.func,
   isDesktop: PropTypes.bool.isRequired,
 };

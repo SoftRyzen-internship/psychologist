@@ -1,12 +1,17 @@
 import PropTypes from 'prop-types';
 import Image from 'next/image';
-
-import { ActionButton, Container, SectionTitle } from '@/components';
-import { TrainingsSection } from '@/components/TrainingsSection/TrainingsSection';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
+
+import {
+  ActionButton,
+  Container,
+  SectionTitle,
+  TrainingsSection,
+} from '@/components';
 
 import vs from './StrongSidesView.module.css';
 import s from '@/components/TrainingsSection/TrainingsSection.module.css';
+
 export const StrongSidesView = ({
   markdown,
   img,
@@ -14,32 +19,37 @@ export const StrongSidesView = ({
   isDesktop,
 }) => {
   const { heading, goal, timePeriod, list } = markdown;
+
   return (
-    <>
-      {isDesktop && (
-        <section className={`trainingSection ${vs.strongSidesSection}`}>
-          {' '}
-          <Container>
+    <section
+      className={
+        isDesktop
+          ? `trainingSection ${vs.strongSidesSection}`
+          : `trainingSection`
+      }
+    >
+      <Container>
+        {isDesktop && (
+          <>
             <SectionTitle title={heading} />
             <div className={s.contentDesktopContainer}>
               <div>
                 <ReactMarkdown className={`${s.goal} ${s.textMargin}`}>
                   {goal}
-                </ReactMarkdown>{' '}
+                </ReactMarkdown>
                 <Image
                   className={vs.image}
                   src={img.PATH.DESKTOP}
                   width={img.SIZES.WIDTH.DESKTOP}
                   height={img.SIZES.HEIGHT.DESKTOP}
                   alt={img.ALTERNATIVETEXT}
-                />{' '}
+                />
                 <ActionButton clickHandler={btnClickHandler} />
-              </div>{' '}
+              </div>
               <div>
-                {' '}
-                <em className={`${s.timePeriod} ${s.textMargin}`}>
+                <p className={`${s.timePeriod} ${s.textMargin}`}>
                   {timePeriod}
-                </em>
+                </p>
                 <h3 className={s.programTitle}>Програма:</h3>
                 <ReactMarkdown
                   className={`${s.programList} ${vs.desktopProgramList}`}
@@ -48,28 +58,23 @@ export const StrongSidesView = ({
                 </ReactMarkdown>
               </div>
             </div>
-          </Container>
-        </section>
-      )}
-      {!isDesktop && (
-        <section className="trainingSection">
-          {' '}
-          <Container>
-            <TrainingsSection
-              markdown={markdown}
-              img={img}
-              btnClickHandler={btnClickHandler}
-            />
-          </Container>
-        </section>
-      )}
-    </>
+          </>
+        )}
+        {!isDesktop && (
+          <TrainingsSection
+            markdown={markdown}
+            img={img}
+            btnClickHandler={btnClickHandler}
+          />
+        )}
+      </Container>
+    </section>
   );
 };
 
 StrongSidesView.propTypes = {
   markdown: PropTypes.object.isRequired,
   imgPath: PropTypes.string,
-  btnClickHandler: PropTypes.func.isRequired,
+  btnClickHandler: PropTypes.func,
   isDesktop: PropTypes.bool.isRequired,
 };

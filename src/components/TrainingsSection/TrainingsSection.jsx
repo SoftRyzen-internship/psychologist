@@ -2,8 +2,10 @@ import PropTypes from 'prop-types';
 import Image from 'next/image';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 
-import s from './TrainingsSection.module.css';
 import { ActionButton, SectionTitle } from '@/components';
+import { combineList } from '@/utils/combineList';
+
+import s from './TrainingsSection.module.css';
 
 export const TrainingsSection = ({
   markdown,
@@ -13,6 +15,7 @@ export const TrainingsSection = ({
   btnClickHandler,
 }) => {
   const { heading, goal, timePeriod, list } = markdown;
+
   const mobileImgWidth = img?.SIZES.WIDTH.MOBILE
     ? `${img.SIZES.WIDTH.MOBILE}px`
     : '100%';
@@ -25,13 +28,7 @@ export const TrainingsSection = ({
   const tabletImgHeight = img?.SIZES.HEIGHT.TABLET
     ? `${img.SIZES.HEIGHT.TABLET}px`
     : '100%';
-  const combineList = () => {
-    let completeList = list[0].content;
 
-    return list
-      .slice(1)
-      .reduce((acc, currentList) => acc + currentList.content, completeList);
-  };
   return (
     <>
       {isHeroSection && (
@@ -46,15 +43,14 @@ export const TrainingsSection = ({
             className="sectionTitleH1"
           />
           <div className={s.heroContentWrapper}>
-            {' '}
             <ReactMarkdown
               className={`${s.goal} ${s.textMargin} ${s.goalHero}`}
             >
               {goal}
             </ReactMarkdown>
-            <em className={`${s.timePeriodHero} ${s.textMargin}`}>
+            <p className={`${s.timePeriodHero} ${s.textMargin}`}>
               {timePeriod}
-            </em>
+            </p>
             <h3 className={s.programTitle}>Програма:</h3>
             <ReactMarkdown className={`${s.programList} ${s.heroProgramList}`}>
               {list[0].content}
@@ -89,10 +85,10 @@ export const TrainingsSection = ({
               />
             </div>
           )}
-          <em className={`${s.timePeriod} ${s.textMargin}`}>{timePeriod}</em>
+          <p className={`${s.timePeriod} ${s.textMargin}`}>{timePeriod}</p>
           <h3 className={s.programTitle}>Програма:</h3>
           <ReactMarkdown className={s.programList}>
-            {list.length > 1 ? combineList() : list[0].content}
+            {list.length > 1 ? combineList(list) : list[0].content}
           </ReactMarkdown>
           <ActionButton clickHandler={btnClickHandler} />
         </>
