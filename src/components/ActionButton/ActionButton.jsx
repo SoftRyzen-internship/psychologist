@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-
 import { routes } from 'routes';
 import s from './ActionButton.module.css';
 
 export const ActionButton = ({ clickHandler, is404 = true }) => {
+
   return (
     <>
       {is404 && (
@@ -12,6 +12,7 @@ export const ActionButton = ({ clickHandler, is404 = true }) => {
           Повернутись на головну
         </Link>
       )}
+
       {!is404 && (
         <button className={s.actionButton} type="submit" onClick={clickHandler}>
           Залишити заявку

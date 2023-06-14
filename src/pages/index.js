@@ -1,12 +1,11 @@
 import Head from 'next/head';
 import { getData } from '@/lib/getData';
 import { folderPaths } from '@/utils/folderPaths';
-import { HomeHero } from '@/views';
+import { HomeHero, StudyView, WhatIDo } from '@/views';
 import { getNewsList } from '@/lib/request';
-// import { ActionButton } from '@/components';
 import { MainFixedSocials } from '@/components';
 
-export default function Home({ hero }) {
+export default function Home({ hero, whatIDo, study }) {
   return (
     <>
       <Head>
@@ -17,8 +16,11 @@ export default function Home({ hero }) {
 
       <main className="main">
         <HomeHero hero={hero} />
-        {/* <FirstView /> */}
-        {/* <ActionButton /> */}
+       
+        <WhatIDo whatIDo={whatIDo} />
+
+        <StudyView study={study} />
+
         <MainFixedSocials />
       </main>
     </>
@@ -29,12 +31,14 @@ export async function getStaticProps() {
   const { allNews } = await getNewsList();
   const { HOME } = folderPaths;
   const homeData = getData(HOME);
-  const { hero } = homeData;
+  const { hero, whatIDo, study } = homeData;
+
   if (!allNews) {
     return {
       notFound: true,
     };
   }
+
   if (!homeData) {
     return {
       notFound: true,
@@ -45,6 +49,8 @@ export async function getStaticProps() {
     props: {
       allNews,
       hero,
+      whatIDo,
+      study,
     },
   };
 }
