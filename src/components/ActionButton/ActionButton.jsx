@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-
 import { routes } from 'routes';
 import s from './ActionButton.module.css';
 
@@ -16,6 +15,7 @@ export const ActionButton = ({
           Повернутись на головну
         </Link>
       )}
+
       {!is404 && (
         <button
           className={inModalForm ? s.actionButtonModal : s.actionButton}
