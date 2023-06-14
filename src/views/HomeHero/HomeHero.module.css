@@ -18,7 +18,7 @@
   /* background: url('/icons/homeHeroBg_desk.svg') no-repeat; */
 }
 
-.imageBox {
+.image {
   display: none;
 }
 
@@ -66,13 +66,9 @@
   .wrapper {
     /* padding-top: 63px; */
   }
-  .imageBox {
-    display: block;
-    width: 427px;
-    height: 742px;
-    /* position: relative; */
-  }
+
   .image {
+    display: block;
     width: 427px;
     height: 742px;
     transform: translateX(-102px);
@@ -105,13 +101,7 @@
     width: 100vw;
     height: 100%;
   }
-  .imageBox {
-    /* width: 41vw;
-    height: 70vh; */
-    /* position: relative; */
-    /* width: 458px;
-    height: 734px; */
-  }
+
   .image {
     width: 458px;
     height: 745px;
