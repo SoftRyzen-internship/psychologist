@@ -3,7 +3,7 @@ import { getData } from '@/lib/getData';
 import { folderPaths } from '@/utils/folderPaths';
 import { HomeHero, StudyView, WhatIDo } from '@/views';
 import { getNewsList } from '@/lib/request';
-import { MainFixedSocials } from '@/components';
+import { FixedSocials } from '@/components';
 
 export default function Home({ hero, whatIDo, study }) {
   return (
@@ -21,7 +21,7 @@ export default function Home({ hero, whatIDo, study }) {
 
         <StudyView study={study} />
 
-        <MainFixedSocials />
+        <FixedSocials />
       </main>
     </>
   );

@@ -6,4 +6,5 @@
   right: 0;
   border-radius: 8px 0px 0px 8px;
   /* transform: matrix(-1, 0, 0, 1, 0, 0); */
+  z-index: 10;
 }
