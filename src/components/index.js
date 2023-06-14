@@ -9,3 +9,5 @@ export * from './MobileMenu/MobileMenu';
 export * from './Socials/Socials';
 export * from './FixedSocials/FixedSocials';
 export * from './OffsetImageBorder/OffsetImageBorder';
+export * from './ReusableSection/ReusableSection';
+export * from './TrainingsSection/TrainingsSection';

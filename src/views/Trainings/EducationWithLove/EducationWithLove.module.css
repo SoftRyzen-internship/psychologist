@@ -1,0 +1,10 @@
+@media screen and (min-width: 1280px) {
+  .image {
+    margin-bottom: 36px;
+  }
+  .educationWithLoveSection > div > h2 {
+    width: 656px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

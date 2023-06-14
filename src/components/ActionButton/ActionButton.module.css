@@ -3,6 +3,8 @@
   width: 100%;
   height: 60px;
   padding: 16px 44px;
+  display: flex;
+  justify-content: center;
 
   font-family: var(--font-open-sans);
   font-weight: 600;
@@ -36,8 +38,6 @@
 
 .actionLink404 {
   composes: actionButton;
-
-  display: inline-block;
 }
 
 @media screen and (max-width: 767px) {
@@ -65,5 +65,10 @@
   .actionButton {
     font-size: 20px;
     line-height: calc(28 / 20);
+  }
+}
+@media screen and (max-width: 360px) {
+  .actionButton {
+    padding: 16px 0;
   }
 }
