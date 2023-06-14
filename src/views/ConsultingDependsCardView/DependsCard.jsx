@@ -1,9 +1,10 @@
-import { Container, Modal, SectionTitle } from '@/components';
-import s from './DependsCard.module.css';
-import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import Image from 'next/image';
-import * as Dialog from '@radix-ui/react-dialog';
+import PropTypes from 'prop-types';
+import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
+// import * as Dialog from '@radix-ui/react-dialog';
+import { Container, Modal, SectionTitle } from '@/components';
 import { useState } from 'react';
+import s from './DependsCard.module.css';
 
 export const DependsCard = ({ data }) => {
   // const [open, setOpen] = useState(false);
@@ -57,4 +58,16 @@ export const DependsCard = ({ data }) => {
       </section>
     </>
   );
+};
+
+DependsCard.propTypes = {
+  data: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    cards: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        content: PropTypes.string.isRequired,
+      }),
+    ).isRequired,
+  }).isRequired,
 };

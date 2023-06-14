@@ -1,12 +1,15 @@
-import {
-  DialogClose,
-  DialogContent,
-  DialogOverlay,
-} from '@radix-ui/react-dialog';
-import s from './Modal.module.css';
+// import {
+//   DialogClose,
+//   DialogContent,
+//   DialogOverlay,
+// } from '@radix-ui/react-dialog';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import CloseBtn from 'public/icons/closeModalBTN.svg';
-import { Container } from '..';
+import { useEffect } from 'react';
+import s from './Modal.module.css';
+// import { Container } from '..';
 
 // export const Modal = ({ data }) => {
 //   // console.log(data);
@@ -33,10 +36,24 @@ import { Container } from '..';
 
 export const Modal = ({ data, onClose }) => {
   // console.log(data);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const overlay = document.querySelector(`.${s.overlay}`);
+      const modalWrapper = document.querySelector(`.${s.modalWrapper}`);
+      overlay.classList.add(s.open);
+      modalWrapper.classList.add(s.open);
+    }, 100);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
     <>
-      <div className={s.overlay}>
-        <div className={s.modalWrapper}>
+      <div className={classNames(s.overlay)}>
+        <div className={classNames(s.modalWrapper)}>
           <button className={s.closeButton} onClick={onClose}>
             <CloseBtn className={s.closeVector} aria-label="close button" />
           </button>
@@ -48,4 +65,12 @@ export const Modal = ({ data, onClose }) => {
       </div>
     </>
   );
+};
+
+Modal.propTypes = {
+  data: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+  }).isRequired,
+  onClose: PropTypes.func.isRequired,
 };

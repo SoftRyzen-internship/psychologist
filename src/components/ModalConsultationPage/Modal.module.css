@@ -105,6 +105,13 @@
   z-index: 9999;
   overflow: hidden;
   overflow-y: auto;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay.open {
+  opacity: 1;
 }
 
 @media screen and (min-width: 768px) {
@@ -137,6 +144,14 @@
   /* max-height: 100%; */
   box-sizing: content-box;
   padding: 24px 20px 44px 20px;
+
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.modalWrapper.open {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media screen and (min-width: 768px) {
