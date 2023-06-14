@@ -1,7 +1,7 @@
 .section {
   background: url('/images/home-hero-bg-mob-l.svg') left bottom no-repeat,
     url('/images/home-hero-bg-mob-r.svg') right top no-repeat;
-  background-size: contain, auto;
+  background-size: contain, 35%;
   background-color: var(--bg2-color);
   width: 100vw;
   height: 100%;
@@ -14,25 +14,14 @@
 .wrapper {
   display: flex;
   width: 100%;
-  /* padding-top: 16px; */
-  /* background: url('/icons/homeHeroBg_desk.svg') no-repeat; */
 }
 
 .image {
   display: none;
 }
 
-.image {
-  /* width: 458px;
-  height: 745px; */
-  /* position: absolute; */
-  /* object-fit: contain; */
-  /* object-fit: contain; */
-}
-
 .descr {
   width: 100%;
-  /* padding-top: 150px; */
   padding-left: 0;
   padding-right: 0;
 }
@@ -53,32 +42,26 @@
 
 @media screen and (min-width: 768px) {
   .section {
-    background: url('/images/home-hero-bg-l.svg') left bottom no-repeat,
-      url('/images/home-hero-bg-r.svg') right top no-repeat;
-    background-size: contain, auto;
+    background: url('/images/home-hero-bg-tab-l.svg') left bottom no-repeat,
+      url('/images/home-hero-bg-tab-r.svg') right top no-repeat;
+    background-size: 45%, 27%;
     background-color: var(--bg2-color);
     width: 100vw;
     height: 100%;
-    padding-top: 63px;
-    padding-bottom: 0;
-    overflow: hidden;
   }
-  .wrapper {
-    /* padding-top: 63px; */
-  }
-
   .image {
     display: block;
     width: 427px;
     height: 742px;
-    transform: translateX(-102px);
+    position: absolute;
+    top: 0;
+    left: -102px;
   }
   .descr {
-    /* width: 70%; */
-    padding-top: 63px;
-    padding-left: 36px;
-    padding-right: 0;
-    transform: translateX(-102px);
+    width: 375px;
+    margin-left: 329px;
+    padding-top: 52px;
+    padding-bottom: 15px;
   }
   .intro {
     font-size: 24px;
@@ -96,7 +79,7 @@
   .section {
     background: url('/images/home-hero-bg-l.svg') left bottom no-repeat,
       url('/images/home-hero-bg-r.svg') right top no-repeat;
-    background-size: contain, auto;
+    background-size: 40%, 28%;
     background-color: var(--bg2-color);
     width: 100vw;
     height: 100%;
@@ -105,13 +88,15 @@
   .image {
     width: 458px;
     height: 745px;
-    transform: translateX(-40px);
+    position: absolute;
+    top: -30px;
+    left: 0;
   }
   .descr {
-    /* width: 100%; */
-    padding-top: 150px;
-    padding-left: 62px;
-    padding-right: 40px;
+    width: 696px;
+    margin-left: 485px;
+    padding-top: 112px;
+    padding-bottom: 62px;
   }
   .intro {
     font-size: 32px;
