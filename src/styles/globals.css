@@ -160,6 +160,12 @@ section {
     font-size: 48px;
     line-height: calc(62 / 48);
   }
+
+  .swiper-wrapper { 
+    width: 592px !important;
+    overflow-x: visible;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -184,5 +190,9 @@ section {
 
     font-size: 60px;
     line-height: calc(60 / 60);
+  }
+
+  .swiper-wrapper { 
+    width: 1216px !important;
   }
 }

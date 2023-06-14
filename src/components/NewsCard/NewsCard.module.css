@@ -1,14 +1,29 @@
+.centered {
+    display: inline-block;
+    margin: 0 auto;
+}
+
 .newsTitle {
     margin-top: 24px;
+
     font-weight: 600;
     font-size: 18px;
     line-height: 1.56;
+
     color: var(--accent-text-color);
+}
+
+.imageStyle {
+  display: inline-block;
+  width: 100%;
+  height: 396px;
+
+  border-radius: 0 12px;
+  object-fit: cover;
 }
 
 .readMoreLink {
     display: flex;
-    /* height: 25px; */
     gap: 8px;
     margin-bottom: 32px;
 
@@ -23,8 +38,32 @@
 
 .readMoreLink::after {
   content: "";
+
   display: inline-block;
   width: 24px;
   height: 24px;
+
   background: url('/icons/read-more-chevron-right.svg');
+}
+
+@media screen and (min-width: 768px) {
+    .newsTitle {
+        font-size: 24px;
+        line-height: 1.33;
+    }
+    .imageStyle {
+        width: 592px;
+        height: 100%;
+        
+        border-radius: 0 16px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .readMoreLink {
+        margin-bottom: 71px;
+    }
+    .imageStyle {
+        border-radius: 0 20px;
+    }
 }

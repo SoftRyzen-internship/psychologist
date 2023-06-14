@@ -1,7 +1,7 @@
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import PropTypes from 'prop-types';
 import s from './NewsText.module.css';
-const NewsText = ({ newsTextProp, section = false }) => {
+export const NewsText = ({ newsTextProp, section = false }) => {
   return (
     <span className={section ? s.newsTextSection : s.newsText}>
       <ReactMarkdown>{newsTextProp}</ReactMarkdown>
@@ -11,6 +11,5 @@ const NewsText = ({ newsTextProp, section = false }) => {
 
 NewsText.propTypes = {
   newsTextProp: PropTypes.string.isRequired,
+  section: PropTypes.bool
 };
-
-export default NewsText;

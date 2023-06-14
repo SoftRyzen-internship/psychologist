@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import PropTypes from 'prop-types';
-import { Container, OffsetImageBorder } from '@/components';
-import { SectionTitle } from '@/components/SectionTitle/SectionTitle';
+import { Container, SectionTitle, OffsetImageBorder } from '@/components';
 import NewsText from '@/components/NewsText/NewsText';
 
 import s from './NewsView.module.css';
@@ -35,5 +34,16 @@ export function NewsView({ allNews }) {
 }
 
 NewsView.propTypes = {
-  allNews: PropTypes.array.isRequired
-}
+  allNews: PropTypes.shape([
+    {
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
+      image: PropTypes.shape({
+        alt: PropTypes.string.isRequired,
+        url: PropTypes.string.isRequired,
+      }),
+      _publishedAt: PropTypes.string.isRequired,
+    },
+  ]),
+};

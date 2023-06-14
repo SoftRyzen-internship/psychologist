@@ -1,15 +1,35 @@
-import Image from "next/image";
-import NewsText from "../NewsText/NewsText";
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import Image from 'next/image';
+import Link from 'next/link';
+import { NewsText } from '@/components';
 import s from './NewsCard.module.css';
-import Link from "next/link";
 
-export const NewsCard = ({ image, title, text}) => {
+export const NewsCard = ({ image, title, text }) => {
+  const { url, alt } = image;
   return (
-    <div>
-      <Image src={image.url} alt={image.alt} width={592} height={396} />
-      <h3 className={s.newsTitle}>{title}</h3>
+    <>
+      <Image
+        src={url}
+        alt={alt}
+        width={1200}
+        height={748}
+        className={s.imageStyle}
+      />
+      <h3 className={classNames(s.newsTitle)}>{title}</h3>
       <NewsText newsTextProp={text} section />
-      <Link href="/news" className={s.readMoreLink}>Читати більше</Link>
-    </div>
+      <Link href="/news" className={s.readMoreLink}>
+        Читати більше
+      </Link>
+    </>
   );
+};
+
+NewsCard.propTypes = {
+  image: PropTypes.shape({
+    alt: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+  }),
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired
 };

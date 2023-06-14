@@ -1,6 +1,7 @@
 .newsText {
   display: block;
   margin-top: 32px;
+  
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
@@ -25,8 +26,8 @@
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 6; /* start showing ellipsis when 3rd line is reached */
-  white-space: pre-wrap; /* let the text wrap preserving spaces */
+  -webkit-line-clamp: 6;
+  white-space: pre-wrap;
 
   color: var(--main-text-color);
 }
@@ -69,7 +70,10 @@
     margin-bottom: 36px;
   }
   .newsTextSection {
+    max-width: 592px;
     margin-top: 24px;
+
+    -webkit-line-clamp: 5;
   }
   .newsTextSection > p {
     font-size: 18px;
@@ -88,10 +92,6 @@
   }
   .newsText > p:last-child {
     margin-bottom: 56px;
-  }
-
-  .newsTextSection {
-    max-width: 592px;
   }
   .newsTextSection > p {
     font-size: 20px;

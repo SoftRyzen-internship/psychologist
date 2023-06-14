@@ -1,49 +1,40 @@
+import PropTypes from 'prop-types';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import { Pagination, Mousewheel, Keyboard } from 'swiper';
+import { NewsCard, SlideButton } from '@/components';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/virtual';
 import s from './Slider.module.css';
 
-import { Pagination, Mousewheel, Keyboard } from 'swiper';
-import { NewsCard, SlideButton } from '@/components';
-import { useMediaQuery } from '@/utils/hooks/useMediaQuery';
-
-
 export const Slider = ({ allNews }) => {
-  const isBreakPoint = useMediaQuery(768);
-  console.log(isBreakPoint);
-  
   const pagination = {
     clickable: true,
-    dynamicBullets: true
+    dynamicBullets: true,
   };
   return (
     <>
       <Swiper
-        // rewind={true}
-        loop={true}
-        // cssMode={true}
-        pagination={pagination}
-        // mousewheel={true}
-        keyboard={true}
         modules={[Pagination, Mousewheel, Keyboard]}
-        spaceBetween={50}
-        // breakpoints={{
-        //   768: {
-        //     pagination: false
-        //   },
-          
-        //   1280: {
-        //     pagination: false
-        // } }}
+        pagination={pagination}
+        mousewheel={true}
+        keyboard={true}
+        rewind={true}
+        // loop={true}
+        spaceBetween={32}
+        breakpoints={{
+          768: {
+            pagination: false,
+          },
+
+          1280: {
+            pagination: false,
+            slidesPerView: 2,
+          },
+        }}
       >
         {allNews.map(newsContent => (
-          <SwiperSlide
-            key={newsContent.id}
-            //   virtualIndex={index}
-          >
+          <SwiperSlide key={newsContent.id}>
             <NewsCard
               image={newsContent.image}
               title={newsContent.title}
@@ -58,4 +49,19 @@ export const Slider = ({ allNews }) => {
       </Swiper>
     </>
   );
+};
+
+Slider.propTypes = {
+    allNews: PropTypes.shape([
+        {
+            id: PropTypes.number.isRequired,
+            title: PropTypes.string.isRequired,
+            text: PropTypes.string.isRequired,
+            image: PropTypes.shape({
+                alt: PropTypes.string.isRequired,
+                url: PropTypes.string.isRequired
+            }),
+            _publishedAt: PropTypes.string.isRequired
+      }
+  ]),
 };
