@@ -131,6 +131,9 @@
   .lowerWrap .imgWrap {
     max-width: 420px;
   }
+  .lowerWrap .textWrap {
+    margin-bottom: 36px;
+  }
 }
 
 @media screen and (min-width: 1280px) {

@@ -25,8 +25,8 @@
 }
 
 .title {
-  margin: 0 auto 24px;
-  width: 356px;
+  margin: 0 auto 20px;
+  width: 100%px;
   text-align: center;
   font-family: var(--font-alegreya);
   font-weight: 500;
@@ -41,12 +41,13 @@
   align-items: flex-start;
   gap: 4px;
   position: relative;
-  width: 360px;
+  min-width: 278px;
+  width: 100%;
   padding-bottom: 24px;
 
   font-weight: 400;
-  font-size: 16px;
-  line-height: calc(24 / 16);
+  font-size: 14px;
+  line-height: calc(20 / 14);
   /* @media screen and (max-width: 374px) {
     width: 100%;
   } */
@@ -62,7 +63,7 @@
   justify-content: center;
   width: 100%;
   flex: 1;
-  padding: 16px 20px;
+  padding: 12px 10px;
 
   background: #ffffff;
   border: none;
@@ -71,7 +72,7 @@
 }
 
 .inputField::placeholder {
-  color: var(--input-placeholder-color);
+  color: var(--input-placeholder-mob);
 }
 
 .error {
@@ -93,12 +94,12 @@
   position: relative;
   display: flex;
   flex-direction: row-reverse;
-  gap: 10px;
-  margin-top: 4px;
-  margin-bottom: 40px;
+  gap: 12px;
+  margin-top: 8px;
+  margin-bottom: 28px;
 
-  font-size: 14px;
-  line-height: calc(20 / 14);
+  font-size: 12px;
+  line-height: calc(12 / 16);
   /* identical to box height, or 143% */
 
   color: var(--label-text-color);
@@ -118,9 +119,7 @@
 
   border: 1px solid var(--checkbox-border-color);
   border-radius: 4px;
-  /* color: var(--accent-text-color); */
   color: white;
-  /* background-color: var(--accent-color); */
 }
 
 .icon {
@@ -134,12 +133,40 @@
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
+
 @media screen and (min-width: 768px) {
   .form {
     padding: 80px 64px;
   }
   .title {
+    margin: 0 auto 24px;
+
     font-size: 36px;
     line-height: calc(40 / 36);
+  }
+
+  .inputWrap {
+    width: 360px;
+
+    font-size: 16px;
+    line-height: calc(24 / 16);
+  }
+
+  .inputField {
+    padding: 16px 20px;
+  }
+
+  .inputField::placeholder {
+    color: var(--input-placeholder-color);
+  }
+
+  .checkboxLabel {
+    gap: 10px;
+    margin-top: 4px;
+
+    font-size: 14px;
+    line-height: calc(20 / 14);
+
+    margin-bottom: 40px;
   }
 }
