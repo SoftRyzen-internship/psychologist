@@ -62,7 +62,6 @@
   .contentWrapper {
     align-items: flex-start;
     flex-direction: row;
-    gap: 28px;
   }
   .image {
     position: relative;
