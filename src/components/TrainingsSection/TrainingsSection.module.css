@@ -34,7 +34,7 @@
 
 .programList > ul > li {
   padding-left: 40px;
-  background-image: url(/images/icons/Check.svg);
+  background-image: url(/icons/check-mark.svg);
   background-position: 0 0;
   background-repeat: no-repeat;
 }

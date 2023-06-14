@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import Head from 'next/head';
 import { useMediaQuery } from 'react-responsive';
 import { useEffect, useState } from 'react';
@@ -102,6 +103,16 @@ export const getStaticProps = async () => {
       timeManagement,
     },
   };
+};
+
+TrainingsPage.propTypes = {
+  conflictology: PropTypes.object.isRequired,
+  educationWithLove: PropTypes.object.isRequired,
+  publicSpeaking: PropTypes.object.isRequired,
+  selfHelp: PropTypes.object.isRequired,
+  stressResistance: PropTypes.object.isRequired,
+  strongSides: PropTypes.object.isRequired,
+  timeManagement: PropTypes.object.isRequired,
 };
 
 export default TrainingsPage;
