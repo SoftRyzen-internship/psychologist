@@ -12,4 +12,10 @@ export * from './OffsetImageBorder/OffsetImageBorder';
 export * from './SlideButton/SlideButton';
 export * from './NewsCard/NewsCard';
 export * from './NewsText/NewsText';
+export * from './ContactForm/ContactForm';
+export * from './Modal/Modal';
+export * from './ModalButton/ModalButton';
 export * from './ReusableSection/ReusableSection';
+export * from './ThankYou/ThankYou';
+export * from './TrainingsSection/TrainingsSection';
+

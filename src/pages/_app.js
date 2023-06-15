@@ -1,5 +1,7 @@
-import { Open_Sans, Alegreya } from 'next/font/google';
+import { useRouter } from 'next/router';
 import classNames from 'classnames';
+import { Open_Sans, Alegreya } from 'next/font/google';
+
 import { Layout } from '@/layout';
 import '@/styles/globals.css';
 
@@ -18,6 +20,7 @@ const alegreya = Alegreya({
 });
 
 export default function App({ Component, pageProps }) {
+  const router = useRouter();
   return (
     <>
       <style jsx global>
@@ -28,9 +31,12 @@ export default function App({ Component, pageProps }) {
           }
         `}
       </style>
-      <Layout data={pageProps} className={classNames('layout')}>
-        <Component {...pageProps} />
-      </Layout>
+      {router.pathname === '/404' && <Component {...pageProps} />}
+      {router.pathname !== '/404' && (
+        <Layout data={pageProps} className={classNames('layout')}>
+          <Component {...pageProps} />
+        </Layout>
+      )}
     </>
   );
 }
