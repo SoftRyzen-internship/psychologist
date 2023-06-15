@@ -6,7 +6,7 @@ export const FirstView = () => {
   return (
     <section className={s.firstView}>
       <Container>
-        <SectionTitle title="Перша секція" h1={true} centered={true} />
+        <SectionTitle title="Юлія Сулаєва" h1={true} centered={false} />
 
         <FirstComponent />
       </Container>

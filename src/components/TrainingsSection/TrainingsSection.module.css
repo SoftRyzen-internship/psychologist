@@ -1,0 +1,113 @@
+.textMargin {
+  margin-bottom: 24px;
+}
+.goal {
+  font-size: 18px;
+  line-height: calc(28 / 18);
+}
+.goal strong {
+  font-weight: 600;
+}
+.timePeriod {
+  display: block;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: calc(28 / 18);
+
+  color: var(--accent-text-color);
+}
+
+.programTitle {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: calc(28 / 18);
+}
+
+.programList {
+  margin-bottom: 40px;
+}
+
+.programList > ul {
+  list-style-type: none;
+}
+
+.programList > ul > li {
+  padding-left: 40px;
+  background-image: url(/icons/check-mark.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.programList > ul > li:not(:last-child) {
+  margin-bottom: 20px;
+}
+.imageWrapper {
+  composes: textMargin;
+
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.image {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
+
+@media screen and (min-width: 768px) {
+  .heroProgramList {
+    width: 369px;
+  }
+  .programTitle {
+    font-size: 20px;
+    line-height: calc(28 / 18);
+  }
+  .formatText {
+    font-size: 20px;
+    line-height: calc(28 / 20);
+  }
+  .goal {
+    font-size: 24px;
+    line-height: calc(32 / 24);
+  }
+  .timePeriod {
+    font-size: 24px;
+    line-height: calc(32 / 24);
+  }
+  .timePeriodHero {
+    composes: timePeriod;
+
+    width: 328px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .heroContentWrapper {
+    width: 696px;
+  }
+  .textMargin {
+    margin-bottom: 36px;
+  }
+  .heroProgramList {
+    width: 100%;
+  }
+  .programTitle {
+    font-size: 24px;
+    line-height: calc(32 / 24);
+  }
+  .goalHero {
+    width: 100%;
+  }
+  .timePeriodHero {
+    width: 100%;
+  }
+  .contentDesktopContainer {
+    display: flex;
+    gap: 32px;
+  }
+  .contentDesktopContainer > div {
+    width: 592px;
+  }
+}
