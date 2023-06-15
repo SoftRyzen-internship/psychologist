@@ -12,6 +12,8 @@
   --btn-hover-color: #2f8bf6;
   --btn-disabled-color: #a3a9b2;
   --fast-btn-animation: background-color 300ms ease;
+  --consult-border-color: #d0e2ff;
+  --consult-bg-color: #e4f0ff;
 }
 
 * {

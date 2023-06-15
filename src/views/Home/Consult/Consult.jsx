@@ -1,15 +1,8 @@
 import { Container, SectionTitle } from '@/components';
+import data from 'src/data/consult.json';
 import st from './Consult.module.css';
 
 export const Consult = () => {
-  const data = [
-    { id: 1, text: 'Тривалість сесії: 50 – 55 хвилин' },
-    {
-      id: 2,
-      text: 'Працюю очно та онлайн з дорослими та підлітками (від 15 років)',
-    },
-    { id: 3, text: 'Строго дотримуюсь принципу конфіденційності' },
-  ];
   return (
     <section className={st.section}>
       <Container>
@@ -21,7 +14,7 @@ export const Consult = () => {
           {data.map(el => {
             return (
               <li className={st.item} key={el.id}>
-                {el.text}
+                <span className={st.content}>{el.text}</span>
               </li>
             );
           })}
