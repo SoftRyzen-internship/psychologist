@@ -1,0 +1,129 @@
+.footer {
+  background-color: var(--footer-color);
+  color: var(--white-color);
+}
+.footerWrapper {
+  padding-top: 32px;
+  padding-bottom: 16px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo {
+  width: 69px;
+  height: 46px;
+  margin-bottom: 20px;
+
+  display: block;
+}
+.navList {
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  line-height: calc(20 / 14);
+  text-align: center;
+
+  list-style: none;
+}
+.linkActive {
+  font-weight: 700;
+}
+.navList > li:not(:last-child) {
+  margin-bottom: 12px;
+}
+.imgIcon {
+  width: 36px;
+  height: 36px;
+
+  fill: var(--white-color);
+  transition: var(--fast-svg-animation);
+}
+.imgIcon:hover {
+  fill: #2361ab;
+}
+.socialList {
+  margin-bottom: 29px;
+
+  display: flex;
+  gap: 24px;
+
+  list-style: none;
+}
+.developmentYear {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+}
+.footer::after {
+  height: 1px;
+  bottom: 40px;
+
+  content: '';
+  display: block;
+  position: relative;
+
+  background: var(--white-color);
+}
+
+@media screen and (min-width: 768px) {
+  .footerWrapper {
+    padding-top: 36px;
+  }
+  .mainTabletWrapper {
+    width: 100%;
+    display: flex;
+  }
+  .tabletWrappers {
+    flex: 1;
+  }
+  .logo {
+    width: 95px;
+    height: 64px;
+  }
+  .navList {
+    margin-bottom: 25px;
+
+    font-size: 16px;
+    line-height: calc(24 / 16);
+    text-align: left;
+  }
+  .navList > li:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footerWrapper {
+    padding-top: 32px;
+  }
+  .desktopWrapper {
+    width: 100%;
+    margin-bottom: 25px;
+
+    display: flex;
+    justify-content: space-between;
+  }
+  .desktopNavWrapper {
+    width: 406px;
+    height: 112px;
+  }
+  .navList {
+    height: 112px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .navList > li {
+    margin-right: 106px;
+  }
+  .navList > li:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .navList > li:nth-child(3) {
+    margin-bottom: 0px;
+  }
+  .socialList {
+    margin-right: 61px;
+  }
+}
