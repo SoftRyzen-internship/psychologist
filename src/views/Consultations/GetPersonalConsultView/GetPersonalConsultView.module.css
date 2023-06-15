@@ -1,23 +1,24 @@
 .imageWrapper {
   width: auto;
+  /* width: 308px; */
 }
 
-@media screen and (min-width: 768px) {
-  .imageWrapper {
-    width: 704px;
-  }
+.imageWrapper {
+  margin-top: 24px;
+}
 
+.section h2 {
+  width: 268px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .imageWrapper img {
     width: 100%;
-    height: 100%;
   }
 }
 
-@media screen and (min-width: 1280px) {
-  .imageWrapper {
-    width: 472px;
-    height: 870px;
-  }
+.mdContent {
+  margin-bottom: 40px;
 }
 
 .mdContent ul {
@@ -27,7 +28,7 @@
   gap: 20px;
   counter-reset: my-counter;
 
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 }
 
 /* .mdContent li {
@@ -66,16 +67,6 @@
   /* margin-right: 5px; */
 }
 
-.mdContent + button {
-  margin-bottom: 24px;
-}
-
-@media screen and (min-width: 768px) {
-  .mdContent + button {
-    margin-bottom: 40px;
-  }
-}
-
 .mdContent li > strong {
   font-weight: 600;
 }
@@ -87,12 +78,45 @@
   line-height: calc(24 / 16);
 }
 
+/**
+  |============================
+  | 768
+  |============================
+*/
+
 @media screen and (min-width: 768px) {
   .mdContent li {
     font-size: 18px;
     line-height: calc(28 / 18);
   }
+
+  .imageWrapper {
+    margin-top: 40px;
+  }
+
+  .imageWrapper {
+    width: 688px;
+  }
+
+  .imageWrapper img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .section h2 {
+    width: auto;
+  }
+
+  .mdContent li {
+    padding-left: 56px;
+  }
 }
+
+/**
+  |============================
+  | 1280
+  |============================
+*/
 
 @media screen and (min-width: 1280px) {
   .flexBox {
@@ -102,7 +126,7 @@
   }
 
   .mdContent {
-    width: 696px;
+    width: 676px;
   }
 
   .mdContent li {
@@ -110,7 +134,29 @@
     line-height: calc(28 / 20);
   }
 
-  .mdContent + button {
-    margin-bottom: 0;
+  .imageWrapper {
+    margin-top: 0;
+  }
+
+  .imageWrapper {
+    width: 472px;
+    height: 870px;
+  }
+
+  .section {
+    background-image: url('/icons/consultations-personalcons-vector_bg.svg');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    /* background-size: 204px 594px; */
+  }
+
+  .section h2 {
+    width: 824px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mdContent li {
+    padding-left: 60px;
   }
 }
