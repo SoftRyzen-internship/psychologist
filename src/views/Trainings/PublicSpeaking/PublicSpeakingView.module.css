@@ -1,0 +1,41 @@
+@media screen and (min-width: 768px) {
+  .heroTrainingSection > div {
+    position: relative;
+  }
+  .heroTrainingSection > div:after {
+    content: '';
+    width: 901px;
+    height: 950px;
+    right: -588px;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+    background-image: url('/images/trainingsPage/publicSpeakingBackground.svg');
+    background-repeat: no-repeat;
+  }
+  .heroImg {
+    display: block;
+    position: absolute;
+    right: -226px;
+    bottom: 0;
+  }
+  .heroTrainingSection > div > button {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .heroTrainingSection h2 {
+    width: 940px;
+    white-space: pre-wrap;
+  }
+  .heroImg {
+    right: -34px;
+  }
+  .heroTrainingSection > div:after {
+    width: 908px;
+    height: 842px;
+    right: -322px;
+    background-image: url('/images/trainingsPage/publicSpeakingBackgroundDesktop.svg');
+  }
+}
