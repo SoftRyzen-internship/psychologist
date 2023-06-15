@@ -4,6 +4,10 @@
   height: 100%;
 }
 
+.section :global .sectionTitleH2 {
+  text-align: left;
+}
+
 .list {
   display: flex;
   flex-direction: column;
@@ -44,6 +48,9 @@
 }
 
 @media screen and (min-width: 768px) {
+  .section :global .sectionTitleH2 {
+    text-align: center;
+  }
   .list {
     flex-direction: row;
     flex-wrap: wrap;

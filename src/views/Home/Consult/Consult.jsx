@@ -15,7 +15,7 @@ export const Consult = () => {
       <Container>
         <SectionTitle
           title={'Індивідуальні психологічні консультації, психотерапія:'}
-          centered={true}
+          className={st.title}
         />
         <ul className={st.list}>
           {data.map(el => {
