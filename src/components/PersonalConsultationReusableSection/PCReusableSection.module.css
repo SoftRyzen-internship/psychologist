@@ -14,23 +14,18 @@
   font-weight: 600;
 }
 
-.reusableSection p:not(:last-of-type) {
-  margin-bottom: 20px;
-}
-
 .reusableSection {
   background-image: url(/icons/MobileConsult.svg);
-  background-size: cover;
   background-color: var(--bg2-color);
-  background-position: right;
+  background-position: bottom;
   background-repeat: no-repeat;
+  background-size: 360px 528px;
 }
 
 .reusableSection2 {
   background-image: url(/icons/MobileTime.svg);
-  background-size: cover;
   background-color: var(--bg2-color);
-  background-position: left;
+  background-position: bottom;
   background-repeat: no-repeat;
 }
 
@@ -39,6 +34,17 @@
   font-weight: 400;
   font-size: 16px;
   line-height: calc(24 / 16);
+
+  width: 320px;
+}
+
+.universalWrapper > div:nth-child(2) > p:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+.reusableSection2 > div > div > div:nth-child(2) > p {
+  font-size: 18px;
+  line-height: calc(28 / 18);
 }
 
 /**
@@ -54,6 +60,8 @@
 
   .reusableSection {
     background-image: url(/icons/TabletConsult.svg);
+    background-size: 768px 562px;
+    background-position: bottom;
   }
 
   .reusableSection2 {
@@ -85,6 +93,10 @@
     justify-content: center;
     align-items: center;
   }
+
+  .universalWrapper > div:first-of-type {
+    padding-top: 42px;
+  }
 }
 
 /**
@@ -101,6 +113,7 @@
   .reusableSection {
     background-image: url(/icons/PCConsult.svg);
     background-position: bottom;
+    background-size: 1440px 426px;
   }
 
   .reusableSection2 {
@@ -128,37 +141,27 @@
   }
 
   .universalWrapper > div:first-of-type {
-    padding-left: 80px;
-    padding-top: 40px;
+    padding-top: 62px;
+  }
+
+  .universalWrapper > div:nth-child(2) {
+    padding-right: 106px;
   }
 
   .reusableSection2 > div > .universalWrapper > div:nth-of-type(1) {
-    padding-left: 13px;
-    padding-top: 40px;
+    padding: 0;
   }
 
   .reusableSection2 > div > .universalWrapper > div:nth-of-type(2) {
-    padding-right: 28px;
+    padding-right: 72px;
   }
-}
 
-/* .reusableSection p:not(:first-of-type) {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: calc(24/16);
-}
-
-@media screen and (min-width: 768px) {
-  .reusableSection p:not(:first-of-type) {
-    font-size: 18px;
-    line-height: calc(28/18);
+  .reusableSection2 > div > div > div:nth-child(1) > h2 {
+    margin-bottom: 0;
   }
-}
 
-@media screen and (min-width: 1280px) {
-  .reusableSection p:not(:first-of-type) {
+  .reusableSection2 > div > div > div:nth-child(2) > p {
     font-size: 20px;
-    line-height: calc(28/20);
+    line-height: calc(28 / 20);
   }
-} */
+}

@@ -13,12 +13,10 @@ const ConsultationsPage = props => {
       </Head>
       <BlueSectionComponent
         data={props.faq1}
-        reusable
         className={{ section: 'reusableSection', div: 'containerX' }}
       />
       {/* <BlueSectionComponent
         data={props.faq2}
-        reusable
         className={{ section: 'reusableSection2', div: 'containerX' }}
       /> */}
     </>

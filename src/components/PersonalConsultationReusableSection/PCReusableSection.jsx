@@ -3,30 +3,21 @@ import PropTypes from 'prop-types';
 import { SectionTitle } from '../SectionTitle/SectionTitle';
 import * as styles from './PCReusableSection.module.css';
 
-export const BlueSectionComponent = ({ data, className, reusable }) => {
+export const BlueSectionComponent = ({ data, className }) => {
   return (
     <>
-      <section
-        className={
-          reusable
-            ? styles[className.section] + ' ' + styles[className.section]
-            : styles[className.section]
-        }
-      >
-        <div className={reusable ? 'container' : styles[className.div]}>
-          {reusable && (
-            <>
-              <div className={styles['universalWrapper']}>
-                <div>
-                  <SectionTitle title={data.heading} />
-                </div>
-                {/* <ReactMarkdown>{data.heading}</ReactMarkdown> */}
-                <div>
-                  <ReactMarkdown>{data.description}</ReactMarkdown>
-                </div>
+      <section className={styles[className.section]}>
+        <div className={'container'}>
+          <>
+            <div className={styles['universalWrapper']}>
+              <div>
+                <SectionTitle title={data.heading} />
               </div>
-            </>
-          )}
+              <div>
+                <ReactMarkdown>{data.description}</ReactMarkdown>
+              </div>
+            </div>
+          </>
         </div>
       </section>
     </>
