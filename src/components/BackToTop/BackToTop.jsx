@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import BackToTopF from '../../../public/icons/TestVectorFull.svg';
+import BackToTopF from '../../../public/icons/backtotop.svg';
 import s from './BackToTop.module.css';
 
 export const BackToTopButton = () => {
