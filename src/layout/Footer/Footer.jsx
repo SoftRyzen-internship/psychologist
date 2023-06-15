@@ -9,7 +9,7 @@ import socials from 'utils/socials.json';
 import LogoIcon from 'public/icons/logoFooter.svg';
 import FacebookIcon from 'public/icons/facebook.svg';
 import TelegramIcon from 'public/icons/telegram.svg';
-import YoutubeIcon from 'public/icons/Youtube.svg';
+import YoutubeIcon from 'public/icons/youtube.svg';
 import InstagramIcon from 'public/icons/instagram.svg';
 
 import s from './Footer.module.css';
