@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import Telegram from 'public/icons/soctelegram.svg';
 import Facebook from 'public/icons/socfacebook.svg';
 import Youtube from 'public/icons/socyoutube.svg';
@@ -49,4 +50,8 @@ export const Socials = ({ component = 'panel' }) => {
       </ul>
     </>
   );
+};
+
+Socials.propTypes = {
+  component: PropTypes.string,
 };
