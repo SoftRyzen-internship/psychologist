@@ -23,12 +23,14 @@ export const Slider = ({ allNews }) => {
         // loop={true}
         spaceBetween={32}
         breakpoints={{
+          480: {
+            slidesPerView: 1,
+          },
           768: {
-            pagination: false,
+            slidesPerView: 1,
           },
 
           1280: {
-            pagination: false,
             slidesPerView: 2,
           },
         }}
@@ -52,8 +54,8 @@ export const Slider = ({ allNews }) => {
 };
 
 Slider.propTypes = {
-  allNews: PropTypes.arrayOf(PropTypes.shape(
-    {
+  allNews: PropTypes.arrayOf(
+    PropTypes.shape({
       id: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
       text: PropTypes.string.isRequired,
@@ -62,6 +64,6 @@ Slider.propTypes = {
         url: PropTypes.string.isRequired,
       }),
       _publishedAt: PropTypes.string.isRequired,
-    },
-  )),
+    }),
+  ),
 };
