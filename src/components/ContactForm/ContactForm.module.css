@@ -5,8 +5,8 @@
 
   padding: 48px 20px 40px;
 
-  /* width: 320px;
-  height: 532px; */
+  width: 320px;
+  height: 532px;
 
   background-color: var(--white-color);
   border-radius: 12px;
@@ -136,8 +136,8 @@
   .form {
     padding: 80px 64px;
 
-    /* width: 488px;
-    height: 680px; */
+    width: 488px;
+    height: 680px;
   }
 
   .title {

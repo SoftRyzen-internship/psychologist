@@ -1,34 +1,12 @@
-.wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  padding: 48px 20px;
-
-  background-color: var(--white-color);
-  border-radius: 12px;
-
-  width: 100%;
-}
-
-.titleWrap {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 16px;
-
-  margin-left: 16px;
-  margin-bottom: 24px;
-}
-
-.correctIcon {
-  padding-top: 8px;
-  width: 28px;
-  height: 28px;
-}
-
+/* .correctIcon {
+  width: 40px;
+  height: 40px;
+} */
+/* .content {
+  background: url('/images/modal-done-bg.png');
+} */
 .title {
-  width: 193px;
+  margin-bottom: 40px;
 
   font-family: var(--font-alegreya);
   font-weight: 500;
@@ -39,10 +17,12 @@
 
   color: var(--accent-text-color);
 }
-.textWrap {
+
+.wrap {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  align-items: center;
+  gap: 40px;
 
   width: 278px;
   font-size: 16px;
@@ -50,36 +30,37 @@
 
   text-align: center;
 }
-.text {
+
+.strongImage {
+  width: 270px;
 }
 
 @media screen and (min-width: 768px) {
-  .wrap {
-    padding: 80px 40px;
-  }
-  .titleWrap {
-    gap: 12px;
-
-    margin-left: 0;
-    margin-bottom: 36px;
-  }
-  .correctIcon {
+  /* .correctIcon {
     padding-top: 0;
 
-    width: 40px;
-    height: 40px;
-  }
+    width: 44px;
+    height: 44px;
+  } */
 
   .title {
-    width: 356px;
+    margin: 0 auto 64px;
 
     font-size: 36px;
     line-height: calc(40 / 36);
   }
-  .textWrap {
-    width: 408px;
 
+  .strongImage {
+    width: 360px;
+  }
+
+  .wrap {
+    width: 360px;
+    gap: 64px;
     font-size: 20px;
     line-height: calc(28 / 20);
+  }
+  .textWrap p:not(:first-child) {
+    display: inline;
   }
 }
