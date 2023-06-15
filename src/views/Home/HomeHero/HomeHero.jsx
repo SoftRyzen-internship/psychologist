@@ -1,20 +1,30 @@
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
+import PropTypes from 'prop-types';
+import { useMediaQuery } from 'react-responsive';
+import { useState, useEffect } from 'react';
 import { Container, SectionTitle } from '@/components';
-import st from './HomeHero.module.css';
+import * as st from './HomeHero.module.css';
 
 export const HomeHero = ({ hero }) => {
+  const isTablet = useMediaQuery({ minWidth: 768 });
+  const [showElem, setShowElem] = useState(false);
+  useEffect(() => {
+    isTablet ? setShowElem(true) : setShowElem(false);
+  }, [isTablet]);
   return (
     <section className={st.section}>
       <Container>
-        <Image
-          alt="main hero photo"
-          src="/images/main_hero.png"
-          className={st.image}
-          priority
-          width={458}
-          height={745}
-        />
+        {showElem && (
+          <Image
+            alt="фото Юлії Сулаєвої"
+            src="/images/main_hero.png"
+            className={st.image}
+            priority
+            width={458}
+            height={734}
+          />
+        )}
         <div className={st.descr}>
           <SectionTitle title={hero.heading} h1={true} />
 
@@ -25,4 +35,8 @@ export const HomeHero = ({ hero }) => {
       </Container>
     </section>
   );
+};
+
+HomeHero.propTypes = {
+  hero: PropTypes.object.isRequired,
 };

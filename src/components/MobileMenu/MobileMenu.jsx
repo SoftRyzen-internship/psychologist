@@ -1,9 +1,9 @@
+import PropTypes from 'prop-types';
 import { Container, NavBar, Socials } from '..';
 import * as st from './MobileMenu.module.css';
 
 export const MobileMenu = ({ isMenuOpen, setIsMenuOpen }) => {
   const wrapStat = isMenuOpen ? st.wrapperMenuOpen : st.wrapper;
-  // const classStat = isMenuOpen ? st.isOpen : st.isClose;
   return (
     <div className={wrapStat}>
       <Container className={st.menu}>
@@ -14,4 +14,9 @@ export const MobileMenu = ({ isMenuOpen, setIsMenuOpen }) => {
       </Container>
     </div>
   );
+};
+
+MobileMenu.propTypes = {
+  isMenuOpen: PropTypes.bool.isRequired,
+  setIsMenuOpen: PropTypes.func.isRequired,
 };

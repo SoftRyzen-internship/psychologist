@@ -2,7 +2,11 @@
   display: flex;
   flex-direction: column;
   gap: 36px;
-  padding: 62px 37px 108px 37px;
+  /* padding: 62px 37px 108px 37px; */
+  padding-top: 62px;
+  padding-left: 37px;
+  padding-right: 37px;
+  margin-bottom: 108px;
   font-family: var(--font-open-sans);
   font-size: 18px;
   font-weight: 600;
@@ -12,11 +16,11 @@
 }
 
 .link {
-  color: #2361a8;
+  color: var(--accent-text-color);
 }
 
 .linkActive {
-  color: #2361a8;
+  color: var(--accent-text-color);
   position: relative;
 }
 
@@ -35,9 +39,9 @@
   .list {
     /* padding: 100px auto 92px 0; */
     padding-top: 100px;
-    padding-bottom: 92px;
+    /* padding-bottom: 92px; */
     padding-left: 0;
-
+    margin-bottom: 92px;
     font-size: 24px;
     line-height: 1.33;
   }
@@ -47,7 +51,12 @@
   .list {
     flex-direction: row;
     gap: 40px;
-    padding: 18px;
+    padding-top: 62px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 0;
     font-size: 18px;
     line-height: 1.56;
   }
