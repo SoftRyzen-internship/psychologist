@@ -1,13 +1,4 @@
 .backToTopButton {
-  /* position: absolute;
-  width: 44px;
-  height: 44px;
-  bottom: 30px;
-  background: rgb(233, 237, 242);
-  border: 0.5px solid rgb(35, 97, 168);
-  right: 32px;
-  display: block; */
-
   position: fixed;
   bottom: 35px;
   right: 32px;
@@ -18,6 +9,9 @@
   border: 0.5px solid var(--accent-text-color);
 
   opacity: 0;
+  cursor: pointer;
+  pointer-events: none;
+  transform: scale(1);
 
   transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease,
     opacity 0.3s ease;
@@ -25,7 +19,7 @@
 
 .backToTopButton.visible {
   opacity: 1;
-  /* transition: opacity 0.3s ease; */
+  pointer-events: all;
 }
 
 .svg {
@@ -33,12 +27,11 @@
   height: 44px;
 }
 
-.backToTopButton:hover {
+.backToTopButton:hover,
+.backToTopButton:focus {
   transform: scale(1.2);
 }
 
-.backToTopButton:not(:hover) {
-  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease,
-    opacity 0.3s ease;
+.backToTopButton:not(:hover):not(:focus) {
   transform: scale(1);
 }

@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import BackToTopF from '../../../public/icons/backtotop.svg';
+import React, { useState, useEffect, useRef } from 'react';
+import BackToTopF from 'public/icons/backtotop.svg';
 import s from './BackToTop.module.css';
 
 export const BackToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const buttonRef = useRef(null);
 
   const handleScroll = () => {
     const scrollTop =
@@ -16,6 +17,8 @@ export const BackToTopButton = () => {
       top: 0,
       behavior: 'smooth',
     });
+
+    buttonRef.current.blur();
   };
 
   useEffect(() => {
@@ -27,14 +30,8 @@ export const BackToTopButton = () => {
 
   return (
     <button
+      ref={buttonRef}
       className={`${s.backToTopButton} ${isVisible ? s.visible : ''}`}
-      // style={{
-      //   display: isVisible ? 'block' : 'none',
-      // }}
-      // style={{
-      //   transition: 'opacity 0.3s ease',
-      //   opacity: isVisible ? 1 : 0,
-      // }}
       onClick={scrollToTop}
     >
       <BackToTopF className={s.svg} />
