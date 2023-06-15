@@ -52,9 +52,9 @@ export const Slider = ({ allNews }) => {
 };
 
 Slider.propTypes = {
-  allNews: PropTypes.shape([
+  allNews: PropTypes.arrayOf(PropTypes.shape(
     {
-      id: PropTypes.number.isRequired,
+      id: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
       text: PropTypes.string.isRequired,
       image: PropTypes.shape({
@@ -63,5 +63,5 @@ Slider.propTypes = {
       }),
       _publishedAt: PropTypes.string.isRequired,
     },
-  ]),
+  )),
 };
