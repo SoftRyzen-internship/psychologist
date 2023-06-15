@@ -1,11 +1,8 @@
-.actionButton {
-  margin: 0 auto;
+.modalButton {
   max-width: 320px;
   width: 100%;
   height: 60px;
   padding: 16px 44px;
-  display: flex;
-  justify-content: center;
 
   font-family: var(--font-open-sans);
   font-weight: 600;
@@ -21,40 +18,26 @@
   transition: var(--fast-btn-animation);
 }
 
-.actionButton:hover,
-.actionButton:focus {
+.modalButton:hover,
+.modalButton:focus {
   background-color: var(--btn-hover-color);
 }
 
-.actionButton:disabled {
+.modalButton:disabled {
   background-color: var(--btn-disabled-color);
 }
 
-.actionLink404 {
-  composes: actionButton;
+@media screen and (max-width: 767px) {
+  .modalButton {
+    margin: 0 auto;
+  }
 }
 
 @media screen and (min-width: 768px) {
-  .actionButton {
+  .modalButton {
     max-width: 360px;
 
     font-size: 18px;
     line-height: calc(28 / 18);
-  }
-
-  .actionLink404 {
-    max-width: 360px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .actionButton {
-    font-size: 20px;
-    line-height: calc(28 / 20);
-  }
-}
-@media screen and (max-width: 360px) {
-  .actionButton {
-    padding: 16px 0;
   }
 }
