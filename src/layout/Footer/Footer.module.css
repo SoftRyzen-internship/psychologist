@@ -39,7 +39,8 @@
   fill: var(--white-color);
   transition: var(--fast-svg-animation);
 }
-.imgIcon:hover {
+.imgIcon:hover,
+.imgIcon:focus {
   fill: #2361ab;
 }
 .socialList {
