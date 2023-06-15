@@ -3,7 +3,6 @@
     url('/images/home-hero-bg-mob-r.svg') right top no-repeat;
   background-size: contain, 35%;
   background-color: var(--bg2-color);
-  width: 100vw;
   height: 100%;
 }
 
@@ -16,10 +15,6 @@
   width: 100%;
 }
 
-.image {
-  display: none;
-}
-
 .descr {
   width: 100%;
   padding-left: 0;
@@ -28,8 +23,11 @@
 
 .intro {
   font-size: 20px;
+  font-weight: 600;
   line-height: 1.4;
   color: var(--main-text-color);
+  width: 238px;
+  margin-top: 24px;
 }
 
 .first,
@@ -39,6 +37,12 @@
   color: var(--main-text-color);
   margin-top: 24px;
 }
+.first {
+  font-weight: 300;
+}
+.second {
+  font-weight: 400;
+}
 
 @media screen and (min-width: 768px) {
   .section {
@@ -46,26 +50,30 @@
       url('/images/home-hero-bg-tab-r.svg') right top no-repeat;
     background-size: 45%, 27%;
     background-color: var(--bg2-color);
-    width: 100vw;
-    height: 100%;
+    padding-top: 62px;
+    height: 755px;
   }
   .image {
     display: block;
     width: 427px;
-    height: 742px;
+    /* height: 742px; */
+    height: 692px;
     position: absolute;
     top: 0;
     left: -102px;
   }
   .descr {
     width: 375px;
-    margin-left: 329px;
-    padding-top: 52px;
-    padding-bottom: 15px;
+    /* margin-left: 329px; */
+    margin-left: auto;
+    padding-top: 69px;
+    /* padding-bottom: 15px; */
   }
   .intro {
     font-size: 24px;
     line-height: 1.33;
+    width: 100%;
+    margin-top: 24px;
   }
 
   .first,
@@ -81,26 +89,36 @@
       url('/images/home-hero-bg-r.svg') right top no-repeat;
     background-size: 40%, 28%;
     background-color: var(--bg2-color);
-    width: 100vw;
+    /* width: 100vw; */
     height: 100%;
+  }
+
+  .section :global .sectionTitleH1 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 36px;
   }
 
   .image {
     width: 458px;
-    height: 745px;
+    height: 734px;
     position: absolute;
-    top: -30px;
+    top: 0;
     left: 0;
   }
   .descr {
     width: 696px;
     margin-left: 485px;
-    padding-top: 112px;
+    /* padding-top: 112px; */
+    padding-top: 155px;
     padding-bottom: 62px;
+    margin-top: 36px;
   }
   .intro {
     font-size: 32px;
     line-height: 1.13;
+    width: 100%;
+    /* margin-top: 36px; */
   }
 
   .first,

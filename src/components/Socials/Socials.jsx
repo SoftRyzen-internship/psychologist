@@ -3,7 +3,7 @@ import Telegram from 'public/icons/soctelegram.svg';
 import Facebook from 'public/icons/socfacebook.svg';
 import Youtube from 'public/icons/socyoutube.svg';
 import Instagram from 'public/icons/socinstagram.svg';
-import { links } from '@/data';
+import links from 'src/data/socialsLinks.json';
 import * as st from './Socials.module.css';
 
 export const Socials = ({ component = 'panel' }) => {
@@ -17,13 +17,12 @@ export const Socials = ({ component = 'panel' }) => {
     panel: st.itemLinkPanel,
     mobile: st.itemLinkMobile,
   };
-
   return (
     <>
       <ul className={listClass[component]}>
         <li className={st.item}>
           <a
-            href={links.telegram}
+            href={links[0].telegram}
             target="_blank"
             rel="noreferrer noopener nofollow"
             className={itemClass[component]}
@@ -33,7 +32,7 @@ export const Socials = ({ component = 'panel' }) => {
         </li>
         <li className={st.item}>
           <a
-            href={links.facebook}
+            href={links[0].facebook}
             target="_blank"
             rel="noreferrer noopener nofollow"
             className={itemClass[component]}
@@ -43,7 +42,7 @@ export const Socials = ({ component = 'panel' }) => {
         </li>
         <li className={st.item}>
           <a
-            href={links.youtube}
+            href={links[0].youtube}
             target="_blank"
             rel="noreferrer noopener nofollow"
             className={itemClass[component]}
@@ -53,7 +52,7 @@ export const Socials = ({ component = 'panel' }) => {
         </li>
         <li className={st.item}>
           <a
-            href={links.instagram}
+            href={links[0].instagram}
             target="_blank"
             rel="noreferrer noopener nofollow"
             className={itemClass[component]}
