@@ -1,6 +1,4 @@
 .section {
-  /* background: url('/images/home-hero-bg-mob-l.svg') left bottom no-repeat;
-  background-size: contain; */
   background-color: var(--bg2-color);
   width: 100vw;
   height: 100%;
