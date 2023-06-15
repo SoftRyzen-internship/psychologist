@@ -18,4 +18,3 @@ export * from './ModalButton/ModalButton';
 export * from './ReusableSection/ReusableSection';
 export * from './ThankYou/ThankYou';
 export * from './TrainingsSection/TrainingsSection';
-
