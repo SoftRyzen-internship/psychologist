@@ -56,8 +56,9 @@
     padding-top: 27.7vh;
     padding-bottom: 18.34vh;
 
-    background-image: url(/images/404page/secondViewBackgroundTopRightDesktop.svg);
-    background-size: 27.8vw 43.9vh;
+    background-image: url(/images/404page/secondViewBackgroundTopRightDesktop.svg),
+      url(/images/404page/secondViewBackgroundBottomLeftDesktop.svg);
+    background-size: 27.8vw auto, 31.87vw auto;
     background-color: var(--bg2-color);
   }
   .contentWrapper {
