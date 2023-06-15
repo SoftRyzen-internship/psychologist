@@ -1,16 +1,3 @@
-@media screen and (min-width: 1280px) {
-  .image {
-    width: 468px;
-    height: 304px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .utilityFinder > div > h2 {
-    text-align: center;
-  }
-}
-
 @media screen and (max-width: 767px) {
   .image {
     width: 100%;
@@ -30,22 +17,6 @@
   font-weight: 600;
 }
 
-@media screen and (min-width: 768px) {
-  .utilityFinder p,
-  .utilityFinder li {
-    font-size: 18px;
-    line-height: calc(28 / 18);
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .utilityFinder p,
-  .utilityFinder li {
-    font-size: 20px;
-    line-height: calc(28 / 20);
-  }
-}
-
 .utilityFinder ul {
   list-style-type: none;
   display: flex;
@@ -53,34 +24,11 @@
   flex-direction: column;
 }
 
-@media screen and (min-width: 1280px) {
-  .utilityFinder ul {
-    gap: 36px;
-  }
-}
-
 .utilityFinder li {
   position: relative;
-  padding-left: 36px;
+  padding-left: 40px;
   min-width: 320px;
   height: auto;
-}
-
-@media screen and (min-width: 768px) {
-  .utilityFinder li {
-    min-width: auto;
-    height: auto;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .utilityFinder li {
-    width: 547px;
-  }
-
-  .textWrapper > ul > li:first-child {
-    width: 549px;
-  }
 }
 
 .utilityFinder li::before {
@@ -99,40 +47,88 @@
   margin-bottom: 24px;
 }
 
-@media screen and (min-width: 768px) {
-  .flexWrapper {
-    display: flex;
-    gap: 52px;
-    justify-content: center;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .flexWrapper {
-    margin-bottom: 0;
-    gap: 60px;
-    align-items: center;
-  }
-}
-
 .utilityFinder > div > ul > li > p {
   margin-left: 30px;
 }
 
+/**
+  |============================
+  | 768px
+  |============================
+*/
+
 @media screen and (min-width: 768px) {
   .textWrapper {
-    min-width: 335px;
+    width: 335px;
+  }
+
+  .flexWrapper {
+    display: flex;
+    gap: 52px;
+    /* justify-content: center; */
+  }
+
+  .utilityFinder li {
+    min-width: auto;
+    height: auto;
+  }
+
+  .utilityFinder p,
+  .utilityFinder li {
+    font-size: 18px;
+    line-height: calc(28 / 18);
+  }
+
+  .utilityFinder > div > h2 {
+    text-align: center;
   }
 }
+
+/**
+  |============================
+  | 1280
+  |============================
+*/
 
 @media screen and (min-width: 1280px) {
   .textWrapper > p:nth-child(1) {
     width: 637px;
   }
-}
 
-@media screen and (min-width: 1280px) {
   .textWrapper > p:nth-child(2) {
     margin-bottom: 36px;
+  }
+
+  .textWrapper {
+    width: 637px;
+  }
+
+  .flexWrapper {
+    margin-bottom: 0;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .utilityFinder li {
+    width: 548px;
+  }
+
+  .textWrapper > ul > li:first-child {
+    width: 549px;
+  }
+
+  .utilityFinder ul {
+    gap: 36px;
+  }
+
+  .utilityFinder p,
+  .utilityFinder li {
+    font-size: 20px;
+    line-height: calc(28 / 20);
+  }
+
+  .image {
+    width: 468px;
+    height: 304px;
   }
 }

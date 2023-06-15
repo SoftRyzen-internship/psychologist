@@ -1,34 +1,23 @@
-// import PropTypes from 'prop-types';
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
-import { Container } from '@/components';
-import { SectionTitle } from '@/components';
 import { useEffect, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
+import PropTypes from 'prop-types';
+import { Container, SectionTitle } from '@/components';
 import s from './OnlineConsultationsView.module.css';
 
-export const OnlineConsultationView = ({ data, src, alt }) => {
-  const [isDesktop, setIsDesktop] = useState(false);
+export const OnlineConsultationView = ({ data }) => {
+  const [isDesktopShow, setIsDesktopShow] = useState(false);
+  const isDesktop = useMediaQuery({ minWidth: 1280 });
 
   useEffect(() => {
-    const checkIsDesktop = () => {
-      const screenWidth = window.innerWidth;
-      setIsDesktop(screenWidth >= 1280);
-    };
-
-    checkIsDesktop();
-
-    window.addEventListener('resize', checkIsDesktop);
-
-    return () => {
-      window.removeEventListener('resize', checkIsDesktop);
-    };
-  }, []);
+    isDesktop ? setIsDesktopShow(true) : setIsDesktopShow(false);
+  }, [isDesktop]);
 
   return (
     <section className={s.utilityFinder}>
       <Container>
         <SectionTitle title={data.heading} />
-        <ReactMarkdown>{data.title}</ReactMarkdown>
         <div
           className={s.flexWrapper}
           role="container for img and text content"
@@ -36,18 +25,26 @@ export const OnlineConsultationView = ({ data, src, alt }) => {
         >
           <Image
             className={s.image}
-            src={src}
-            alt={alt}
+            src="/icons/OnlineConsultVector.svg"
+            alt="Ілюстрація онлайн консультації"
             width={287}
             height={186}
           />
           <div className={s.textWrapper}>
             <ReactMarkdown>{data.description}</ReactMarkdown>
-            {isDesktop && <ReactMarkdown>{data.list}</ReactMarkdown>}
+            {isDesktopShow && <ReactMarkdown>{data.list}</ReactMarkdown>}
           </div>
         </div>
-        {!isDesktop && <ReactMarkdown>{data.list}</ReactMarkdown>}
+        {!isDesktopShow && <ReactMarkdown>{data.list}</ReactMarkdown>}
       </Container>
     </section>
   );
+};
+
+OnlineConsultationView.propTypes = {
+  data: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    list: PropTypes.string.isRequired,
+  }).isRequired,
 };

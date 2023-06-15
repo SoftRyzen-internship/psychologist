@@ -11,11 +11,7 @@ const ConsultationsPage = props => {
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <OnlineConsultationView
-        data={props.online}
-        src={'/icons/OnlineConsultVector.svg'}
-        alt={'Online consultation pic'}
-      />
+      <OnlineConsultationView data={props.online} />
     </>
   );
 };
