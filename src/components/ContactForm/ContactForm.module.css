@@ -5,6 +5,9 @@
 
   padding: 48px 20px 40px;
 
+  /* width: 320px;
+  height: 532px; */
+
   background-color: var(--white-color);
   border-radius: 12px;
 
@@ -24,14 +27,21 @@
   color: var(--accent-text-color);
 }
 
+.fieldsWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+
+  margin-bottom: 32px;
+}
+
 .inputWrap {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 4px;
   position: relative;
-
-  margin-bottom: 24px;
   min-width: 278px;
   width: 100%;
 
@@ -86,9 +96,9 @@
   position: relative;
   display: flex;
   flex-direction: row-reverse;
+  justify-content: flex-end;
   gap: 12px;
 
-  margin-top: 8px;
   margin-bottom: 28px;
 
   font-size: 12px;
@@ -125,6 +135,9 @@
 @media screen and (min-width: 768px) {
   .form {
     padding: 80px 64px;
+
+    /* width: 488px;
+    height: 680px; */
   }
 
   .title {
@@ -133,7 +146,9 @@
     font-size: 36px;
     line-height: calc(40 / 36);
   }
-
+  .fieldsWrap {
+    margin-bottom: 28px;
+  }
   .inputWrap {
     width: 360px;
 
@@ -155,7 +170,6 @@
   .checkboxLabel {
     gap: 10px;
 
-    margin-top: 4px;
     margin-bottom: 40px;
 
     font-size: 14px;

@@ -13,3 +13,4 @@ export * from './ContactForm/ContactForm';
 export * from './Modal/Modal';
 export * from './ModalButton/ModalButton';
 export * from './ReusableSection/ReusableSection';
+export * from './ThankYou/ThankYou';
