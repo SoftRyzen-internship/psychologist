@@ -1,15 +1,11 @@
 import Image from 'next/image';
 import PropTypes from 'prop-types';
-import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
-// import * as Dialog from '@radix-ui/react-dialog';
-import { Container, Modal, SectionTitle } from '@/components';
 import { useState } from 'react';
+import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
+import { Container, Modal, SectionTitle } from '@/components';
 import s from './DependsCard.module.css';
 
 export const DependsCard = ({ data }) => {
-  // const [open, setOpen] = useState(false);
-  // console.log(data);
-
   const [openIndex, setOpenIndex] = useState(-1);
 
   const handleOpen = index => {
@@ -32,14 +28,6 @@ export const DependsCard = ({ data }) => {
                 <div className={s.contentWrapper}>
                   <ReactMarkdown>{item.content}</ReactMarkdown>
                 </div>
-                {/* <Dialog.Root open={open} onOpenChange={setOpen}>
-                  <Dialog.Trigger>
-                    <p>Читати більше</p>
-                  </Dialog.Trigger>
-                  <Dialog.Portal>
-                    <Modal data={item} />
-                  </Dialog.Portal>
-                </Dialog.Root> */}
                 <button onClick={() => handleOpen(i)}>
                   <p>Читати більше</p>
                 </button>
@@ -49,9 +37,9 @@ export const DependsCard = ({ data }) => {
             <Image
               className={s.image}
               src="/image/JuliaConsultationPage.jpg"
-              alt="Julia in an consultation process"
-              width={320}
-              height={215}
+              alt="Юлія в процесі консультації"
+              width={592}
+              height={396}
             />
           </ul>
         </Container>

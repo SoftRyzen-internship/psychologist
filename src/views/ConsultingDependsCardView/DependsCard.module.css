@@ -7,7 +7,6 @@
   border-radius: 0px 16px;
 
   padding: 24px 20px 24px 20px;
-  /* position: relative; */
 }
 
 @media screen and (min-width: 768px) {
@@ -77,7 +76,6 @@
   font-size: 16px;
   line-height: calc(24 / 16);
 
-  /* width: 157px; */
   color: var(--accent-text-color);
 }
 
@@ -120,40 +118,30 @@
   background-position: top;
   background-image: url('/icons/firstLiMobile.svg');
   background-repeat: no-repeat;
-
-  /* background-size: 320px 179px; */
 }
 
 .cardWrapper:nth-child(2) {
   background-position: bottom;
   background-image: url('/icons/secondLiMobile.svg');
   background-repeat: no-repeat;
-
-  /* background-size: 320px 164px; */
 }
 
 .cardWrapper:nth-child(3) {
   background-position: top right;
   background-image: url('/icons/thirdLiMobile.svg');
   background-repeat: no-repeat;
-
-  /* background-size: 320px 117px; */
 }
 
 .cardWrapper:nth-child(4) {
   background-position: bottom;
   background-image: url('/icons/fourthLiMobile.svg');
   background-repeat: no-repeat;
-
-  /* background-size: 320px 164px; */
 }
 
 .cardWrapper:nth-child(5) {
   background-position: top;
   background-image: url('/icons/fifthLiMobile.svg');
   background-repeat: no-repeat;
-
-  /* background-size: 320px 158px; */
 }
 
 @media screen and (min-width: 768px) {
@@ -204,6 +192,10 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
+
+  .cardWrapper:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .contentWrapper {
@@ -217,10 +209,6 @@
   -webkit-line-clamp: 8;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
-
-  /* overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis; */
 }
 
 @media screen and (min-width: 768px) {
