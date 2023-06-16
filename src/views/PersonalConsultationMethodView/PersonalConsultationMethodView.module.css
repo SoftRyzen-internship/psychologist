@@ -98,6 +98,10 @@
     width: 506px;
     height: auto;
   }
+
+  .section > div > h2 {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 479.98px) {
