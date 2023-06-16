@@ -35,18 +35,17 @@ export const GetPersonalConsultView = ({ data }) => {
         {isTabletShow && !isDesktopShow && (
           <Image
             src="/images/consultations-personalcons-tablet.jpg"
-            width={308}
-            height={386}
+            width={688}
+            height={859}
             alt="Психолог на консультації"
           />
         )}
         {isDesktopShow && (
           <Image
             src="/images/consultations-personalcons.jpg"
-            width={308}
-            height={386}
+            width={472}
+            height={870}
             alt="Психолог на консультації"
-            quality={100}
           />
         )}
       </OffsetImageBorder>
