@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import PropTypes from 'prop-types';
 import { getData } from '@/lib/getData';
 import { folderPaths } from '@/utils/folderPaths';
 import { OnlineConsultationView } from '@/views';
@@ -27,3 +28,12 @@ export const getStaticProps = async () => {
 };
 
 export default ConsultationsPage;
+
+ConsultationsPage.propTypes = {
+  online: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    list: PropTypes.string.isRequired,
+    benefits: PropTypes.string.isRequired,
+  }).isRequired,
+};
