@@ -104,7 +104,7 @@
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 479.98px) {
+@media screen and (min-width: 320px) and (max-width: 767.98px) {
   .image {
     width: 100%;
   }
