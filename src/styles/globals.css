@@ -17,6 +17,9 @@
   --btn-hover-color: #2f8bf6;
   --btn-disabled-color: #a3a9b2;
   --fast-btn-animation: background-color 300ms ease;
+  --fast-text-animation: color 300ms ease;
+
+  --fast-svg-animation: fill 300ms ease;
 
   --swiper-pagination-color: #a3a9b2;
   --swiper-pagination-bullet-width: 8px;

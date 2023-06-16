@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import Image from 'next/image';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 
-import { ActionButton, SectionTitle } from '@/components';
+import { ModalButton, SectionTitle } from '@/components';
 import { combineList } from '@/utils/combineList';
 
 import s from './TrainingsSection.module.css';
@@ -12,7 +12,7 @@ export const TrainingsSection = ({
   img = null,
   isHeroSection = false,
   isTitleCentered = false,
-  btnClickHandler,
+  specialTitle,
 }) => {
   const { heading, goal, timePeriod, list } = markdown;
 
@@ -39,7 +39,7 @@ export const TrainingsSection = ({
           </p>
           <SectionTitle
             centered={isTitleCentered}
-            title={heading}
+            title={specialTitle ? specialTitle : heading}
             className="sectionTitleH1"
           />
           <div className={s.heroContentWrapper}>
@@ -56,7 +56,7 @@ export const TrainingsSection = ({
               {list[0].content}
             </ReactMarkdown>
           </div>
-          <ActionButton clickHandler={btnClickHandler} />
+          <ModalButton />
         </>
       )}
       {!isHeroSection && (
@@ -82,6 +82,7 @@ export const TrainingsSection = ({
                 src={img.PATH.MOBILE}
                 fill
                 alt={img.ALTERNATIVETEXT}
+                quality={100}
               />
             </div>
           )}
@@ -90,7 +91,7 @@ export const TrainingsSection = ({
           <ReactMarkdown className={s.programList}>
             {list.length > 1 ? combineList(list) : list[0].content}
           </ReactMarkdown>
-          <ActionButton clickHandler={btnClickHandler} />
+          <ModalButton />
         </>
       )}
     </>
@@ -102,5 +103,5 @@ TrainingsSection.propTypes = {
   img: PropTypes.object,
   isHeroSection: PropTypes.bool,
   isTitleCentered: PropTypes.bool,
-  btnClickHandler: PropTypes.func,
+  specialTitle: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
 };
