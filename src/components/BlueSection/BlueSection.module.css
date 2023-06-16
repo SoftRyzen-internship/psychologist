@@ -5,16 +5,23 @@
 */
 
 .personalConsSection {
-  background-image: url(/icons/OnlineVector.svg);
+  background-image: url(/images/consultations_GREY-Mobilebg.png);
   background-size: cover;
   background-color: #e2eaf3;
 
   padding: 0;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1279.98px) {
+@media screen and (min-width: 768px) {
   .personalConsSection {
-    background-image: url(/icons/TabletOnlineVector.svg);
+    background-image: url(/images/consultations_GREY-Tabletbg.png);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .personalConsSection {
+    background-image: url(/images/consultations_GREY-PCbg.png);
+    background-position: top;
   }
 }
 
@@ -71,33 +78,37 @@
 */
 
 .mainPageSection {
-  background-image: url(/icons/MobileMain.svg), url(/icons/MainElipseVector.svg);
+  background-image: url(/icons/MainElipseVector.svg),
+    url(/images/main_GREY-Mobilebg.png);
   background-size: cover;
   background-color: #e2eaf3;
-  background-position: left, top left;
+  background-position: top left, center;
+  background-repeat: no-repeat;
+  background-size: 90px 160px, 360px 212px;
 
   padding: 0;
 }
 
 @media screen and (min-width: 768px) {
   .mainPageSection {
-    background-image: url(/icons/TabletMainVector.svg),
-      url(/icons/MainElipseVector.svg);
+    background-image: url(/icons/MainElipseVector.svg),
+      url(/images/main_GREY-Tabletbg.png);
     background-position: left, top left;
+    background-size: 90px 160px, 768px 156px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .mainPageSection {
-    background-image: url(/icons/PCMainVector.svg),
-      url(/icons/MainElipseVector.svg);
-    background-position: bottom, top left;
+    background-image: url(/icons/MainElipseVector.svg),
+      url(/images/main_GREY-PCbg.png);
+    background-position: left, bottom;
+    background-size: 198px 160px, 1440px 160px;
   }
 }
 
 .containerX {
   padding: 36px 20px 36px 20px;
-
   /* position: relative; */
 }
 
