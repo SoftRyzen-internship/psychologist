@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { routes } from 'routes';
 import s from './ActionButton.module.css';
 
-export const ActionButton = ({ clickHandler, is404 = true }) => {
+export const ActionButton = ({ clickHandler, is404 = false }) => {
   return (
     <>
       {is404 && (
