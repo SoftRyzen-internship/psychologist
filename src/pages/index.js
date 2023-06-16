@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { getData } from '@/lib/getData';
 import { folderPaths } from '@/utils/folderPaths';
-import { HomeHero, StudyView, WhatIDo } from '@/views';
+import { HomeHero, Consult, StudyView, WhatIDo } from '@/views';
 import { getNewsList } from '@/lib/request';
 import PropTypes from 'prop-types';
 
@@ -18,6 +18,8 @@ export default function Home({ hero, whatIDo, study }) {
         <HomeHero hero={hero} />
 
         <WhatIDo whatIDo={whatIDo} />
+
+        <Consult />
 
         <StudyView study={study} />
       </main>

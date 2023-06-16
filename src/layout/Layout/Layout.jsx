@@ -1,4 +1,5 @@
 // import { Footer, Header } from '..';
+import { FixedSocials } from '@/components';
 import { Header } from '..';
 
 export const Layout = ({ children, className }) => {
@@ -9,6 +10,7 @@ export const Layout = ({ children, className }) => {
       {children}
 
       {/* <Footer /> */}
+      <FixedSocials />
     </div>
   );
 };
