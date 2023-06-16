@@ -1,5 +1,5 @@
-import { Footer, Header } from '..';
-import { FixedSocials } from '@/components';
+// import { Footer, Header } from '..';
+import { Header } from '..';
 
 export const Layout = ({ children, className }) => {
   return (
@@ -8,8 +8,7 @@ export const Layout = ({ children, className }) => {
 
       {children}
 
-      <Footer />
-      <FixedSocials />
+      {/* <Footer /> */}
     </div>
   );
 };

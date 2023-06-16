@@ -3,8 +3,8 @@ import Image from 'next/image';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 
 import {
-  ActionButton,
   Container,
+  ModalButton,
   SectionTitle,
   TrainingsSection,
 } from '@/components';
@@ -12,12 +12,7 @@ import {
 import vs from './TimeManagementView.module.css';
 import s from '@/components/TrainingsSection/TrainingsSection.module.css';
 
-export const TimeManagementView = ({
-  markdown,
-  img,
-  btnClickHandler,
-  isDesktop,
-}) => {
+export const TimeManagementView = ({ markdown, img, isDesktop }) => {
   const { heading, goal, timePeriod, list } = markdown;
 
   return (
@@ -50,18 +45,12 @@ export const TimeManagementView = ({
                 <ReactMarkdown className={s.programList}>
                   {list[1].content}
                 </ReactMarkdown>
-                <ActionButton clickHandler={btnClickHandler} />
+                <ModalButton />{' '}
               </div>
             </div>
           </>
         )}
-        {!isDesktop && (
-          <TrainingsSection
-            markdown={markdown}
-            img={img}
-            btnClickHandler={btnClickHandler}
-          />
-        )}
+        {!isDesktop && <TrainingsSection markdown={markdown} img={img} />}
       </Container>
     </section>
   );
@@ -70,6 +59,5 @@ export const TimeManagementView = ({
 TimeManagementView.propTypes = {
   markdown: PropTypes.object.isRequired,
   imgPath: PropTypes.string,
-  btnClickHandler: PropTypes.func,
   isDesktop: PropTypes.bool.isRequired,
 };
