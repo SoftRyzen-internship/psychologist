@@ -62,6 +62,7 @@ export const EducationMethodView = ({ method }) => {
                 className={s.image}
                 width="688"
                 height="728"
+                priority
               />
             </OffsetImageBorder>
           </MediaQuery>
@@ -74,6 +75,7 @@ export const EducationMethodView = ({ method }) => {
                 className={s.image}
                 width="472"
                 height="660"
+                priority
               />
             </OffsetImageBorder>
           </MediaQuery>

@@ -1,37 +1,16 @@
 import { Formik, Field, Form } from 'formik';
-import axios from 'axios';
+import { Persist } from 'formik-persist';
 import { useState } from 'react';
-
 import { ActionButton, ErrorNote, ThankYou } from '..';
 import { contactValidationShema } from '@/utils/contactValidationShema';
+import { sendFormDataToChat } from '@/utils/sendFormDataToChat';
 import AgreeSVG from 'public/icons/check-mark.svg';
 import s from './ContactForm.module.css';
-
-const TOKEN = process.env.NEXT_PUBLIC_TELEGRAM_BOT_TOKEN;
-const CHAT_ID = process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID;
-const URL_API = `https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${CHAT_ID}`;
-
-const sendToChat = async ({ name, email, phone }, setError) => {
-  const text = `Ім'я - ${name} Email - ${email} Телефон - ${phone} `;
-  console.log(text);
-
-  try {
-    const data = await axios.post(URL_API, {
-      text,
-      parse_mod: 'HTML',
-    });
-    console.log(data);
-    return data;
-  } catch (error) {
-    const message = error.message;
-    console.log(message);
-    setError(message);
-  }
-};
 
 export const ContactForm = () => {
   const [isThankYou, setIsThankYou] = useState(false);
   const [error, setError] = useState(false);
+  const formName = 'contact-form';
 
   return (
     <>
@@ -45,15 +24,15 @@ export const ContactForm = () => {
         validationSchema={contactValidationShema}
         onSubmit={(values, { setSubmitting }) => {
           // dispatch(onSubmit(values));
-          console.log(values);
-          sendToChat(values, setError);
+          console.log('values', values);
+          sendFormDataToChat(values, setError, setIsThankYou);
+          localStorage.removeItem(formName);
           setSubmitting(false);
-          setIsThankYou(true);
         }}
       >
         {({ errors, touched, values }) => (
           <Form className={s.form}>
-            {!isThankYou && (
+            {!isThankYou && !error && (
               <div>
                 <h3 className={s.title}>Записатися на прийом</h3>
                 <div className={s.fieldsWrap}>
@@ -147,10 +126,11 @@ export const ContactForm = () => {
                   </span>
                 </label>
 
-                <ActionButton inModalForm={true} is404={false} />
+                <ActionButton is404={false} />
+                <Persist name={formName} />
               </div>
             )}
-            {!error && isThankYou && <ThankYou />}
+            {isThankYou && <ThankYou />}
             {error && <ErrorNote message={error} />}
           </Form>
         )}

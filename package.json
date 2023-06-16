@@ -16,9 +16,11 @@
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.4",
     "@svgr/webpack": "^8.0.1",
+    "aos": "^3.0.0-beta.6",
     "axios": "^1.4.0",
     "classnames": "^2.3.2",
     "formik": "^2.4.1",
+    "formik-persist": "^1.1.0",
     "graphql-request": "^6.1.0",
     "gray-matter": "^4.0.3",
     "next": "13.2.3",

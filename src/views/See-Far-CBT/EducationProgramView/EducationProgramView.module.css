@@ -19,14 +19,14 @@
   height: auto;
 }
 
-.image {
+/* .image {
   object-fit: contain;
   position: relative !important;
 
   width: 100% !important;
   height: unset !important;
   align-self: baseline;
-}
+} */
 
 .timing {
   margin-bottom: 24px;

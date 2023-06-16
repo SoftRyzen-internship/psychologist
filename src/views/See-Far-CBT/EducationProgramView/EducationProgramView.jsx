@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 import { Container, ModalButton, SectionTitle } from '@/components';
 import s from './EducationProgramView.module.css';
+import NoSSR from '@/components/NoSSR/NoSSR';
 
 const MediaQuery = dynamic(() => import('react-responsive'), {
   ssr: false,
@@ -48,8 +49,9 @@ export const EducationProgramView = ({ program }) => {
         <div className={s.lowerWrap}>
           <div className={s.textWrap}>
             <ReactMarkdown>{program.list2}</ReactMarkdown>
-
-            <ModalButton />
+            <NoSSR>
+              <ModalButton />
+            </NoSSR>
           </div>
 
           <div className={s.imgWrap}>
