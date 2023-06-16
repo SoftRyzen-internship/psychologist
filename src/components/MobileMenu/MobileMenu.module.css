@@ -23,6 +23,9 @@
 .menu {
   /* padding-left: 32px;
   padding-top: 100px; */
+  padding-top: 62px;
+  padding-left: 57px !important;
+  padding-right: 57px !important;
 }
 
 .social {
@@ -39,6 +42,12 @@
   }
   .wrapper {
     background-image: url('/images/mobMenuBg_tab.svg');
+  }
+
+  .menu {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+    padding-top: 100px;
   }
 
   .social {

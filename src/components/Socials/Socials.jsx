@@ -26,6 +26,7 @@ export const Socials = ({ component = 'panel' }) => {
             target="_blank"
             rel="noreferrer noopener nofollow"
             className={itemClass[component]}
+            aria-label="Телеграм"
           >
             <Telegram className={st.imgIcon} />
           </a>
@@ -36,6 +37,7 @@ export const Socials = ({ component = 'panel' }) => {
             target="_blank"
             rel="noreferrer noopener nofollow"
             className={itemClass[component]}
+            aria-label="Фейсбук"
           >
             <Facebook className={st.imgIcon} />
           </a>
@@ -46,6 +48,7 @@ export const Socials = ({ component = 'panel' }) => {
             target="_blank"
             rel="noreferrer noopener nofollow"
             className={itemClass[component]}
+            aria-label="Ютуб"
           >
             <Youtube className={st.imgIcon} />
           </a>
@@ -56,6 +59,7 @@ export const Socials = ({ component = 'panel' }) => {
             target="_blank"
             rel="noreferrer noopener nofollow"
             className={itemClass[component]}
+            aria-label="Інстаграм"
           >
             <Instagram className={st.imgIcon} />
           </a>

@@ -26,7 +26,7 @@
   font-weight: 600;
   line-height: 1.4;
   color: var(--main-text-color);
-  width: 238px;
+  /* width: 238px; */
   margin-top: 24px;
 }
 
@@ -107,7 +107,7 @@
     left: 0;
   }
   .descr {
-    width: 696px;
+    width: 700px;
     margin-left: 485px;
     /* padding-top: 112px; */
     padding-top: 155px;

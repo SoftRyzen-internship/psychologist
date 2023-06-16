@@ -8,10 +8,15 @@ import * as st from './HomeHero.module.css';
 
 export const HomeHero = ({ hero }) => {
   const isTablet = useMediaQuery({ minWidth: 768 });
+  const isDesktop = useMediaQuery({ minWidth: 1280 });
   const [showElem, setShowElem] = useState(false);
+  const [introDesktop, setIntroDesktop] = useState(false);
   useEffect(() => {
     isTablet ? setShowElem(true) : setShowElem(false);
   }, [isTablet]);
+  useEffect(() => {
+    isDesktop ? setIntroDesktop(true) : setIntroDesktop(false);
+  }, [isDesktop]);
   return (
     <section className={st.section}>
       <Container>
@@ -23,12 +28,18 @@ export const HomeHero = ({ hero }) => {
             priority
             width={458}
             height={734}
+            quality={100}
           />
         )}
         <div className={st.descr}>
           <SectionTitle title={hero.heading} h1={true} />
 
-          <ReactMarkdown className={st.intro}>{hero.intro}</ReactMarkdown>
+          {!introDesktop && (
+            <ReactMarkdown className={st.intro}>{hero.intro}</ReactMarkdown>
+          )}
+          {introDesktop && (
+            <ReactMarkdown className={st.intro}>{hero.introdesk}</ReactMarkdown>
+          )}
           <ReactMarkdown className={st.first}>{hero.first}</ReactMarkdown>
           <ReactMarkdown className={st.second}>{hero.second}</ReactMarkdown>
         </div>

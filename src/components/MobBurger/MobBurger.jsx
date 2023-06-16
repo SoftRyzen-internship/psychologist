@@ -8,7 +8,7 @@ export const MobBurger = ({ setIsMenuOpen, isMenuOpen }) => {
   };
   return (
     <>
-      <button className={st.burger} onClick={handleClick} aria-label="menu">
+      <button className={st.burger} onClick={handleClick} aria-label="меню">
         {!isMenuOpen && (
           <Image
             src="/icons/menu.svg"
