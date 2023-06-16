@@ -9,6 +9,24 @@
   font-weight: 600;
 }
 
+.image1 {
+  margin-bottom: 24px;
+}
+
+.wrapper p:not(:nth-child(4n)) {
+  margin-bottom: 20px;
+}
+
+.wrapper:nth-of-type(1) p:nth-child(2n),
+.wrapper:nth-of-type(2) p:nth-child(2n) {
+  margin-bottom: 0;
+}
+
+.wrapper p:nth-child(4n),
+.wrapper:nth-of-type(2) p:nth-child(3) {
+  margin-bottom: 24px;
+}
+
 @media screen and (min-width: 768px) {
   .wrapper p {
     font-size: 18px;
@@ -25,23 +43,27 @@
     gap: 32px;
   }
 
+  .wrapper:last-of-type {
+    margin-bottom: 0;
+  }
+
   .wrapper:nth-of-type(2) {
     flex-direction: row-reverse;
   }
-}
 
-.wrapper p:not(:nth-child(4n)) {
-  margin-bottom: 20px;
-}
+  .image1 {
+    margin-bottom: 0;
+    width: 336px;
+    height: 602px;
+  }
 
-.wrapper:nth-of-type(1) p:nth-child(2n),
-.wrapper:nth-of-type(2) p:nth-child(2n) {
-  margin-bottom: 0;
-}
+  .image2 {
+    width: 336px;
+  }
 
-.wrapper p:nth-child(4n),
-.wrapper:nth-of-type(2) p:nth-child(3) {
-  margin-bottom: 24px;
+  .wrapper:nth-of-type(2) p:nth-child(3) {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -67,7 +89,7 @@
   }
 
   .image1 {
-    width: 448px;
+    width: 440px;
     height: auto;
     margin-bottom: 0;
   }
@@ -82,8 +104,4 @@
   .image {
     width: 100%;
   }
-}
-
-.image1 {
-  margin-bottom: 24px;
 }
