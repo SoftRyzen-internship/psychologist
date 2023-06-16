@@ -26,6 +26,12 @@
 
   list-style: none;
 }
+.link {
+  transition: var(--fast-text-animation);
+}
+.link:hover {
+  color: var(--accent-text-color);
+}
 .linkActive {
   font-weight: 700;
 }
@@ -41,7 +47,7 @@
 }
 .imgIcon:hover,
 .imgIcon:focus {
-  fill: #2361ab;
+  fill: var(--accent-text-color);
 }
 .socialList {
   margin-bottom: 29px;
