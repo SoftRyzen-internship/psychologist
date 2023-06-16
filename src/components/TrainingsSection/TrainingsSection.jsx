@@ -103,5 +103,5 @@ TrainingsSection.propTypes = {
   img: PropTypes.object,
   isHeroSection: PropTypes.bool,
   isTitleCentered: PropTypes.bool,
-  specialTitle: PropTypes.string,
+  specialTitle: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
 };
