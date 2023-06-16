@@ -15,6 +15,7 @@
   font-family: var(--font-alegreya);
 
   color: var(--accent-text-color);
+  width: 222px;
 }
 
 .subtitle {
@@ -26,24 +27,9 @@
   margin-right: -8px;
 }
 
-/* .subtitle::before {
-  content: "";
-  display: inline-block;
-  width: 219px;
-  height: 89px;
-  margin-right: 10px;
-  background-image: url(/icons/personalConsult.svg);
-} */
-
-/* .subtitle p::before {
-  background-image: url("/icons/personalConsult.svg");
-  fill: black;
-} */
-
 .subtitle p {
   position: relative;
 
-  /* font-family: 'Open Sans'; */
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -56,16 +42,9 @@
   color: var(--accent-text-color);
 }
 
-/* .subtitle p::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 218px;
-  height: 89px;
-  background-image: url(/icons/personalConsult.svg);
-  fill: black;
-} */
+.listWrapper {
+  margin-top: 24px;
+}
 
 .listWrapper p:nth-child(1) {
   font-family: var(--font-open-sans);
@@ -74,7 +53,6 @@
   font-size: 16px;
   line-height: calc(24 / 16);
 
-  margin-top: 24px;
   margin-bottom: 16px;
 }
 
@@ -95,6 +73,10 @@
   margin-bottom: 16px;
 }
 
+.mainListItem:last-child {
+  margin-bottom: 0;
+}
+
 .mainList > li > ul > li::before {
   content: '';
   display: inline-block;
@@ -105,8 +87,6 @@
   top: 8px;
   background-color: #95a4b6;
   border-radius: 50%;
-
-  /* margin-right: 16px; */
 }
 
 .mainList > li:nth-child(1) > ul:nth-child(1) > li,
@@ -114,7 +94,6 @@
   padding-left: 24px;
   position: relative;
 
-  /* font-style: normal; */
   font-weight: 400;
   font-size: 16px;
   line-height: calc(24 / 16);
@@ -130,6 +109,7 @@
   .sectionBG > div > h2 {
     font-size: 52px;
     line-height: calc(52 / 52);
+    width: auto;
   }
 
   .sectionBG {
@@ -180,6 +160,10 @@
   .sectionBG > div > h2 {
     font-size: 64px;
     line-height: calc(64 / 64);
+  }
+
+  .listWrapper {
+    margin-top: 36px;
   }
 
   .sectionBG {
