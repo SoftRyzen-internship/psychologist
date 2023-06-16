@@ -1,0 +1,69 @@
+/* .correctIcon {
+  width: 40px;
+  height: 40px;
+} */
+/* .content {
+  background: url('/images/modal-done-bg.png');
+} */
+.title {
+  margin-bottom: 40px;
+
+  font-family: var(--font-alegreya);
+  font-weight: 500;
+  font-size: 28px;
+  line-height: calc(36 / 28);
+
+  text-align: center;
+
+  color: var(--error-color);
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  width: 278px;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+
+  text-align: center;
+}
+
+.strongImage {
+  width: 270px;
+}
+.error {
+  color: var(--error-color);
+}
+
+@media screen and (min-width: 768px) {
+  /* .correctIcon {
+    padding-top: 0;
+
+    width: 44px;
+    height: 44px;
+  } */
+
+  .title {
+    margin: 0 auto 64px;
+
+    font-size: 36px;
+    line-height: calc(40 / 36);
+  }
+
+  .strongImage {
+    width: 360px;
+  }
+
+  .wrap {
+    width: 360px;
+    gap: 64px;
+    font-size: 20px;
+    line-height: calc(28 / 20);
+  }
+  .textWrap p:not(:first-child) {
+    display: inline;
+  }
+}

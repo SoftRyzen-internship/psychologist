@@ -2,7 +2,7 @@ import { Formik, Field, Form } from 'formik';
 import axios from 'axios';
 import { useState } from 'react';
 
-import { ActionButton, ThankYou } from '..';
+import { ActionButton, ErrorNote, ThankYou } from '..';
 import { contactValidationShema } from '@/utils/contactValidationShema';
 import AgreeSVG from 'public/icons/check-mark.svg';
 import s from './ContactForm.module.css';
@@ -11,20 +11,27 @@ const TOKEN = process.env.NEXT_PUBLIC_TELEGRAM_BOT_TOKEN;
 const CHAT_ID = process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID;
 const URL_API = `https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${CHAT_ID}`;
 
-const sendToChat = async ({ name, email, phone }) => {
+const sendToChat = async ({ name, email, phone }, setError) => {
   const text = `Ім'я - ${name} Email - ${email} Телефон - ${phone} `;
   console.log(text);
 
-  const data = await axios.post(URL_API, {
-    text,
-    parse_mod: 'HTML',
-  });
-  console.log(data);
-  return data;
+  try {
+    const data = await axios.post(URL_API, {
+      text,
+      parse_mod: 'HTML',
+    });
+    console.log(data);
+    return data;
+  } catch (error) {
+    const message = error.message;
+    console.log(message);
+    setError(message);
+  }
 };
 
 export const ContactForm = () => {
   const [isThankYou, setIsThankYou] = useState(false);
+  const [error, setError] = useState(false);
 
   return (
     <>
@@ -39,7 +46,7 @@ export const ContactForm = () => {
         onSubmit={(values, { setSubmitting }) => {
           // dispatch(onSubmit(values));
           console.log(values);
-          sendToChat(values);
+          sendToChat(values, setError);
           setSubmitting(false);
           setIsThankYou(true);
         }}
@@ -143,7 +150,8 @@ export const ContactForm = () => {
                 <ActionButton inModalForm={true} is404={false} />
               </div>
             )}
-            {isThankYou && <ThankYou />}
+            {!error && isThankYou && <ThankYou />}
+            {error && <ErrorNote message={error} />}
           </Form>
         )}
       </Formik>
