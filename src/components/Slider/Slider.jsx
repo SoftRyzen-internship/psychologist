@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types';
+import { useMediaQuery } from 'react-responsive';
+import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Mousewheel, Keyboard } from 'swiper';
 import { NewsCard, SlideButton } from '@/components';
@@ -8,6 +10,12 @@ import 'swiper/css/pagination';
 import s from './Slider.module.css';
 
 export const Slider = ({ allNews }) => {
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const [showPagination, setShowPagination] = useState(false);
+  useEffect(() => {
+    if (isMobile) setShowPagination(true);
+    else setShowPagination(false);
+  }, [isMobile]);
   const pagination = {
     clickable: true,
     dynamicBullets: true,
@@ -16,11 +24,10 @@ export const Slider = ({ allNews }) => {
     <>
       <Swiper
         modules={[Pagination, Mousewheel, Keyboard]}
-        pagination={pagination}
+        pagination={showPagination ? pagination : false}
         mousewheel={true}
         keyboard={true}
         rewind={true}
-        // loop={true}
         spaceBetween={32}
         breakpoints={{
           480: {
