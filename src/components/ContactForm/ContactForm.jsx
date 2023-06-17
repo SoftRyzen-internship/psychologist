@@ -15,6 +15,7 @@ export const ContactForm = () => {
   return (
     <>
       <Formik
+        enableReinitialize
         initialValues={{
           name: '',
           email: '',
@@ -27,6 +28,7 @@ export const ContactForm = () => {
           console.log('values', values);
           sendFormDataToChat(values, setError, setIsThankYou);
           localStorage.removeItem(formName);
+          localStorage.setItem(formName, null);
           setSubmitting(false);
         }}
       >
@@ -123,6 +125,9 @@ export const ContactForm = () => {
                     {values.acceptedTerms && (
                       <AgreeSVG className={s.icon} width="16" height="16" />
                     )}
+                    {touched.acceptedTerms && errors.acceptedTerms ? (
+                      <div className={s.error}>{errors.acceptedTerms}</div>
+                    ) : null}
                   </span>
                 </label>
 

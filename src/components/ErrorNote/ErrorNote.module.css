@@ -1,10 +1,7 @@
-/* .correctIcon {
-  width: 40px;
-  height: 40px;
-} */
 .content {
   animation: contentShow 600ms ease-out;
 }
+
 .title {
   margin-bottom: 40px;
 
@@ -39,13 +36,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  /* .correctIcon {
-    padding-top: 0;
-
-    width: 44px;
-    height: 44px;
-  } */
-
   .title {
     margin: 0 auto 64px;
 
