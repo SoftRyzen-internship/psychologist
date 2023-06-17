@@ -18,7 +18,11 @@ export function NewsView({ allNews }) {
           {allNews.length > 0 &&
             allNews.map(news => (
               <li key={news.id} className={s.newsItem}>
-                <SectionTitle h2 title={news.title} />
+                <SectionTitle
+                  h2
+                  title={news.title}
+                  className={'sectionTitleH1'}
+                />
                 <NewsText newsTextProp={news.text} />
                 <OffsetImageBorder className={s.aspectRatio}>
                   <Image
