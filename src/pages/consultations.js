@@ -32,9 +32,9 @@ const ConsultationsPage = ({ individual, online, requirements, factors }) => {
           {factors.cards.map(({ title, content }, index) => (
             <li key={index}>
               <h3>{title}</h3>
-              <span>
+              <div>
                 <ReactMarkdown>{content}</ReactMarkdown>
-              </span>
+              </div>
             </li>
           ))}
         </ul>
