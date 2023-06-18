@@ -1,10 +1,7 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { useMediaQuery } from 'react-responsive';
 import { useEffect, useState } from 'react';
 
-import { Container } from '@/components';
-import navPaths from 'utils/navPaths.json';
+import { Container, NavBar } from '@/components';
 import socials from 'utils/socials.json';
 import LogoIcon from 'public/icons/logoFooter.svg';
 import FacebookIcon from 'public/icons/facebook.svg';
@@ -18,10 +15,6 @@ export const Footer = () => {
   const [isTablet, setIsTablet] = useState(false);
 
   const [isDesktop, setIsDesktop] = useState(false);
-
-  const router = useRouter();
-
-  const currentPath = router.pathname;
 
   const isTabletSize = useMediaQuery({ query: '(min-width: 768px)' });
   const isDesktopSize = useMediaQuery({ query: '(min-width: 1280px)' });
@@ -52,22 +45,7 @@ export const Footer = () => {
             <>
               <LogoIcon className={s.logo} />
 
-              <nav>
-                <ul className={s.navList}>
-                  {navPaths?.map(path => (
-                    <li key={path.id}>
-                      <Link
-                        href={path.route}
-                        className={
-                          currentPath === path.route ? s.linkActive : s.link
-                        }
-                      >
-                        {path.title}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
+              <NavBar footerVariant />
 
               <ul className={s.socialList}>
                 {socials.map(social => (
@@ -108,22 +86,7 @@ export const Footer = () => {
                 </div>
 
                 <div className={s.tabletWrappers}>
-                  <nav>
-                    <ul className={s.navList}>
-                      {navPaths?.map(path => (
-                        <li key={path.id}>
-                          <Link
-                            href={path.route}
-                            className={
-                              currentPath === path.route ? s.linkActive : s.link
-                            }
-                          >
-                            {path.title}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </nav>
+                  <NavBar footerVariant />
                 </div>
               </div>
               <p className={s.developmentYear}>2023 &#169;</p>
@@ -135,22 +98,7 @@ export const Footer = () => {
                 <LogoIcon className={s.logo} />
 
                 <div className={s.desktopNavWrapper}>
-                  <nav>
-                    <ul className={s.navList}>
-                      {navPaths?.map(path => (
-                        <li key={path.id}>
-                          <Link
-                            href={path.route}
-                            className={
-                              currentPath === path.route ? s.linkActive : s.link
-                            }
-                          >
-                            {path.title}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </nav>
+                  <NavBar footerVariant />
                 </div>
 
                 <ul className={s.socialList}>
