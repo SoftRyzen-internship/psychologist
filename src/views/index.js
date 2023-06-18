@@ -12,4 +12,5 @@ export * from './See-Far-CBT/EducationProgramView/EducationProgramView';
 export * from './Home/HomeHero/HomeHero';
 export * from './Home/WhatIDo/WhatIDo';
 export * from './Home/StudyView/StudyView';
+export * from './Home/Requests/Requests';
 // -------------
