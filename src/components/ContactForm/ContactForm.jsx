@@ -23,16 +23,12 @@ export const ContactForm = () => {
           acceptedTerms: false,
         }}
         validationSchema={contactValidationShema}
-        onSubmit={(values, { setSubmitting }) => {
-          // dispatch(onSubmit(values));
-          console.log('values', values);
+        onSubmit={(values, { resetForm }) => {
           sendFormDataToChat(values, setError, setIsThankYou);
-          localStorage.removeItem(formName);
-          localStorage.setItem(formName, null);
-          setSubmitting(false);
+          resetForm();
         }}
       >
-        {({ errors, touched, values }) => (
+        {({ errors, touched, values, handleSubmit }) => (
           <Form className={s.form}>
             {!isThankYou && !error && (
               <div>
@@ -131,7 +127,12 @@ export const ContactForm = () => {
                   </span>
                 </label>
 
-                <ActionButton is404={false} />
+                <ActionButton
+                  is404={false}
+                  clickHandler={() => {
+                    handleSubmit();
+                  }}
+                />
                 <Persist name={formName} />
               </div>
             )}
