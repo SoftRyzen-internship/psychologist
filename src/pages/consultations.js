@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import PropTypes from 'prop-types';
 import { getData } from '@/lib/getData';
 import { folderPaths } from '@/utils/folderPaths';
 import { PersonalConsultationMethodView } from '@/views';
@@ -28,3 +29,15 @@ export const getStaticProps = async () => {
 };
 
 export default ConsultationsPage;
+
+ConsultationsPage.propTypes = {
+  method: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    description: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        content: PropTypes.string.isRequired,
+      }),
+    ).isRequired,
+  }).isRequired,
+};

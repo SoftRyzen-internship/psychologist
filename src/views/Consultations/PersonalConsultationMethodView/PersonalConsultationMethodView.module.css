@@ -5,7 +5,7 @@
   line-height: calc(24 / 16);
 }
 
-.wrapper p > strong {
+.wrapper p>strong {
   font-weight: 600;
 }
 
@@ -22,8 +22,15 @@
   margin-bottom: 0;
 }
 
-.wrapper p:nth-child(4n),
+.wrapper p:nth-child(4n) {
+  margin-bottom: 24px;
+}
+
 .wrapper:nth-of-type(2) p:nth-child(3) {
+  margin-bottom: 0;
+}
+
+.textWrapper:first-of-type {
   margin-bottom: 24px;
 }
 
@@ -31,6 +38,10 @@
   .wrapper p {
     font-size: 18px;
     line-height: calc(28 / 18);
+  }
+
+  .textWrapper:first-of-type {
+    margin-bottom: 0;
   }
 
   .image1 {
@@ -99,7 +110,7 @@
     height: auto;
   }
 
-  .section > div > h2 {
+  .section>div>h2 {
     text-align: center;
   }
 }

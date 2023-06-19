@@ -16,7 +16,7 @@ export const PersonalConsultationMethodView = ({ data }) => {
           </div>
           <Image
             className={classNames(s.image1, s.image)}
-            src="/icons/Method1.svg"
+            src="/icons/consultations-method1.svg"
             alt="Робочий метод 1 опис"
             width={320}
             height={284}
@@ -28,7 +28,7 @@ export const PersonalConsultationMethodView = ({ data }) => {
           </div>
           <Image
             className={classNames(s.image2, s.image)}
-            src="/icons/Method2.svg"
+            src="/icons/consultations-method2.svg"
             alt="Робочий метод 2 опис"
             width={320}
             height={249}
