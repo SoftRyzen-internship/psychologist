@@ -27,3 +27,15 @@
     line-height: 1.4;
   }
 }
+
+@media screen and (min-width: 1280px) {
+  .blueText {
+    margin-bottom: 49px;
+    font-size: 28px;
+    line-height: 1.14;
+  }
+
+  .blueText:after {
+    width: 100%;
+  }
+}

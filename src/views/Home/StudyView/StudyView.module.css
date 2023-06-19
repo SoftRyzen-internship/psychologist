@@ -1,3 +1,7 @@
+.section h2 {
+  width: 265px;
+}
+
 .flexBox {
   display: flex;
   flex-direction: column-reverse;
@@ -10,8 +14,12 @@
 .mdContent > p {
   margin-bottom: 24px;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.56;
+}
+
+.mdContent > p > strong {
+  font-weight: 600;
 }
 
 .mdContent > p + p {
@@ -24,7 +32,7 @@
 .mdContent ol {
   padding-left: 35px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.5;
   list-style: none;
   counter-reset: my-counter;
@@ -34,6 +42,10 @@
   position: relative;
   margin-bottom: 16px;
   counter-increment: my-counter;
+}
+
+.mdContent li:last-child {
+  margin-bottom: 0;
 }
 
 .mdContent li::before {
@@ -61,6 +73,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  .section h2 {
+    width: 574px;
+  }
+
   .mdContent > p {
     width: 629px;
 
@@ -90,23 +106,28 @@
 }
 
 @media screen and (min-width: 1280px) {
+  .section h2 {
+    width: 673px;
+  }
+
   .flexBox {
     flex-direction: row-reverse;
+    gap: 64px;
   }
 
   .mdContent {
-    width: 592px;
+    width: 555px;
   }
 
   .mdContent > p {
-    width: 592px;
+    width: 555px;
     margin-bottom: 36px;
     font-size: 24px;
     line-height: 1.33;
   }
 
   .mdContent > p + p {
-    width: 592px;
+    width: 555px;
     margin-bottom: 20px;
   }
 
