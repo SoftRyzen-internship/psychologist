@@ -1,0 +1,26 @@
+.header {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 16px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #d4dae7;
+  background: var(--white-color);
+  z-index: 10;
+}
+
+.headerBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding-top: 15px;
+    padding-bottom: 13px;
+  }
+}

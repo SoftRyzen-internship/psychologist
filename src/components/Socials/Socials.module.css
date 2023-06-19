@@ -1,0 +1,92 @@
+.list {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.listFooter {
+  composes: list;
+  flex-direction: row;
+  gap: 24px;
+}
+.listPanel {
+  composes: list;
+  flex-direction: column;
+  gap: 20px;
+}
+.listMobile {
+  composes: list;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.item {
+  width: 36px;
+  height: 36px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* border: 1px solid;
+  border-radius: 8px;
+  transition: color 300ms ease-in-out, background-color 300ms ease-in-out; */
+}
+
+.itemLink {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 8px;
+  transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+}
+
+.itemLinkPanel {
+  composes: itemLink;
+  border-color: var(--white-color);
+  color: var(--white-color);
+  background-color: var(--accent-text-color);
+}
+
+.itemLinkMobile {
+  composes: itemLink;
+  border-color: var(--accent-text-color);
+  color: var(--accent-text-color);
+  background-color: transparent;
+}
+
+.itemLinkFooter {
+  composes: itemLink;
+  border-color: var(--white-color);
+  color: var(--white-color);
+  background-color: var(--footer-color);
+}
+
+.itemLinkPanel:hover,
+.itemLinkPanel:focus {
+  color: var(--accent-text-color);
+  background-color: var(--white-color);
+}
+
+.itemLinkMobile:hover,
+.itemLinkMobile:focus {
+  border-color: var(--accent-text-color);
+  color: var(--white-color);
+  background-color: var(--accent-text-color);
+}
+
+.itemLinkFooter:hover,
+.itemLinkFooter:focus {
+  border-color: var(--footer-color);
+  color: var(--footer-color);
+  background-color: var(--white-color);
+}
+
+.imgIcon {
+  display: block;
+  width: 23px;
+  height: 23px;
+  fill: currentColor;
+}

@@ -1,14 +1,9 @@
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-
 import { routes } from 'routes';
 import s from './ActionButton.module.css';
 
-export const ActionButton = ({
-  clickHandler,
-  inModalForm = false,
-  is404 = true,
-}) => {
+export const ActionButton = ({ clickHandler, is404 = false }) => {
   return (
     <>
       {is404 && (
@@ -16,12 +11,9 @@ export const ActionButton = ({
           Повернутись на головну
         </Link>
       )}
+
       {!is404 && (
-        <button
-          className={inModalForm ? s.actionButtonModal : s.actionButton}
-          type={inModalForm ? 'submit' : 'button'}
-          onClick={clickHandler}
-        >
+        <button className={s.actionButton} type="submit" onClick={clickHandler}>
           Залишити заявку
         </button>
       )}
@@ -31,6 +23,5 @@ export const ActionButton = ({
 
 ActionButton.propTypes = {
   clickHandler: PropTypes.func,
-  inModalForm: PropTypes.bool,
   is404: PropTypes.bool,
 };

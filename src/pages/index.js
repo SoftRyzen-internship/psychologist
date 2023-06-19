@@ -1,9 +1,11 @@
 import Head from 'next/head';
-import { FirstView } from '@/views';
-import { getNewsList } from '@/utils/request';
-import { ActionButton } from '@/components';
+import { getData } from '@/lib/getData';
+import { folderPaths } from '@/utils/folderPaths';
+import { HomeHero, StudyView, WhatIDo } from '@/views';
+import { getNewsList } from '@/lib/request';
+import PropTypes from 'prop-types';
 
-export default function Home() {
+export default function Home({ hero, whatIDo, study }) {
   return (
     <>
       <Head>
@@ -13,8 +15,11 @@ export default function Home() {
       </Head>
 
       <main className="main">
-        <FirstView />
-        <ActionButton />
+        <HomeHero hero={hero} />
+
+        <WhatIDo whatIDo={whatIDo} />
+
+        <StudyView study={study} />
       </main>
     </>
   );
@@ -22,7 +27,17 @@ export default function Home() {
 
 export async function getStaticProps() {
   const { allNews } = await getNewsList();
+  const { HOME } = folderPaths;
+  const homeData = getData(HOME);
+  const { hero, whatIDo, study } = homeData;
+
   if (!allNews) {
+    return {
+      notFound: true,
+    };
+  }
+
+  if (!homeData) {
     return {
       notFound: true,
     };
@@ -31,6 +46,15 @@ export async function getStaticProps() {
   return {
     props: {
       allNews,
+      hero,
+      whatIDo,
+      study,
     },
   };
 }
+
+Home.propTypes = {
+  hero: PropTypes.object.isRequired,
+  whatIDo: PropTypes.object.isRequired,
+  study: PropTypes.object.isRequired,
+};

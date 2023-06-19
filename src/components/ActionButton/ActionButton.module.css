@@ -1,8 +1,11 @@
 .actionButton {
+  margin: 0 auto;
   max-width: 320px;
   width: 100%;
   height: 60px;
   padding: 16px 44px;
+  display: flex;
+  justify-content: center;
 
   font-family: var(--font-open-sans);
   font-weight: 600;
@@ -27,29 +30,18 @@
   background-color: var(--btn-disabled-color);
 }
 
-.actionButtonModal {
-  composes: actionButton;
-
-  max-width: 280px;
-  width: 100%;
-}
-
 .actionLink404 {
   composes: actionButton;
-
-  display: inline-block;
 }
 
 @media screen and (min-width: 768px) {
   .actionButton {
-    max-width: 280px;
+    max-width: 360px;
 
     font-size: 18px;
     line-height: calc(28 / 18);
   }
-  .actionButtonModal {
-    max-width: 360px;
-  }
+
   .actionLink404 {
     max-width: 360px;
   }
@@ -59,5 +51,10 @@
   .actionButton {
     font-size: 20px;
     line-height: calc(28 / 20);
+  }
+}
+@media screen and (max-width: 360px) {
+  .actionButton {
+    padding: 16px 0;
   }
 }
