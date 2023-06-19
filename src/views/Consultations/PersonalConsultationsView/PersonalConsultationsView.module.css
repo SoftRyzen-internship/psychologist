@@ -190,7 +190,8 @@
   .mainList {
     display: flex;
     flex-direction: row;
-    gap: 104px;
+    /* gap: 104px; */
+    gap: 136px;
   }
 
   .mainList ul {
