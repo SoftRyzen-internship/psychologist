@@ -38,7 +38,7 @@ export const DependsCard = ({ data }) => {
             ))}
             <Image
               className={s.image}
-              src="/image/JuliaConsultationPage.jpg"
+              src="/images/consultation_modal-author.jpg"
               alt="Юлія в процесі консультації"
               width={592}
               height={396}

@@ -8,16 +8,22 @@ import s from './Modal.module.css';
 export const Modal = ({ data, onClose }) => {
   const body = document.querySelector('body');
 
+  const handleKeyDown = event => {
+    if (event.keyCode === 27) {
+      handleClose();
+    }
+  };
+
   useEffect(() => {
     const timer = setTimeout(() => {
       const overlay = document.querySelector(`.${s.overlay}`);
       const modalWrapper = document.querySelector(`.${s.modalWrapper}`);
-      // const header = document.querySelector('header');
 
-      // header.classList.add(s.begone);
       body.classList.add(s.noScroll);
       overlay.classList.add(s.open);
       modalWrapper.classList.add(s.open);
+
+      document.addEventListener('keydown', handleKeyDown);
     }, 100);
 
     return () => {
@@ -29,6 +35,8 @@ export const Modal = ({ data, onClose }) => {
     const overlay = document.querySelector(`.${s.overlay}`);
     overlay.classList.remove(s.open);
     body.classList.remove(s.noScroll);
+
+    document.removeEventListener('keydown', handleKeyDown);
 
     setTimeout(() => {
       onClose();
