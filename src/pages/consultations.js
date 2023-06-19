@@ -21,6 +21,12 @@ const ConsultationsPage = props => {
 export const getStaticProps = async () => {
   const consults = getData(folderPaths.CONSULTATIONS);
 
+  if (!method) {
+    return {
+      notFound: true,
+    };
+  }
+
   const { individual, online, requirements, faq1, factors, method } = consults;
 
   return {
