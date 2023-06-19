@@ -1,8 +1,8 @@
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
-import PropTypes from 'prop-types';
-import { ActionButton, Container, SectionTitle } from '..';
-import s from './ReusableSection.module.css';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import { Container, ModalButton, SectionTitle } from '..';
+import s from './ReusableSection.module.css';
 
 export const ReusableSection = ({
   data,
@@ -25,12 +25,12 @@ export const ReusableSection = ({
                 </ReactMarkdown>
 
                 {data?.subtitle && (
-                  <span className={s.blueText}>
+                  <div className={s.blueText}>
                     <ReactMarkdown>{data?.subtitle}</ReactMarkdown>
-                  </span>
+                  </div>
                 )}
 
-                <ActionButton type="button" />
+                <ModalButton />
               </div>
 
               {/* put an image with or without wrapper inside the component  */}
