@@ -3,8 +3,8 @@ import Image from 'next/image';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 
 import {
-  ActionButton,
   Container,
+  ModalButton,
   SectionTitle,
   TrainingsSection,
 } from '@/components';
@@ -12,12 +12,7 @@ import {
 import vs from './StressResistance.module.css';
 import s from '@/components/TrainingsSection/TrainingsSection.module.css';
 
-export const StressResistanceView = ({
-  markdown,
-  img,
-  btnClickHandler,
-  isDesktop,
-}) => {
+export const StressResistanceView = ({ markdown, img, isDesktop }) => {
   const { heading, goal, timePeriod, list } = markdown;
 
   return (
@@ -44,7 +39,7 @@ export const StressResistanceView = ({
                 <ReactMarkdown className={s.programList}>
                   {list[0].content}
                 </ReactMarkdown>
-                <ActionButton clickHandler={btnClickHandler} />
+                <ModalButton />{' '}
               </div>
               <div>
                 <Image
@@ -66,7 +61,6 @@ export const StressResistanceView = ({
             markdown={markdown}
             img={img}
             isTitleCentered={true}
-            btnClickHandler={btnClickHandler}
           />
         )}
       </Container>
@@ -77,6 +71,5 @@ export const StressResistanceView = ({
 StressResistanceView.propTypes = {
   markdown: PropTypes.object.isRequired,
   imgPath: PropTypes.string,
-  btnClickHandler: PropTypes.func,
   isDesktop: PropTypes.bool.isRequired,
 };

@@ -8,7 +8,7 @@
 
 .mdContent > p {
   margin-bottom: 24px;
-  font-optical-sizing: 18px;
+  font-size: 18px;
   font-weight: 600;
   line-height: 1.56;
 }
@@ -16,7 +16,7 @@
 .mdContent ul {
   padding-left: 40px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.5;
   list-style-type: none;
 }
@@ -24,6 +24,10 @@
 .mdContent li {
   position: relative;
   margin-bottom: 24px;
+}
+
+.mdContent li > strong {
+  font-weight: 600;
 }
 
 .mdContent li::before {
@@ -73,6 +77,7 @@
 @media screen and (min-width: 1280px) {
   .flexBox {
     display: flex;
+    gap: 20px;
   }
 
   .mdContent {
@@ -112,10 +117,11 @@
     right: 70px;
     width: 642px;
     height: 511px;
+    flex-shrink: 0;
     margin-top: 0;
   }
 
   .imgWrapper img {
-    height: 389px !important;
+    height: 511px !important;
   }
 }

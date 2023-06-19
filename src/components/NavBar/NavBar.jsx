@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { useMediaQuery } from 'react-responsive';
+import PropTypes from 'prop-types';
 import navPaths from 'utils/navPaths.json';
 import * as st from './NavBar.module.css';
 
@@ -14,7 +15,7 @@ export const NavBar = ({ setIsMenuOpen }) => {
     }
   };
   return (
-    <>
+    <nav className={st.nav}>
       <ul className={st.list}>
         {navPaths?.map(item => {
           return (
@@ -22,6 +23,7 @@ export const NavBar = ({ setIsMenuOpen }) => {
               <Link
                 href={item.route}
                 className={currentPath === item.route ? st.linkActive : st.link}
+                aria-label={item.title}
                 onClick={handleClick}
               >
                 {item.title}
@@ -30,6 +32,10 @@ export const NavBar = ({ setIsMenuOpen }) => {
           );
         })}
       </ul>
-    </>
+    </nav>
   );
+};
+
+NavBar.propTypes = {
+  setIsMenuOpen: PropTypes.func,
 };
