@@ -11,10 +11,8 @@ const EducationPage = ({ method, program }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <main className="main">
-        <EducationMethodView method={method} />
-        <EducationProgramView program={program} />
-      </main>
+      <EducationMethodView method={method} />
+      <EducationProgramView program={program} />
     </>
   );
 };

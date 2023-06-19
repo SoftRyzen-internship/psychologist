@@ -5,9 +5,10 @@ export const Layout = ({ children, className }) => {
   return (
     <div className={className}>
       <Header />
-      <BackToTopButton />
-      {children}
-
+      <main className="main">
+        {children}
+        <BackToTopButton />
+      </main>
       <Footer />
     </div>
   );
