@@ -31,7 +31,9 @@ export const DependsCard = ({ data }) => {
                 <button onClick={() => handleOpen(i)}>
                   <p>Читати більше</p>
                 </button>
-                {openIndex === i && <Modal data={item} onClose={handleClose} />}
+                {openIndex === i && (
+                  <Modal data={item} onClose={handleClose} isOpen={openIndex} />
+                )}
               </li>
             ))}
             <Image

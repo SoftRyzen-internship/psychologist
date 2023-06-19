@@ -4,31 +4,6 @@
   |============================
 */
 
-.DialogOverlay {
-  background-image: url('/icons/firstLiMobile.svg');
-  background-position: top left;
-  background-repeat: no-repeat;
-  /* background-size: cover; */
-  background-color: var(--bg1-color);
-  position: fixed;
-  inset: 0;
-  animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.DialogContent {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 488px;
-  max-height: 680px;
-  animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.DialogContent:focus {
-  outline: none;
-}
-
 .closeButton {
   position: absolute;
   top: 24px;
@@ -44,43 +19,11 @@
 
   background: transparent;
   border: none;
-  color: green;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  /* color: var(--accent-text-color); */
+  transition: fill 0.3s ease;
 }
 
 .closeButton:hover {
-  /* color: var(--btn-hover-color); */
-  color: red;
-}
-
-.iconClose {
-  display: block;
-  color: red;
-  fill: red;
-}
-
-@keyframes overlayShow {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes contentShow {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -48%) scale(0.96);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
+  fill: var(--btn-hover-color);
 }
 
 /**
@@ -89,6 +32,22 @@
   |============================
 */
 
+body.noScroll {
+  position: fixed;
+  overflow-y: scroll;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.begone {
+  opacity: 0;
+}
+
+/* .noScroll {
+  overflow: hidden;
+} */
+
 .overlay {
   position: fixed;
   top: 0;
@@ -96,11 +55,9 @@
   right: 0;
   bottom: 0;
 
-  background-image: url('/icons/firstLiMobile.svg');
-  background-position: top left;
-  background-repeat: no-repeat;
-  background-color: var(--bg1-color);
-  /* border-radius: 0px 16px; */
+  /* background: rgba(var(--consult-modalbgRdesign), 0.5) !important; */
+  background-color: var(--consult-modalbgRdesign);
+  /* background-color: rgba(var(--consult-modalbgRdesign), 0.5) !important; */
 
   z-index: 9999;
   overflow: hidden;
@@ -110,14 +67,12 @@
   transition: opacity 0.3s ease;
 }
 
-.overlay.open {
-  opacity: 1;
+.overlay:focus {
+  outline: none;
 }
 
-@media screen and (min-width: 768px) {
-  .overlay {
-    background-color: var(--consult-modalbg2);
-  }
+.overlay.open {
+  opacity: 1;
 }
 
 .overlay > div > p:first-of-type {
@@ -127,23 +82,20 @@
   line-height: calc(28 / 18);
   color: var(--accent-text-color);
 
-  /* width: 126px;
-  height: 28px; */
   margin-bottom: 44px;
 }
 
-@media screen and (min-width: 768px) {
-  .overlay > div > p:first-of-type {
-    font-size: 24px;
-    line-height: calc(32 / 24);
-  }
-}
-
 .modalWrapper {
+  overflow: hidden;
+
   width: 320px;
-  /* max-height: 100%; */
   box-sizing: content-box;
   padding: 24px 20px 44px 20px;
+
+  background-image: url('/icons/firstLiMobile.svg');
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-color: var(--bg1-color);
 
   transform: translateY(-20px);
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -154,23 +106,9 @@
   transform: translateY(0);
 }
 
-@media screen and (min-width: 768px) {
-  .modalWrapper {
-    width: auto;
-    padding: 40px 40px 40px 40px;
-  }
-}
-
 .contentWrapper p:first-of-type,
 .contentWrapper p:last-of-type {
   margin-bottom: 16px;
-}
-
-@media screen and (min-width: 768px) {
-  .contentWrapper p:first-of-type,
-  .contentWrapper p:last-of-type {
-    margin-bottom: 20px;
-  }
 }
 
 .contentWrapper li {
@@ -184,33 +122,11 @@
   font-weight: 600;
 }
 
-@media screen and (min-width: 768px) {
-  .contentWrapper p,
-  .contentWrapper li {
-    font-size: 20px;
-    line-height: calc(28 / 20);
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .contentWrapper p,
-  .contentWrapper li {
-    font-size: 20px;
-    line-height: calc(28 / 20);
-  }
-}
-
 .contentWrapper ul {
   list-style-type: none;
   display: flex;
   gap: 16px;
   flex-direction: column;
-}
-
-@media screen and (min-width: 768px) {
-  .contentWrapper ul {
-    gap: 20px;
-  }
 }
 
 .contentWrapper li {
@@ -230,4 +146,67 @@
   left: 0;
   /* vertical-align: middle; */
   background-image: url('/icons/Check.svg');
+}
+
+/**
+  |============================
+  | 768
+  |============================
+*/
+
+@media screen and (min-width: 768px) {
+  .contentWrapper p:first-of-type,
+  .contentWrapper p:last-of-type {
+    margin-bottom: 20px;
+  }
+
+  .overlay > div > p:first-of-type {
+    font-size: 24px;
+    line-height: calc(32 / 24);
+  }
+
+  .contentWrapper p,
+  .contentWrapper li {
+    font-size: 20px;
+    line-height: calc(28 / 20);
+  }
+
+  .modalWrapper {
+    position: relative;
+    top: 5vh;
+    width: 592px;
+    margin: 0 auto;
+    padding: 40px 40px 40px 40px;
+    border: 1px solid #d0e2ff;
+    border-radius: 0px 16px;
+  }
+
+  .closeButton {
+    top: 40px;
+    right: 40px;
+  }
+
+  .contentWrapper ul {
+    gap: 20px;
+  }
+}
+
+/**
+  |============================
+  | 1280
+  |============================
+*/
+
+@media screen and (min-width: 1280px) {
+  .contentWrapper p,
+  .contentWrapper li {
+    font-size: 20px;
+    line-height: calc(28 / 20);
+  }
+
+  .modalWrapper {
+    width: 1216px;
+    position: relative;
+    top: 12vh;
+  }
 }

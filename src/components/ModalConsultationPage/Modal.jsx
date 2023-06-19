@@ -1,46 +1,21 @@
-// import {
-//   DialogClose,
-//   DialogContent,
-//   DialogOverlay,
-// } from '@radix-ui/react-dialog';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
-import CloseBtn from 'public/icons/closeModalBTN.svg';
 import { useEffect } from 'react';
+import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
+import CloseBtn from 'public/icons/closeButton.svg';
 import s from './Modal.module.css';
-// import { Container } from '..';
-
-// export const Modal = ({ data }) => {
-//   // console.log(data);
-//   return (
-//     <>
-//       {/* <Container> */}
-//       <DialogOverlay className={s.DialogOverlay} />
-//       <DialogContent className={s.DialogContent}>
-//         <ReactMarkdown>{data.title}</ReactMarkdown>
-//         <ReactMarkdown>{data.content}</ReactMarkdown>
-//         <DialogClose asChild>
-//           <button className={s.closeButton} aria-label="Close">
-//             <CloseBtn className={s.iconClose} />
-//             {/* <svg className={s.iconClose}>
-//               <use xlinkHref="../../../public/icons/closeModalBTN.svg" />
-//             </svg> */}
-//           </button>
-//         </DialogClose>
-//       </DialogContent>
-//       {/* </Container> */}
-//     </>
-//   );
-// };
 
 export const Modal = ({ data, onClose }) => {
-  // console.log(data);
+  const body = document.querySelector('body');
 
   useEffect(() => {
     const timer = setTimeout(() => {
       const overlay = document.querySelector(`.${s.overlay}`);
       const modalWrapper = document.querySelector(`.${s.modalWrapper}`);
+      // const header = document.querySelector('header');
+
+      // header.classList.add(s.begone);
+      body.classList.add(s.noScroll);
       overlay.classList.add(s.open);
       modalWrapper.classList.add(s.open);
     }, 100);
@@ -50,11 +25,21 @@ export const Modal = ({ data, onClose }) => {
     };
   }, []);
 
+  const handleClose = () => {
+    const overlay = document.querySelector(`.${s.overlay}`);
+    overlay.classList.remove(s.open);
+    body.classList.remove(s.noScroll);
+
+    setTimeout(() => {
+      onClose();
+    }, 300);
+  };
+
   return (
     <>
       <div className={classNames(s.overlay)}>
         <div className={classNames(s.modalWrapper)}>
-          <button className={s.closeButton} onClick={onClose}>
+          <button className={s.closeButton} onClick={handleClose}>
             <CloseBtn className={s.closeVector} aria-label="close button" />
           </button>
           <ReactMarkdown>{data.title}</ReactMarkdown>
