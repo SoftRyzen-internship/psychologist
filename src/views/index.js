@@ -1,7 +1,7 @@
-export * from './FirstView/FirstView';
-
 // Consultations View
 export * from './Consultations/PersonalConsultationsView/PersonalConsultationsView';
+export * from './Consultations/OnlineConsultationView/OnlineConsultationsView';
+export * from './Consultations/PersonalConsultationMethodView/PersonalConsultationMethod';
 // -------------
 
 // Trainings View
@@ -20,7 +20,9 @@ export * from './See-Far-CBT/EducationProgramView/EducationProgramView';
 // -------------
 
 // Home View
+export * from '../components/FixedSocials/FixedSocials';
 export * from './Home/HomeHero/HomeHero';
 export * from './Home/WhatIDo/WhatIDo';
 export * from './Home/StudyView/StudyView';
 // -------------
+export * from './Consultations/GetPersonalConsultView/GetPersonalConsultView';

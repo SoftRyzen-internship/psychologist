@@ -2,8 +2,13 @@ import PropTypes from 'prop-types';
 import Head from 'next/head';
 import { getData } from '@/lib/getData';
 import { folderPaths } from '@/utils/folderPaths';
+import {
+  GetPersonalConsultView,
+  PersonalConsultationMethodView,
+  OnlineConsultationView,
+} from '@/views';
 
-const ConsultationsPage = () => {
+const ConsultationsPage = props => {
   return (
     <>
       <Head>
@@ -11,12 +16,21 @@ const ConsultationsPage = () => {
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+      <GetPersonalConsultView data={props.requirements} />
+      <PersonalConsultationMethodView data={props.method} />
+      <OnlineConsultationView data={props.online} />
     </>
   );
 };
 
 export const getStaticProps = async () => {
   const consults = getData(folderPaths.CONSULTATIONS);
+
+  if (!consults) {
+    return {
+      notFound: true,
+    };
+  }
 
   const { individual, online, requirements, faq1, factors, method } = consults;
 
@@ -28,6 +42,25 @@ export const getStaticProps = async () => {
 export default ConsultationsPage;
 
 ConsultationsPage.propTypes = {
+  requirements: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+  }).isRequired,
+  method: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    description: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        content: PropTypes.string.isRequired,
+      }),
+    ).isRequired,
+  }).isRequired,
+  online: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    list: PropTypes.string.isRequired,
+    benefits: PropTypes.string.isRequired,
+  }),
   individual: PropTypes.shape({
     heading: PropTypes.string.isRequired,
     format: PropTypes.string.isRequired,
