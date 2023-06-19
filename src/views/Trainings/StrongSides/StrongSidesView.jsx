@@ -3,8 +3,8 @@ import Image from 'next/image';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 
 import {
-  ActionButton,
   Container,
+  ModalButton,
   SectionTitle,
   TrainingsSection,
 } from '@/components';
@@ -12,12 +12,7 @@ import {
 import vs from './StrongSidesView.module.css';
 import s from '@/components/TrainingsSection/TrainingsSection.module.css';
 
-export const StrongSidesView = ({
-  markdown,
-  img,
-  btnClickHandler,
-  isDesktop,
-}) => {
+export const StrongSidesView = ({ markdown, img, isDesktop }) => {
   const { heading, goal, timePeriod, list } = markdown;
 
   return (
@@ -44,7 +39,7 @@ export const StrongSidesView = ({
                   height={img.SIZES.HEIGHT.DESKTOP}
                   alt={img.ALTERNATIVETEXT}
                 />
-                <ActionButton clickHandler={btnClickHandler} />
+                <ModalButton />{' '}
               </div>
               <div>
                 <p className={`${s.timePeriod} ${s.textMargin}`}>
@@ -60,13 +55,7 @@ export const StrongSidesView = ({
             </div>
           </>
         )}
-        {!isDesktop && (
-          <TrainingsSection
-            markdown={markdown}
-            img={img}
-            btnClickHandler={btnClickHandler}
-          />
-        )}
+        {!isDesktop && <TrainingsSection markdown={markdown} img={img} />}
       </Container>
     </section>
   );
@@ -75,6 +64,5 @@ export const StrongSidesView = ({
 StrongSidesView.propTypes = {
   markdown: PropTypes.object.isRequired,
   imgPath: PropTypes.string,
-  btnClickHandler: PropTypes.func,
   isDesktop: PropTypes.bool.isRequired,
 };

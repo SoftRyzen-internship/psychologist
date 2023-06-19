@@ -4,16 +4,10 @@ import { useMediaQuery } from 'react-responsive';
 import { useEffect, useState } from 'react';
 
 import { Container, TrainingsSection } from '@/components';
-import { setSpecialTitle } from '@/utils/setSpecialTitle';
 
 import s from './PublicSpeakingView.module.css';
 
-export const PublicSpeakingView = ({
-  markdown,
-  img,
-  btnClickHandler,
-  isDesktop,
-}) => {
+export const PublicSpeakingView = ({ markdown, img, isDesktop }) => {
   const isTabletSize = useMediaQuery({ query: '(min-width: 768px)' });
 
   const [isTablet, setIsTablet] = useState(false);
@@ -26,15 +20,19 @@ export const PublicSpeakingView = ({
     <section className={`trainingSection ${s.heroTrainingSection}`}>
       <Container>
         <TrainingsSection
-          markdown={isDesktop ? setSpecialTitle(markdown) : markdown}
+          markdown={markdown}
+          specialTitle={
+            isDesktop &&
+            '"Ораторське мистецтво" (групові\u00A0та індивідуальні заняття)'
+          }
           isHeroSection={true}
-          btnClickHandler={btnClickHandler}
         />
         {isTablet && (
           <Image
             className={s.heroImg}
             src={isDesktop ? img.PATH.DESKTOP : img.PATH.MOBILE}
             priority
+            quality={100}
             width={isDesktop ? img.SIZES.WIDTH.DESKTOP : img.SIZES.WIDTH.TABLET}
             height={
               isDesktop ? img.SIZES.HEIGHT.DESKTOP : img.SIZES.HEIGHT.TABLET
@@ -50,6 +48,5 @@ export const PublicSpeakingView = ({
 PublicSpeakingView.propTypes = {
   markdown: PropTypes.object.isRequired,
   imgPath: PropTypes.string,
-  btnClickHandler: PropTypes.func,
   isDesktop: PropTypes.bool.isRequired,
 };
