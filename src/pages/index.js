@@ -14,15 +14,13 @@ export default function Home({ hero, whatIDo, study }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <main className="main">
-        <HomeHero hero={hero} />
+      <HomeHero hero={hero} />
 
-        <WhatIDo whatIDo={whatIDo} />
+      <WhatIDo whatIDo={whatIDo} />
 
-        <Consult />
+      <Consult />
 
-        <StudyView study={study} />
-      </main>
+      <StudyView study={study} />
     </>
   );
 }

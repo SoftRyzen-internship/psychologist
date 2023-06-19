@@ -1,15 +1,16 @@
-// import { Footer, Header } from '..';
+import { BackToTopButton } from '@/components';
+import { Footer, Header } from '..';
 import { FixedSocials } from '@/components';
-import { Header } from '..';
 
 export const Layout = ({ children, className }) => {
   return (
     <div className={className}>
       <Header />
-
-      {children}
-
-      {/* <Footer /> */}
+      <main className="main">
+        {children}
+        <BackToTopButton />
+      </main>
+      <Footer />
       <FixedSocials />
     </div>
   );
