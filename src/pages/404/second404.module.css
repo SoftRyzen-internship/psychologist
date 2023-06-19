@@ -1,0 +1,75 @@
+.view {
+  height: 100vh;
+  padding-top: 34vh;
+  padding-bottom: 28.75vh;
+
+  background-image: url(/images/404page/firstViewBackgroundTopRight.svg),
+    url(/images/404page/firstViewBackgroundBottomLeft.svg);
+  background-repeat: no-repeat;
+  background-position: top right, bottom left;
+  background-size: 237px 213px, 287px 171px;
+}
+.contentWrapper {
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.image {
+  margin-bottom: 40px;
+  flex-shrink: 0;
+}
+.title {
+  margin-bottom: 20px;
+
+  font-family: var(--font-alegreya);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: calc(28 / 20);
+
+  color: var(--accent-text-color);
+}
+@media screen and (min-width: 768px) {
+  .view {
+    padding-top: 25.12vh;
+    padding-bottom: 20.1vh;
+
+    background-image: url(/images/404page/firstViewBackgroundTopRight.svg),
+      url(/images/404page/secondViewBackgroundBottomLeftTablet.svg);
+    background-size: 280px 280px, 344px 164px;
+  }
+  .image {
+    width: 524px;
+    height: 248px;
+    margin-bottom: 40px;
+  }
+  .title {
+    margin-bottom: 48px;
+
+    font-size: 40px;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .view {
+    padding-top: 27.7vh;
+    padding-bottom: 18.34vh;
+
+    background-image: url(/images/404page/secondViewBackgroundTopRightDesktop.svg),
+      url(/images/404page/secondViewBackgroundBottomLeftDesktop.svg);
+    background-size: 27.8vw auto, 31.87vw auto;
+    background-color: var(--bg2-color);
+  }
+  .contentWrapper {
+    align-items: flex-start;
+    flex-direction: row;
+  }
+  .image {
+    position: relative;
+    left: 32px;
+    width: 822px;
+    height: 100%;
+    margin-bottom: 0px;
+  }
+}

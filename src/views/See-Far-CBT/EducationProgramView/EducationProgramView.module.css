@@ -1,6 +1,7 @@
 .section :global .sectionTitleH2 {
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 32px;
 }
 .upperWrap {
   display: flex;
@@ -41,15 +42,19 @@
   margin-bottom: 20px;
 
   font-weight: 600;
+  font-size: 18px;
+  line-height: calc(28 / 18);
 }
 
 .textWrap {
   display: flex;
   flex-direction: column;
+
+  font-size: 16px;
+  line-height: calc(24 / 16);
 }
 
 .textWrap ol {
-  /* margin-left: 47px; */
   padding: 0;
   list-style: none;
   counter-reset: my-awesome-counter;
@@ -67,16 +72,17 @@
 .textWrap li::before {
   display: block;
 
+  margin-right: 28px;
   width: 31px;
 
   content: counter(my-awesome-counter) '. ';
+
   font-family: var(--font-alegreya);
+  font-weight: 500;
   font-size: 32px;
-  font-weight: 600;
   line-height: calc(36 / 32);
+
   color: var(--accent-text-color);
-  /* text-align: center; */
-  margin-right: 28px;
 }
 
 .lowerWrap ol {
@@ -99,9 +105,18 @@
 }
 
 @media screen and (min-width: 768px) {
+  .section :global .sectionTitleH2 {
+    margin-bottom: 40px;
+  }
+
   .timing {
     font-size: 24px;
     line-height: calc(32 / 24);
+  }
+
+  .programm {
+    font-size: 20px;
+    line-height: calc(28 / 20);
   }
 
   .imgWrap {
@@ -118,24 +133,23 @@
   .textWrap {
     display: flex;
     flex-direction: column;
-  }
 
-  .textWrap ol {
-    margin-left: 41px;
-  }
-
-  .textWrap li::marker {
-    font-size: large;
+    font-size: 18px;
+    line-height: calc(28 / 18);
   }
 
   .lowerWrap .imgWrap {
     max-width: 420px;
+  }
+  .lowerWrap .textWrap {
+    margin-bottom: 36px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .section :global .sectionTitleH2 {
     width: 808px;
+    margin-bottom: 60px;
   }
 
   .upperWrap {
@@ -154,17 +168,22 @@
   .timing {
     margin-bottom: 36px;
   }
-
+  .programm {
+    font-size: 24px;
+    line-height: calc(32 / 24);
+  }
   .textWrap {
     margin-bottom: 0;
 
     width: 592px;
-  }
 
-  .textWrap ol {
-    margin-left: 51px;
+    font-size: 20px;
+    line-height: calc(28 / 20);
   }
-
+  .textWrap li::before {
+    font-size: 40px;
+    line-height: calc(40 / 40);
+  }
   .lowerWrap {
     display: flex;
     flex-direction: row-reverse;

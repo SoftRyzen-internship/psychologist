@@ -5,7 +5,7 @@ import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import CloseBtn from 'public/icons/closeButton.svg';
 import s from './Modal.module.css';
 
-export const Modal = ({ data, onClose }) => {
+export const ModalDependsCards = ({ data, onClose }) => {
   const body = document.querySelector('body');
 
   const handleKeyDown = event => {
@@ -60,7 +60,7 @@ export const Modal = ({ data, onClose }) => {
   );
 };
 
-Modal.propTypes = {
+ModalDependsCards.propTypes = {
   data: PropTypes.shape({
     title: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired,

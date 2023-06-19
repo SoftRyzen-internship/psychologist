@@ -17,13 +17,15 @@
     "@radix-ui/react-dialog": "^1.0.4",
     "@svgr/webpack": "^8.0.1",
     "classnames": "^2.3.2",
+    "formik": "^2.4.1",
     "graphql-request": "^6.1.0",
     "gray-matter": "^4.0.3",
     "next": "13.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-markdown": "^8.0.7",
-    "react-responsive": "^9.0.2"
+    "react-responsive": "^9.0.2",
+    "yup": "^1.2.0"
   },
   "devDependencies": {
     "eslint": "8.41.0",
