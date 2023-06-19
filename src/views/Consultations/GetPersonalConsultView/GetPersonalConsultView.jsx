@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import PropTypes from 'prop-types';
-import { OffsetImageBorder, ReusableSection } from '@/components';
-import s from './GetPersonalConsultView.module.css';
 import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
+import { OffsetImageBorder, ReusableSection } from '@/components';
+import s from './GetPersonalConsultView.module.css';
 
 export const GetPersonalConsultView = ({ data }) => {
   const [isDesktopShow, setDesktopShow] = useState(false);
@@ -30,6 +30,7 @@ export const GetPersonalConsultView = ({ data }) => {
             width={308}
             height={386}
             alt="Психолог на консультації"
+            quality={100}
           />
         )}
         {isTabletShow && !isDesktopShow && (
@@ -38,6 +39,7 @@ export const GetPersonalConsultView = ({ data }) => {
             width={688}
             height={859}
             alt="Психолог на консультації"
+            quality={100}
           />
         )}
         {isDesktopShow && (
@@ -46,6 +48,7 @@ export const GetPersonalConsultView = ({ data }) => {
             width={472}
             height={870}
             alt="Психолог на консультації"
+            quality={100}
           />
         )}
       </OffsetImageBorder>
