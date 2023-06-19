@@ -1,11 +1,12 @@
 // Utils
 export * from './Container';
+export * from './ActionButton/ActionButton';
+export * from './BackToTop/BackToTop';
 export * from './SectionTitle/SectionTitle';
 export * from './Logo/Logo';
 export * from './OffsetImageBorder/OffsetImageBorder';
 export * from './ModalButton/ModalButton';
 export * from './NavBar/NavBar';
-export * from './ActionButton/ActionButton';
 export * from './FixedSocials/FixedSocials';
 // -------------
 
