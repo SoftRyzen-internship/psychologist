@@ -1,5 +1,3 @@
-export * from './FirstView/FirstView';
-
 // Consultations View
 export * from './Consultations/PersonalConsultationsView/PersonalConsultationsView';
 export * from './Consultations/OnlineConsultationView/OnlineConsultationsView';
