@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import { getData } from '@/lib/getData';
 import { folderPaths } from '@/utils/folderPaths';
-import { HomeHero, Requests, StudyView, WhatIDo } from '@/views';
+import { HomeHero, Requests, StudyView, HomeTrainings, WhatIDo } from '@/views';
 import { getNewsList } from '@/lib/request';
 import PropTypes from 'prop-types';
 
-export default function Home({ hero, whatIDo, study, requests }) {
+export default function Home({ hero, whatIDo, study, requests, trainings }) {
   return (
     <>
       <Head>
@@ -21,6 +21,8 @@ export default function Home({ hero, whatIDo, study, requests }) {
 
         <Requests requests={requests} />
 
+        <HomeTrainings trainings={trainings} />
+
         <StudyView study={study} />
       </main>
     </>
@@ -31,7 +33,7 @@ export async function getStaticProps() {
   const { allNews } = await getNewsList();
   const { HOME } = folderPaths;
   const homeData = getData(HOME);
-  const { hero, whatIDo, study, requests } = homeData;
+  const { hero, whatIDo, study, requests, trainings } = homeData;
 
   if (!allNews) {
     return {
@@ -52,6 +54,7 @@ export async function getStaticProps() {
       whatIDo,
       study,
       requests,
+      trainings,
     },
   };
 }
@@ -60,4 +63,6 @@ Home.propTypes = {
   hero: PropTypes.object.isRequired,
   whatIDo: PropTypes.object.isRequired,
   study: PropTypes.object.isRequired,
+  requests: PropTypes.object.isRequired,
+  trainings: PropTypes.object.isRequired,
 };
