@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 
-import { ActionButton, Container, SectionTitle } from '@/components';
+import { Container, ModalButton, SectionTitle } from '@/components';
 import { TrainingsSection } from '@/components/TrainingsSection/TrainingsSection';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 
 import vs from './SelfHelpView.module.css';
 import s from '@/components/TrainingsSection/TrainingsSection.module.css';
 
-export const SelfHelpView = ({ markdown, img, btnClickHandler, isDesktop }) => {
+export const SelfHelpView = ({ markdown, img, isDesktop }) => {
   const { heading, goal, timePeriod, list } = markdown;
 
   return (
@@ -40,18 +40,12 @@ export const SelfHelpView = ({ markdown, img, btnClickHandler, isDesktop }) => {
                 <ReactMarkdown className={s.programList}>
                   {list[0].content}
                 </ReactMarkdown>
-                <ActionButton clickHandler={btnClickHandler} />
+                <ModalButton />
               </div>
             </div>
           </>
         )}
-        {!isDesktop && (
-          <TrainingsSection
-            markdown={markdown}
-            img={img}
-            btnClickHandler={btnClickHandler}
-          />
-        )}
+        {!isDesktop && <TrainingsSection markdown={markdown} img={img} />}
       </Container>
     </section>
   );
@@ -60,6 +54,5 @@ export const SelfHelpView = ({ markdown, img, btnClickHandler, isDesktop }) => {
 SelfHelpView.propTypes = {
   markdown: PropTypes.object.isRequired,
   imgPath: PropTypes.string,
-  btnClickHandler: PropTypes.func,
   isDesktop: PropTypes.bool.isRequired,
 };

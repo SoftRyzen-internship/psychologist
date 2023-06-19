@@ -5,16 +5,28 @@ import { useEffect, useState } from 'react';
 
 import { getData } from '@/lib/getData';
 import { folderPaths } from '@/utils/folderPaths';
-import {
-  PublicSpeakingView,
-  ConflictologyView,
-  EducationWithLoveView,
-  SelfHelpView,
-  StressResistanceView,
-  StrongSidesView,
-  TimeManagementView,
-} from '@/views';
+import { PublicSpeakingView } from '@/views';
 import { imgProperties } from '@/utils/imgProperties';
+import dynamic from 'next/dynamic';
+
+const DynamicConflictologyView = dynamic(() =>
+  import('@/views').then(mod => mod.ConflictologyView),
+);
+const DynamicEducationWithLoveView = dynamic(() =>
+  import('@/views').then(mod => mod.EducationWithLoveView),
+);
+const DynamicSelfHelpView = dynamic(() =>
+  import('@/views').then(mod => mod.SelfHelpView),
+);
+const DynamicStressResistanceView = dynamic(() =>
+  import('@/views').then(mod => mod.StressResistanceView),
+);
+const DynamicStrongSidesView = dynamic(() =>
+  import('@/views').then(mod => mod.StrongSidesView),
+);
+const DynamicTimeManagementView = dynamic(() =>
+  import('@/views').then(mod => mod.TimeManagementView),
+);
 
 const TrainingsPage = ({
   conflictology,
@@ -46,32 +58,32 @@ const TrainingsPage = ({
         bgrImg={imgProperties.TRAININGS.HERO.BACKGROUND}
         isDesktop={isDesktop}
       />
-      <ConflictologyView
+      <DynamicConflictologyView
         markdown={conflictology}
         img={imgProperties.TRAININGS.CONFLICTOLOGY.IMAGE}
         isDesktop={isDesktop}
       />
-      <StressResistanceView
+      <DynamicStressResistanceView
         markdown={stressResistance}
         img={imgProperties.TRAININGS.STRESSRESISTANCE.IMAGE}
         isDesktop={isDesktop}
       />
-      <SelfHelpView
+      <DynamicSelfHelpView
         markdown={selfHelp}
         img={imgProperties.TRAININGS.SELFHELP.IMAGE}
         isDesktop={isDesktop}
       />
-      <EducationWithLoveView
+      <DynamicEducationWithLoveView
         markdown={educationWithLove}
         img={imgProperties.TRAININGS.EDUCATIONWITHLOVE.IMAGE}
         isDesktop={isDesktop}
       />
-      <TimeManagementView
+      <DynamicTimeManagementView
         markdown={timeManagement}
         img={imgProperties.TRAININGS.TIMEMANAGEMENT.IMAGE}
         isDesktop={isDesktop}
       />
-      <StrongSidesView
+      <DynamicStrongSidesView
         markdown={strongSides}
         img={imgProperties.TRAININGS.STRONGSIDES.IMAGE}
         isDesktop={isDesktop}
