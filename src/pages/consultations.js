@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import Head from 'next/head';
 import { getData } from '@/lib/getData';
 import { folderPaths } from '@/utils/folderPaths';
-import { PersonalConsultationsView } from '@/views';
+import { OnlineConsultationView } from '@/views';
 
 const ConsultationsPage = props => {
   return (
@@ -12,7 +12,7 @@ const ConsultationsPage = props => {
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <PersonalConsultationsView data={props.individual} />
+      <OnlineConsultationView data={props.online} />
     </>
   );
 };
@@ -30,6 +30,12 @@ export const getStaticProps = async () => {
 export default ConsultationsPage;
 
 ConsultationsPage.propTypes = {
+  online: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    list: PropTypes.string.isRequired,
+    benefits: PropTypes.string.isRequired,
+  }),
   individual: PropTypes.shape({
     heading: PropTypes.string.isRequired,
     format: PropTypes.string.isRequired,
