@@ -30,6 +30,7 @@ export function NewsView({ allNews }) {
                     alt={news.image.alt}
                     width={1200}
                     height={748}
+                    unoptimized={true}
                     className={s.imageStyle}
                   />
                 </OffsetImageBorder>
