@@ -1,5 +1,3 @@
-export * from './FirstComponent/FirstComponent';
-
 // Utils
 export * from './Container';
 export * from './SectionTitle/SectionTitle';

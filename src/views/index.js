@@ -1,5 +1,3 @@
-export * from './FirstView/FirstView';
-
 // Consultations View
 export * from './Consultations/PersonalConsultationsView/PersonalConsultationsView';
 export * from './Consultations/OnlineConsultationView/OnlineConsultationsView';
@@ -27,3 +25,4 @@ export * from './Home/HomeHero/HomeHero';
 export * from './Home/WhatIDo/WhatIDo';
 export * from './Home/StudyView/StudyView';
 // -------------
+export * from './Consultations/GetPersonalConsultView/GetPersonalConsultView';
