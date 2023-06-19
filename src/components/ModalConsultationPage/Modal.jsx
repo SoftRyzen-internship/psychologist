@@ -29,7 +29,7 @@ export const Modal = ({ data, onClose }) => {
     return () => {
       clearTimeout(timer);
     };
-  }, []);
+  }, []); //eslint-disable-line
 
   const handleClose = () => {
     const overlay = document.querySelector(`.${s.overlay}`);
