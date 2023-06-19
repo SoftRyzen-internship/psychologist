@@ -11,14 +11,14 @@ const ConsultationsPage = props => {
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <BlueSectionComponent
+      {/* <BlueSectionComponent
         data={props.online}
         className={{ section: 'personalConsSection', div: 'container' }}
-      />
-      {/* <BlueSectionComponent
+      /> */}
+      <BlueSectionComponent
         data={props.blue}
         className={{ section: 'mainPageSection', div: 'containerX' }}
-      /> */}
+      />
     </>
   );
 };

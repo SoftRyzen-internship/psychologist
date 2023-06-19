@@ -78,32 +78,29 @@
 */
 
 .mainPageSection {
-  background-image: url(/icons/MainElipseVector.svg),
-    url(/images/main_GREY-Mobilebg.png);
+  background-image: url(/images/consultations_reusable-mainMobile.png);
   background-size: cover;
   background-color: #e2eaf3;
-  background-position: top left, center;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 90px 160px, 360px 212px;
+  background-size: 360px 212px;
 
   padding: 0;
 }
 
 @media screen and (min-width: 768px) {
   .mainPageSection {
-    background-image: url(/icons/MainElipseVector.svg),
-      url(/images/main_GREY-Tabletbg.png);
-    background-position: left, top left;
-    background-size: 90px 160px, 768px 156px;
+    background-image: url(/images/consultations_reusable-mainTablet.png);
+    background-position: top left;
+    background-size: 768px 156px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .mainPageSection {
-    background-image: url(/icons/MainElipseVector.svg),
-      url(/images/main_GREY-PCbg.png);
-    background-position: left, bottom;
-    background-size: 198px 160px, 1440px 160px;
+    background-image: url(/images/consultations_reusable-mainPC.png);
+    background-position: bottom;
+    background-size: 1440px 160px;
   }
 }
 
