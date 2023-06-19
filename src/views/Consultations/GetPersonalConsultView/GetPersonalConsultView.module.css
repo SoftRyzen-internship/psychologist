@@ -92,6 +92,13 @@
   .mdContent li {
     padding-left: 56px;
   }
+
+  .mdContent li:nth-of-type(1),
+  .mdContent li:nth-of-type(2) {
+    height: 36px;
+    display: flex;
+    align-items: center;
+  }
 }
 
 /**
@@ -103,7 +110,6 @@
 @media screen and (min-width: 1280px) {
   .flexBox {
     display: flex;
-    align-items: center;
     gap: 32px;
   }
 
@@ -139,5 +145,12 @@
 
   .mdContent li {
     padding-left: 60px;
+  }
+
+  .mdContent li:first-of-type,
+  .mdContent li:nth-of-type(2) {
+    height: 40px;
+    display: flex;
+    align-items: center;
   }
 }
