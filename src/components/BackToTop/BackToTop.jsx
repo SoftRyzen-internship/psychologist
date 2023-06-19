@@ -9,7 +9,7 @@ export const BackToTopButton = () => {
   const handleScroll = () => {
     const scrollTop =
       document.documentElement.scrollTop || document.body.scrollTop;
-    setIsVisible(scrollTop > 0);
+    setIsVisible(scrollTop > 200);
   };
 
   const scrollToTop = () => {
