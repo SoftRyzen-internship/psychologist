@@ -5,7 +5,7 @@ export const Spinner = ({ contain }) => {
         <>
           <div className="contain">
             <div className="blobs">
-              <div className="blobs-center"></div>
+              <div className="blob-center"></div>
               <div className="blob"></div>
               <div className="blob"></div>
               <div className="blob"></div>
