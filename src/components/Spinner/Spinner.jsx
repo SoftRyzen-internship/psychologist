@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { SpinnerMarkup } from '@/components';
 import * as styles from './Spinner.module.css';
 
@@ -18,4 +19,8 @@ export const Spinner = ({ contain }) => {
       )}
     </>
   );
+};
+
+Spinner.propTypes = {
+  contain: PropTypes.bool,
 };
