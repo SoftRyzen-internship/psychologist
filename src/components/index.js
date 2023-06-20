@@ -3,6 +3,7 @@ export * from './Container';
 export * from './ActionButton/ActionButton';
 export * from './BackToTop/BackToTop';
 export * from './SectionTitle/SectionTitle';
+export * from './BlueSection/BlueSection';
 export * from './Logo/Logo';
 export * from './OffsetImageBorder/OffsetImageBorder';
 export * from './ModalButton/ModalButton';
