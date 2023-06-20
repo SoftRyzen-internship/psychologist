@@ -9,6 +9,7 @@ export * from './ModalButton/ModalButton';
 export * from './NavBar/NavBar';
 export * from './FixedSocials/FixedSocials';
 export * from './Spinner/Spinner';
+export * from './Spinner/SpinnerMarkup';
 // -------------
 
 // Consultations

@@ -32,7 +32,11 @@ export default function App({ Component, pageProps }) {
           }
         `}
       </style>
-      {router.pathname === '/404' && <Component {...pageProps} />}
+      {router.pathname === '/404' && (
+        <Hydrated>
+          <Component {...pageProps} />
+        </Hydrated>
+      )}
       {router.pathname !== '/404' && (
         <Hydrated>
           <Layout data={pageProps} className={classNames('layout')}>
@@ -48,9 +52,7 @@ const Hydrated = ({ children }) => {
   const [hydration, setHydration] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setHydration(true);
-    }
+    setHydration(true);
   }, []);
 
   return hydration ? children : <Spinner />;
