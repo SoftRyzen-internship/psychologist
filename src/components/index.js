@@ -15,10 +15,11 @@ export * from './Spinner/SpinnerMarkup';
 
 // Consultations
 export * from './ReusableSection/ReusableSection';
-export * from './Modal/Modal';
+export * from './ConsultationFAQReusable/ConsultationFAQ';
 // -------------
 
 // See-Far-CBT
+export * from './Modal/Modal';
 export * from './ThankYou/ThankYou';
 export * from './ContactForm/ContactForm';
 // -------------
