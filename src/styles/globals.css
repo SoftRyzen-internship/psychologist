@@ -230,6 +230,11 @@ section {
   |============================
 */
 
+.contain {
+  width: 100%;
+  height: 100%;
+}
+
 .blobs {
   filter: url(#goo);
   width: 300px;
@@ -238,12 +243,15 @@ section {
   overflow: hidden;
   border-radius: 70px;
   transform-style: preserve-3d;
+
+  top: 50%;
+  left: 50%;
 }
 
 .blobs .blob-center {
   transform-style: preserve-3d;
   position: absolute;
-  background: #fff200;
+  background: var(--accent-color);
   top: 50%;
   left: 50%;
   width: 30px;
@@ -253,12 +261,12 @@ section {
   -webkit-animation: blob-grow linear 3.4s infinite;
   animation: blob-grow linear 3.4s infinite;
   border-radius: 50%;
-  box-shadow: 0 -10px 40px -5px #fff200;
+  box-shadow: 0 -10px 40px -5px var(--accent-color);
 }
 
 .blob {
   position: absolute;
-  background: #fff200;
+  background: var(--accent-color);
   top: 50%;
   left: 50%;
   width: 30px;
