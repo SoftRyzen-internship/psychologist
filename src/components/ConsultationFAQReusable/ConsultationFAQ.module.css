@@ -1,0 +1,175 @@
+/**
+  |============================
+  | Personal consulting re-use
+  |============================
+*/
+
+.reusableSection > div > div:first-of-type > div > h2,
+.reusableSection2 > div > div:first-of-type > div > h2 {
+  width: 238px;
+}
+
+.reusableSection p > strong {
+  font-weight: 600;
+}
+
+.reusableSection {
+  background-image: url(/icons/MobileConsult.svg);
+  background-color: var(--bg2-color);
+  background-position: left bottom;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.reusableSection2 {
+  background-image: url(/icons/MobileTime.svg);
+  background-color: var(--bg2-color);
+  background-position: bottom;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.universalWrapper p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+
+  width: 320px;
+}
+
+.universalWrapper > div:nth-child(2) > p:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+.reusableSection2 > div > div > div:nth-child(2) > p {
+  font-size: 18px;
+  line-height: calc(28 / 18);
+}
+
+/**
+  |============================
+  | 768px
+  |============================
+*/
+
+@media screen and (min-width: 768px) {
+  .reusableSection > div > div:first-of-type > div > h2,
+  .reusableSection2 > div > div:first-of-type > div > h2 {
+    width: auto;
+  }
+
+  .reusableSection {
+    background-image: url(/icons/TabletConsult.svg);
+    background-size: 100%;
+    background-position: bottom;
+  }
+
+  .reusableSection2 {
+    background-image: url(/icons/TabletTime.svg);
+  }
+
+  .reusableSection2 > div > div:first-of-type {
+    gap: 32px;
+  }
+
+  .universalWrapper p {
+    font-size: 18px;
+    line-height: calc(28 / 18);
+
+    width: 378px;
+  }
+
+  .reusableSection2 > div > .universalWrapper > div:nth-of-type(2) p {
+    width: 336px;
+  }
+
+  .universalWrapper > p:first-of-type {
+    margin-bottom: 32px;
+  }
+
+  .universalWrapper {
+    display: flex;
+    gap: 48px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .universalWrapper > div:first-of-type {
+    padding-top: 42px;
+  }
+}
+
+/**
+  |============================
+  | 1280px
+  |============================
+*/
+
+@media screen and (min-width: 1280px) {
+  .containerX {
+    padding-right: 112px;
+    padding-left: 112px;
+  }
+
+  .reusableSection {
+    background-image: url(/icons/PCConsult.svg);
+    background-position: bottom;
+    background-size: 100%;
+  }
+
+  .reusableSection2 {
+    background-image: url(/icons/PCTime.svg);
+    background-position: bottom;
+  }
+
+  .reusableSection2 > div > div:first-of-type {
+    gap: 104px;
+  }
+
+  .universalWrapper p {
+    font-size: 20px;
+    line-height: calc(28 / 20);
+
+    width: 592px;
+  }
+
+  .reusableSection2 > div > .universalWrapper > div:nth-of-type(2) p {
+    width: 448px;
+  }
+
+  .universalWrapper {
+    justify-content: flex-start;
+    gap: 32px;
+  }
+
+  .reusableSection > div > div:first-of-type > div > h2,
+  .reusableSection2 > div > div:first-of-type > div > h2 {
+    width: 486px;
+  }
+
+  .universalWrapper > div:first-of-type {
+    padding-top: 62px;
+  }
+
+  .universalWrapper > div:nth-child(2) {
+    width: 592px;
+  }
+
+  .reusableSection2 > div > .universalWrapper > div:nth-of-type(1) {
+    padding: 0;
+  }
+
+  .reusableSection2 > div > .universalWrapper > div:nth-of-type(2) {
+    padding-right: 72px;
+  }
+
+  .reusableSection2 > div > div > div:nth-child(1) > h2 {
+    margin-bottom: 0;
+  }
+
+  .reusableSection2 > div > div > div:nth-child(2) > p {
+    font-size: 20px;
+    line-height: calc(28 / 20);
+  }
+}

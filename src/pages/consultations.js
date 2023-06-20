@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import Head from 'next/head';
 import { getData } from '@/lib/getData';
 import { folderPaths } from '@/utils/folderPaths';
+import { ConsultationFAQComponent } from '@/components';
 import {
   GetPersonalConsultView,
   PersonalConsultationMethodView,
@@ -17,6 +18,14 @@ const ConsultationsPage = props => {
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+      {/* <ConsultationFAQComponent
+        data={props.faq1}
+        className={{ section: 'reusableSection', div: 'containerX' }}
+      /> */}
+      <ConsultationFAQComponent
+        data={props.faq2}
+        className={{ section: 'reusableSection2', div: 'containerX' }}
+      />
       {/* <ReusableBlueView
         data={props.blue}
         className={{ section: 'mainPageSection', div: 'containerX' }}
@@ -69,6 +78,14 @@ export const getStaticProps = async () => {
 export default ConsultationsPage;
 
 ConsultationsPage.propTypes = {
+  faq1: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+  }).isRequired,
+  faq2: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+  }).isRequired,
   requirements: PropTypes.shape({
     heading: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired,
