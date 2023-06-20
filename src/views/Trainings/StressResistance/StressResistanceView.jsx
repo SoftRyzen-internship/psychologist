@@ -16,13 +16,7 @@ export const StressResistanceView = ({ markdown, img, isDesktop }) => {
   const { heading, goal, timePeriod, list } = markdown;
 
   return (
-    <section
-      className={
-        isDesktop
-          ? `trainingSection`
-          : `trainingSection ${vs.conflictologySection}`
-      }
-    >
+    <section className={`trainingSection`}>
       <Container>
         {isDesktop && (
           <>

@@ -26,5 +26,6 @@ export * from './Home/HomeNews/HomeNews';
 export * from './News/NewsView';
 export * from './Home/WhatIDo/WhatIDo';
 export * from './Home/StudyView/StudyView';
+export * from './Home/Consult/Consult';
 // -------------
 export * from './Consultations/GetPersonalConsultView/GetPersonalConsultView';
