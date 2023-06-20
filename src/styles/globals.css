@@ -187,6 +187,11 @@ section {
     overflow-x: visible;
     margin: 0 auto;
   }
+  .news-swiper-wrapper {
+    width: 592px !important;
+    overflow-x: visible;
+    margin: 0 auto;
+  }
   
   .trainingSection {
     padding-top: 80px;
