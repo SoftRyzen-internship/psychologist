@@ -59,6 +59,10 @@
   margin-bottom: 24px;
 }
 
+.aspRatio {
+  aspect-ratio: 308 / 390;
+}
+
 @media screen and (min-width: 768px) {
   .flexBox {
     flex-direction: row-reverse;
@@ -113,6 +117,10 @@
     margin-bottom: 0;
     margin-right: 32px;
     flex-shrink: 0;
+  }
+
+  .aspRatio {
+    aspect-ratio: 324 / 596;
   }
 }
 
@@ -177,5 +185,9 @@
     margin-bottom: 0;
     margin-right: 104px;
     flex-shrink: 0;
+  }
+
+  .aspRatio {
+    aspect-ratio: 576 / 572;
   }
 }

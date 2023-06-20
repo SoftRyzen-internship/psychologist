@@ -58,5 +58,10 @@ export const HomeTrainings = ({ trainings }) => {
 };
 
 HomeTrainings.propTypes = {
-  trainings: PropTypes.object.isRequired,
+  trainings: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    variantFirst: PropTypes.string.isRequired,
+    variantSecond: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+  }),
 };
