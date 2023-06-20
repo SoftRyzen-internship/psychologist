@@ -6,7 +6,7 @@ export const BlueSectionComponent = ({ data, className }) => {
   return (
     <>
       <div className={styles[className.section]}>
-        <div className={styles[className.div]}>
+        <div>
           <ReactMarkdown>{data.benefits}</ReactMarkdown>
         </div>
       </div>

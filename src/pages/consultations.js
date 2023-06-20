@@ -6,7 +6,6 @@ import {
   GetPersonalConsultView,
   PersonalConsultationMethodView,
   OnlineConsultationView,
-  ReusableBlueView,
 } from '@/views';
 
 const ConsultationsPage = props => {
@@ -21,13 +20,17 @@ const ConsultationsPage = props => {
         data={props.blue}
         className={{ section: 'mainPageSection', div: 'containerX' }}
       /> */}
-      <ReusableBlueView
+      {/* <ReusableBlueView
         data={props.online}
         className={{ section: 'personalConsSection', div: 'container' }}
-      />
+      /> */}
       <GetPersonalConsultView data={props.requirements} />
       <PersonalConsultationMethodView data={props.method} />
-      <OnlineConsultationView data={props.online} />
+      <OnlineConsultationView
+        data={props.online}
+        bluesection={props.blue}
+        mysection={props.online}
+      />
     </>
   );
 };
