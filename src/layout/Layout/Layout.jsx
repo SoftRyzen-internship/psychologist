@@ -9,9 +9,9 @@ export const Layout = ({ children, className }) => {
       <main className="main">
         {children}
         <BackToTopButton />
+        <FixedSocials />
       </main>
       <Footer />
-      <FixedSocials />
     </div>
   );
 };

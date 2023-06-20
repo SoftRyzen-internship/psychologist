@@ -81,10 +81,9 @@
 
 @media screen and (min-width: 1280px) {
   .section :global .sectionTitleH2 {
-    /* width: 736px;
-    text-align: center; */
-    padding-left: 240px;
-    padding-right: 240px;
+    width: 736px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .list {
