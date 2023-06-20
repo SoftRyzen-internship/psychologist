@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { getData } from '@/lib/getData';
 import { folderPaths } from '@/utils/folderPaths';
-import { HomeHero, HomeNews, StudyView, WhatIDo } from '@/views';
+import { FixedSocials, HomeHero, HomeNews, StudyView, WhatIDo } from '@/views';
 import { getNewsList } from '@/lib/request';
 import PropTypes from 'prop-types';
 
@@ -18,15 +18,13 @@ export default function Home({ hero, allNews, whatIDo, study }) {
 
       <WhatIDo whatIDo={whatIDo} />
 
-<<<<<<< HEAD
-        <StudyView study={study} />
-
-        <HomeNews allNews={allNews} />
-        <MainFixedSocials />
-      </main>
-=======
       <StudyView study={study} />
->>>>>>> dbd685129d7938e34a940120978b8c1bd06b254f
+
+      <StudyView study={study} />
+
+      <HomeNews allNews={allNews} />
+
+      <FixedSocials />
     </>
   );
 }

@@ -8,7 +8,7 @@ import s from './NewsCard.module.css';
 export const NewsCard = ({ image, title, text }) => {
   const { url, alt } = image;
   return (
-    <>
+    <div>
       <Image
         src={url}
         alt={alt}
@@ -22,7 +22,7 @@ export const NewsCard = ({ image, title, text }) => {
       <Link href="/news" className={s.readMoreLink}>
         Читати більше
       </Link>
-    </>
+    </div>
   );
 };
 
