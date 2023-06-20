@@ -18,6 +18,16 @@ export const HomeTrainings = ({ trainings }) => {
     4: <Trainitem4 />,
     5: <Trainitem5 />,
   };
+  const trainingsList = homeTrainingsData?.map(el => {
+    return (
+      <>
+        <li key={el.id.toString()} className={st.item}>
+          <span className={st.itemImg}>{Trainitems[el.id]}</span>
+          <span className={st.itemText}>{el.text}</span>
+        </li>
+      </>
+    );
+  });
   return (
     <section className={st.section}>
       <Container>
@@ -26,19 +36,7 @@ export const HomeTrainings = ({ trainings }) => {
           <ReactMarkdown className={st.variant}>
             {trainings.variantFirst}
           </ReactMarkdown>
-          <div>5 blocks</div>
-          <ul className={st.list}>
-            {homeTrainingsData?.map(el => {
-              return (
-                <>
-                  <li key={el.id} className={st.item}>
-                    <span className={st.itemImg}>{Trainitems[el.id]}</span>
-                    <span className={st.itemText}>{el.text}</span>
-                  </li>
-                </>
-              );
-            })}
-          </ul>
+          <ul className={st.list}>{trainingsList}</ul>
           <Image
             alt="фото Юлії Сулаєвої"
             src="/images/home_trainings.jpg"
