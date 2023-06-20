@@ -1,7 +1,12 @@
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import PropTypes from 'prop-types';
-import { Container, SectionTitle } from '@/components';
+import {
+  Container,
+  SectionTitle,
+  OffsetImageBorder,
+  ModalButton,
+} from '@/components';
 import homeTrainingsData from 'src/data/homeTrainingsData.json';
 import Trainitem1 from 'public/icons/home-tren-item-1.svg';
 import Trainitem2 from 'public/icons/home-tren-item-2.svg';
@@ -32,25 +37,34 @@ export const HomeTrainings = ({ trainings }) => {
     <section className={st.section}>
       <Container>
         <div className={st.descr}>
-          <SectionTitle title={trainings.heading} />
+          <SectionTitle title={trainings.heading} centered />
           <ReactMarkdown className={st.variant}>
             {trainings.variantFirst}
           </ReactMarkdown>
-          <ul className={st.list}>{trainingsList}</ul>
-          <Image
-            alt="фото Юлії Сулаєвої"
-            src="/images/home_trainings.jpg"
-            className={st.image}
-            priority
-            width={458}
-            height={734}
-            quality={100}
-          />
+          <ul className={st.listTrainings}>{trainingsList}</ul>
+          <div className={st.contentWrapper}>
+            <OffsetImageBorder className={st.imageBorder}>
+              <Image
+                alt="фото Юлії Сулаєвої"
+                src="/images/home_trainings.png"
+                className={st.image}
+                priority
+                width={308}
+                height={345}
+                quality={100}
+              />
+            </OffsetImageBorder>
+            <div>
+              <ReactMarkdown className={st.variant}>
+                {trainings.variantSecond}
+              </ReactMarkdown>
+              <ReactMarkdown className={st.listMasters}>
+                {trainings.content}
+              </ReactMarkdown>
 
-          <ReactMarkdown className={st.variant}>
-            {trainings.variantSecond}
-          </ReactMarkdown>
-          <ReactMarkdown className={st.list}>{trainings.content}</ReactMarkdown>
+              <ModalButton />
+            </div>
+          </div>
         </div>
       </Container>
     </section>
