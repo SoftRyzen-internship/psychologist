@@ -238,6 +238,6 @@ section {
     line-height: calc(28 / 20);
   }
   .swiper-wrapper {
-    width: 1216px !important;
+    width: 1280px !important;
   }
 }

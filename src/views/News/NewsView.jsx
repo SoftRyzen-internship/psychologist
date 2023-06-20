@@ -43,9 +43,9 @@ export function NewsView({ allNews }) {
 }
 
 NewsView.propTypes = {
-  allNews: PropTypes.shape([
-    {
-      id: PropTypes.number.isRequired,
+  allNews: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
       text: PropTypes.string.isRequired,
       image: PropTypes.shape({
@@ -53,6 +53,6 @@ NewsView.propTypes = {
         url: PropTypes.string.isRequired,
       }),
       _publishedAt: PropTypes.string.isRequired,
-    },
-  ]),
+    }),
+  ),
 };

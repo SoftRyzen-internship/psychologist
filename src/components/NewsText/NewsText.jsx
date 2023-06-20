@@ -4,9 +4,9 @@ import s from './NewsText.module.css';
 
 export const NewsText = ({ newsTextProp, section = false }) => {
   return (
-    <span className={section ? s.newsTextSection : s.newsText}>
+    <div className={section ? s.newsTextSection : s.newsText}>
       <ReactMarkdown linkTarget="_blank">{newsTextProp}</ReactMarkdown>
-    </span>
+    </div>
   );
 };
 

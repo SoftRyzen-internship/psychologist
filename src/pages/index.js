@@ -61,4 +61,16 @@ Home.propTypes = {
   hero: PropTypes.object.isRequired,
   whatIDo: PropTypes.object.isRequired,
   study: PropTypes.object.isRequired,
+  allNews: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
+      image: PropTypes.shape({
+        alt: PropTypes.string.isRequired,
+        url: PropTypes.string.isRequired,
+      }),
+      _publishedAt: PropTypes.string.isRequired,
+    }),
+  ),
 };
