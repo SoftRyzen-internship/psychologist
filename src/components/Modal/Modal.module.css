@@ -12,9 +12,6 @@
 
   inset: 0;
 }
-/* .DialogOverlay[data-state='open'] {
-  animation: overlayShow 200ms ease-out;
-} */
 
 .DialogContent {
   z-index: 20;
@@ -99,8 +96,3 @@
     opacity: 0;
   }
 }
-
-/* .DialogOverlay[data-state='open'],
-.DialogContent[data-state='open'] {
-  animation: fadeIn 300ms ease-out;
-} */

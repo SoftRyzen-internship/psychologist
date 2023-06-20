@@ -19,6 +19,7 @@ export const ErrorNote = () => {
             alt="Контурний малюнок людини з похиленою головою біля ноутбука"
             width="360"
             height="200"
+            quality={100}
           />
         </div>
       </div>

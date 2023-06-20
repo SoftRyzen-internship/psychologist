@@ -8,7 +8,6 @@ export const ThankYou = () => {
         <h3 className={s.title}>Дякую за вашу заявку!</h3>
         <div className={s.wrap}>
           <p className={s.text}>Ваші дані були успішно відправлені.</p>
-          {/* <CorrectSVG className={s.correctIcon} /> */}
 
           <div className={s.textWrap}>
             <p className={s.text}>Будь ласка, очікуйте:</p>
@@ -21,6 +20,7 @@ export const ThankYou = () => {
             alt="Контурний малюнок жінки біля ноутбука"
             width="360"
             height="200"
+            quality={100}
           />
         </div>
       </div>

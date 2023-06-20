@@ -25,6 +25,7 @@ export const EducationProgramView = ({ program }) => {
                 className={s.image}
                 width="620"
                 height="280"
+                quality={100}
               />
             </MediaQuery>
 
@@ -35,6 +36,7 @@ export const EducationProgramView = ({ program }) => {
                 className={s.image}
                 width="592"
                 height="364"
+                quality={100}
               />
             </MediaQuery>
           </div>
@@ -49,9 +51,7 @@ export const EducationProgramView = ({ program }) => {
         <div className={s.lowerWrap}>
           <div className={s.textWrap}>
             <ReactMarkdown>{program.list2}</ReactMarkdown>
-            {/* <NoSSR> */}
             <ModalButton />
-            {/* </NoSSR> */}
           </div>
 
           <div className={s.imgWrap}>
@@ -62,6 +62,7 @@ export const EducationProgramView = ({ program }) => {
                 className={s.image}
                 width="420"
                 height="312"
+                quality={100}
               />
             </MediaQuery>
 
@@ -72,6 +73,7 @@ export const EducationProgramView = ({ program }) => {
                 className={s.image}
                 width="520"
                 height="316"
+                quality={100}
               />
             </MediaQuery>
           </div>

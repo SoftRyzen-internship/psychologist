@@ -20,8 +20,6 @@
     "aos": "^3.0.0-beta.6",
     "axios": "^1.4.0",
     "classnames": "^2.3.2",
-    "formik": "^2.4.1",
-    "formik-persist": "^1.1.0",
     "graphql-request": "^6.1.0",
     "gray-matter": "^4.0.3",
     "next": "13.2.3",
@@ -31,7 +29,6 @@
     "react-hook-form-persist": "^3.0.0",
     "react-markdown": "^8.0.7",
     "react-responsive": "^9.0.2",
-    "react-spring": "^9.7.1",
     "yup": "^1.2.0"
   },
   "devDependencies": {

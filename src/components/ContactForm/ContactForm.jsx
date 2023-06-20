@@ -15,9 +15,6 @@ export const ContactForm = () => {
   const STORAGE_KEY = 'contactForm';
   const schema = contactValidationShema();
 
-  console.log('serverError', serverError);
-  console.log('isSubmitting', isSubmitting);
-
   const {
     register,
     handleSubmit,
