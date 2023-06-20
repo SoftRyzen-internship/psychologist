@@ -22,7 +22,7 @@ export const SpinnerMarkup = () => {
             />
             <feColorMatrix
               in="blur"
-              mode="matrix"
+              type="matrix"
               values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
               result="goo"
             />
