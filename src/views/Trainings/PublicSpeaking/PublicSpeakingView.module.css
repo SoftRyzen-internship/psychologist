@@ -1,3 +1,6 @@
+.heroTrainingSection h2 {
+  margin-bottom: 32px;
+}
 @media screen and (min-width: 768px) {
   .heroTrainingSection > div {
     position: relative;
@@ -6,7 +9,7 @@
     content: '';
     width: 901px;
     height: 950px;
-    right: -588px;
+    right: -563px;
     bottom: 0;
     position: absolute;
     z-index: -1;
@@ -16,8 +19,11 @@
   .heroImg {
     display: block;
     position: absolute;
-    right: -226px;
+    right: -191px;
     bottom: 0;
+  }
+  .heroTrainingSection h2 {
+    margin-bottom: 40px;
   }
   .heroTrainingSection > div > button {
     margin: 0;
@@ -27,7 +33,7 @@
 @media screen and (min-width: 1280px) {
   .heroTrainingSection h2 {
     width: 940px;
-    white-space: pre-wrap;
+    margin-bottom: 60px;
   }
   .heroImg {
     right: -34px;
