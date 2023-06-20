@@ -1,16 +1,16 @@
-import s from './Spinner.module.css';
+// import s from './Spinner.module.css';
 
 export const Spinner = () => {
   return (
     <>
-      <div className={s.blobs}>
-        <div className={s['blobs-center']}></div>
-        <div className={s.blob}></div>
-        <div className={s.blob}></div>
-        <div className={s.blob}></div>
-        <div className={s.blob}></div>
-        <div className={s.blob}></div>
-        <div className={s.blob}></div>
+      <div className="blobs">
+        <div className="blobs-center"></div>
+        <div className="blob"></div>
+        <div className="blob"></div>
+        <div className="blob"></div>
+        <div className="blob"></div>
+        <div className="blob"></div>
+        <div className="blob"></div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
         <defs>
