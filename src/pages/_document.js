@@ -32,7 +32,8 @@ export default function Document() {
 
         <meta property="og:title" content="Психолог Юлія Сулаєва" />
 
-        <link rel="canonical" href="https://e-volunteer.vercel.app/" />
+        {/* <link rel="canonical" href="" />
+        <link rel="alternate" href="" /> */}
 
         <link
           rel="apple-touch-icon"
