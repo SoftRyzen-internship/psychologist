@@ -1,7 +1,8 @@
 import Head from 'next/head';
+import PropTypes from 'prop-types';
 import { getData } from '@/lib/getData';
 import { folderPaths } from '@/utils/folderPaths';
-import { BlueSectionComponent } from '@/components';
+import { ReusableBlueView } from '@/views';
 
 const ConsultationsPage = props => {
   return (
@@ -11,13 +12,13 @@ const ConsultationsPage = props => {
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      {/* <BlueSectionComponent
-        data={props.online}
-        className={{ section: 'personalConsSection', div: 'container' }}
-      /> */}
-      <BlueSectionComponent
+      {/* <ReusableBlueView
         data={props.blue}
         className={{ section: 'mainPageSection', div: 'containerX' }}
+      /> */}
+      <ReusableBlueView
+        data={props.online}
+        className={{ section: 'personalConsSection', div: 'container' }}
       />
     </>
   );
@@ -52,3 +53,15 @@ export const getStaticProps = async () => {
 };
 
 export default ConsultationsPage;
+
+ConsultationsPage.propTypes = {
+  online: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    list: PropTypes.string.isRequired,
+    benefits: PropTypes.string.isRequired,
+  }).isRequired,
+  blue: PropTypes.shape({
+    benefits: PropTypes.string.isRequired,
+  }).isRequired,
+};
