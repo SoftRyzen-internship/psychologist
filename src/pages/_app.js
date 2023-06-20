@@ -1,8 +1,9 @@
 import { useRouter } from 'next/router';
 import classNames from 'classnames';
+import { useEffect, useState } from 'react';
 import { Open_Sans, Alegreya } from 'next/font/google';
-
 import { Layout } from '@/layout';
+import { Spinner } from '@/components';
 import '@/styles/globals.css';
 
 const open_sans = Open_Sans({
@@ -31,12 +32,28 @@ export default function App({ Component, pageProps }) {
           }
         `}
       </style>
-      {router.pathname === '/404' && <Component {...pageProps} />}
-      {router.pathname !== '/404' && (
-        <Layout data={pageProps} className={classNames('layout')}>
+      {router.pathname === '/404' && (
+        <Hydrated>
           <Component {...pageProps} />
-        </Layout>
+        </Hydrated>
+      )}
+      {router.pathname !== '/404' && (
+        <Hydrated>
+          <Layout data={pageProps} className={classNames('layout')}>
+            <Component {...pageProps} />
+          </Layout>
+        </Hydrated>
       )}
     </>
   );
 }
+
+const Hydrated = ({ children }) => {
+  const [hydration, setHydration] = useState(false);
+
+  useEffect(() => {
+    setHydration(true);
+  }, []);
+
+  return hydration ? children : <Spinner />;
+};

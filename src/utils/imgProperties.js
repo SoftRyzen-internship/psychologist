@@ -4,7 +4,8 @@
   |============================
 */
 // 1. If you wanna responsive image - then value of property (width> height --> mobile, tablet, desktop) must be an empty string ('')
-// Path to image starts from public folder
+// 2. Path to image starts from public folder
+// 3. Width and Height attributes must be in numerical format (example: TABLET: 499 <-- CORRECT;TABLET: '499px' <-- INCORRECT!)
 export const imgProperties = {
   TRAININGS: {
     HERO: {

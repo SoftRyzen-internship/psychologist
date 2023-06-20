@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { getData } from '@/lib/getData';
 import { folderPaths } from '@/utils/folderPaths';
-import { HomeHero, StudyView, WhatIDo } from '@/views';
+import { HomeHero, Consult, StudyView, WhatIDo } from '@/views';
 import { getNewsList } from '@/lib/request';
 import PropTypes from 'prop-types';
 
@@ -14,13 +14,13 @@ export default function Home({ hero, whatIDo, study }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <main className="main">
-        <HomeHero hero={hero} />
+      <HomeHero hero={hero} />
 
-        <WhatIDo whatIDo={whatIDo} />
+      <WhatIDo whatIDo={whatIDo} />
 
-        <StudyView study={study} />
-      </main>
+      <Consult />
+
+      <StudyView study={study} />
     </>
   );
 }
