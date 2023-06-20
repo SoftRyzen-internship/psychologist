@@ -1,7 +1,8 @@
 import Head from 'next/head';
+import PropTypes from 'prop-types';
 import { getData } from '@/lib/getData';
 import { folderPaths } from '@/utils/folderPaths';
-import { BlueSectionComponent } from '@/components';
+import { ConsultationFAQComponent } from '@/components';
 
 const ConsultationsPage = props => {
   return (
@@ -11,14 +12,14 @@ const ConsultationsPage = props => {
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <BlueSectionComponent
+      {/* <ConsultationFAQComponent
         data={props.faq1}
         className={{ section: 'reusableSection', div: 'containerX' }}
-      />
-      {/* <BlueSectionComponent
+      /> */}
+      <ConsultationFAQComponent
         data={props.faq2}
         className={{ section: 'reusableSection2', div: 'containerX' }}
-      /> */}
+      />
     </>
   );
 };
@@ -35,3 +36,14 @@ export const getStaticProps = async () => {
 };
 
 export default ConsultationsPage;
+
+ConsultationsPage.propTypes = {
+  faq1: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+  }).isRequired,
+  faq2: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+  }).isRequired,
+};

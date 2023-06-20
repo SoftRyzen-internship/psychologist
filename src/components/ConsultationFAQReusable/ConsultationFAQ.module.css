@@ -4,10 +4,9 @@
   |============================
 */
 
-.containerX {
-  padding: 36px 20px 36px 20px;
-
-  /* position: relative; */
+.reusableSection > div > div:first-of-type > div > h2,
+.reusableSection2 > div > div:first-of-type > div > h2 {
+  width: 238px;
 }
 
 .reusableSection p > strong {
@@ -17,15 +16,16 @@
 .reusableSection {
   background-image: url(/icons/MobileConsult.svg);
   background-color: var(--bg2-color);
-  background-position: bottom;
+  background-position: left bottom;
+  background-size: 100%;
   background-repeat: no-repeat;
-  background-size: 360px 528px;
 }
 
 .reusableSection2 {
   background-image: url(/icons/MobileTime.svg);
   background-color: var(--bg2-color);
   background-position: bottom;
+  background-size: 100%;
   background-repeat: no-repeat;
 }
 
@@ -54,13 +54,14 @@
 */
 
 @media screen and (min-width: 768px) {
-  .containerX {
-    padding: 36px 96px 36px 96px;
+  .reusableSection > div > div:first-of-type > div > h2,
+  .reusableSection2 > div > div:first-of-type > div > h2 {
+    width: auto;
   }
 
   .reusableSection {
     background-image: url(/icons/TabletConsult.svg);
-    background-size: 768px 562px;
+    background-size: 100%;
     background-position: bottom;
   }
 
@@ -107,13 +108,14 @@
 
 @media screen and (min-width: 1280px) {
   .containerX {
-    padding: 48px 188px 48px 188px;
+    padding-right: 112px;
+    padding-left: 112px;
   }
 
   .reusableSection {
     background-image: url(/icons/PCConsult.svg);
     background-position: bottom;
-    background-size: 1440px 426px;
+    background-size: 100%;
   }
 
   .reusableSection2 {
@@ -137,7 +139,13 @@
   }
 
   .universalWrapper {
-    gap: 0;
+    justify-content: flex-start;
+    gap: 32px;
+  }
+
+  .reusableSection > div > div:first-of-type > div > h2,
+  .reusableSection2 > div > div:first-of-type > div > h2 {
+    width: 486px;
   }
 
   .universalWrapper > div:first-of-type {
@@ -145,7 +153,7 @@
   }
 
   .universalWrapper > div:nth-child(2) {
-    padding-right: 106px;
+    width: 592px;
   }
 
   .reusableSection2 > div > .universalWrapper > div:nth-of-type(1) {

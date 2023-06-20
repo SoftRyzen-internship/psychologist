@@ -13,6 +13,6 @@ export * from './ContactForm/ContactForm';
 export * from './Modal/Modal';
 export * from './ModalButton/ModalButton';
 export * from './ReusableSection/ReusableSection';
-export * from './PersonalConsultationReusableSection/PCReusableSection';
+export * from './ConsultationFAQReusable/ConsultationFAQ';
 export * from './ThankYou/ThankYou';
 export * from './TrainingsSection/TrainingsSection';
