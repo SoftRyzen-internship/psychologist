@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import useFormPersist from 'react-hook-form-persist';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { ActionButton, ErrorNote, ThankYou } from '..';
+import { ActionButton, ErrorNote, Spinner, ThankYou } from '..';
 import { contactValidationShema } from '@/utils/contactValidationShema';
 import { sendFormDataToChat } from '@/utils/sendFormDataToChat';
 import s from './ContactForm.module.css';
@@ -119,7 +119,7 @@ export const ContactForm = () => {
         </>
       )}
 
-      {isSubmitting && <p>Is loading...</p>}
+      {isSubmitting && <Spinner />}
 
       {isThankYou && <ThankYou />}
 
