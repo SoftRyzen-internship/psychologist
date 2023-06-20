@@ -2,7 +2,7 @@ import Image from 'next/image';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
-import { Container, Modal, SectionTitle } from '@/components';
+import { Container, ModalDependsCards, SectionTitle } from '@/components';
 import s from './DependsCard.module.css';
 
 export const DependsCard = ({ data }) => {
@@ -32,7 +32,11 @@ export const DependsCard = ({ data }) => {
                   <p>Читати більше</p>
                 </button>
                 {openIndex === i && (
-                  <Modal data={item} onClose={handleClose} isOpen={openIndex} />
+                  <ModalDependsCards
+                    data={item}
+                    onClose={handleClose}
+                    isOpen={openIndex}
+                  />
                 )}
               </li>
             ))}

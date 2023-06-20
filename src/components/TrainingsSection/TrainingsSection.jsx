@@ -71,7 +71,9 @@ export const TrainingsSection = ({
                 .dynamicImgWrapper {
                   width: ${mobileImgWidth};
                   height: ${mobileImgHeight};
-                  @media screen and (min-width: 768px) {
+                }
+                @media screen and (min-width: 768px) {
+                  .dynamicImgWrapper {
                     width: ${tabletImgWidth};
                     height: ${tabletImgHeight};
                   }
@@ -99,7 +101,7 @@ export const TrainingsSection = ({
 };
 
 TrainingsSection.propTypes = {
-  markdown: PropTypes.object,
+  markdown: PropTypes.object.isRequired,
   img: PropTypes.object,
   isHeroSection: PropTypes.bool,
   isTitleCentered: PropTypes.bool,

@@ -17,13 +17,7 @@ export const EducationWithLoveView = ({ markdown, img, isDesktop }) => {
 
   return (
     <>
-      <section
-        className={
-          isDesktop
-            ? `trainingSection ${vs.educationWithLoveSection}`
-            : `trainingSection`
-        }
-      >
+      <section className={`trainingSection ${vs.educationWithLoveSection}`}>
         <Container>
           {isDesktop && (
             <>

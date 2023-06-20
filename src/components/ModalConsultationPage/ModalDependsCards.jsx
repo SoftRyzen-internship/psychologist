@@ -48,7 +48,7 @@ export const ModalDependsCards = ({ data, onClose }) => {
       <div className={classNames(s.overlay)}>
         <div className={classNames(s.modalWrapper)}>
           <button className={s.closeButton} onClick={handleClose}>
-            <CloseBtn className={s.closeVector} aria-label="close button" />
+            <CloseBtn className={s.closeVector} aria-label="Кнопка закриття" />
           </button>
           <ReactMarkdown>{data.title}</ReactMarkdown>
           <div className={s.contentWrapper}>

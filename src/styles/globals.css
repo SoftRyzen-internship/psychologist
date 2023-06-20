@@ -19,9 +19,11 @@
   --fast-btn-animation: background-color 300ms ease;
   --consult-modalbg2: #f9fbfe;
   --consult-modalbgRdesign: #2361a8;
+  --back-to-top-button-bg: #e9edf2;
   --fast-text-animation: color 300ms ease;
-
   --fast-svg-animation: fill 300ms ease;
+  --consult-border-color: #d0e2ff;
+  --consult-bg-color: #e4f0ff;
 }
 
 * {
