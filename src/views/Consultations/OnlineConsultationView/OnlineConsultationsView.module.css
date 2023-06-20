@@ -1,0 +1,134 @@
+@media screen and (max-width: 767px) {
+  .image {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+}
+
+.utilityFinder p,
+.utilityFinder li {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+}
+
+.utilityFinder p > strong {
+  font-weight: 600;
+}
+
+.utilityFinder ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.utilityFinder li {
+  position: relative;
+  padding-left: 40px;
+  min-width: 320px;
+  height: auto;
+}
+
+.utilityFinder li::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  position: absolute;
+  left: 0;
+  /* vertical-align: middle; */
+  background-image: url('/icons/Check.svg');
+}
+
+.flexWrapper {
+  margin-bottom: 24px;
+}
+
+.utilityFinder > div > ul > li > p {
+  margin-left: 30px;
+}
+
+/**
+  |============================
+  | 768px
+  |============================
+*/
+
+@media screen and (min-width: 768px) {
+  .textWrapper {
+    width: 335px;
+  }
+
+  .flexWrapper {
+    display: flex;
+    gap: 52px;
+    /* justify-content: center; */
+  }
+
+  .utilityFinder li {
+    min-width: auto;
+    height: auto;
+  }
+
+  .utilityFinder p,
+  .utilityFinder li {
+    font-size: 18px;
+    line-height: calc(28 / 18);
+  }
+
+  .utilityFinder > div > h2 {
+    text-align: center;
+  }
+}
+
+/**
+  |============================
+  | 1280
+  |============================
+*/
+
+@media screen and (min-width: 1280px) {
+  .textWrapper > p:nth-child(1) {
+    width: 637px;
+  }
+
+  .textWrapper > p:nth-child(2) {
+    margin-bottom: 36px;
+  }
+
+  .textWrapper {
+    width: 637px;
+  }
+
+  .flexWrapper {
+    margin-bottom: 0;
+    gap: 54px;
+    align-items: center;
+  }
+
+  .utilityFinder li {
+    width: 548px;
+  }
+
+  .textWrapper > ul > li:first-child {
+    width: 549px;
+  }
+
+  .utilityFinder ul {
+    gap: 36px;
+  }
+
+  .utilityFinder p,
+  .utilityFinder li {
+    font-size: 20px;
+    line-height: calc(28 / 20);
+  }
+
+  .image {
+    width: 468px;
+    height: 304px;
+  }
+}
