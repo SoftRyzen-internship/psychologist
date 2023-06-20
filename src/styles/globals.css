@@ -17,8 +17,8 @@
   --btn-hover-color: #2f8bf6;
   --btn-disabled-color: #a3a9b2;
   --fast-btn-animation: background-color 300ms ease;
+  --back-to-top-button-bg: #e9edf2;
   --fast-text-animation: color 300ms ease;
-
   --fast-svg-animation: fill 300ms ease;
 
   --swiper-pagination-color: #a3a9b2;
@@ -63,6 +63,7 @@ body {
 .main {
   flex-grow: 1;
 }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -76,6 +77,7 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
 .trainingSection {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -83,16 +85,19 @@ body {
   font-size: 16px;
   line-height: calc(24 / 16);
 }
+
 .trainingSection > div > button {
   display: block;
   margin: 0 auto;
 }
+
 footer {
   margin-top: auto;
 }
 
 ul,
 ol {
+  padding: 0;
   margin: 0;
 }
 
@@ -101,6 +106,7 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+
 button {
   cursor: pointer;
 }
@@ -187,11 +193,6 @@ section {
     overflow-x: visible;
     margin: 0 auto;
   }
-  .news-swiper-wrapper {
-    width: 592px !important;
-    overflow-x: visible;
-    margin: 0 auto;
-  }
   
   .trainingSection {
     padding-top: 80px;
@@ -200,6 +201,7 @@ section {
     font-size: 18px;
     line-height: calc(28 / 18);
   }
+
   .trainingSection > div > button {
     margin: 0;
   }
@@ -227,6 +229,7 @@ section {
     font-size: 60px;
     line-height: 1;
   }
+
   .trainingSection {
     padding-top: 100px;
     padding-bottom: 100px;

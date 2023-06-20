@@ -3,7 +3,7 @@ import { getData } from '@/lib/getData';
 import { folderPaths } from '@/utils/folderPaths';
 import { HomeHero, HomeNews, StudyView, WhatIDo } from '@/views';
 import { getNewsList } from '@/lib/request';
-import { MainFixedSocials } from '@/components';
+import PropTypes from 'prop-types';
 
 export default function Home({ hero, allNews, whatIDo, study }) {
   return (
@@ -14,16 +14,19 @@ export default function Home({ hero, allNews, whatIDo, study }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <main className="main">
-        <HomeHero hero={hero} />
+      <HomeHero hero={hero} />
 
-        <WhatIDo whatIDo={whatIDo} />
+      <WhatIDo whatIDo={whatIDo} />
 
+<<<<<<< HEAD
         <StudyView study={study} />
 
         <HomeNews allNews={allNews} />
         <MainFixedSocials />
       </main>
+=======
+      <StudyView study={study} />
+>>>>>>> dbd685129d7938e34a940120978b8c1bd06b254f
     </>
   );
 }
@@ -55,3 +58,9 @@ export async function getStaticProps() {
     },
   };
 }
+
+Home.propTypes = {
+  hero: PropTypes.object.isRequired,
+  whatIDo: PropTypes.object.isRequired,
+  study: PropTypes.object.isRequired,
+};

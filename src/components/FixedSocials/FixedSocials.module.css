@@ -2,9 +2,13 @@
   background-color: #2361ab;
   padding: 32px 12px;
   position: fixed;
-  top: calc(50% - 134px);
+  top: calc(50% + 42px);
   right: 0;
+  transform: translateY(-50%);
   border-radius: 8px 0px 0px 8px;
   z-index: 10;
+<<<<<<< HEAD
   /* transform: matrix(-1, 0, 0, 1, 0, 0); */
+=======
+>>>>>>> dbd685129d7938e34a940120978b8c1bd06b254f
 }
