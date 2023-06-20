@@ -22,7 +22,7 @@ export default function Document() {
 
         {/* og image */}
 
-        <meta property="og:image" content={'/images/main_hero.png'} />
+        <meta property="og:image" content={'/images/meta-julia.png'} />
 
         <meta property="og:image:width" content="458" />
 
