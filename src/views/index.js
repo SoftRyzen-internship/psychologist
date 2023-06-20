@@ -24,5 +24,6 @@ export * from '../components/FixedSocials/FixedSocials';
 export * from './Home/HomeHero/HomeHero';
 export * from './Home/WhatIDo/WhatIDo';
 export * from './Home/StudyView/StudyView';
+export * from './Home/Consult/Consult';
 // -------------
 export * from './Consultations/GetPersonalConsultView/GetPersonalConsultView';
