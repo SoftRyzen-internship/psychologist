@@ -1,4 +1,4 @@
-.section :global .sectionTitleH2 {
+.section h2 {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 32px;
@@ -8,24 +8,6 @@
   flex-direction: column;
 
   margin-bottom: 24px;
-}
-
-.imgWrap {
-  display: flex;
-
-  margin: 0 auto 24px;
-
-  width: auto;
-  height: auto;
-}
-
-.image {
-  object-fit: contain;
-  position: relative !important;
-
-  width: 100% !important;
-  height: unset !important;
-  align-self: baseline;
 }
 
 .timing {
@@ -71,9 +53,9 @@
 
 .textWrap li::before {
   display: block;
+  width: 20px;
 
   margin-right: 28px;
-  width: 31px;
 
   content: counter(my-awesome-counter) '. ';
 
@@ -105,7 +87,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .section :global .sectionTitleH2 {
+  .section h2 {
     margin-bottom: 40px;
   }
 
@@ -147,7 +129,7 @@
 }
 
 @media screen and (min-width: 1280px) {
-  .section :global .sectionTitleH2 {
+  .section h2 {
     width: 808px;
     margin-bottom: 60px;
   }
@@ -189,13 +171,9 @@
     flex-direction: row-reverse;
     align-items: flex-start;
     gap: 104px;
+  }
 
-    .textWrap {
-      margin-bottom: 0;
-    }
-
-    .imgWrap {
-      max-width: 520px;
-    }
+  .lowerWrap .textWrap {
+    margin-bottom: 0px;
   }
 }
