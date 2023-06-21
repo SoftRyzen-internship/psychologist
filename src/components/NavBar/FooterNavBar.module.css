@@ -1,0 +1,52 @@
+.navList {
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  line-height: calc(20 / 14);
+  text-align: center;
+
+  list-style: none;
+}
+.navList > li:not(:last-child) {
+  margin-bottom: 12px;
+}
+.link {
+  transition: var(--fast-text-animation);
+}
+.link:hover {
+  color: var(--accent-text-color);
+}
+.linkActive {
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .navList {
+    margin-bottom: 25px;
+
+    font-size: 16px;
+    line-height: calc(24 / 16);
+    text-align: left;
+  }
+  .navList > li:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .navList {
+    height: 112px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .navList > li {
+    margin-right: 106px;
+  }
+  .navList > li:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .navList > li:nth-child(3) {
+    margin-bottom: 0px;
+  }
+}
