@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 import { Container, ModalButton, SectionTitle } from '@/components';
 import s from './EducationProgramView.module.css';
+// import NoSSR from '@/components/NoSSR/NoSSR';
 
 const MediaQuery = dynamic(() => import('react-responsive'), {
   ssr: false,
@@ -13,7 +14,7 @@ export const EducationProgramView = ({ program }) => {
   return (
     <section className={s.section}>
       <Container>
-        <SectionTitle title={program.heading} centered={true} />
+        <SectionTitle title={program.heading} />
 
         <div className={s.upperWrap}>
           <div className={s.imgWrap}>
@@ -24,6 +25,7 @@ export const EducationProgramView = ({ program }) => {
                 className={s.image}
                 width="620"
                 height="280"
+                quality={100}
               />
             </MediaQuery>
 
@@ -34,6 +36,7 @@ export const EducationProgramView = ({ program }) => {
                 className={s.image}
                 width="592"
                 height="364"
+                quality={100}
               />
             </MediaQuery>
           </div>
@@ -48,7 +51,6 @@ export const EducationProgramView = ({ program }) => {
         <div className={s.lowerWrap}>
           <div className={s.textWrap}>
             <ReactMarkdown>{program.list2}</ReactMarkdown>
-
             <ModalButton />
           </div>
 
@@ -60,6 +62,7 @@ export const EducationProgramView = ({ program }) => {
                 className={s.image}
                 width="420"
                 height="312"
+                quality={100}
               />
             </MediaQuery>
 
@@ -70,6 +73,7 @@ export const EducationProgramView = ({ program }) => {
                 className={s.image}
                 width="520"
                 height="316"
+                quality={100}
               />
             </MediaQuery>
           </div>
