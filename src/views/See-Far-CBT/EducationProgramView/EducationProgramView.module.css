@@ -76,16 +76,6 @@
   margin-bottom: 24px;
 }
 
-@media screen and (max-width: 767px) {
-  .imgWrap {
-    max-width: 440px;
-  }
-
-  .lowerWrap .imgWrap {
-    max-width: 440px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .section h2 {
     margin-bottom: 40px;
@@ -130,6 +120,8 @@
 
 @media screen and (min-width: 1280px) {
   .section h2 {
+    text-align: center;
+
     width: 808px;
     margin-bottom: 60px;
   }
