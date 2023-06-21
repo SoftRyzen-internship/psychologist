@@ -4,8 +4,9 @@ import { useMediaQuery } from 'react-responsive';
 import PropTypes from 'prop-types';
 import navPaths from 'utils/navPaths.json';
 import * as st from './NavBar.module.css';
+import fs from './FooterNavBar.module.css';
 
-export const NavBar = ({ setIsMenuOpen }) => {
+export const NavBar = ({ setIsMenuOpen, footerVariant = false }) => {
   const isDesktop = useMediaQuery({ minWidth: 1280 });
   const router = useRouter();
   const currentPath = router.pathname;
@@ -15,19 +16,35 @@ export const NavBar = ({ setIsMenuOpen }) => {
     }
   };
   return (
-    <nav className={st.nav}>
-      <ul className={st.list}>
+    <nav className={!footerVariant && st.nav}>
+      <ul className={footerVariant ? fs.navList : st.list}>
         {navPaths?.map(item => {
           return (
             <li key={item.id}>
-              <Link
-                href={item.route}
-                className={currentPath === item.route ? st.linkActive : st.link}
-                aria-label={item.title}
-                onClick={handleClick}
-              >
-                {item.title}
-              </Link>
+              {footerVariant && (
+                <Link
+                  href={item.route}
+                  className={
+                    currentPath === item.route ? fs.linkActive : fs.link
+                  }
+                  aria-label={item.title}
+                  onClick={handleClick}
+                >
+                  {item.title}
+                </Link>
+              )}
+              {!footerVariant && (
+                <Link
+                  href={item.route}
+                  className={
+                    currentPath === item.route ? st.linkActive : st.link
+                  }
+                  aria-label={item.title}
+                  onClick={handleClick}
+                >
+                  {item.title}
+                </Link>
+              )}
             </li>
           );
         })}
@@ -38,4 +55,5 @@ export const NavBar = ({ setIsMenuOpen }) => {
 
 NavBar.propTypes = {
   setIsMenuOpen: PropTypes.func,
+  footerVariant: PropTypes.bool,
 };
