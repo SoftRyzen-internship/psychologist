@@ -11,18 +11,33 @@
   background-size: cover;
 
   inset: 0;
+
+  overflow-y: auto;
+  place-items: center;
+}
+
+.modalWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 3%;
+  padding-bottom: 3%;
+
+  min-height: 100%;
+  width: 100%;
 }
 
 .DialogContent {
+  position: relative;
+
   z-index: 20;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 0 auto;
 
   max-width: 488px;
   max-height: 680px;
 }
+
 .DialogContent[data-state='open'] {
   animation: contentShow 400ms ease-out;
 }
