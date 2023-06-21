@@ -16,48 +16,40 @@ export const NavBar = ({ setIsMenuOpen, footerVariant = false }) => {
     }
   };
   return (
-    <>
-      {!footerVariant && (
-        <nav className={st.nav}>
-          <ul className={st.list}>
-            {navPaths?.map(item => {
-              return (
-                <li key={item.id}>
-                  <Link
-                    href={item.route}
-                    className={
-                      currentPath === item.route ? st.linkActive : st.link
-                    }
-                    aria-label={item.title}
-                    onClick={handleClick}
-                  >
-                    {item.title}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
-      )}
-      {footerVariant && (
-        <nav>
-          <ul className={fs.navList}>
-            {navPaths?.map(path => (
-              <li key={path.id}>
+    <nav className={!footerVariant && st.nav}>
+      <ul className={footerVariant ? fs.navList : st.list}>
+        {navPaths?.map(item => {
+          return (
+            <li key={item.id}>
+              {footerVariant && (
                 <Link
-                  href={path.route}
+                  href={item.route}
                   className={
-                    currentPath === path.route ? fs.linkActive : fs.link
+                    currentPath === item.route ? fs.linkActive : fs.link
                   }
+                  aria-label={item.title}
+                  onClick={handleClick}
                 >
-                  {path.title}
+                  {item.title}
                 </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      )}
-    </>
+              )}
+              {!footerVariant && (
+                <Link
+                  href={item.route}
+                  className={
+                    currentPath === item.route ? st.linkActive : st.link
+                  }
+                  aria-label={item.title}
+                  onClick={handleClick}
+                >
+                  {item.title}
+                </Link>
+              )}
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
   );
 };
 

@@ -1,13 +1,13 @@
 import { useMediaQuery } from 'react-responsive';
 import { useEffect, useState } from 'react';
 
-import { Container, NavBar } from '@/components';
-import socials from 'utils/socials.json';
+import { Container, NavBar, Socials } from '@/components';
+// import socials from 'utils/socials.json';
 import LogoIcon from 'public/icons/logoFooter.svg';
-import FacebookIcon from 'public/icons/facebook.svg';
-import TelegramIcon from 'public/icons/telegram.svg';
-import YoutubeIcon from 'public/icons/youtube.svg';
-import InstagramIcon from 'public/icons/instagram.svg';
+// import FacebookIcon from 'public/icons/facebook.svg';
+// import TelegramIcon from 'public/icons/telegram.svg';
+// import YoutubeIcon from 'public/icons/youtube.svg';
+// import InstagramIcon from 'public/icons/instagram.svg';
 
 import s from './Footer.module.css';
 
@@ -24,18 +24,18 @@ export const Footer = () => {
     setIsDesktop(isDesktopSize);
   }, [isTabletSize, setIsTablet, setIsDesktop, isDesktopSize]);
 
-  const serveIcon = iconName => {
-    const lowCaseIconName = iconName.toLowerCase();
-    if (lowCaseIconName === 'telegram') {
-      return <TelegramIcon className={s.imgIcon} />;
-    } else if (lowCaseIconName === 'youtube') {
-      return <YoutubeIcon className={s.imgIcon} />;
-    } else if (lowCaseIconName === 'facebook') {
-      return <FacebookIcon className={s.imgIcon} />;
-    } else if (lowCaseIconName === 'instagram') {
-      return <InstagramIcon className={s.imgIcon} />;
-    }
-  };
+  // const serveIcon = iconName => {
+  //   const lowCaseIconName = iconName.toLowerCase();
+  //   if (lowCaseIconName === 'telegram') {
+  //     return <TelegramIcon className={s.imgIcon} />;
+  //   } else if (lowCaseIconName === 'youtube') {
+  //     return <YoutubeIcon className={s.imgIcon} />;
+  //   } else if (lowCaseIconName === 'facebook') {
+  //     return <FacebookIcon className={s.imgIcon} />;
+  //   } else if (lowCaseIconName === 'instagram') {
+  //     return <InstagramIcon className={s.imgIcon} />;
+  //   }
+  // };
 
   return (
     <footer className={s.footer}>
@@ -47,7 +47,7 @@ export const Footer = () => {
 
               <NavBar footerVariant />
 
-              <ul className={s.socialList}>
+              {/* <ul className={s.socialList}>
                 {socials.map(social => (
                   <li key={social.name}>
                     <a
@@ -59,9 +59,9 @@ export const Footer = () => {
                     </a>
                   </li>
                 ))}
-              </ul>
-
-              <p className={s.developmentYear}>2023 &#169;</p>
+              </ul> */}
+              <Socials component="footer" />
+              <p className={s.developmentYear}>Юлія Сулаєва &#169; 2023</p>
             </>
           )}
           {isTablet && !isDesktop && (
@@ -69,27 +69,14 @@ export const Footer = () => {
               <div className={s.mainTabletWrapper}>
                 <div className={s.tabletWrappers}>
                   <LogoIcon className={s.logo} />
-
-                  <ul className={s.socialList}>
-                    {socials.map(social => (
-                      <li key={social.name}>
-                        <a
-                          href={social.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {serveIcon(social.name)}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
+                  <Socials component="footer" />
                 </div>
 
                 <div className={s.tabletWrappers}>
                   <NavBar footerVariant />
                 </div>
               </div>
-              <p className={s.developmentYear}>2023 &#169;</p>
+              <p className={s.developmentYear}>Юлія Сулаєва &#169; 2023</p>
             </>
           )}
           {isDesktop && (
@@ -100,23 +87,10 @@ export const Footer = () => {
                 <div className={s.desktopNavWrapper}>
                   <NavBar footerVariant />
                 </div>
-
-                <ul className={s.socialList}>
-                  {socials.map(social => (
-                    <li key={social.name}>
-                      <a
-                        href={social.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {serveIcon(social.name)}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+                <Socials component="footer" />
               </div>
 
-              <p className={s.developmentYear}>2023 &#169;</p>
+              <p className={s.developmentYear}>Юлія Сулаєва &#169; 2023</p>
             </>
           )}
         </div>
