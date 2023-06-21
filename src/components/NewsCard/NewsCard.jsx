@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { convertImage, toBase64 } from 'utils/blurDataURL';
 import Image from 'next/image';
 import Link from 'next/link';
 import { NewsText } from '@/components';
@@ -16,6 +17,10 @@ export const NewsCard = ({ image, title, text }) => {
         height={748}
         unoptimized={true}
         className={s.imageStyle}
+        placeholder={blur}
+        blurDataURL={`data:image/svg+xml;base64,${toBase64(
+          convertImage(1200, 748),
+        )}`}
       />
       <h3 className={classNames(s.newsTitle)}>{title}</h3>
       <NewsText newsTextProp={text} section />

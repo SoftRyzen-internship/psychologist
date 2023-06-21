@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import PropTypes from 'prop-types';
+import { convertImage, toBase64 } from 'utils/blurDataURL';
 import {
   Container,
   SectionTitle,
@@ -32,6 +33,10 @@ export function NewsView({ allNews }) {
                     height={748}
                     unoptimized={true}
                     className={s.imageStyle}
+                    placeholder={blur}
+                    blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                      convertImage(1200, 748),
+                    )}`}
                   />
                 </OffsetImageBorder>
               </li>
