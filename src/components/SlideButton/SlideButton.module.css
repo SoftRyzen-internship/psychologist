@@ -11,3 +11,13 @@
   border: none;
   background: url('/icons/slide-next-btn.svg');
 }
+
+.desktop {
+  width: 29px;
+  height: 29px;
+  border: none;
+  border-radius: 50%;
+  background-color: #D9D9D9;
+  /* background-size: 30px; */
+  background-position: center;
+}

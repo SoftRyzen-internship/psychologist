@@ -12,15 +12,20 @@ import s from './Slider.module.css';
 
 export const Slider = ({ allNews }) => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isDesktop = useMediaQuery({ minWidth: 1280 });
   const { ref, inView } = useInView({
     threshold: 0,
     triggerOnce: true,
   });
   const [showPagination, setShowPagination] = useState(false);
+  const [showExtraButtons, setShowExtraButtons] = useState(false);
   useEffect(() => {
     if (isMobile) setShowPagination(true);
     else setShowPagination(false);
-  }, [isMobile]);
+
+    if (isDesktop) setShowExtraButtons(true);
+    else setShowExtraButtons(false);
+  }, [isMobile, isDesktop]);
   const pagination = {
     clickable: true,
     dynamicBullets: true,
@@ -64,6 +69,12 @@ export const Slider = ({ allNews }) => {
               />
             </SwiperSlide>
           ))}
+          {showExtraButtons && (
+            <div className={s.swiperSlideButtonsDesktop}>
+              <SlideButton prev desktop />
+              <SlideButton next desktop />
+            </div>
+          )}
           <div className={s.swiperSlideButtons}>
             <SlideButton prev />
             <SlideButton next />

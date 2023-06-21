@@ -24,4 +24,16 @@
     z-index: 10;
     cursor: pointer;
   }
+
+  .swiperSlideButtonsDesktop {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 25%;
+    left: 4%;
+    right: 0;
+    width: 1124px;
+    z-index: 10;
+    cursor: pointer;
+  }
 }
