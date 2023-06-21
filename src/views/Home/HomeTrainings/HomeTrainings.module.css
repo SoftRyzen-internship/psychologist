@@ -56,7 +56,7 @@
 }
 
 .imageBorder {
-  margin-bottom: 24px;
+  margin-bottom: 36px;
   aspect-ratio: 345 / 308;
 }
 
@@ -120,7 +120,7 @@
   }
 
   .image {
-    width: 332px;
+    width: 323px;
   }
 
   .listMasters {

@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import Image from 'next/image';
-import { ReusableSection, OffsetImageBorder } from '@/components';
 import { useMediaQuery } from 'react-responsive';
 import { useState, useEffect } from 'react';
+import { ReusableSection, OffsetImageBorder } from '@/components';
 import * as s from './Requests.module.css';
 
 export const Requests = ({ requests }) => {
@@ -30,6 +30,10 @@ export const Requests = ({ requests }) => {
               height={390}
               alt="Фото запити з якими працюю"
               quality={100}
+              placeholder="blur"
+              blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                convertImage(220, 392),
+              )}`}
             />
           </OffsetImageBorder>
         )}
@@ -41,6 +45,10 @@ export const Requests = ({ requests }) => {
               height={596}
               alt="Фото запити з якими працюю"
               quality={100}
+              placeholder="blur"
+              blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                convertImage(220, 392),
+              )}`}
             />
           </OffsetImageBorder>
         )}
@@ -52,6 +60,10 @@ export const Requests = ({ requests }) => {
               height={572}
               alt="Фото запити з якими працюю"
               quality={100}
+              placeholder="blur"
+              blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                convertImage(220, 392),
+              )}`}
             />
           </OffsetImageBorder>
         )}

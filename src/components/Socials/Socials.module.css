@@ -24,12 +24,6 @@
 .item {
   width: 36px;
   height: 36px;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  /* border: 1px solid;
-  border-radius: 8px;
-  transition: color 300ms ease-in-out, background-color 300ms ease-in-out; */
 }
 
 .itemLink {
@@ -40,7 +34,8 @@
   align-items: center;
   border: 1px solid;
   border-radius: 8px;
-  transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+  transition: var(--fast-text-animation), var(--fast-btn-animation),
+    border-color 300ms ease;
 }
 
 .itemLinkPanel {
