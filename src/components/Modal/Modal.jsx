@@ -7,15 +7,17 @@ export const Modal = ({ children }) => {
   return (
     <>
       <Dialog.Portal>
-        <Dialog.Overlay className={s.DialogOverlay} />
+        <Dialog.Overlay className={s.DialogOverlay}>
+          <Dialog.Content className={s.modalWrap}>
+            <div className={s.DialogContent}>
+              {children}
 
-        <Dialog.Content className={s.DialogContent}>
-          {children}
-
-          <Dialog.Close className={s.buttonClose} aria-label="Close">
-            <CloseSVG className={s.iconClose} />
-          </Dialog.Close>
-        </Dialog.Content>
+              <Dialog.Close className={s.buttonClose} aria-label="Close">
+                <CloseSVG className={s.iconClose} />
+              </Dialog.Close>
+            </div>
+          </Dialog.Content>
+        </Dialog.Overlay>
       </Dialog.Portal>
     </>
   );
