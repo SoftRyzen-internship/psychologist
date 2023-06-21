@@ -52,7 +52,10 @@ export const ContactForm = () => {
       {!isThankYou && !serverError && !isSubmitting && (
         <>
           <h3 className={s.title}>Записатися на прийом</h3>
-          <form onSubmit={handleSubmit(onSubmitHandler)}>
+          <form
+            onSubmit={handleSubmit(onSubmitHandler)}
+            novalidate="novalidate"
+          >
             <div className={s.fieldsWrap}>
               <div className={s.inputWrap}>
                 <label className={s.inputLabel} htmlFor="nameInput">

@@ -77,12 +77,8 @@
 }
 
 @media screen and (max-width: 767px) {
-  .imgWrap {
-    max-width: 440px;
-  }
-
-  .lowerWrap .imgWrap {
-    max-width: 440px;
+  .section h2 {
+    text-align: center;
   }
 }
 
