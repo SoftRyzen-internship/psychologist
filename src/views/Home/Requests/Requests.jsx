@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import Image from 'next/image';
 import { useMediaQuery } from 'react-responsive';
 import { useState, useEffect } from 'react';
+import { convertImage, toBase64 } from 'utils/blurDataURL';
 import { ReusableSection, OffsetImageBorder } from '@/components';
 import * as s from './Requests.module.css';
 
@@ -26,10 +27,11 @@ export const Requests = ({ requests }) => {
           <OffsetImageBorder reverse className={s.aspRatio}>
             <Image
               src="/images/home_requests_mob.jpg"
-              width={308}
-              height={390}
+              width={480}
+              height={609}
               alt="Фото запити з якими працюю"
               quality={100}
+              priority
               placeholder="blur"
               blurDataURL={`data:image/svg+xml;base64,${toBase64(
                 convertImage(220, 392),

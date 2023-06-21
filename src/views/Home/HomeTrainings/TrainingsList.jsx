@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import homeTrainingsData from 'src/data/homeTrainingsData.json';
 import Trainitem1 from 'public/icons/home-tren-item-1.svg';
 import Trainitem2 from 'public/icons/home-tren-item-2.svg';
@@ -19,10 +18,12 @@ export const TrainingsList = () => {
   return (
     <ul className={st.listTrainings}>
       {homeTrainingsData?.map(el => {
-        <li key={el.id.toString()} className={st.item}>
-          <span className={st.itemImg}>{Trainitems[el.id]}</span>
-          <span className={st.itemText}>{el.text}</span>
-        </li>;
+        return (
+          <li key={el.id.toString()} className={st.item}>
+            <span className={st.itemImg}>{Trainitems[el.id]}</span>
+            <span className={st.itemText}>{el.text}</span>
+          </li>
+        );
       })}
     </ul>
   );

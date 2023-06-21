@@ -3,6 +3,10 @@
   flex-direction: column-reverse;
 }
 
+.section :global .sectionTitleH2 {
+  width: 230px;
+}
+
 .mdContent {
   margin-top: 24px;
   margin-bottom: 40px;
@@ -10,31 +14,18 @@
 }
 
 .mdContent > ul {
-  margin-bottom: 24px;
+  margin-bottom: 40px;
   font-size: 16px;
   line-height: 1.5;
-}
-
-.mdContent > p + p {
-  margin-bottom: 24px;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.5;
-}
-
-.mdContent ol {
-  padding-left: 35px;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.5;
-  list-style: none;
-  counter-reset: my-counter;
 }
 
 .mdContent li {
   position: relative;
-  margin-bottom: 16px;
   list-style-type: none;
+}
+
+.mdContent li:not(:last-child) {
+  margin-bottom: 16px;
 }
 
 .mdContent li::before {
@@ -51,9 +42,9 @@
 }
 
 .imgWrapper {
-  width: 85%;
+  /* width: 85%;
   max-width: 320px;
-  max-height: 367px;
+  max-height: 367px; */
   height: auto;
   margin: 0 auto;
   margin-bottom: 24px;
@@ -68,6 +59,10 @@
     flex-direction: row-reverse;
   }
 
+  .section :global .sectionTitleH2 {
+    width: auto;
+  }
+
   .mdContent {
     width: 336px;
     margin-top: 0;
@@ -77,19 +72,7 @@
 
   .mdContent > ul {
     width: 336px;
-    margin-bottom: 40px;
 
-    font-size: 18px;
-    line-height: 1.56;
-  }
-
-  .mdContent > p + p {
-    font-size: 20px;
-    line-height: 1.4;
-  }
-
-  .mdContent ol {
-    padding-left: 45px;
     font-size: 18px;
     line-height: 1.56;
   }
@@ -109,10 +92,10 @@
 
   .imgWrapper {
     /* width: 85%; */
-    width: 324px;
-    height: 596px;
-    max-width: 324px;
-    max-height: 596px;
+    width: 336px;
+    height: 608px;
+    max-width: 336px;
+    max-height: 608px;
     margin: 0 auto;
     margin-bottom: 0;
     margin-right: 32px;
@@ -129,6 +112,10 @@
     flex-direction: row-reverse;
   }
 
+  .section :global .sectionTitleH2 {
+    width: auto;
+  }
+
   .mdContent {
     width: 488px;
     margin-top: 0;
@@ -138,24 +125,11 @@
 
   .mdContent > ul {
     width: 488px;
-    margin-bottom: 36px;
     font-size: 20px;
     line-height: 1.33;
   }
 
-  .mdContent > p + p {
-    width: 488px;
-    margin-bottom: 20px;
-  }
-
-  .mdContent ol {
-    padding-left: 49px;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 1.4;
-  }
-
-  .mdContent li {
+  .mdContent li:not(:last-child) {
     margin-bottom: 20px;
   }
 
@@ -177,10 +151,10 @@
   }
 
   .imgWrapper {
-    width: 576px;
-    height: 572px;
-    max-width: 576px;
-    max-height: 572px;
+    width: 592px;
+    height: 588px;
+    max-width: 592px;
+    max-height: 588px;
     margin: 0 auto;
     margin-bottom: 0;
     margin-right: 104px;
