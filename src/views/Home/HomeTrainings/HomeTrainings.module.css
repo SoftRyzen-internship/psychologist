@@ -139,6 +139,10 @@
       var(--bg2-color);
   }
 
+  .section > div {
+    position: relative;
+  }
+
   .variant {
     font-size: 32px;
     line-height: 1.13;
@@ -168,12 +172,16 @@
   .contentWrapper {
     height: 270px;
     flex-direction: row-reverse;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: left;
   }
 
   .imageBorder {
     /* transform: translate(20px, -165px); */
-    transform: translate(-33px, -110px) scale(1.5);
+    /* transform: translate(-33px, -110px) scale(1.5); */
+    position: absolute;
+    left: 865px;
+    top: 355px;
   }
 
   .image {
