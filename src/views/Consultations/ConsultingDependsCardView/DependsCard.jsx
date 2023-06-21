@@ -46,6 +46,7 @@ export const DependsCard = ({ data }) => {
               alt="Юлія в процесі консультації"
               width={592}
               height={396}
+              quality={100}
             />
           </ul>
         </Container>

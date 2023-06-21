@@ -14,6 +14,12 @@ export const ModalDependsCards = ({ data, onClose }) => {
     }
   };
 
+  const handleOverlayClick = event => {
+    if (event.target.classList.contains(s.overlay)) {
+      handleClose();
+    }
+  };
+
   useEffect(() => {
     const timer = setTimeout(() => {
       const overlay = document.querySelector(`.${s.overlay}`);
@@ -45,15 +51,14 @@ export const ModalDependsCards = ({ data, onClose }) => {
 
   return (
     <>
-      <div className={classNames(s.overlay)}>
-        <div className={classNames(s.modalWrapper)}>
-          <button className={s.closeButton} onClick={handleClose}>
-            <CloseBtn className={s.closeVector} aria-label="Кнопка закриття" />
-          </button>
-          <ReactMarkdown>{data.title}</ReactMarkdown>
-          <div className={s.contentWrapper}>
-            <ReactMarkdown>{data.content}</ReactMarkdown>
-          </div>
+      <div className={classNames(s.overlay)} onClick={handleOverlayClick} />
+      <div className={classNames(s.modalWrapper)}>
+        <button className={s.closeButton} onClick={handleClose}>
+          <CloseBtn className={s.closeVector} aria-label="Кнопка закриття" />
+        </button>
+        <ReactMarkdown>{data.title}</ReactMarkdown>
+        <div className={s.contentWrapper}>
+          <ReactMarkdown>{data.content}</ReactMarkdown>
         </div>
       </div>
     </>

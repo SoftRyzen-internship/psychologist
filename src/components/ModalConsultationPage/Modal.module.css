@@ -55,11 +55,9 @@ body.noScroll {
   right: 0;
   bottom: 0;
 
-  /* background: rgba(var(--consult-modalbgRdesign), 0.5) !important; */
   background-color: var(--consult-modalbgRdesign);
-  /* background-color: rgba(var(--consult-modalbgRdesign), 0.5) !important; */
 
-  z-index: 9999;
+  z-index: 11;
   overflow: hidden;
   overflow-y: auto;
 
@@ -72,10 +70,10 @@ body.noScroll {
 }
 
 .overlay.open {
-  opacity: 1;
+  opacity: 0.5;
 }
 
-.overlay > div > p:first-of-type {
+.modalWrapper > p:first-of-type {
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -87,9 +85,13 @@ body.noScroll {
 
 .modalWrapper {
   overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 12;
 
   width: 320px;
-  box-sizing: content-box;
+  /* box-sizing: content-box; */
   padding: 24px 20px 44px 20px;
 
   background-image: url('/icons/firstLiMobile.svg');
@@ -98,12 +100,14 @@ body.noScroll {
   background-color: var(--bg1-color);
 
   transform: translateY(-20px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  /* transform: translate(-50%, -50%); */
+  transition: opacity 0.3s ease, transform 1s ease;
 }
 
 .modalWrapper.open {
-  opacity: 1;
   transform: translateY(0);
+  top: 0;
+  left: 0;
 }
 
 .contentWrapper p:first-of-type,
@@ -111,14 +115,14 @@ body.noScroll {
   margin-bottom: 16px;
 }
 
-.contentWrapper li {
+.modalWrapper li {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: calc(24 / 16);
 }
 
-.overlay p > strong {
+.contentWrapper p > strong {
   font-weight: 600;
 }
 
@@ -160,7 +164,7 @@ body.noScroll {
     margin-bottom: 20px;
   }
 
-  .overlay > div > p:first-of-type {
+  .modalWrapper > p:first-of-type {
     font-size: 24px;
     line-height: calc(32 / 24);
   }
@@ -172,8 +176,9 @@ body.noScroll {
   }
 
   .modalWrapper {
-    position: relative;
-    top: 5vh;
+    position: absolute;
+    top: 5vh !important;
+    right: 0;
     width: 592px;
     margin: 0 auto;
     padding: 40px 40px 40px 40px;
@@ -206,7 +211,8 @@ body.noScroll {
 
   .modalWrapper {
     width: 1216px;
-    position: relative;
-    top: 12vh;
+    /* position: relative; */
+    position: absolute;
+    top: 12vh !important;
   }
 }

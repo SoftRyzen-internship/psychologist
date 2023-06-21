@@ -1,5 +1,5 @@
 // Consultations View
-export * from './ConsultingDependsCardView/DependsCard';
+export * from './Consultations/ConsultingDependsCardView/DependsCard';
 export * from './Consultations/PersonalConsultationsView/PersonalConsultationsView';
 export * from './Consultations/OnlineConsultationView/OnlineConsultationsView';
 export * from './Consultations/PersonalConsultationMethodView/PersonalConsultationMethod';
