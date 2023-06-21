@@ -166,12 +166,14 @@
   }
 
   .contentWrapper {
+    height: 270px;
     flex-direction: row-reverse;
     justify-content: space-between;
   }
 
   .imageBorder {
-    transform: translate(20px, -165px);
+    /* transform: translate(20px, -165px); */
+    transform: translate(-33px, -110px) scale(1.5);
   }
 
   .image {
