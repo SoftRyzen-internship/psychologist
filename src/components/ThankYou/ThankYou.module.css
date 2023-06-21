@@ -43,6 +43,7 @@
 
   .strongImage {
     width: 360px;
+    height: auto;
   }
 
   .wrap {
