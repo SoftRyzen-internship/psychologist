@@ -11,7 +11,7 @@ export const SlideButton = ({ prev = false, next = false, desktop = false }) => 
       {prev && (
         <button
           className={
-            desktop ? classNames(s.slidePrevBtn, s.desktop) : s.slidePrevBtn
+            desktop ? classNames(s.slidePrevBtn, s.desktopPrev) : s.slidePrevBtn
           }
           onClick={() => swiper.slidePrev()}
         ></button>
@@ -19,7 +19,7 @@ export const SlideButton = ({ prev = false, next = false, desktop = false }) => 
       {next && (
         <button
           className={
-            desktop ? classNames(s.slideNextBtn, s.desktop) : s.slideNextBtn
+            desktop ? classNames(s.slideNextBtn, s.desktopNext) : s.slideNextBtn
           }
           onClick={() => swiper.slideNext()}
         ></button>

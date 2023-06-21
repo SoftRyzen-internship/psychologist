@@ -18,13 +18,13 @@ export const Slider = ({ allNews }) => {
     triggerOnce: true,
   });
   const [showPagination, setShowPagination] = useState(false);
-  const [showExtraButtons, setShowExtraButtons] = useState(false);
+  const [showDesktopButtons, setShowDesktopButtons] = useState(false);
   useEffect(() => {
     if (isMobile) setShowPagination(true);
     else setShowPagination(false);
 
-    if (isDesktop) setShowExtraButtons(true);
-    else setShowExtraButtons(false);
+    if (isDesktop) setShowDesktopButtons(true);
+    else setShowDesktopButtons(false);
   }, [isMobile, isDesktop]);
   const pagination = {
     clickable: true,
@@ -69,15 +69,15 @@ export const Slider = ({ allNews }) => {
               />
             </SwiperSlide>
           ))}
-          {showExtraButtons && (
-            <div className={s.swiperSlideButtonsDesktop}>
-              <SlideButton prev desktop />
-              <SlideButton next desktop />
-            </div>
-          )}
-          <div className={s.swiperSlideButtons}>
-            <SlideButton prev />
-            <SlideButton next />
+          <div
+            className={
+              showDesktopButtons
+                ? s.swiperSlideButtonsDesktop
+                : s.swiperSlideButtons
+            }
+          >
+            <SlideButton prev desktop={showDesktopButtons} />
+            <SlideButton next desktop={showDesktopButtons} />
           </div>
         </Swiper>
       )}

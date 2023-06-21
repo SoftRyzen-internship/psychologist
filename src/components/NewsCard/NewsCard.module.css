@@ -61,9 +61,6 @@
 }
 
 @media screen and (min-width: 1280px) {
-  .readMoreLink {
-    margin-bottom: 71px;
-  }
   .imageStyle {
     border-radius: 0 20px;
   }

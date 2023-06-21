@@ -29,10 +29,10 @@
     position: absolute;
     display: flex;
     justify-content: space-between;
-    top: 25%;
-    left: 4%;
+    top: 26%;
+    left: 2.3%;
     right: 0;
-    width: 1124px;
+    width: 1160px;
     z-index: 10;
     cursor: pointer;
   }
