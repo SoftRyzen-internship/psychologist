@@ -14,7 +14,7 @@ export const EducationProgramView = ({ program }) => {
   return (
     <section className={s.section}>
       <Container>
-        <SectionTitle title={program.heading} centered={true} />
+        <SectionTitle title={program.heading} />
 
         <div className={s.upperWrap}>
           <div className={s.imgWrap}>
