@@ -6,8 +6,8 @@
 
 .closeButton {
   position: absolute;
-  top: 24px;
-  right: 24px;
+  top: 124px;
+  right: calc(50% - 138px);
 
   display: inline-flex;
   align-items: center;
@@ -40,14 +40,6 @@ body.noScroll {
   left: 0;
 }
 
-.begone {
-  opacity: 0;
-}
-
-/* .noScroll {
-  overflow: hidden;
-} */
-
 .overlay {
   position: fixed;
   top: 0;
@@ -56,6 +48,7 @@ body.noScroll {
   bottom: 0;
 
   background-color: var(--consult-modalbgRdesign);
+  pointer-events: auto;
 
   z-index: 11;
   overflow: hidden;
@@ -73,6 +66,40 @@ body.noScroll {
   opacity: 0.5;
 }
 
+.mainModalWrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 12;
+
+  padding: 100px 0 100px 0;
+  overflow-y: auto;
+
+  /* transform: scaleY(-50%); */
+  transform: translateY(-50%);
+
+  transition: opacity 0.3s ease, transform 1s ease;
+}
+
+.modalWrapper {
+  width: 320px;
+  margin: 0 auto;
+  padding: 24px 20px 44px 20px;
+
+  background-image: url('/icons/firstLiMobile.svg');
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-color: var(--bg1-color);
+}
+
+.mainModalWrapper.open {
+  transform: translateY(0);
+  top: 0;
+  left: 0;
+}
+
 .modalWrapper > p:first-of-type {
   font-style: normal;
   font-weight: 600;
@@ -81,38 +108,15 @@ body.noScroll {
   color: var(--accent-text-color);
 
   margin-bottom: 44px;
+  width: 213px;
 }
 
-.modalWrapper {
-  overflow: hidden;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  z-index: 12;
-
-  width: 320px;
-  /* box-sizing: content-box; */
-  padding: 24px 20px 44px 20px;
-
-  background-image: url('/icons/firstLiMobile.svg');
-  background-position: top left;
-  background-repeat: no-repeat;
-  background-color: var(--bg1-color);
-
-  transform: translateY(-20px);
-  /* transform: translate(-50%, -50%); */
-  transition: opacity 0.3s ease, transform 1s ease;
-}
-
-.modalWrapper.open {
-  transform: translateY(0);
-  top: 0;
-  left: 0;
-}
-
-.contentWrapper p:first-of-type,
-.contentWrapper p:last-of-type {
+.contentWrapper p:first-of-type {
   margin-bottom: 16px;
+}
+
+.contentWrapper p:last-of-type {
+  margin-bottom: 20px;
 }
 
 .modalWrapper li {
@@ -136,8 +140,6 @@ body.noScroll {
 .contentWrapper li {
   position: relative;
   padding-left: 36px;
-  /* min-width: 320px; */
-  /* height: auto; */
 }
 
 .contentWrapper li::before {
@@ -145,10 +147,8 @@ body.noScroll {
   display: inline-block;
   width: 24px;
   height: 24px;
-  /* margin-right: 16px; */
   position: absolute;
   left: 0;
-  /* vertical-align: middle; */
   background-image: url('/icons/Check.svg');
 }
 
@@ -167,6 +167,7 @@ body.noScroll {
   .modalWrapper > p:first-of-type {
     font-size: 24px;
     line-height: calc(32 / 24);
+    width: 335px;
   }
 
   .contentWrapper p,
@@ -176,9 +177,7 @@ body.noScroll {
   }
 
   .modalWrapper {
-    position: absolute;
-    top: 5vh !important;
-    right: 0;
+    position: relative;
     width: 592px;
     margin: 0 auto;
     padding: 40px 40px 40px 40px;
@@ -211,8 +210,9 @@ body.noScroll {
 
   .modalWrapper {
     width: 1216px;
-    /* position: relative; */
-    position: absolute;
-    top: 12vh !important;
+  }
+
+  .modalWrapper > p:first-of-type {
+    width: auto;
   }
 }

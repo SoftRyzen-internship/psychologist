@@ -3,7 +3,7 @@ export * from './Consultations/ConsultingDependsCardView/DependsCard';
 export * from './Consultations/PersonalConsultationsView/PersonalConsultationsView';
 export * from './Consultations/OnlineConsultationView/OnlineConsultationsView';
 export * from './Consultations/PersonalConsultationMethodView/PersonalConsultationMethod';
-export * from './UniversalView/ReusableBlueView';
+export * from './Consultations/UniversalView/ReusableBlueView';
 export * from './Consultations/GetPersonalConsultView/GetPersonalConsultView';
 // -------------
 

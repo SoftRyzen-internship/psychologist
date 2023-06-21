@@ -30,6 +30,7 @@ export const BackToTopButton = () => {
 
   return (
     <button
+      aria-label="Кнопка повернутися нагору"
       ref={buttonRef}
       className={`${s.backToTopButton} ${isVisible ? s.visible : ''}`}
       onClick={scrollToTop}
