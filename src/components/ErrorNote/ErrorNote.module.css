@@ -30,6 +30,7 @@
 
 .strongImage {
   width: 270px;
+  height: auto;
 }
 .error {
   color: var(--error-color);
@@ -45,6 +46,7 @@
 
   .strongImage {
     width: 360px;
+    height: auto;
   }
 
   .wrap {

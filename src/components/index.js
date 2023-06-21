@@ -6,22 +6,23 @@ export * from './SectionTitle/SectionTitle';
 export * from './BlueSection/BlueSection';
 export * from './Logo/Logo';
 export * from './OffsetImageBorder/OffsetImageBorder';
-export * from './ModalButton/ModalButton';
 export * from './NavBar/NavBar';
 export * from './FixedSocials/FixedSocials';
 export * from './Spinner/Spinner';
 export * from './Spinner/SpinnerMarkup';
 // -------------
 
-// Consultations
-export * from './ReusableSection/ReusableSection';
-export * from './ConsultationFAQReusable/ConsultationFAQ';
-// -------------
-
-// See-Far-CBT
+// Modal / Form
+export * from './Modal/Modal';
+export * from './ModalButton/ModalButton';
 export * from './ContactForm/ContactForm';
 export * from './ThankYou/ThankYou';
 export * from './ErrorNote/ErrorNote';
+// -------------
+
+// Consultations
+export * from './ReusableSection/ReusableSection';
+export * from './ConsultationFAQReusable/ConsultationFAQ';
 // -------------
 
 // Home
