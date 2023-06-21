@@ -39,11 +39,11 @@ export const OnlineConsultationView = ({ data, mysection }) => {
           </div>
           {!isDesktopShow && <ReactMarkdown>{data.list}</ReactMarkdown>}
         </Container>
+        <ReusableBlueView
+          data={mysection}
+          className={{ section: 'personalConsSection' }}
+        />
       </section>
-      <ReusableBlueView
-        data={mysection}
-        className={{ section: 'personalConsSection' }}
-      />
     </>
   );
 };

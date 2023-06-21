@@ -9,18 +9,19 @@
   background-size: cover;
   background-color: #e2eaf3;
 
+  margin-top: 60px;
   padding-top: 36px;
   padding-bottom: 36px;
 }
 
 .personalConsSection p,
 .mainPageSection p {
-  font-style: normal;
-  font-weight: 700;
+  font-style: normal !important;
+  font-weight: 700 !important;
   font-size: 18px;
   line-height: calc(28 / 18);
 
-  color: var(--plaska-color);
+  color: var(--plaska-color) !important;
 
   text-align: center;
 
@@ -39,6 +40,7 @@
   background-size: cover;
   background-color: #e2eaf3;
 
+  margin-top: 60px;
   padding-top: 36px;
   padding-bottom: 36px;
 }
@@ -52,6 +54,7 @@
 @media screen and (min-width: 768px) {
   .personalConsSection {
     background-image: url(/images/consultations_GREY-Tabletbg.png);
+    margin-top: 80px;
   }
 
   .element {
@@ -61,8 +64,8 @@
 
   .personalConsSection p,
   .mainPageSection p {
-    font-size: 20px;
-    line-height: calc(28 / 20);
+    font-size: 20px !important;
+    line-height: calc(28 / 20) !important;
   }
 
   .personalConsSection p {
@@ -75,6 +78,7 @@
 
   .mainPageSection {
     background-image: url(/images/consultations_reusable-mainTablet.png);
+    margin-top: 80px;
   }
 
   .reusableSection {
@@ -123,12 +127,13 @@
     background-image: url(/images/consultations_GREY-PCbg.png);
     padding-top: 48px;
     padding-bottom: 48px;
+    margin-top: 100px;
   }
 
   .personalConsSection p,
   .mainPageSection p {
-    font-size: 24px;
-    line-height: calc(32 / 24);
+    font-size: 24px !important;
+    line-height: calc(32 / 24) !important;
   }
 
   .personalConsSection p {
@@ -143,6 +148,7 @@
     background-image: url(/images/consultations_reusable-mainPC.png);
     padding-top: 48px;
     padding-bottom: 48px;
+    margin-top: 100px;
   }
 
   .reusableSection {

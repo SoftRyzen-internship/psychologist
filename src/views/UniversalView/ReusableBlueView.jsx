@@ -14,6 +14,5 @@ ReusableBlueView.propTypes = {
   }).isRequired,
   className: PropTypes.shape({
     section: PropTypes.string.isRequired,
-    div: PropTypes.string.isRequired,
   }).isRequired,
 };
