@@ -53,8 +53,9 @@
 }
 
 .newsTextSection > p > a {
-  text-decoration: underline;
-  color: var(--accent-color);
+  text-decoration: none;
+  color: var(--main-text-color);
+  pointer-events: none
 }
 
 @media screen and (min-width: 768px) {

@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import PropTypes from 'prop-types';
-import { convertImage, toBase64 } from 'utils/blurDataURL';
 import {
   Container,
   SectionTitle,
@@ -12,38 +11,32 @@ import s from './NewsView.module.css';
 
 export function NewsView({ allNews }) {
   return (
-    <section className={s.newsSection}>
-      <Container>
-        <SectionTitle h1 className={s.visuallyHidden} title={'Новини'} />
-        <ul className={s.newsList}>
-          {allNews.length > 0 &&
-            allNews.map(news => (
-              <li key={news.id} className={s.newsItem}>
-                <SectionTitle
-                  h2
-                  title={news.title}
-                  className={'sectionTitleH1'}
+    <div className={s.newsBackground}>
+      <SectionTitle h1 className={s.visuallyHidden} title={'Новини'} />
+      {allNews.length > 0 &&
+        allNews.map(news => (
+          <section key={news.id} className={s.newsInstance}>
+            <Container>
+              <SectionTitle
+                h2
+                title={news.title}
+                className={'sectionTitleH1'}
+              />
+              <NewsText newsTextProp={news.text} />
+              <OffsetImageBorder className={s.aspectRatio}>
+                <Image
+                  src={news.image.url}
+                  alt={news.image.alt}
+                  width={1200}
+                  height={748}
+                  unoptimized={true}
+                  className={s.imageStyle}
                 />
-                <NewsText newsTextProp={news.text} />
-                <OffsetImageBorder className={s.aspectRatio}>
-                  <Image
-                    src={news.image.url}
-                    alt={news.image.alt}
-                    width={1200}
-                    height={748}
-                    unoptimized={true}
-                    className={s.imageStyle}
-                    placeholder={blur}
-                    blurDataURL={`data:image/svg+xml;base64,${toBase64(
-                      convertImage(1200, 748),
-                    )}`}
-                  />
-                </OffsetImageBorder>
-              </li>
-            ))}
-        </ul>
-      </Container>
-    </section>
+              </OffsetImageBorder>
+            </Container>
+          </section>
+        ))}
+    </div>
   );
 }
 
