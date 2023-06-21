@@ -31,6 +31,7 @@ export const EducationMethodView = ({ method }) => {
                 width="690"
                 height="710"
                 quality={100}
+                placeholder="blur"
                 priority
               />
             </OffsetImageBorder>
@@ -45,6 +46,7 @@ export const EducationMethodView = ({ method }) => {
                 width="472"
                 height="680"
                 quality={100}
+                placeholder="blur"
                 priority
               />
             </OffsetImageBorder>
@@ -65,6 +67,7 @@ export const EducationMethodView = ({ method }) => {
                 width="688"
                 height="728"
                 quality={100}
+                placeholder="blur"
                 priority
               />
             </OffsetImageBorder>
@@ -79,6 +82,7 @@ export const EducationMethodView = ({ method }) => {
                 width="472"
                 height="660"
                 quality={100}
+                placeholder="blur"
                 priority
               />
             </OffsetImageBorder>
