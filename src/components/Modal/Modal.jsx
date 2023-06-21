@@ -8,15 +8,15 @@ export const Modal = ({ children }) => {
     <>
       <Dialog.Portal>
         <Dialog.Overlay className={s.DialogOverlay}>
-          <div className={s.modalWrap}>
-            <Dialog.Content className={s.DialogContent}>
+          <Dialog.Content className={s.modalWrap}>
+            <div className={s.DialogContent}>
               {children}
 
               <Dialog.Close className={s.buttonClose} aria-label="Close">
                 <CloseSVG className={s.iconClose} />
               </Dialog.Close>
-            </Dialog.Content>
-          </div>
+            </div>
+          </Dialog.Content>
         </Dialog.Overlay>
       </Dialog.Portal>
     </>
