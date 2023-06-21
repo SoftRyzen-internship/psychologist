@@ -19,9 +19,9 @@ export * from './ConsultationFAQReusable/ConsultationFAQ';
 // -------------
 
 // See-Far-CBT
-export * from './Modal/Modal';
-export * from './ThankYou/ThankYou';
 export * from './ContactForm/ContactForm';
+export * from './ThankYou/ThankYou';
+export * from './ErrorNote/ErrorNote';
 // -------------
 
 // Home

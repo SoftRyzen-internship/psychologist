@@ -14,15 +14,19 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.1.1",
     "@radix-ui/react-dialog": "^1.0.4",
     "@svgr/webpack": "^8.0.1",
+    "aos": "^3.0.0-beta.6",
+    "axios": "^1.4.0",
     "classnames": "^2.3.2",
-    "formik": "^2.4.1",
     "graphql-request": "^6.1.0",
     "gray-matter": "^4.0.3",
     "next": "13.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.45.0",
+    "react-hook-form-persist": "^3.0.0",
     "react-markdown": "^8.0.7",
     "react-responsive": "^9.0.2",
     "yup": "^1.2.0"
