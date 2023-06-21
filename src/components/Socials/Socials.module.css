@@ -24,12 +24,6 @@
 .item {
   width: 36px;
   height: 36px;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  /* border: 1px solid;
-  border-radius: 8px;
-  transition: color 300ms ease-in-out, background-color 300ms ease-in-out; */
 }
 
 .itemLink {
@@ -61,7 +55,8 @@
   composes: itemLink;
   border-color: var(--white-color);
   color: var(--white-color);
-  background-color: var(--footer-color);
+  /* background-color: var(--footer-color); */
+  background-color: transparent;
 }
 
 .itemLinkPanel:hover,
@@ -79,9 +74,11 @@
 
 .itemLinkFooter:hover,
 .itemLinkFooter:focus {
-  border-color: var(--footer-color);
-  color: var(--footer-color);
-  background-color: var(--white-color);
+  /* border-color: var(--footer-color); */
+  border-color: var(--accent-text-color);
+  /* color: var(--footer-color); */
+  color: var(--accent-text-color);
+  /* background-color: var(--white-color); */
 }
 
 .imgIcon {

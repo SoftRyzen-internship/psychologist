@@ -1,17 +1,20 @@
+.formContainer {
+  padding: 48px 20px 40px;
+
+  width: 320px;
+  height: 502px;
+
+  background-color: var(--white-color);
+  border-radius: 12px;
+}
+
 .form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 
-  padding: 48px 20px 40px;
-
-  /* width: 320px;
-  height: 532px; */
-
-  background-color: var(--white-color);
-  border-radius: 12px;
-
   width: 100%;
+  height: 100%;
 }
 
 .title {
@@ -31,9 +34,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
 
-  margin-bottom: 32px;
+  margin-bottom: 12px;
 }
 
 .inputWrap {
@@ -79,9 +81,6 @@
 }
 
 .error {
-  position: absolute;
-  bottom: -24px;
-
   margin-top: 4px;
   margin-bottom: 4px;
 
@@ -92,52 +91,27 @@
   color: var(--error-color);
 }
 
-.checkboxLabel {
-  position: relative;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-  gap: 12px;
-
-  margin-bottom: 28px;
-
-  font-size: 12px;
-  line-height: calc(12 / 16);
-
-  color: var(--label-text-color);
-}
-
-.acceptCheckbox {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-  display: none;
-}
-
-.acceptSpan {
+.emptyDiv {
   height: 16px;
-  width: 16px;
-
-  border: 1px solid var(--checkbox-border-color);
-  border-radius: 4px;
-  color: white;
-}
-
-.icon {
-  display: block;
-  width: 16px;
-  height: 16px;
-  margin-right: 8px;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 @media screen and (min-width: 768px) {
-  .form {
+  .formContainer {
     padding: 80px 64px;
 
-    /* width: 488px;
-    height: 680px; */
+    width: 488px;
+    height: 644px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 100%;
+    height: 100%;
   }
 
   .title {
@@ -147,7 +121,7 @@
     line-height: calc(40 / 36);
   }
   .fieldsWrap {
-    margin-bottom: 28px;
+    margin-bottom: 16px;
   }
   .inputWrap {
     width: 360px;
