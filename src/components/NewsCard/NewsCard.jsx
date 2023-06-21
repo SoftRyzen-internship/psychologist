@@ -8,7 +8,7 @@ import s from './NewsCard.module.css';
 export const NewsCard = ({ image, title, text }) => {
   const { url, alt } = image;
   return (
-    <div>
+    <div className={s.cardWrapper}>
       <Image
         src={url}
         alt={alt}

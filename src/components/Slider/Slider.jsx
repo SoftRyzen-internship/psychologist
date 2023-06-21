@@ -36,6 +36,12 @@ export const Slider = ({ allNews }) => {
           keyboard={true}
           rewind={true}
           spaceBetween={32}
+          lazy={{
+            enabled: true,
+            loadPrevNext: true,
+            loadPrevNextAmount: 1,
+            loadOnTransitionStart: true,
+          }}
           breakpoints={{
             480: {
               slidesPerView: 1,

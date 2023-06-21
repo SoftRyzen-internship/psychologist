@@ -38,10 +38,14 @@
   width: 24px;
   height: 24px;
 
-  background: url('/icons/read-more-chevron-right.svg');
+  background: url('/icons/slide-next-btn.svg');
+  background-size: 24px;
 }
 
 @media screen and (min-width: 768px) {
+  .cardWrapper {
+    max-width: 592px;
+  }
   .newsTitle {
     font-size: 24px;
     line-height: 1.33;
@@ -50,6 +54,9 @@
     width: 592px;
 
     border-radius: 0 16px;
+  }
+  .readMoreLink {
+    margin-bottom: 0;
   }
 }
 
