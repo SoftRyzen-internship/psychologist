@@ -70,9 +70,9 @@
   }
 
   .mdContent {
-    width: 336px;
+    width: 341px;
     margin-top: 0;
-
+    margin-left: 0;
     padding-left: 30px;
   }
 
@@ -88,7 +88,7 @@
     position: absolute;
     width: 10px;
     height: 10px;
-    left: -30px;
+    left: -24px;
     top: 50%;
     transform: translateY(-50%);
     border-radius: 50%;
@@ -125,8 +125,8 @@
   .mdContent {
     width: 488px;
     margin-top: 0;
-
-    margin-left: 36px;
+    padding-left: 36px;
+    margin-left: 0;
   }
 
   .mdContent > ul {
