@@ -21,6 +21,7 @@ export * from './ErrorNote/ErrorNote';
 // -------------
 
 // Consultations
+export * from './ModalConsultationPage/ModalDependsCards';
 export * from './ReusableSection/ReusableSection';
 export * from './ConsultationFAQReusable/ConsultationFAQ';
 // -------------

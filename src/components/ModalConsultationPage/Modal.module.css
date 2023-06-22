@@ -1,0 +1,216 @@
+/**
+  |============================
+  | Test - modal RADDIX
+  |============================
+*/
+
+.closeButton {
+  position: absolute;
+  top: 124px;
+  right: calc(50% - 138px);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  height: 32px;
+  width: 32px;
+
+  background: transparent;
+  border: none;
+  transition: fill 0.3s ease;
+}
+
+.closeButton:hover {
+  fill: var(--btn-hover-color);
+}
+
+/**
+  |============================
+  | With hands
+  |============================
+*/
+
+body.noScroll {
+  overflow: hidden;
+  overflow-x: hidden;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: var(--consult-modalbgRdesign);
+  pointer-events: auto;
+
+  z-index: 11;
+  overflow: hidden;
+  overflow-y: auto;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay:focus {
+  outline: none;
+}
+
+.overlay.open {
+  opacity: 0.5;
+}
+
+.mainModalWrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 12;
+
+  padding: 100px 0 100px 0;
+  overflow-y: auto;
+
+  /* transform: scaleY(-50%); */
+  transform: translateY(-50%);
+
+  transition: opacity 0.3s ease, transform 1s ease;
+}
+
+.modalWrapper {
+  width: 320px;
+  margin: 0 auto;
+  padding: 24px 20px 44px 20px;
+
+  background-image: url('/icons/firstLiMobile.svg');
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-color: var(--bg1-color);
+
+  border: 1px solid #d0e2ff;
+  border-radius: 0px 16px;
+}
+
+.mainModalWrapper.open {
+  transform: translateY(0);
+  top: 0;
+  left: 0;
+}
+
+.modalWrapper > p:first-of-type {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: calc(28 / 18);
+  color: var(--accent-text-color);
+
+  margin-bottom: 44px;
+  width: 213px;
+}
+
+.contentWrapper p:first-of-type {
+  margin-bottom: 16px;
+}
+
+.contentWrapper p:last-of-type {
+  margin-bottom: 20px;
+}
+
+.modalWrapper li {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+}
+
+.contentWrapper p > strong {
+  font-weight: 600;
+}
+
+.contentWrapper ul {
+  list-style-type: none;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+
+.contentWrapper li {
+  position: relative;
+  padding-left: 36px;
+}
+
+.contentWrapper li::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 0;
+  background-image: url('/icons/Check.svg');
+}
+
+/**
+  |============================
+  | 768
+  |============================
+*/
+
+@media screen and (min-width: 768px) {
+  .contentWrapper p:first-of-type,
+  .contentWrapper p:last-of-type {
+    margin-bottom: 20px;
+  }
+
+  .modalWrapper > p:first-of-type {
+    font-size: 24px;
+    line-height: calc(32 / 24);
+    width: 335px;
+  }
+
+  .contentWrapper p,
+  .contentWrapper li {
+    font-size: 20px;
+    line-height: calc(28 / 20);
+  }
+
+  .modalWrapper {
+    position: relative;
+    width: 592px;
+    margin: 0 auto;
+    padding: 40px 40px 40px 40px;
+  }
+
+  .closeButton {
+    top: 40px;
+    right: 40px;
+  }
+
+  .contentWrapper ul {
+    gap: 20px;
+  }
+}
+
+/**
+  |============================
+  | 1280
+  |============================
+*/
+
+@media screen and (min-width: 1280px) {
+  .contentWrapper p,
+  .contentWrapper li {
+    font-size: 20px;
+    line-height: calc(28 / 20);
+  }
+
+  .modalWrapper {
+    width: 1216px;
+  }
+
+  .modalWrapper > p:first-of-type {
+    width: auto;
+  }
+}
