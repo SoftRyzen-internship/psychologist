@@ -45,8 +45,6 @@ export const Requests = ({ requests, mysection }) => {
                 <ModalButton />
               </div>
 
-              {/* put an image with or without wrapper inside the component  */}
-
               <div className={s.imgWrapper}>
                 {!tablet && !desktop && (
                   <OffsetImageBorder reverse className={s.aspRatio}>
@@ -54,7 +52,7 @@ export const Requests = ({ requests, mysection }) => {
                       src="/images/home_requests_mob.jpg"
                       width={480}
                       height={609}
-                      alt="Фото запити з якими працюю"
+                      alt="Запити з якими працюю фото"
                       quality={100}
                       priority
                       placeholder="blur"

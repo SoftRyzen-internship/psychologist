@@ -29,6 +29,7 @@
     "react-hook-form-persist": "^3.0.0",
     "react-markdown": "^8.0.7",
     "react-responsive": "^9.0.2",
+    "tua-body-scroll-lock": "^1.2.1",
     "yup": "^1.2.0"
   },
   "devDependencies": {
