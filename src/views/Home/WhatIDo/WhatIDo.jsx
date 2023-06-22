@@ -15,7 +15,7 @@ export const WhatIDo = ({ whatIDo }) => {
           src="/icons/whatIDo.svg"
           width={642}
           height={511}
-          alt="Чим займаюсь картинка"
+          alt="Контурне зображення процесу проведення психологічної консультації"
         />
       </div>
     </ReusableSection>

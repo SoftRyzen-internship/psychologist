@@ -7,6 +7,7 @@ import {
   GetPersonalConsultView,
   PersonalConsultationMethodView,
   OnlineConsultationView,
+  DependsCard,
   PersonalConsultationsView,
 } from '@/views';
 
@@ -34,6 +35,7 @@ const ConsultationsPage = props => {
         data={props.faq2}
         className={{ section: 'reusableSection2', div: 'containerX' }}
       />
+      <DependsCard data={props.factors} />
     </>
   );
 };
