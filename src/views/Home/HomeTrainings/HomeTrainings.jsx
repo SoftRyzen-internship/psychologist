@@ -7,41 +7,18 @@ import {
   OffsetImageBorder,
   ModalButton,
 } from '@/components';
-import homeTrainingsData from 'src/data/homeTrainingsData.json';
-import Trainitem1 from 'public/icons/home-tren-item-1.svg';
-import Trainitem2 from 'public/icons/home-tren-item-2.svg';
-import Trainitem3 from 'public/icons/home-tren-item-3.svg';
-import Trainitem4 from 'public/icons/home-tren-item-4.svg';
-import Trainitem5 from 'public/icons/home-tren-item-5.svg';
+import { convertImage, toBase64 } from 'utils/blurDataURL';
+import { TrainingsList } from './TrainingsList';
 import * as st from './HomeTrainings.module.css';
 
 export const HomeTrainings = ({ trainings }) => {
-  const Trainitems = {
-    1: <Trainitem1 />,
-    2: <Trainitem2 />,
-    3: <Trainitem3 />,
-    4: <Trainitem4 />,
-    5: <Trainitem5 />,
-  };
-  const trainingsList = homeTrainingsData?.map(el => {
-    return (
-      <>
-        <li key={el.id.toString()} className={st.item}>
-          <span className={st.itemImg}>{Trainitems[el.id]}</span>
-          <span className={st.itemText}>{el.text}</span>
-        </li>
-      </>
-    );
-  });
   return (
     <section className={st.section}>
       <Container>
         <div className={st.descr}>
           <SectionTitle title={trainings.heading} centered />
-          <ReactMarkdown className={st.variant}>
-            {trainings.variantFirst}
-          </ReactMarkdown>
-          <ul className={st.listTrainings}>{trainingsList}</ul>
+          <p className={st.variant}>{trainings.variantFirst}</p>
+          <TrainingsList />
           <div className={st.contentWrapper}>
             <OffsetImageBorder className={st.imageBorder}>
               <Image
@@ -52,12 +29,14 @@ export const HomeTrainings = ({ trainings }) => {
                 width={308}
                 height={345}
                 quality={100}
+                placeholder="blur"
+                blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                  convertImage(220, 392),
+                )}`}
               />
             </OffsetImageBorder>
             <div>
-              <ReactMarkdown className={st.variant}>
-                {trainings.variantSecond}
-              </ReactMarkdown>
+              <p className={st.variant}>{trainings.variantSecond}</p>
               <ReactMarkdown className={st.listMasters}>
                 {trainings.content}
               </ReactMarkdown>

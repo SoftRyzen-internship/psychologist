@@ -56,7 +56,7 @@
 }
 
 .imageBorder {
-  margin-bottom: 24px;
+  margin-bottom: 36px;
   aspect-ratio: 345 / 308;
 }
 
@@ -80,6 +80,10 @@
 .listMasters li {
   position: relative;
   margin-bottom: 16px;
+}
+
+.listMasters li:last-child {
+  margin-bottom: 0;
 }
 
 .listMasters li::before {
@@ -119,8 +123,12 @@
     justify-content: space-between;
   }
 
+  .imageBorder {
+    margin-bottom: 0;
+  }
+
   .image {
-    width: 332px;
+    width: 323px;
   }
 
   .listMasters {
@@ -137,6 +145,10 @@
   .section {
     background: url('/images/home-trainings-bg-desk.svg') right bottom no-repeat
       var(--bg2-color);
+  }
+
+  .section > div {
+    position: relative;
   }
 
   .variant {
@@ -166,12 +178,18 @@
   }
 
   .contentWrapper {
+    height: 270px;
     flex-direction: row-reverse;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: left;
   }
 
   .imageBorder {
-    transform: translate(20px, -165px);
+    /* transform: translate(20px, -165px); */
+    /* transform: translate(-33px, -110px) scale(1.5); */
+    position: absolute;
+    left: 865px;
+    top: 355px;
   }
 
   .image {
@@ -192,6 +210,7 @@
 
   .listMasters li {
     width: 384px;
+    margin-bottom: 0;
     font-size: 20px;
     line-height: 1.4;
   }

@@ -5,6 +5,10 @@
   }
 }
 
+.utilityFinder {
+  padding-bottom: 0;
+}
+
 .utilityFinder p,
 .utilityFinder li {
   font-style: normal;

@@ -12,7 +12,14 @@ import {
 import { getNewsList } from '@/lib/request';
 import PropTypes from 'prop-types';
 
-export default function Home({ hero, whatIDo, study, requests, trainings }) {
+export default function Home({
+  hero,
+  whatIDo,
+  study,
+  requests,
+  blue,
+  trainings,
+}) {
   return (
     <>
       <Head>
@@ -27,7 +34,7 @@ export default function Home({ hero, whatIDo, study, requests, trainings }) {
 
       <Consult />
 
-      <Requests requests={requests} />
+      <Requests requests={requests} mysection={blue} />
 
       <HomeTrainings trainings={trainings} />
 
@@ -40,7 +47,7 @@ export async function getStaticProps() {
   const { allNews } = await getNewsList();
   const { HOME } = folderPaths;
   const homeData = getData(HOME);
-  const { hero, whatIDo, study, requests, trainings } = homeData;
+  const { hero, whatIDo, study, requests, blue, trainings } = homeData;
 
   if (!allNews) {
     return {
@@ -61,6 +68,7 @@ export async function getStaticProps() {
       whatIDo,
       study,
       requests,
+      blue,
       trainings,
     },
   };
@@ -71,5 +79,6 @@ Home.propTypes = {
   whatIDo: PropTypes.object.isRequired,
   study: PropTypes.object.isRequired,
   requests: PropTypes.object.isRequired,
+  blue: PropTypes.object.isRequired,
   trainings: PropTypes.object.isRequired,
 };
