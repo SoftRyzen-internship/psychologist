@@ -1,3 +1,7 @@
+.cardWrapper {
+  padding-bottom: 32px;
+}
+
 .newsTitle {
   margin-top: 24px;
 
@@ -19,8 +23,8 @@
 
 .readMoreLink {
   display: flex;
+  width: max-content;
   gap: 8px;
-  margin-bottom: 32px;
 
   font-family: var(--font-open-sans);
   font-style: normal;
@@ -45,6 +49,7 @@
 @media screen and (min-width: 768px) {
   .cardWrapper {
     max-width: 592px;
+    padding-bottom: 0;
   }
   .newsTitle {
     font-size: 24px;

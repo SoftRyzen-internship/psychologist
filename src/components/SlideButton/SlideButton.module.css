@@ -26,7 +26,6 @@
   border: none;
   border-radius: 50%;
   background-color: rgb(255, 255, 255, 50%);
-  /* background-size: 30px; */
   transition: var(--fast-btn-animation);
 }
 

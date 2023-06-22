@@ -1,6 +1,7 @@
 .newsText {
   display: block;
   margin-top: 32px;
+  margin-bottom: 24px;
 
   font-family: var(--font-open-sans);
   font-style: normal;
@@ -39,10 +40,6 @@
   margin-bottom: 20px;
 }
 
-.newsText > p:last-child {
-  margin-bottom: 24px;
-}
-
 .newsTextSection > p:last-child {
   margin-bottom: 20px;
 }
@@ -53,21 +50,18 @@
 }
 
 .newsTextSection > p > a {
-  text-decoration: none;
-  color: var(--main-text-color);
-  pointer-events: none
+  text-decoration: underline;
+  color: var(--accent-color);
 }
 
 @media screen and (min-width: 768px) {
   .newsText {
-    margin-top: 40px;
+    margin-top: 0;
+    margin-bottom: 36px;
   }
   .newsText > p {
     font-size: 18px;
     line-height: 1.56;
-  }
-  .newsText > p:last-child {
-    margin-bottom: 36px;
   }
   .newsTextSection {
     margin-top: 24px;
@@ -82,15 +76,12 @@
 
 @media screen and (min-width: 1280px) {
   .newsText {
-    margin-top: 60px;
+    margin-bottom: 56px;
     max-width: 903px;
   }
   .newsText > p {
     font-size: 20px;
     line-height: 1.4;
-  }
-  .newsText > p:last-child {
-    margin-bottom: 56px;
   }
   .newsTextSection > p {
     font-size: 20px;
