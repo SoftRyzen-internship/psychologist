@@ -8,11 +8,14 @@ import s from './Modal.module.css';
 export const ModalDependsCards = ({ data, onClose }) => {
   const body = document !== undefined ? document.querySelector('body') : null;
 
-  const handleKeyDown = useCallback(event => {
-    if (event.keyCode === 27) {
-      handleClose();
-    }
-  }, []);
+  const handleKeyDown = useCallback(
+    event => {
+      if (event.keyCode === 27) {
+        handleClose();
+      }
+    },
+    [handleClose],
+  );
 
   const handleOverlayClick = event => {
     const isOverlayClick = event.target.classList.contains(s.overlay);
