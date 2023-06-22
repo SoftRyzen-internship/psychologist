@@ -1,3 +1,13 @@
+.transparentOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-bottom: 62px;
+  overflow-y: auto;
+}
+
 .wrapper {
   width: 100dvw;
   position: absolute;

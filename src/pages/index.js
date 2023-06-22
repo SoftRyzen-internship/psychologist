@@ -1,11 +1,25 @@
 import Head from 'next/head';
 import { getData } from '@/lib/getData';
 import { folderPaths } from '@/utils/folderPaths';
-import { HomeHero, Consult, StudyView, WhatIDo } from '@/views';
+import {
+  HomeHero,
+  Consult,
+  Requests,
+  StudyView,
+  HomeTrainings,
+  WhatIDo,
+} from '@/views';
 import { getNewsList } from '@/lib/request';
 import PropTypes from 'prop-types';
 
-export default function Home({ hero, whatIDo, study }) {
+export default function Home({
+  hero,
+  whatIDo,
+  study,
+  requests,
+  blue,
+  trainings,
+}) {
   return (
     <>
       <Head>
@@ -20,6 +34,10 @@ export default function Home({ hero, whatIDo, study }) {
 
       <Consult />
 
+      <Requests requests={requests} mysection={blue} />
+
+      <HomeTrainings trainings={trainings} />
+
       <StudyView study={study} />
     </>
   );
@@ -29,7 +47,7 @@ export async function getStaticProps() {
   const { allNews } = await getNewsList();
   const { HOME } = folderPaths;
   const homeData = getData(HOME);
-  const { hero, whatIDo, study } = homeData;
+  const { hero, whatIDo, study, requests, blue, trainings } = homeData;
 
   if (!allNews) {
     return {
@@ -49,6 +67,9 @@ export async function getStaticProps() {
       hero,
       whatIDo,
       study,
+      requests,
+      blue,
+      trainings,
     },
   };
 }
@@ -57,4 +78,7 @@ Home.propTypes = {
   hero: PropTypes.object.isRequired,
   whatIDo: PropTypes.object.isRequired,
   study: PropTypes.object.isRequired,
+  requests: PropTypes.object.isRequired,
+  blue: PropTypes.object.isRequired,
+  trainings: PropTypes.object.isRequired,
 };
