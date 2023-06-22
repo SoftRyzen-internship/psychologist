@@ -123,6 +123,10 @@
     justify-content: space-between;
   }
 
+  .imageBorder {
+    margin-bottom: 0;
+  }
+
   .image {
     width: 323px;
   }
