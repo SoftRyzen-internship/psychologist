@@ -3,9 +3,8 @@ import ReactMarkdown from 'react-markdown';
 import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import PropTypes from 'prop-types';
-import { Container, SectionTitle } from '@/components';
+import { Container, SectionTitle, BlueSectionComponent } from '@/components';
 import s from './OnlineConsultationsView.module.css';
-import { ReusableBlueView } from '@/views';
 
 export const OnlineConsultationView = ({ data, mysection }) => {
   const [isDesktopShow, setIsDesktopShow] = useState(false);
@@ -39,7 +38,7 @@ export const OnlineConsultationView = ({ data, mysection }) => {
           </div>
           {!isDesktopShow && <ReactMarkdown>{data.list}</ReactMarkdown>}
         </Container>
-        <ReusableBlueView
+        <BlueSectionComponent
           data={mysection}
           className={{ section: 'personalConsSection' }}
         />

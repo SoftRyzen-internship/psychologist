@@ -6,6 +6,7 @@ import {
   GetPersonalConsultView,
   PersonalConsultationMethodView,
   OnlineConsultationView,
+  PersonalConsultationsView,
 } from '@/views';
 
 const ConsultationsPage = props => {
@@ -24,13 +25,14 @@ const ConsultationsPage = props => {
         data={props.online}
         className={{ section: 'personalConsSection', div: 'container' }}
       /> */}
-      <GetPersonalConsultView data={props.requirements} />
-      <PersonalConsultationMethodView data={props.method} />
+      <PersonalConsultationsView data={props.individual} />
       <OnlineConsultationView
         data={props.online}
         bluesection={props.blue}
         mysection={props.online}
       />
+      <GetPersonalConsultView data={props.requirements} />
+      <PersonalConsultationMethodView data={props.method} />
     </>
   );
 };
