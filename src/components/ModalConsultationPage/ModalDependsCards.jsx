@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { useCallback, useEffect } from 'react';
+import { useEffect } from 'react';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import CloseBtn from 'public/icons/closeButton.svg';
 import s from './Modal.module.css';
@@ -8,14 +8,26 @@ import s from './Modal.module.css';
 export const ModalDependsCards = ({ data, onClose }) => {
   const body = document !== undefined ? document.querySelector('body') : null;
 
-  const handleKeyDown = useCallback(
-    event => {
-      if (event.keyCode === 27) {
-        handleClose();
-      }
-    },
-    [handleClose],
-  );
+  const handleKeyDown = event => {
+    if (event.keyCode === 27) {
+      handleClose();
+    }
+  };
+
+  const handleClose = () => {
+    const overlay = document.querySelector(`.${s.overlay}`);
+    const mainModalWrapper = document.querySelector(`.${s.mainModalWrapper}`);
+
+    mainModalWrapper.classList.remove(s.open);
+    overlay.classList.remove(s.open);
+    body.classList.remove('noScroll');
+
+    document.removeEventListener('keydown', handleKeyDown);
+
+    setTimeout(() => {
+      onClose();
+    }, 300);
+  };
 
   const handleOverlayClick = event => {
     const isOverlayClick = event.target.classList.contains(s.overlay);
@@ -43,22 +55,7 @@ export const ModalDependsCards = ({ data, onClose }) => {
     return () => {
       clearTimeout(timer);
     };
-  }, [body.classList, handleKeyDown]);
-
-  const handleClose = () => {
-    const overlay = document.querySelector(`.${s.overlay}`);
-    const mainModalWrapper = document.querySelector(`.${s.mainModalWrapper}`);
-
-    mainModalWrapper.classList.remove(s.open);
-    overlay.classList.remove(s.open);
-    body.classList.remove('noScroll');
-
-    document.removeEventListener('keydown', handleKeyDown);
-
-    setTimeout(() => {
-      onClose();
-    }, 300);
-  };
+  }, []); //eslint-disable-line
 
   return (
     <>
