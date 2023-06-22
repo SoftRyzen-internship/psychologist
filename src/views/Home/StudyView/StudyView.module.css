@@ -115,6 +115,10 @@
     gap: 64px;
   }
 
+  .flexBox > div:not(:last-child) {
+    margin-right: 37px;
+  }
+
   .mdContent {
     width: 555px;
   }
@@ -158,7 +162,10 @@
     max-height: 608px;
     margin: 0 auto;
     margin-bottom: 0;
-    margin-right: 65px;
     flex-shrink: 0;
+  }
+
+  .imgWrapper > img {
+    height: 608px;
   }
 }
