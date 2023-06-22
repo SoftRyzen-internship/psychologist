@@ -89,6 +89,9 @@ body.noScroll {
   background-position: top left;
   background-repeat: no-repeat;
   background-color: var(--bg1-color);
+
+  border: 1px solid #d0e2ff;
+  border-radius: 0px 16px;
 }
 
 .mainModalWrapper.open {
@@ -178,8 +181,6 @@ body.noScroll {
     width: 592px;
     margin: 0 auto;
     padding: 40px 40px 40px 40px;
-    border: 1px solid #d0e2ff;
-    border-radius: 0px 16px;
   }
 
   .closeButton {
