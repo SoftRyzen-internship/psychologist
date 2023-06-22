@@ -3,7 +3,7 @@
 }
 
 .title {
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 
   font-family: var(--font-alegreya);
   font-weight: 500;
@@ -12,14 +12,14 @@
 
   text-align: center;
 
-  color: var(--accent-text-color);
+  color: var(--error-color);
 }
 
 .wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 36px;
 
   width: 278px;
   font-size: 16px;
@@ -32,10 +32,13 @@
   width: 270px;
   height: auto;
 }
+.error {
+  color: var(--error-color);
+}
 
 @media screen and (min-width: 768px) {
   .title {
-    margin: 0 auto 56px;
+    margin: 0 auto 44px;
 
     font-size: 36px;
     line-height: calc(40 / 36);
@@ -48,7 +51,7 @@
 
   .wrap {
     width: 360px;
-    gap: 64px;
+    gap: 44px;
     font-size: 20px;
     line-height: calc(28 / 20);
   }

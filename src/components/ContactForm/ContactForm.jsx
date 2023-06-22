@@ -1,125 +1,129 @@
-import { Formik, Field, Form } from 'formik';
-import { ActionButton } from '..';
-import { contactValidationShema } from '../../utils/contactValidationShema';
-import AgreeSVG from 'public/icons/check-mark.svg';
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import useFormPersist from 'react-hook-form-persist';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { ActionButton, ErrorNote, Spinner, ThankYou } from '..';
+import { contactValidationShema } from '@/utils/contactValidationShema';
+import { sendFormDataToChat } from '@/utils/sendFormDataToChat';
 import s from './ContactForm.module.css';
 
 export const ContactForm = () => {
+  const [isThankYou, setIsThankYou] = useState(false);
+  const [serverError, setServerError] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const STORAGE_KEY = 'contactForm';
+  const schema = contactValidationShema();
+
+  const {
+    register,
+    handleSubmit,
+    watch,
+    setValue,
+    reset,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
+
+  useFormPersist(STORAGE_KEY, {
+    watch,
+    setValue,
+    storage: typeof window !== 'undefined' ? localStorage : undefined,
+  });
+
+  const onSubmitHandler = async (data, e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    return await sendFormDataToChat(
+      data,
+      setServerError,
+      setIsThankYou,
+      reset,
+    ).finally(() => {
+      setIsSubmitting(false);
+      reset();
+    });
+  };
+
   return (
-    <>
-      <Formik
-        initialValues={{
-          name: '',
-          email: '',
-          phone: '',
-          acceptedTerms: false,
-        }}
-        validationSchema={contactValidationShema}
-        onSubmit={(values, { setSubmitting }) => {
-          // dispatch(onSubmit(values));
-          setSubmitting(false);
-        }}
-      >
-        {({ errors, touched, values }) => (
-          <Form className={s.form}>
-            <div>
-              <h3 className={s.title}>Записатися на прийом</h3>
-              <div className={s.fieldsWrap}>
-                <div className={s.inputWrap}>
-                  <label className={s.inputLabel} htmlFor="nameInput">
-                    Ваше ім’я
-                  </label>
-                  <Field
-                    style={
-                      touched.name &&
-                      errors.name && {
-                        outline: '1px solid var(--error-color)',
-                      }
-                    }
-                    className={s.inputField}
-                    type="text"
-                    name="name"
-                    id="namelInput"
-                    placeholder="Ваше ім'я"
-                  />
-                  {touched.name && errors.name ? (
-                    <div className={s.error}>{errors.name}</div>
-                  ) : null}
-                </div>
-
-                <div className={s.inputWrap}>
-                  <label className={s.inputLabel} htmlFor="emailInput">
-                    Email
-                  </label>
-                  <Field
-                    style={
-                      touched.email &&
-                      errors.email && {
-                        outline: '1px solid var(--error-color)',
-                      }
-                    }
-                    className={s.inputField}
-                    type="email"
-                    name="email"
-                    id="emailInput"
-                    placeholder="vaich@gmail.com"
-                  />
-                  {touched.email && errors.email ? (
-                    <div className={s.error}>{errors.email}</div>
-                  ) : null}
-                </div>
-
-                <div className={s.inputWrap}>
-                  <label className={s.inputLabel} htmlFor="phoneInput">
-                    Телефон
-                  </label>
-                  <Field
-                    style={
-                      touched.phone &&
-                      errors.phone && {
-                        outline: '1px solid var(--error-color)',
-                      }
-                    }
-                    className={s.inputField}
-                    type="phone"
-                    id="phoneInput"
-                    placeholder="+380"
-                    name="phone"
-                  />
-                  {touched.phone && errors.phone ? (
-                    <div className={s.error}>{errors.phone}</div>
-                  ) : null}
-                </div>
+    <div className={s.formContainer}>
+      {!isThankYou && !serverError && !isSubmitting && (
+        <>
+          <h3 className={s.title}>Записатися на прийом</h3>
+          <form
+            onSubmit={handleSubmit(onSubmitHandler)}
+            novalidate="novalidate"
+          >
+            <div className={s.fieldsWrap}>
+              <div className={s.inputWrap}>
+                <label className={s.inputLabel} htmlFor="nameInput">
+                  Ваше ім’я
+                </label>
+                <input
+                  type="text"
+                  id="namelInput"
+                  className={s.inputField}
+                  {...register('name')}
+                  placeholder="Ваше ім'я"
+                />
+                {errors?.name ? (
+                  <p className={s.error}>{errors?.name?.message}</p>
+                ) : (
+                  <div className={s.emptyDiv}></div>
+                )}
               </div>
 
-              <label className={s.checkboxLabel} htmlFor="acceptedTerms">
-                Згоден з політикою конфеденційності
-                <Field
-                  className={s.acceptCheckbox}
-                  type="checkbox"
-                  id="acceptedTerms"
-                  name="acceptedTerms"
+              <div className={s.inputWrap}>
+                <label className={s.inputLabel} htmlFor="emailInput">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="emailInput"
+                  className={s.inputField}
+                  {...register('email')}
+                  placeholder="vaich@gmail.com"
                 />
-                <span
-                  className={s.acceptSpan}
-                  style={
-                    touched.acceptedTerms &&
-                    errors.acceptedTerms && {
-                      outline: '1px solid var(--error-color)',
-                    }
-                  }
-                >
-                  {values.acceptedTerms && (
-                    <AgreeSVG className={s.icon} width="16" height="16" />
-                  )}
-                </span>
-              </label>
 
-              <ActionButton inModalForm={true} is404={false} />
+                {errors.email ? (
+                  <p className={s.error}>{errors?.email?.message}</p>
+                ) : (
+                  <div className={s.emptyDiv}> </div>
+                )}
+              </div>
+
+              <div className={s.inputWrap}>
+                <label className={s.inputLabel} htmlFor="phoneInput">
+                  Телефон
+                </label>
+                <input
+                  type="tel"
+                  id="phoneInput"
+                  className={s.inputField}
+                  {...register('phone')}
+                  placeholder="+380"
+                />
+
+                {errors.phone ? (
+                  <p className={s.error}>{errors?.phone?.message}</p>
+                ) : (
+                  <div className={s.emptyDiv}> </div>
+                )}
+              </div>
             </div>
-          </Form>
-        )}
-      </Formik>
-    </>
+
+            <ActionButton is404={false} />
+          </form>
+        </>
+      )}
+
+      {isSubmitting && <Spinner />}
+
+      {isThankYou && <ThankYou />}
+
+      {serverError && <ErrorNote />}
+    </div>
   );
 };

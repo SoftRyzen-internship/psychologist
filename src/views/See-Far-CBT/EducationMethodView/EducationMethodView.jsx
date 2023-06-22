@@ -2,6 +2,7 @@ import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
+import { convertImage, toBase64 } from 'utils/blurDataURL';
 import { Container, OffsetImageBorder, SectionTitle } from '@/components';
 import s from './EducationMethodView.module.css';
 
@@ -30,6 +31,11 @@ export const EducationMethodView = ({ method }) => {
                 className={s.image}
                 width="690"
                 height="710"
+                quality={100}
+                placeholder="blur"
+                blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                  convertImage(690, 710),
+                )}`}
                 priority
               />
             </OffsetImageBorder>
@@ -43,6 +49,11 @@ export const EducationMethodView = ({ method }) => {
                 className={s.image}
                 width="472"
                 height="680"
+                quality={100}
+                placeholder="blur"
+                blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                  convertImage(472, 680),
+                )}`}
                 priority
               />
             </OffsetImageBorder>
@@ -62,6 +73,12 @@ export const EducationMethodView = ({ method }) => {
                 className={s.image}
                 width="688"
                 height="728"
+                quality={100}
+                placeholder="blur"
+                blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                  convertImage(688, 728),
+                )}`}
+                priority
               />
             </OffsetImageBorder>
           </MediaQuery>
@@ -74,6 +91,12 @@ export const EducationMethodView = ({ method }) => {
                 className={s.image}
                 width="472"
                 height="660"
+                quality={100}
+                placeholder="blur"
+                blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                  convertImage(472, 660),
+                )}`}
+                priority
               />
             </OffsetImageBorder>
           </MediaQuery>
