@@ -26,14 +26,6 @@ const ConsultationsPage = props => {
         data={props.faq2}
         className={{ section: 'reusableSection2', div: 'containerX' }}
       />
-      {/* <ReusableBlueView
-        data={props.blue}
-        className={{ section: 'mainPageSection', div: 'containerX' }}
-      /> */}
-      {/* <ReusableBlueView
-        data={props.online}
-        className={{ section: 'personalConsSection', div: 'container' }}
-      /> */}
       <PersonalConsultationsView data={props.individual} />
       <OnlineConsultationView
         data={props.online}
