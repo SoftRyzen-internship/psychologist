@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { useEffect } from 'react';
+import { useCallback, useEffect } from 'react';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import CloseBtn from 'public/icons/closeButton.svg';
 import s from './Modal.module.css';
@@ -8,11 +8,11 @@ import s from './Modal.module.css';
 export const ModalDependsCards = ({ data, onClose }) => {
   const body = document !== undefined ? document.querySelector('body') : null;
 
-  const handleKeyDown = event => {
+  const handleKeyDown = useCallback(event => {
     if (event.keyCode === 27) {
       handleClose();
     }
-  };
+  }, []);
 
   const handleOverlayClick = event => {
     const isOverlayClick = event.target.classList.contains(s.overlay);
