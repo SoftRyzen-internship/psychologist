@@ -8,7 +8,6 @@ import {
   StudyView,
   HomeTrainings,
   WhatIDo,
-  ReusableBlueView,
 } from '@/views';
 import { getNewsList } from '@/lib/request';
 import PropTypes from 'prop-types';
@@ -35,12 +34,7 @@ export default function Home({
 
       <Consult />
 
-      <Requests requests={requests} />
-
-      <ReusableBlueView
-        data={blue}
-        className={{ section: 'mainPageSection', div: 'containerX' }}
-      />
+      <Requests requests={requests} mysection={blue} />
 
       <HomeTrainings trainings={trainings} />
 
