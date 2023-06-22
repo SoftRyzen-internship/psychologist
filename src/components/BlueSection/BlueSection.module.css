@@ -9,23 +9,24 @@
   background-size: cover;
   background-color: #e2eaf3;
 
-  padding: 0;
-}
-
-.container {
-  padding: 36px 20px 36px 20px;
+  margin-top: 60px;
+  padding-top: 36px;
+  padding-bottom: 36px;
 }
 
 .personalConsSection p,
 .mainPageSection p {
-  font-style: normal;
-  font-weight: 700;
+  font-style: normal !important;
+  font-weight: 700 !important;
   font-size: 18px;
   line-height: calc(28 / 18);
 
-  color: var(--plaska-color);
+  color: var(--plaska-color) !important;
 
   text-align: center;
+
+  width: 320px;
+  margin: 0 auto;
 }
 
 /**
@@ -39,44 +40,9 @@
   background-size: cover;
   background-color: #e2eaf3;
 
-  padding: 0;
-}
-
-.containerX {
-  padding: 36px 20px 36px 20px;
-}
-
-/**
-  |============================
-  | Personal consulting re-use
-  |============================
-*/
-
-.reusableSection {
-  background-image: url(/icons/MobileConsult.svg);
-  background-size: cover;
-  background-color: var(--bg2-color);
-}
-
-.reusableSection2 {
-  background-image: url(/icons/MobileTime.svg);
-  background-size: cover;
-  background-color: var(--bg2-color);
-}
-
-.universalWrapper p {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: calc(24 / 16);
-}
-
-.reusableSection p > strong {
-  font-weight: 600;
-}
-
-.reusableSection p:not(:last-of-type) {
-  margin-bottom: 20px;
+  margin-top: 60px;
+  padding-top: 36px;
+  padding-bottom: 36px;
 }
 
 /**
@@ -88,24 +54,31 @@
 @media screen and (min-width: 768px) {
   .personalConsSection {
     background-image: url(/images/consultations_GREY-Tabletbg.png);
+    margin-top: 80px;
   }
 
-  .container {
-    padding: 36px 88px 36px 88px;
+  .element {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
   }
 
   .personalConsSection p,
   .mainPageSection p {
-    font-size: 20px;
-    line-height: calc(28 / 20);
+    font-size: 20px !important;
+    line-height: calc(28 / 20) !important;
+  }
+
+  .personalConsSection p {
+    width: 592px;
+  }
+
+  .mainPageSection p {
+    width: 576px;
   }
 
   .mainPageSection {
     background-image: url(/images/consultations_reusable-mainTablet.png);
-  }
-
-  .containerX {
-    padding: 36px 96px 36px 96px;
+    margin-top: 80px;
   }
 
   .reusableSection {
@@ -152,24 +125,30 @@
 @media screen and (min-width: 1280px) {
   .personalConsSection {
     background-image: url(/images/consultations_GREY-PCbg.png);
-  }
-
-  .container {
-    padding: 48px 85px 48px 85px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    margin-top: 100px;
   }
 
   .personalConsSection p,
   .mainPageSection p {
-    font-size: 24px;
-    line-height: calc(32 / 24);
+    font-size: 24px !important;
+    line-height: calc(32 / 24) !important;
+  }
+
+  .personalConsSection p {
+    width: 1112px;
+  }
+
+  .mainPageSection p {
+    width: 904px;
   }
 
   .mainPageSection {
     background-image: url(/images/consultations_reusable-mainPC.png);
-  }
-
-  .containerX {
-    padding: 48px 188px 48px 188px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    margin-top: 100px;
   }
 
   .reusableSection {

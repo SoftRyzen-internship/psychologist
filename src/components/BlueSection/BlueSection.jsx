@@ -6,7 +6,7 @@ export const BlueSectionComponent = ({ data, className }) => {
   return (
     <>
       <div className={styles[className.section]}>
-        <div className={styles[className.div]}>
+        <div>
           <ReactMarkdown>{data.benefits}</ReactMarkdown>
         </div>
       </div>
@@ -23,6 +23,5 @@ BlueSectionComponent.propTypes = {
   }).isRequired,
   className: PropTypes.shape({
     section: PropTypes.string.isRequired,
-    div: PropTypes.string.isRequired,
   }).isRequired,
 };
