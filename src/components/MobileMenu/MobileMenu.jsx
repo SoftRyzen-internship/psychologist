@@ -6,12 +6,14 @@ export const MobileMenu = ({ isMenuOpen, setIsMenuOpen }) => {
   const wrapStat = isMenuOpen ? st.wrapperMenuOpen : st.wrapper;
   return (
     <div className={wrapStat}>
-      <Container className={st.menu}>
-        <NavBar setIsMenuOpen={setIsMenuOpen} />
-        <div className={st.social}>
-          <Socials component="mobile" />
-        </div>
-      </Container>
+      <div className={st.transparentOverlay}>
+        <Container className={st.menu}>
+          <NavBar setIsMenuOpen={setIsMenuOpen} />
+          <div className={st.social}>
+            <Socials component="mobile" />
+          </div>
+        </Container>
+      </div>
     </div>
   );
 };
