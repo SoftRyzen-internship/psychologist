@@ -20,11 +20,7 @@ const ConsultationsPage = props => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <PersonalConsultationsView data={props.individual} />
-      <OnlineConsultationView
-        data={props.online}
-        bluesection={props.blue}
-        mysection={props.online}
-      />
+      <OnlineConsultationView data={props.online} />
       <GetPersonalConsultView data={props.requirements} />
       <ConsultationFAQComponent
         data={props.faq1}

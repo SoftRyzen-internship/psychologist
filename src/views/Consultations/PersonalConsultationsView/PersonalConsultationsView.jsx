@@ -18,6 +18,7 @@ export const PersonalConsultationsView = ({ data }) => {
               alt="Пісочний годинник"
               width={218}
               height={89}
+              loading="eager"
             />
             <ReactMarkdown>{data.format}</ReactMarkdown>
           </div>
