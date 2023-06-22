@@ -82,6 +82,10 @@
   margin-bottom: 16px;
 }
 
+.listMasters li:last-child {
+  margin-bottom: 0;
+}
+
 .listMasters li::before {
   position: absolute;
   left: -40px;
@@ -202,6 +206,7 @@
 
   .listMasters li {
     width: 384px;
+    margin-bottom: 0;
     font-size: 20px;
     line-height: 1.4;
   }

@@ -7,6 +7,7 @@ import {
   OffsetImageBorder,
   ModalButton,
 } from '@/components';
+import { convertImage, toBase64 } from 'utils/blurDataURL';
 import { TrainingsList } from './TrainingsList';
 import * as st from './HomeTrainings.module.css';
 
@@ -16,9 +17,7 @@ export const HomeTrainings = ({ trainings }) => {
       <Container>
         <div className={st.descr}>
           <SectionTitle title={trainings.heading} centered />
-          <ReactMarkdown className={st.variant}>
-            {trainings.variantFirst}
-          </ReactMarkdown>
+          <p className={st.variant}>{trainings.variantFirst}</p>
           <TrainingsList />
           <div className={st.contentWrapper}>
             <OffsetImageBorder className={st.imageBorder}>
@@ -30,12 +29,14 @@ export const HomeTrainings = ({ trainings }) => {
                 width={308}
                 height={345}
                 quality={100}
+                placeholder="blur"
+                blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                  convertImage(220, 392),
+                )}`}
               />
             </OffsetImageBorder>
             <div>
-              <ReactMarkdown className={st.variant}>
-                {trainings.variantSecond}
-              </ReactMarkdown>
+              <p className={st.variant}>{trainings.variantSecond}</p>
               <ReactMarkdown className={st.listMasters}>
                 {trainings.content}
               </ReactMarkdown>
