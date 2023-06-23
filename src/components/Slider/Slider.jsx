@@ -10,16 +10,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import s from './Slider.module.css';
 
-const Hydrated = ({ children }) => {
-  const [hydration, setHydration] = useState(false);
-
-  useEffect(() => {
-    setHydration(true);
-  }, []);
-
-  return hydration ? children : <Spinner />;
-};
-
 export const Slider = ({ allNews }) => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const isDesktop = useMediaQuery({ minWidth: 1280 });
@@ -36,63 +26,62 @@ export const Slider = ({ allNews }) => {
     if (isDesktop) setShowDesktopButtons(true);
     else setShowDesktopButtons(false);
   }, [isMobile, isDesktop]);
-  
+
   const pagination = {
     clickable: true,
     dynamicBullets: true,
   };
   return (
     <div ref={ref}>
-      {inView && (
-        <Hydrated>
-          <Swiper
-            // wrapperClass="news-swiper-wrapper"
-            modules={[Pagination, Mousewheel, Keyboard]}
-            pagination={showPagination ? pagination : false}
-            mousewheel={true}
-            keyboard={true}
-            rewind={true}
-            spaceBetween={32}
-            lazy={{
-              enabled: true,
-              loadPrevNext: true,
-              loadPrevNextAmount: 1,
-              loadOnTransitionStart: true,
-            }}
-            breakpoints={{
-              480: {
-                slidesPerView: 1,
-              },
-              768: {
-                slidesPerView: 1,
-              },
-  
-              1280: {
-                slidesPerView: 2,
-              },
-            }}
+      {inView ? (
+        <Swiper
+          modules={[Pagination, Mousewheel, Keyboard]}
+          pagination={showPagination ? pagination : false}
+          mousewheel={true}
+          keyboard={true}
+          rewind={true}
+          spaceBetween={32}
+          lazy={{
+            enabled: true,
+            loadPrevNext: true,
+            loadPrevNextAmount: 1,
+            loadOnTransitionStart: true,
+          }}
+          breakpoints={{
+            480: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 1,
+            },
+
+            1280: {
+              slidesPerView: 2,
+            },
+          }}
+        >
+          {allNews.map(newsContent => (
+            <SwiperSlide key={newsContent.id}>
+              <NewsCard
+                image={newsContent.image}
+                title={newsContent.title}
+                text={newsContent.text}
+              />
+            </SwiperSlide>
+          ))}
+          <div
+            className={
+              showDesktopButtons
+                ? s.swiperSlideButtonsDesktop
+                : s.swiperSlideButtons
+            }
           >
-            {allNews.map(newsContent => (
-              <SwiperSlide key={newsContent.id}>
-                <NewsCard
-                  image={newsContent.image}
-                  title={newsContent.title}
-                  text={newsContent.text}
-                />
-              </SwiperSlide>
-            ))}
-            <div
-              className={
-                showDesktopButtons
-                  ? s.swiperSlideButtonsDesktop
-                  : s.swiperSlideButtons
-              }
-            >
-              <SlideButton prev desktop={showDesktopButtons} />
-              <SlideButton next desktop={showDesktopButtons} />
-            </div>
-          </Swiper>
-        </Hydrated>
+            <SlideButton prev desktop={showDesktopButtons} />
+            <SlideButton next desktop={showDesktopButtons} />
+          </div>
+        </Swiper>
+      ) : (
+        <Spinner contain={true} />
       )}
     </div>
   );

@@ -13,9 +13,9 @@ export const NewsCard = ({ image, title, text }) => {
       <Image
         src={url}
         alt={alt}
-        width={1200}
-        height={748}
-        unoptimized={true}
+        width={592}
+        height={396}
+        quality={100}
         className={s.imageStyle}
         placeholder={blur}
         blurDataURL={`data:image/svg+xml;base64,${toBase64(

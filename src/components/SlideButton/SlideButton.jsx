@@ -3,7 +3,11 @@ import { useSwiper } from 'swiper/react';
 import s from './SlideButton.module.css';
 import classNames from 'classnames';
 
-export const SlideButton = ({ prev = false, next = false, desktop = false }) => {
+export const SlideButton = ({
+  prev = false,
+  next = false,
+  desktop = false,
+}) => {
   const swiper = useSwiper();
 
   return (

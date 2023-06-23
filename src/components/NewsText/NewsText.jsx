@@ -5,10 +5,7 @@ import s from './NewsText.module.css';
 export const NewsText = ({ newsTextProp, section = false }) => {
   return (
     <div className={section ? s.newsTextSection : s.newsText}>
-      <ReactMarkdown
-        components={{a: 'span'}}
-        linkTarget="_blank"
-      >
+      <ReactMarkdown components={{ a: 'span' }} linkTarget="_blank">
         {newsTextProp}
       </ReactMarkdown>
     </div>

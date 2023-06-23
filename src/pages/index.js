@@ -1,7 +1,14 @@
 import Head from 'next/head';
 import { getData } from '@/lib/getData';
 import { folderPaths } from '@/utils/folderPaths';
-import { FixedSocials, HomeHero, Consult, HomeNews, StudyView, WhatIDo } from '@/views';
+import {
+  FixedSocials,
+  HomeHero,
+  Consult,
+  HomeNews,
+  StudyView,
+  WhatIDo,
+} from '@/views';
 import { getNewsList } from '@/lib/request';
 import PropTypes from 'prop-types';
 
