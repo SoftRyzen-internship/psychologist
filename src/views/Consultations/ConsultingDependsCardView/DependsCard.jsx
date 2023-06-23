@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import { Container, ModalDependsCards, SectionTitle } from '@/components';
+import { convertImage, toBase64 } from '@/utils/blurDataURL';
 import s from './DependsCard.module.css';
 
 export const DependsCard = ({ data }) => {
@@ -49,6 +50,10 @@ export const DependsCard = ({ data }) => {
               width={592}
               height={396}
               quality={100}
+              placeholder="blur"
+              blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                convertImage(220, 392),
+              )}`}
             />
           </div>
         </Container>
