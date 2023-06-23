@@ -27,7 +27,7 @@ export const Header = () => {
       unlock(targetElement);
       clearBodyLocks();
     }
-  }, [isMenuOpen]);
+  }, [isMenuOpen, targetElement]);
 
   return (
     <header className={st.header}>
