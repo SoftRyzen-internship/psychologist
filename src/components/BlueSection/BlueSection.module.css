@@ -1,0 +1,194 @@
+/**
+  |============================
+  | Online consultations
+  |============================
+*/
+
+.personalConsSection {
+  background-image: url(/images/consultations_GREY-Mobilebg.png);
+  background-size: cover;
+  background-color: #e2eaf3;
+
+  margin-top: 60px;
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+.personalConsSection p,
+.mainPageSection p {
+  font-style: normal !important;
+  font-weight: 700 !important;
+  font-size: 18px;
+  line-height: calc(28 / 18);
+
+  color: var(--plaska-color) !important;
+
+  text-align: center;
+
+  width: 320px;
+  margin: 0 auto;
+}
+
+/**
+  |============================
+  | Main page
+  |============================
+*/
+
+.mainPageSection {
+  background-image: url(/images/consultations_reusable-mainMobile.png);
+  background-size: cover;
+  background-color: #e2eaf3;
+
+  margin-top: 60px;
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+/**
+  |============================
+  | 768
+  |============================
+*/
+
+@media screen and (min-width: 768px) {
+  .personalConsSection {
+    background-image: url(/images/consultations_GREY-Tabletbg.png);
+    margin-top: 80px;
+  }
+
+  .element {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+  }
+
+  .personalConsSection p,
+  .mainPageSection p {
+    font-size: 20px !important;
+    line-height: calc(28 / 20) !important;
+  }
+
+  .personalConsSection p {
+    width: 592px;
+  }
+
+  .mainPageSection p {
+    width: 576px;
+  }
+
+  .mainPageSection {
+    background-image: url(/images/consultations_reusable-mainTablet.png);
+    margin-top: 80px;
+  }
+
+  .reusableSection {
+    background-image: url(/icons/TabletConsult.svg);
+  }
+
+  .reusableSection2 {
+    background-image: url(/icons/TabletTime.svg);
+  }
+
+  .reusableSection2 > div > div:first-of-type {
+    gap: 32px;
+  }
+
+  .universalWrapper {
+    display: flex;
+    gap: 48px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .universalWrapper p {
+    font-size: 18px;
+    line-height: calc(28 / 18);
+
+    width: 378px;
+  }
+
+  .reusableSection2 > div > .universalWrapper > div:nth-of-type(2) p {
+    width: 336px;
+  }
+
+  .universalWrapper > p:first-of-type {
+    margin-bottom: 32px;
+  }
+}
+
+/**
+  |============================
+  | 1280
+  |============================
+*/
+
+@media screen and (min-width: 1280px) {
+  .personalConsSection {
+    background-image: url(/images/consultations_GREY-PCbg.png);
+    padding-top: 48px;
+    padding-bottom: 48px;
+    margin-top: 100px;
+  }
+
+  .personalConsSection p,
+  .mainPageSection p {
+    font-size: 24px !important;
+    line-height: calc(32 / 24) !important;
+  }
+
+  .personalConsSection p {
+    width: 1112px;
+  }
+
+  .mainPageSection p {
+    width: 904px;
+  }
+
+  .mainPageSection {
+    background-image: url(/images/consultations_reusable-mainPC.png);
+    padding-top: 48px;
+    padding-bottom: 48px;
+    margin-top: 100px;
+  }
+
+  .reusableSection {
+    background-image: url(/icons/PCConsult.svg);
+  }
+
+  .universalWrapper > div:first-of-type {
+    padding-left: 80px;
+    padding-top: 40px;
+  }
+
+  .reusableSection2 > div > .universalWrapper > div:nth-of-type(1) {
+    padding-left: 13px;
+    padding-top: 40px;
+  }
+
+  .reusableSection2 > div > .universalWrapper > div:nth-of-type(2) {
+    padding-right: 28px;
+  }
+
+  .universalWrapper {
+    gap: 0;
+  }
+
+  .universalWrapper p {
+    font-size: 20px;
+    line-height: calc(28 / 20);
+
+    width: 592px;
+  }
+
+  .reusableSection2 > div > .universalWrapper > div:nth-of-type(2) p {
+    width: 448px;
+  }
+
+  .reusableSection2 {
+    background-image: url(/icons/PCTime.svg);
+  }
+
+  .reusableSection2 > div > div:first-of-type {
+    gap: 104px;
+  }
+}

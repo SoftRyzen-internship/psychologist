@@ -1,0 +1,10 @@
+.fixed {
+  background-color: #2361ab;
+  padding: 32px 12px;
+  position: fixed;
+  top: calc(50% + 42px);
+  right: 0;
+  transform: translateY(-50%);
+  border-radius: 8px 0px 0px 8px;
+  z-index: 10;
+}

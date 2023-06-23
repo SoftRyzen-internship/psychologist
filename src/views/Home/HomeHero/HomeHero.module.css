@@ -1,0 +1,130 @@
+.section {
+  background: url('/images/home-hero-bg-mob-l.svg') left bottom no-repeat,
+    url('/images/home-hero-bg-mob-r.svg') right top no-repeat;
+  background-size: contain, 35%;
+  background-color: var(--bg2-color);
+  height: 100%;
+}
+
+.section > div {
+  position: relative;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.descr {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.intro {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--main-text-color);
+  /* width: 238px; */
+  margin-top: 24px;
+}
+
+.first,
+.second {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--main-text-color);
+  margin-top: 24px;
+}
+.first {
+  font-weight: 300;
+}
+.second {
+  font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    background: url('/images/home-hero-bg-tab-l.svg') left bottom no-repeat,
+      url('/images/home-hero-bg-tab-r.svg') right top no-repeat;
+    background-size: 45%, 27%;
+    background-color: var(--bg2-color);
+    padding-top: 62px;
+    height: 755px;
+  }
+  .image {
+    display: block;
+    width: 427px;
+    /* height: 742px; */
+    height: 692px;
+    position: absolute;
+    top: 0;
+    left: -102px;
+  }
+  .descr {
+    width: 375px;
+    /* margin-left: 329px; */
+    margin-left: auto;
+    padding-top: 69px;
+    /* padding-bottom: 15px; */
+  }
+  .intro {
+    font-size: 24px;
+    line-height: 1.33;
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  .first,
+  .second {
+    font-size: 18px;
+    line-height: 1.56;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section {
+    background: url('/images/home-hero-bg-l.svg') left bottom no-repeat,
+      url('/images/home-hero-bg-r.svg') right top no-repeat;
+    background-size: 40%, 28%;
+    background-color: var(--bg2-color);
+    /* width: 100vw; */
+    height: 100%;
+  }
+
+  .section :global .sectionTitleH1 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 36px;
+  }
+
+  .image {
+    width: 458px;
+    height: 734px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .descr {
+    width: 702px;
+    margin-left: 485px;
+    /* padding-top: 112px; */
+    padding-top: 155px;
+    padding-bottom: 62px;
+    /* margin-top: 36px; */
+  }
+  .intro {
+    font-size: 32px;
+    line-height: 1.13;
+    width: 100%;
+    /* margin-top: 36px; */
+  }
+
+  .first,
+  .second {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-top: 28px;
+  }
+}

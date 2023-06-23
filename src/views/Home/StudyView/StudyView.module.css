@@ -1,0 +1,171 @@
+.section h2 {
+  width: 265px;
+}
+
+.flexBox {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.mdContent {
+  margin-bottom: 40px;
+}
+
+.mdContent > p {
+  margin-bottom: 24px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.56;
+}
+
+.mdContent > p > strong {
+  font-weight: 600;
+}
+
+.mdContent > p + p {
+  margin-bottom: 24px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.mdContent ol {
+  padding-left: 35px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  list-style: none;
+  counter-reset: my-counter;
+}
+
+.mdContent li {
+  position: relative;
+  margin-bottom: 16px;
+  counter-increment: my-counter;
+}
+
+.mdContent li:last-child {
+  margin-bottom: 0;
+}
+
+.mdContent li::before {
+  position: absolute;
+  width: 31px;
+  left: -35px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  content: counter(my-counter) '. ';
+  font-family: var(--font-alegreya);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.33;
+  color: var(--accent-text-color);
+}
+
+.imgWrapper {
+  width: 85%;
+  max-width: 320px;
+  max-height: 367px;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .section h2 {
+    width: 574px;
+  }
+
+  .mdContent > p {
+    width: 629px;
+
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .mdContent > p + p {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .mdContent ol {
+    padding-left: 45px;
+    font-size: 18px;
+    line-height: 1.56;
+  }
+
+  .mdContent li::before {
+    position: absolute;
+    width: 36px;
+    left: -45px;
+
+    font-size: 32px;
+    line-height: 1.12;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section h2 {
+    width: 673px;
+  }
+
+  .flexBox {
+    flex-direction: row-reverse;
+    gap: 64px;
+  }
+
+  .flexBox > div:not(:last-child) {
+    margin-right: 37px;
+  }
+
+  .mdContent {
+    width: 555px;
+  }
+
+  .mdContent > p {
+    width: 555px;
+    margin-bottom: 36px;
+    font-size: 24px;
+    line-height: 1.33;
+  }
+
+  .mdContent > p + p {
+    width: 555px;
+    margin-bottom: 20px;
+  }
+
+  .mdContent ol {
+    padding-left: 49px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  .mdContent li:nth-child(1) {
+    width: 430px;
+  }
+
+  .mdContent li::before {
+    position: absolute;
+    width: 36px;
+    left: -49px;
+
+    font-size: 40px;
+    line-height: 1.2;
+  }
+
+  .imgWrapper {
+    width: 560px;
+    height: 608px;
+    max-width: 560px;
+    max-height: 608px;
+    margin: 0 auto;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .imgWrapper > img {
+    height: 608px;
+  }
+}

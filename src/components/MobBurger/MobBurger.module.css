@@ -1,0 +1,15 @@
+.burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .burger > img {
+    width: 36px;
+    height: 36px;
+  }
+}

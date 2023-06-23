@@ -1,0 +1,156 @@
+.imageWrapper {
+  width: auto;
+}
+
+.imageWrapper {
+  margin-top: 24px;
+}
+
+.section h2 {
+  width: 268px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767.98px) {
+  .imageWrapper img {
+    width: 100%;
+  }
+}
+
+.mdContent {
+  margin-bottom: 40px;
+}
+
+.mdContent ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  counter-reset: my-counter;
+}
+
+.mdContent li {
+  position: relative;
+  padding-left: 48px;
+}
+
+.mdContent li:before {
+  counter-increment: my-counter;
+  content: counter(my-counter);
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: center;
+
+  padding: 4px 12px 4px 13px;
+
+  background: #f2f8ff;
+  border: 1px solid #d0e2ff;
+  border-radius: 0px 16px;
+}
+
+.section p > strong {
+  font-weight: 600;
+}
+
+.mdContent li {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+}
+
+/**
+  |============================
+  | 768
+  |============================
+*/
+
+@media screen and (min-width: 768px) {
+  .mdContent li {
+    font-size: 18px;
+    line-height: calc(28 / 18);
+  }
+
+  .imageWrapper {
+    margin-top: 40px;
+  }
+
+  .imageWrapper {
+    width: 688px;
+  }
+
+  .imageWrapper img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .section h2 {
+    width: auto;
+  }
+
+  .mdContent li {
+    padding-left: 56px;
+  }
+
+  .mdContent li:nth-of-type(1),
+  .mdContent li:nth-of-type(2) {
+    height: 36px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/**
+  |============================
+  | 1280
+  |============================
+*/
+
+@media screen and (min-width: 1280px) {
+  .flexBox {
+    display: flex;
+    gap: 32px;
+  }
+
+  .mdContent {
+    width: 676px;
+  }
+
+  .mdContent li {
+    font-size: 20px;
+    line-height: calc(28 / 20);
+  }
+
+  .imageWrapper {
+    margin-top: 0;
+  }
+
+  .imageWrapper {
+    width: 472px;
+    height: 870px;
+  }
+
+  .section {
+    background-image: url('/icons/consultations-personalcons-vector_bg.svg');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+  }
+
+  .section h2 {
+    width: 824px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mdContent li {
+    padding-left: 60px;
+  }
+
+  .mdContent li:first-of-type,
+  .mdContent li:nth-of-type(2) {
+    height: 40px;
+    display: flex;
+    align-items: center;
+  }
+}

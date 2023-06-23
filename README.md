@@ -52,3 +52,99 @@ from the creators of Next.js.
 Check out our
 [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more
 details.
+
+## Trainings section component.
+
+You can use this component in Views as frame for building sections on Trainings
+Page
+
+### How to use
+
+Component requires markdown (you can find example here)
+
+```bash
+src/content/trainings
+```
+
+**Props:**
+
+- markdown - markdown in .md format. Example you can find here:
+
+```bash
+src/content/trainings
+```
+
+- img - image that you wanna to use in section. It's important to transfer image
+  properties in wright format. You can put your images here:
+
+```bash
+src/utils/imgProperties.js
+```
+
+- isHeroSection - props for build Hero Section that can be used on mobile,
+  tablet and Desktop versions.
+- isTitleCentered - select is title must be centered in section.
+- specialTitle - props for cases when you need pass unique title for Hero
+  Section not from markdown (like title with &nbsp)
+
+**Here is some specific rules for imgProperties.js:**
+
+1.  If you wanna responsive image - then value of property (width> height -->
+    mobile, tablet, desktop) must be an empty string ('')
+2.  Path to image starts from public folder
+3.  Width and Height attributes must be in numerical format (example: TABLET:
+    499 <-- CORRECT;TABLET: '499px' <-- INCORRECT!)
+
+## ContactForm component.
+
+This is a reusable component with 3 validated fields. It's values are saved
+onChange in local storage and are set to default on submit.
+
+On form submit it's inputs values are sent via Telegram bot to Telegram group.
+
+On sending result in Form div it renders ThankYou or ErrorNote components on
+success / error respectfully.
+
+Uses npm 'react-hook-form' and 'react-hook-form-persist'.
+
+Component can be found here
+
+```bash
+src/components/ContactForm
+```
+
+### ThankYou component
+
+can be found here
+
+```bash
+src/components/ThankYou
+```
+
+### TErrorNote component
+
+can be found here
+
+```bash
+src/components/ErrorNote
+```
+
+### Send values to Telegram function
+
+uses .env keys:
+
+NEXT_PUBLIC_TELEGRAM_BOT_TOKEN NEXT_PUBLIC_TELEGRAM_CHAT_ID
+
+and can be found here
+
+```bash
+src/utils/sendFormDataToChat.js
+```
+
+### Form inputs validation schema (uses Yup)
+
+can be found here
+
+```bash
+src/utils/contactValidationSchema.js
+```

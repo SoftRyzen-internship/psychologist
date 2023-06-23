@@ -1,0 +1,35 @@
+.slidePrevBtn {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: url('/icons/slide-prev-btn.svg');
+}
+
+.slideNextBtn {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: url('/icons/slide-next-btn.svg');
+}
+
+.desktopPrev {
+  background-position: 11.49%;
+}
+.desktopNext {
+  background-position: 88.51%;
+}
+
+.desktopPrev,
+.desktopNext {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255, 50%);
+  transition: var(--fast-btn-animation);
+}
+
+.desktopPrev:hover,
+.desktopNext:hover {
+  background-color: rgb(255, 255, 255, 80%);
+}

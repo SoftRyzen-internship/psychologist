@@ -1,8 +1,17 @@
+import PropTypes from 'prop-types';
 import Head from 'next/head';
-import ReactMarkdown from 'react-markdown';
-import { getConsultationsData } from '@/lib/consults';
+import { getData } from '@/lib/getData';
+import { folderPaths } from '@/utils/folderPaths';
+import { ConsultationFAQComponent } from '@/components';
+import {
+  GetPersonalConsultView,
+  PersonalConsultationMethodView,
+  OnlineConsultationView,
+  DependsCard,
+  PersonalConsultationsView,
+} from '@/views';
 
-const ConsultationsPage = ({ individual, online, requirements, factors }) => {
+const ConsultationsPage = props => {
   return (
     <>
       <Head>
@@ -10,46 +19,99 @@ const ConsultationsPage = ({ individual, online, requirements, factors }) => {
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-
-      <div>
-        <ReactMarkdown>{requirements.description}</ReactMarkdown>
-        <ReactMarkdown>{online.list}</ReactMarkdown>
-        <ReactMarkdown>{online.description}</ReactMarkdown>
-
-        <ul style={{ display: 'flex' }}>
-          {individual.list.map(({ id, content }) => {
-            return (
-              <li key={id}>
-                <ReactMarkdown>{content}</ReactMarkdown>
-              </li>
-            );
-          })}
-        </ul>
-
-        <h2>CARDS</h2>
-        <ul style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
-          {factors.cards.map(({ title, content }, index) => (
-            <li key={index}>
-              <h3>{title}</h3>
-              <span>
-                <ReactMarkdown>{content}</ReactMarkdown>
-              </span>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <PersonalConsultationsView data={props.individual} />
+      <OnlineConsultationView data={props.online} />
+      <GetPersonalConsultView data={props.requirements} />
+      <ConsultationFAQComponent
+        data={props.faq1}
+        className={{ section: 'reusableSection', div: 'containerX' }}
+      />
+      <PersonalConsultationMethodView data={props.method} />
+      <ConsultationFAQComponent
+        data={props.faq2}
+        className={{ section: 'reusableSection2', div: 'containerX' }}
+      />
+      <DependsCard data={props.factors} />
     </>
   );
 };
 
 export const getStaticProps = async () => {
-  const consults = getConsultationsData();
+  const consults = getData(folderPaths.CONSULTATIONS);
 
-  const { individual, online, requirements, faq1, factors, method } = consults;
+  if (!consults) {
+    return {
+      notFound: true,
+    };
+  }
+
+  const {
+    individual,
+    online,
+    requirements,
+    faq1,
+    faq2,
+    factors,
+    method,
+    blue,
+  } = consults;
 
   return {
-    props: { individual, online, requirements, faq1, factors, method },
+    props: {
+      individual,
+      online,
+      requirements,
+      faq1,
+      faq2,
+      factors,
+      method,
+      blue,
+    },
   };
 };
 
 export default ConsultationsPage;
+
+ConsultationsPage.propTypes = {
+  faq1: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+  }).isRequired,
+  faq2: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+  }).isRequired,
+  requirements: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+  }).isRequired,
+  method: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    description: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        content: PropTypes.string.isRequired,
+      }),
+    ).isRequired,
+  }).isRequired,
+  online: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    list: PropTypes.string.isRequired,
+    benefits: PropTypes.string.isRequired,
+  }).isRequired,
+  blue: PropTypes.shape({
+    benefits: PropTypes.string.isRequired,
+  }),
+  individual: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    format: PropTypes.string.isRequired,
+    requests: PropTypes.string.isRequired,
+    list: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        content: PropTypes.string.isRequired,
+      }),
+    ).isRequired,
+  }).isRequired,
+};

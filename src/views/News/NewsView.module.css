@@ -1,0 +1,68 @@
+.aspectRatio {
+  aspect-ratio: 1200 / 748;
+  margin-bottom: 6px;
+}
+
+.newsInstance:not(:last-child) {
+  padding-top: 60px;
+  padding-bottom: 0;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.newsBackground {
+  background: var(--bg2-color) url('/icons/news-bg-image-mobile.svg') no-repeat;
+  background-position: top right;
+}
+
+.imageStyle {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .aspectRatio {
+    margin-bottom: 8px;
+  }
+  .newsInstance:not(:last-child) {
+    padding-top: 80px;
+    padding-bottom: 0;
+  }
+  .newsBackground {
+    background: var(--bg2-color) url('/icons/news-bg-image-tablet.svg')
+      no-repeat;
+    background-position: top right;
+  }
+  .imageStyle {
+    border-radius: 16px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .newsBackground {
+    background: var(--white-color) url('/icons/news-bg-image-desktop.svg')
+      no-repeat;
+    background-position: top right;
+  }
+  .newsInstance:not(:last-child) {
+    padding-top: 100px;
+    padding-bottom: 0;
+  }
+  .imageStyle {
+    border-radius: 20px;
+  }
+}
