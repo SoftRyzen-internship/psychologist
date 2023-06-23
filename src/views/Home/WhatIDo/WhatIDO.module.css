@@ -75,6 +75,12 @@
 }
 
 @media screen and (min-width: 1280px) {
+  .section {
+    background-image: url('/icons/bg-flower-what-I-do.svg');
+    background-repeat: no-repeat;
+    background-position: right top;
+  }
+
   .flexBox {
     display: flex;
     gap: 20px;

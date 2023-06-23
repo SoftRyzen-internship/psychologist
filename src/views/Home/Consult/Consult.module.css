@@ -2,6 +2,11 @@
   background-color: var(--bg2-color);
 }
 
+/* .section + section {
+  background: url(/images/home-requests-bg.svg) top right no-repeat;
+  background-size: 22%;
+} */
+
 .section :global .sectionTitleH2 {
   width: 203px;
   text-align: left;

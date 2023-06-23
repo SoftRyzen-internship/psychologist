@@ -7,7 +7,8 @@ import {
   GetPersonalConsultView,
   PersonalConsultationMethodView,
   OnlineConsultationView,
-  ReusableBlueView,
+  DependsCard,
+  PersonalConsultationsView,
 } from '@/views';
 
 const ConsultationsPage = props => {
@@ -18,25 +19,23 @@ const ConsultationsPage = props => {
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      {/* <ConsultationFAQComponent
+      <PersonalConsultationsView data={props.individual} />
+      <OnlineConsultationView
+        data={props.online}
+        bluesection={props.blue}
+        mysection={props.online}
+      />
+      <GetPersonalConsultView data={props.requirements} />
+      <ConsultationFAQComponent
         data={props.faq1}
         className={{ section: 'reusableSection', div: 'containerX' }}
-      /> */}
+      />
+      <PersonalConsultationMethodView data={props.method} />
       <ConsultationFAQComponent
         data={props.faq2}
         className={{ section: 'reusableSection2', div: 'containerX' }}
       />
-      {/* <ReusableBlueView
-        data={props.blue}
-        className={{ section: 'mainPageSection', div: 'containerX' }}
-      /> */}
-      <ReusableBlueView
-        data={props.online}
-        className={{ section: 'personalConsSection', div: 'container' }}
-      />
-      <GetPersonalConsultView data={props.requirements} />
-      <PersonalConsultationMethodView data={props.method} />
-      <OnlineConsultationView data={props.online} />
+      <DependsCard data={props.factors} />
     </>
   );
 };

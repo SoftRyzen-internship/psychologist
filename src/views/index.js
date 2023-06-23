@@ -1,8 +1,8 @@
 // Consultations View
+export * from './Consultations/ConsultingDependsCardView/DependsCard';
 export * from './Consultations/PersonalConsultationsView/PersonalConsultationsView';
 export * from './Consultations/OnlineConsultationView/OnlineConsultationsView';
 export * from './Consultations/PersonalConsultationMethodView/PersonalConsultationMethod';
-export * from './UniversalView/ReusableBlueView';
 export * from './Consultations/GetPersonalConsultView/GetPersonalConsultView';
 // -------------
 
@@ -29,4 +29,6 @@ export * from './News/NewsView';
 export * from './Home/WhatIDo/WhatIDo';
 export * from './Home/StudyView/StudyView';
 export * from './Home/Consult/Consult';
+export * from './Home/Requests/Requests';
+export * from './Home/HomeTrainings/HomeTrainings';
 // -------------

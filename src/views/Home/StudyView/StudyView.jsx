@@ -15,7 +15,7 @@ export const StudyView = ({ study }) => {
           src="/icons/study.svg"
           width={560}
           height={608}
-          alt="Навчання для психологів картинка"
+          alt="Контурне зображення процесу розплутування клубка тривожних думок"
         />
       </div>
     </ReusableSection>

@@ -16,7 +16,7 @@ export const NavBar = ({ setIsMenuOpen, footerVariant = false }) => {
     }
   };
   return (
-    <nav className={!footerVariant && st.nav}>
+    <nav className={footerVariant ? '' : st.nav}>
       <ul className={footerVariant ? fs.navList : st.list}>
         {navPaths?.map(item => {
           return (
