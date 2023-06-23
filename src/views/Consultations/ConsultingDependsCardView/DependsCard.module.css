@@ -73,54 +73,54 @@
 
 .cardWrapper:nth-child(1) {
   background-position: top;
-  background-image: url('/icons/firstLiMobile.svg');
+  background-image: url(/icons/firstLIMobile.svg);
   background-repeat: no-repeat;
 }
 
 .cardWrapper:nth-child(2) {
   background-position: bottom;
-  background-image: url('/icons/secondLiMobile.svg');
+  background-image: url(/icons/secondLiMobile.svg);
   background-repeat: no-repeat;
 }
 
 .cardWrapper:nth-child(3) {
   background-position: top right;
-  background-image: url('/icons/thirdLiMobile.svg');
+  background-image: url(/icons/thirdLiMobile.svg);
   background-repeat: no-repeat;
 }
 
 .cardWrapper:nth-child(4) {
   background-position: bottom;
-  background-image: url('/icons/fourthLiMobile.svg');
+  background-image: url(/icons/fourthLiMobile.svg);
   background-repeat: no-repeat;
 }
 
 .cardWrapper:nth-child(5) {
   background-position: top;
-  background-image: url('/icons/fifthLiMobile.svg');
+  background-image: url(/icons/fifthLiMobile.svg);
   background-repeat: no-repeat;
 }
 
 @media screen and (min-width: 768px) {
   .cardWrapper:nth-child(1) {
-    background-image: url('/icons/firstLiTablet.svg');
+    background-image: url(/icons/firstLiTablet.svg);
   }
 
   .cardWrapper:nth-child(2) {
-    background-image: url('/icons/secondLiTablet.svg');
+    background-image: url(/icons/secondLiTablet.svg);
   }
 
   .cardWrapper:nth-child(3) {
-    background-image: url('/icons/thirdLiTablet.svg');
+    background-image: url(/icons/thirdLiTablet.svg);
   }
 
   .cardWrapper:nth-child(4) {
-    background-image: url('/icons/fourthLiTablet.svg');
+    background-image: url(/icons/fourthLiTablet.svg);
   }
 
   .cardWrapper:nth-child(5) {
     background-position: top left;
-    background-image: url('/icons/fifthLiTablet.svg');
+    background-image: url(/icons/fifthLiTablet.svg);
   }
 }
 
