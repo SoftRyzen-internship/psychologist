@@ -17,8 +17,8 @@ const NewsPage = ({ allNews }) => {
 };
 
 export async function getStaticProps() {
-  const { allNews } = await getNewsList();
-  if (!allNews) {
+  const { news } = await getNewsList();
+  if (!news) {
     return {
       notFound: true,
     };
@@ -26,7 +26,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      allNews,
+      allNews: news.news,
     },
   };
 }

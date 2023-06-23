@@ -48,12 +48,12 @@ export default function Home({
 }
 
 export async function getStaticProps() {
-  const { allNews } = await getNewsList();
+  const { news } = await getNewsList();
   const { HOME } = folderPaths;
   const homeData = getData(HOME);
   const { hero, whatIDo, study, requests, blue, trainings } = homeData;
 
-  if (!allNews) {
+  if (!news) {
     return {
       notFound: true,
     };
@@ -67,7 +67,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      allNews,
+      allNews: news.news,
       hero,
       whatIDo,
       study,
