@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { OffsetImageBorder, ReusableSection } from '@/components';
+import { convertImage, toBase64 } from '@/utils/blurDataURL';
 import s from './GetPersonalConsultView.module.css';
 
 export const GetPersonalConsultView = ({ data }) => {
@@ -31,6 +32,10 @@ export const GetPersonalConsultView = ({ data }) => {
             height={386}
             alt="Психолог на консультації"
             quality={100}
+            placeholder="blur"
+            blurDataURL={`data:image/svg+xml;base64,${toBase64(
+              convertImage(220, 392),
+            )}`}
           />
         )}
         {isTabletShow && !isDesktopShow && (
@@ -40,6 +45,10 @@ export const GetPersonalConsultView = ({ data }) => {
             height={859}
             alt="Психолог на консультації"
             quality={100}
+            placeholder="blur"
+            blurDataURL={`data:image/svg+xml;base64,${toBase64(
+              convertImage(220, 392),
+            )}`}
           />
         )}
         {isDesktopShow && (
@@ -49,6 +58,10 @@ export const GetPersonalConsultView = ({ data }) => {
             height={870}
             alt="Психолог на консультації"
             quality={100}
+            placeholder="blur"
+            blurDataURL={`data:image/svg+xml;base64,${toBase64(
+              convertImage(220, 392),
+            )}`}
           />
         )}
       </OffsetImageBorder>
