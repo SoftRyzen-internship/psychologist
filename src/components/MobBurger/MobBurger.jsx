@@ -12,17 +12,17 @@ export const MobBurger = ({ setIsMenuOpen, isMenuOpen }) => {
         {!isMenuOpen && (
           <Image
             src="/icons/menu.svg"
-            alt="mobile menu"
-            width="36"
-            height="36"
+            alt="мобільне меню"
+            width="24"
+            height="24"
           />
         )}
         {isMenuOpen && (
           <Image
             src="/icons/close.svg"
-            alt="mobile menu"
-            width="36"
-            height="36"
+            alt="закрити мобільне меню"
+            width="24"
+            height="24"
           />
         )}
       </button>

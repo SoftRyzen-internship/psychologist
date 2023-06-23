@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
+import { lock, unlock, clearBodyLocks } from 'tua-body-scroll-lock';
 import { Container, Logo, NavBar, MobBurger, MobileMenu } from '@/components';
 import * as st from './Header.module.css';
 
@@ -18,6 +19,14 @@ export const Header = () => {
       setIsMenuRendered(true);
     }
   }, [isDesktop]);
+
+  useEffect(() => {
+    if (isMenuOpen) lock();
+    else {
+      unlock();
+      clearBodyLocks();
+    }
+  }, [isMenuOpen]);
 
   return (
     <header className={st.header}>
