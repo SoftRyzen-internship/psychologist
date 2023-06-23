@@ -2,36 +2,26 @@ import Head from 'next/head';
 import { getData } from '@/lib/getData';
 import { folderPaths } from '@/utils/folderPaths';
 import {
-<<<<<<< HEAD
-  FixedSocials,
-  HomeHero,
-  Consult,
-  HomeNews,
-  StudyView,
-=======
   HomeHero,
   Consult,
   Requests,
   StudyView,
   HomeTrainings,
->>>>>>> c4331cb744eb96dd0ccdc3e524122db90b54d44e
   WhatIDo,
+  HomeNews,
 } from '@/views';
 import { getNewsList } from '@/lib/request';
 import PropTypes from 'prop-types';
 
-<<<<<<< HEAD
-export default function Home({ hero, allNews, whatIDo, study }) {
-=======
 export default function Home({
   hero,
+  allNews,
   whatIDo,
   study,
   requests,
   blue,
   trainings,
 }) {
->>>>>>> c4331cb744eb96dd0ccdc3e524122db90b54d44e
   return (
     <>
       <Head>
@@ -52,11 +42,7 @@ export default function Home({
 
       <StudyView study={study} />
 
-      <StudyView study={study} />
-
       <HomeNews allNews={allNews} />
-
-      <FixedSocials />
     </>
   );
 }
@@ -96,7 +82,9 @@ Home.propTypes = {
   hero: PropTypes.object.isRequired,
   whatIDo: PropTypes.object.isRequired,
   study: PropTypes.object.isRequired,
-<<<<<<< HEAD
+  requests: PropTypes.object.isRequired,
+  blue: PropTypes.object.isRequired,
+  trainings: PropTypes.object.isRequired,
   allNews: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
@@ -109,9 +97,4 @@ Home.propTypes = {
       _publishedAt: PropTypes.string.isRequired,
     }),
   ),
-=======
-  requests: PropTypes.object.isRequired,
-  blue: PropTypes.object.isRequired,
-  trainings: PropTypes.object.isRequired,
->>>>>>> c4331cb744eb96dd0ccdc3e524122db90b54d44e
 };
