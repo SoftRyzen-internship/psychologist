@@ -5,7 +5,7 @@ import * as st from './MobileMenu.module.css';
 export const MobileMenu = ({ isMenuOpen, setIsMenuOpen }) => {
   const wrapStat = isMenuOpen ? st.wrapperMenuOpen : st.wrapper;
   return (
-    <div className={wrapStat}>
+    <div className={wrapStat} id="mobile">
       <div className={st.transparentOverlay}>
         <Container className={st.menu}>
           <NavBar setIsMenuOpen={setIsMenuOpen} />
