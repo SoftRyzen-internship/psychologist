@@ -224,8 +224,11 @@
   }
 
   .image {
-    width: 100%;
-    height: 100%;
+    width: 592px;
+    height: auto;
+    position: absolute;
+    right: 0;
+    bottom: 0;
   }
 
   .cardBox {
@@ -235,10 +238,15 @@
 
   .cardWrapper:last-of-type {
     margin-bottom: 0;
+    margin: 0;
   }
 
   .cardWrapper p {
     font-size: 20px;
     line-height: calc(28 / 20);
+  }
+
+  .contentAbsolute {
+    position: relative;
   }
 }

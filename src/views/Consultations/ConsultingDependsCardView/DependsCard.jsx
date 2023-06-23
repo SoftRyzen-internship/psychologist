@@ -21,7 +21,7 @@ export const DependsCard = ({ data }) => {
       <section>
         <Container>
           <SectionTitle title={data.heading} />
-          <div>
+          <div className={s.contentAbsolute}>
             <ul className={s.cardBox}>
               {data.cards.map((item, i) => (
                 <li className={s.cardWrapper} key={i}>
@@ -41,17 +41,15 @@ export const DependsCard = ({ data }) => {
                   )}
                 </li>
               ))}
-              <li key={6}>
-                <Image
-                  className={s.image}
-                  src="/images/consultation_modal-author.jpg"
-                  alt="Юлія в процесі консультації"
-                  width={592}
-                  height={396}
-                  quality={100}
-                />
-              </li>
             </ul>
+            <Image
+              className={s.image}
+              src="/images/consultation_modal-author.jpg"
+              alt="Юлія в процесі консультації"
+              width={592}
+              height={396}
+              quality={100}
+            />
           </div>
         </Container>
       </section>
