@@ -10,6 +10,9 @@
   flex-direction: column;
   align-items: center;
 }
+.footerWrapper > ul {
+  margin-bottom: 29px;
+}
 .logo {
   width: 69px;
   height: 46px;
