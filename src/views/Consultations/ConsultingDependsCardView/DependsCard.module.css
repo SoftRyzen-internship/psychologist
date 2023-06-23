@@ -73,7 +73,7 @@
 
 .cardWrapper:nth-child(1) {
   background-position: top;
-  background-image: url(/icons/firstLIMobile.svg);
+  background-image: url('/icons/firstMobile.svg');
   background-repeat: no-repeat;
 }
 
