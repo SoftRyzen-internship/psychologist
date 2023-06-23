@@ -1,0 +1,39 @@
+.swiperSlideButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 164px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .swiperSlideButtons {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    z-index: 10;
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .swiperSlideButtons {
+    position: absolute;
+    top: calc(100% - 36px);
+    right: 0;
+    width: 97px;
+    z-index: 10;
+    cursor: pointer;
+  }
+
+  .swiperSlideButtonsDesktop {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 26%;
+    left: 2.3%;
+    right: 0;
+    width: 1160px;
+    z-index: 10;
+    cursor: pointer;
+  }
+}

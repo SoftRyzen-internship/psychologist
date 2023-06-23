@@ -24,6 +24,15 @@
   --fast-svg-animation: fill 300ms ease;
   --consult-border-color: #d0e2ff;
   --consult-bg-color: #e4f0ff;
+
+  --swiper-pagination-color: #a3a9b2;
+  --swiper-pagination-bullet-width: 8px;
+  --swiper-pagination-bullet-height: 8px;
+  --swiper-pagination-bullet-inactive-color: #d9d9d9;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 6px;
+  --swiper-pagination-top: auto;
+  --swiper-pagination-bottom: 13px;
 }
 
 * {
@@ -185,6 +194,11 @@ section {
     font-size: 48px;
     line-height: calc(62 / 48);
   }
+  .swiper-wrapper {
+    width: 592px !important;
+    overflow-x: visible;
+    margin: 0 auto;
+  }
 
   .trainingSection {
     padding-top: 80px;
@@ -228,5 +242,8 @@ section {
 
     font-size: 20px;
     line-height: calc(28 / 20);
+  }
+  .swiper-wrapper {
+    width: 1280px !important;
   }
 }
