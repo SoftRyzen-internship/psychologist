@@ -9,26 +9,10 @@
   padding: 24px 20px 24px 20px;
 }
 
-@media screen and (min-width: 768px) {
-  .cardWrapper {
-    width: 592px;
-    margin: 0 auto;
-
-    padding: 40px;
-  }
-}
-
 .cardWrapper > p:first-of-type {
   width: 280px;
   height: 56px;
   margin-bottom: 16px;
-}
-
-@media screen and (min-width: 768px) {
-  .cardWrapper > p:first-of-type {
-    width: 354px;
-    height: 64px;
-  }
 }
 
 .cardWrapper p {
@@ -38,20 +22,6 @@
   line-height: calc(24 / 16);
 }
 
-@media screen and (min-width: 768px) {
-  .cardWrapper p {
-    font-size: 18px;
-    line-height: calc(28 / 18);
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .cardWrapper p {
-    font-size: 20px;
-    line-height: calc(28 / 20);
-  }
-}
-
 .cardWrapper > p:first-of-type {
   font-style: normal;
   font-weight: 600;
@@ -59,13 +29,6 @@
   line-height: calc(28 / 18);
 
   color: var(--accent-text-color);
-}
-
-@media screen and (min-width: 768px) {
-  .cardWrapper > p:first-of-type {
-    font-size: 24px;
-    line-height: calc(32 / 24);
-  }
 }
 
 .cardWrapper > button > p:last-of-type {
@@ -102,12 +65,6 @@
   margin-bottom: 24px;
 }
 
-@media screen and (min-width: 768px) {
-  .cardWrapper:last-of-type {
-    margin-bottom: 32px;
-  }
-}
-
 /**
   |============================
   | backgrounds
@@ -116,54 +73,54 @@
 
 .cardWrapper:nth-child(1) {
   background-position: top;
-  background-image: url('/icons/firstLiMobile.svg');
+  background-image: url('/icons/firstMobile.svg');
   background-repeat: no-repeat;
 }
 
 .cardWrapper:nth-child(2) {
   background-position: bottom;
-  background-image: url('/icons/secondLiMobile.svg');
+  background-image: url('/icons/secondMobile.svg');
   background-repeat: no-repeat;
 }
 
 .cardWrapper:nth-child(3) {
   background-position: top right;
-  background-image: url('/icons/thirdLiMobile.svg');
+  background-image: url('/icons/thirdMobile.svg');
   background-repeat: no-repeat;
 }
 
 .cardWrapper:nth-child(4) {
   background-position: bottom;
-  background-image: url('/icons/fourthLiMobile.svg');
+  background-image: url('/icons/fourthMobile.svg');
   background-repeat: no-repeat;
 }
 
 .cardWrapper:nth-child(5) {
   background-position: top;
-  background-image: url('/icons/fifthLiMobile.svg');
+  background-image: url('/icons/fifthMobile.svg');
   background-repeat: no-repeat;
 }
 
 @media screen and (min-width: 768px) {
   .cardWrapper:nth-child(1) {
-    background-image: url('/icons/firstLiTablet.svg');
+    background-image: url('/icons/firstTablet.svg');
   }
 
   .cardWrapper:nth-child(2) {
-    background-image: url('/icons/secondLiTablet.svg');
+    background-image: url('/icons/secondTablet.svg');
   }
 
   .cardWrapper:nth-child(3) {
-    background-image: url('/icons/thirdLiTablet.svg');
+    background-image: url('/icons/thirdTablet.svg');
   }
 
   .cardWrapper:nth-child(4) {
-    background-image: url('/icons/fourthLiTablet.svg');
+    background-image: url('/icons/fourthTablet.svg');
   }
 
   .cardWrapper:nth-child(5) {
     background-position: top left;
-    background-image: url('/icons/fifthLiTablet.svg');
+    background-image: url('/icons/fifthTablet.svg');
   }
 }
 
@@ -181,23 +138,6 @@
   list-style-type: none;
 }
 
-@media screen and (min-width: 768px) {
-  .cardBox {
-    gap: 32px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .cardBox {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .cardWrapper:last-of-type {
-    margin-bottom: 0;
-  }
-}
-
 .contentWrapper {
   margin-bottom: 16px;
 
@@ -211,13 +151,6 @@
   text-overflow: ellipsis;
 }
 
-@media screen and (min-width: 768px) {
-  .contentWrapper {
-    -webkit-line-clamp: 7;
-    width: 512px;
-  }
-}
-
 .image {
   display: block;
   height: auto;
@@ -229,10 +162,91 @@
   }
 }
 
+/**
+  |============================
+  | 768px
+  |============================
+*/
+
 @media screen and (min-width: 768px) {
+  .cardWrapper {
+    width: 592px;
+    margin: 0 auto;
+
+    padding: 40px 42px 36px 40px;
+  }
+
   .image {
     width: 592px;
     height: 396px;
     margin: 0 auto;
+  }
+
+  .contentWrapper {
+    -webkit-line-clamp: 7;
+    width: 512px;
+  }
+
+  .cardBox {
+    gap: 32px;
+  }
+
+  .cardWrapper:last-of-type {
+    margin-bottom: 32px;
+  }
+
+  .cardWrapper > p:first-of-type {
+    font-size: 24px;
+    line-height: calc(32 / 24);
+  }
+
+  .cardWrapper p {
+    font-size: 18px;
+    line-height: calc(28 / 18);
+  }
+
+  .cardWrapper > p:first-of-type {
+    width: 354px;
+    height: 64px;
+  }
+}
+
+/**
+  |============================
+  | 1280px
+  |============================
+*/
+
+@media screen and (min-width: 1280px) {
+  .cardBox > li:nth-child(6) {
+    width: 592px;
+    height: auto;
+  }
+
+  .image {
+    width: 592px;
+    height: auto;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .cardBox {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .cardWrapper:last-of-type {
+    margin-bottom: 0;
+    margin: 0;
+  }
+
+  .cardWrapper p {
+    font-size: 20px;
+    line-height: calc(28 / 20);
+  }
+
+  .contentAbsolute {
+    position: relative;
   }
 }

@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import { Container, SectionTitle, BlueSectionComponent } from '@/components';
 import s from './OnlineConsultationsView.module.css';
 
-export const OnlineConsultationView = ({ data, mysection }) => {
+export const OnlineConsultationView = ({ data }) => {
   const [isDesktopShow, setIsDesktopShow] = useState(false);
   const isDesktop = useMediaQuery({ minWidth: 1280 });
 
@@ -39,7 +39,7 @@ export const OnlineConsultationView = ({ data, mysection }) => {
           {!isDesktopShow && <ReactMarkdown>{data.list}</ReactMarkdown>}
         </Container>
         <BlueSectionComponent
-          data={mysection}
+          data={data}
           className={{ section: 'personalConsSection' }}
         />
       </section>
