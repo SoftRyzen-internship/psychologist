@@ -24,6 +24,12 @@
   transform: translate(-50%, -50%);
 }
 
+.contain .blobs {
+  position: static;
+  margin: 0 auto;
+  transform: translate(0, 0);
+}
+
 .blobs .blob-center {
   transform-style: preserve-3d;
   position: absolute;
