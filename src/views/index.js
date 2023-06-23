@@ -24,6 +24,8 @@ export * from './See-Far-CBT/EducationProgramView/EducationProgramView';
 // Home View
 export * from '../components/FixedSocials/FixedSocials';
 export * from './Home/HomeHero/HomeHero';
+export * from './Home/HomeNews/HomeNews';
+export * from './News/NewsView';
 export * from './Home/WhatIDo/WhatIDo';
 export * from './Home/StudyView/StudyView';
 export * from './Home/Consult/Consult';

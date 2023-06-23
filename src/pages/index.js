@@ -8,12 +8,14 @@ import {
   StudyView,
   HomeTrainings,
   WhatIDo,
+  HomeNews,
 } from '@/views';
 import { getNewsList } from '@/lib/request';
 import PropTypes from 'prop-types';
 
 export default function Home({
   hero,
+  allNews,
   whatIDo,
   study,
   requests,
@@ -39,6 +41,8 @@ export default function Home({
       <HomeTrainings trainings={trainings} />
 
       <StudyView study={study} />
+
+      <HomeNews allNews={allNews} />
     </>
   );
 }
@@ -81,4 +85,16 @@ Home.propTypes = {
   requests: PropTypes.object.isRequired,
   blue: PropTypes.object.isRequired,
   trainings: PropTypes.object.isRequired,
+  allNews: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
+      image: PropTypes.shape({
+        alt: PropTypes.string.isRequired,
+        url: PropTypes.string.isRequired,
+      }),
+      _publishedAt: PropTypes.string.isRequired,
+    }),
+  ),
 };
