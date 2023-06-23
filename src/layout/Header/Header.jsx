@@ -9,6 +9,7 @@ export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMenuRendered, setIsMenuRendered] = useState(false);
   const [isNavBarRendered, setIsNavBarRendered] = useState(false);
+  const targetElement = document.querySelector('#mobile');
 
   useEffect(() => {
     if (isDesktop) {
@@ -21,12 +22,12 @@ export const Header = () => {
   }, [isDesktop]);
 
   useEffect(() => {
-    if (isMenuOpen) lock();
+    if (isMenuOpen) lock(targetElement);
     else {
-      unlock();
+      unlock(targetElement);
       clearBodyLocks();
     }
-  }, [isMenuOpen]);
+  }, [isMenuOpen, targetElement]);
 
   return (
     <header className={st.header}>
