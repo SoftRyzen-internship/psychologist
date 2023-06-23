@@ -19,6 +19,7 @@ export const contactValidationShema = () =>
     email: Yup.string()
       .trim()
       .required("Email обов'язковий")
+      .min(6, 'Email має містити не менше 6 символів')
       .max(63, 'Email має містити не більше 63 символів')
       .matches(
         emailRegexp,
