@@ -52,7 +52,7 @@ export const Requests = ({ requests, mysection }) => {
                       src="/images/home_requests_mob.jpg"
                       width={480}
                       height={609}
-                      alt="Запити з якими працюю фото"
+                      alt="Юлія розповідає про запити з якими працює"
                       quality={100}
                       priority
                       placeholder="blur"
@@ -68,7 +68,7 @@ export const Requests = ({ requests, mysection }) => {
                       src="/images/home_requests_tab.jpg"
                       width={324}
                       height={596}
-                      alt="Фото запити з якими працюю"
+                      alt="Юлія розповідає про запити з якими працює"
                       quality={100}
                       placeholder="blur"
                       blurDataURL={`data:image/svg+xml;base64,${toBase64(
@@ -83,7 +83,7 @@ export const Requests = ({ requests, mysection }) => {
                       src="/images/home_requests_desk.jpg"
                       width={576}
                       height={572}
-                      alt="Фото запити з якими працюю"
+                      alt="Юлія розповідає про запити з якими працює"
                       quality={100}
                       placeholder="blur"
                       blurDataURL={`data:image/svg+xml;base64,${toBase64(
