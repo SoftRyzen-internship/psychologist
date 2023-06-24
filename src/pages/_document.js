@@ -22,9 +22,9 @@ export default function Document() {
           content={'/images/meta-og-preview-1600-1260.jpg'}
         />
 
-        <meta property="og:image:width" content="1600" />
+        {/* <meta property="og:image:width" content="1600" /> */}
 
-        <meta property="og:image:height" content="1260" />
+        {/* <meta property="og:image:height" content="1260" /> */}
 
         <meta property="og:type" content="website" />
 
