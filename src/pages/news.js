@@ -11,6 +11,7 @@ const NewsPage = ({ allNews }) => {
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+
       <NewsView allNews={allNews} />
     </>
   );
@@ -27,7 +28,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      allNews: news.news,
+      allNews: news?.news,
     },
   };
 }

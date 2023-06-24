@@ -27,6 +27,7 @@ export const getStaticProps = async () => {
       notFound: true,
     };
   }
+
   const { method, program } = education;
 
   return {

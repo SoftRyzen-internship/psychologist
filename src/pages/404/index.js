@@ -25,6 +25,7 @@ const NotFoundPage = () => {
                 <h1 className={secondS.title}>Сторінку не знайдено.</h1>
                 <ActionButton is404 />
               </div>
+
               <Image
                 className={secondS.image}
                 src="images/404page/404secondView.svg"
@@ -35,6 +36,7 @@ const NotFoundPage = () => {
               />
             </>
           )}
+
           {!isDesktop && (
             <>
               <Image
@@ -44,6 +46,7 @@ const NotFoundPage = () => {
                 height={150}
                 alt="404, неіснуюча сторінка"
               />
+
               <h1 className={secondS.title}>Сторінку не знайдено.</h1>
               <ActionButton is404 />
             </>

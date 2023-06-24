@@ -8,34 +8,40 @@ import s from './PersonalConsultationsView.module.css';
 export const PersonalConsultationsView = ({ data }) => {
   return (
     <>
-      <section className={s.sectionBG}>
-        <Container>
-          <SectionTitle title={data.heading} />
-          <div className={s.subtitle}>
-            <Image
-              className={s.image}
-              src="/icons/personalConsult.svg"
-              alt="Пісочний годинник"
-              width={218}
-              height={89}
-              loading="eager"
-            />
-            <ReactMarkdown>{data.format}</ReactMarkdown>
-          </div>
-          <div className={s.listWrapper}>
-            <ReactMarkdown>{data.requests}</ReactMarkdown>
-            <ul className={s.mainList}>
-              {data.list.map(({ id, content }) => {
-                return (
-                  <li key={id} className={s.mainListItem}>
-                    <ReactMarkdown>{content}</ReactMarkdown>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        </Container>
-      </section>
+      {data && (
+        <section className={s.sectionBG}>
+          <Container>
+            <SectionTitle title={data?.heading} />
+
+            <div className={s.subtitle}>
+              <Image
+                className={s.image}
+                src="/icons/personalConsult.svg"
+                alt="Пісочний годинник"
+                width={218}
+                height={89}
+                loading="eager"
+              />
+
+              <ReactMarkdown>{data?.format}</ReactMarkdown>
+            </div>
+
+            <div className={s.listWrapper}>
+              <ReactMarkdown>{data?.requests}</ReactMarkdown>
+
+              <ul className={s.mainList}>
+                {data?.list?.map(({ id, content }) => {
+                  return (
+                    <li key={id} className={s.mainListItem}>
+                      <ReactMarkdown>{content}</ReactMarkdown>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </Container>
+        </section>
+      )}
     </>
   );
 };

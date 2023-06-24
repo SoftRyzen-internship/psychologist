@@ -16,8 +16,10 @@ import * as s from './Requests.module.css';
 export const Requests = ({ requests, mysection }) => {
   const isDesktop = useMediaQuery({ minWidth: 1280 });
   const isTablet = useMediaQuery({ minWidth: 768 });
+
   const [desktop, setDesktop] = useState(false);
   const [tablet, setTablet] = useState(false);
+
   useEffect(() => {
     isDesktop ? setDesktop(true) : setDesktop(false);
     isTablet ? setTablet(true) : setTablet(false);
@@ -62,6 +64,7 @@ export const Requests = ({ requests, mysection }) => {
                     />
                   </OffsetImageBorder>
                 )}
+
                 {tablet && !desktop && (
                   <OffsetImageBorder reverse className={s.aspRatio}>
                     <Image
@@ -77,6 +80,7 @@ export const Requests = ({ requests, mysection }) => {
                     />
                   </OffsetImageBorder>
                 )}
+
                 {tablet && desktop && (
                   <OffsetImageBorder reverse className={s.aspRatio}>
                     <Image
@@ -95,10 +99,13 @@ export const Requests = ({ requests, mysection }) => {
               </div>
             </div>
           </Container>
-          <BlueSectionComponent
-            data={mysection}
-            className={{ section: 'mainPageSection' }}
-          />
+
+          {mysection && (
+            <BlueSectionComponent
+              data={mysection}
+              className={{ section: 'mainPageSection' }}
+            />
+          )}
         </section>
       )}
     </>

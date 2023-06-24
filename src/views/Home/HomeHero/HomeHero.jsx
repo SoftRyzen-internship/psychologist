@@ -11,40 +11,57 @@ export const HomeHero = ({ hero }) => {
   const isDesktop = useMediaQuery({ minWidth: 1280 });
   const [showElem, setShowElem] = useState(false);
   const [introDesktop, setIntroDesktop] = useState(false);
+
   useEffect(() => {
     isTablet ? setShowElem(true) : setShowElem(false);
   }, [isTablet]);
+
   useEffect(() => {
     isDesktop ? setIntroDesktop(true) : setIntroDesktop(false);
   }, [isDesktop]);
-  return (
-    <section className={st.section}>
-      <Container>
-        {showElem && (
-          <Image
-            alt="фото Юлії Сулаєвої"
-            src="/images/main_hero.png"
-            className={st.image}
-            priority
-            width={458}
-            height={734}
-            quality={100}
-          />
-        )}
-        <div className={st.descr}>
-          <SectionTitle title={hero.heading} h1={true} />
 
-          {!introDesktop && (
-            <ReactMarkdown className={st.intro}>{hero.intro}</ReactMarkdown>
-          )}
-          {introDesktop && (
-            <ReactMarkdown className={st.intro}>{hero.introdesk}</ReactMarkdown>
-          )}
-          <ReactMarkdown className={st.first}>{hero.first}</ReactMarkdown>
-          <ReactMarkdown className={st.second}>{hero.second}</ReactMarkdown>
-        </div>
-      </Container>
-    </section>
+  return (
+    <>
+      {hero && (
+        <section className={st.section}>
+          <Container>
+            {showElem && (
+              <Image
+                alt="фото Юлії Сулаєвої"
+                src="/images/main_hero.png"
+                className={st.image}
+                priority
+                width={458}
+                height={734}
+                quality={100}
+              />
+            )}
+
+            <div className={st.descr}>
+              <SectionTitle title={hero?.heading} h1={true} />
+
+              {!introDesktop && (
+                <ReactMarkdown className={st.intro}>
+                  {hero?.intro}
+                </ReactMarkdown>
+              )}
+
+              {introDesktop && (
+                <ReactMarkdown className={st.intro}>
+                  {hero?.introdesk}
+                </ReactMarkdown>
+              )}
+
+              <ReactMarkdown className={st.first}>{hero?.first}</ReactMarkdown>
+
+              <ReactMarkdown className={st.second}>
+                {hero?.second}
+              </ReactMarkdown>
+            </div>
+          </Container>
+        </section>
+      )}
+    </>
   );
 };
 
