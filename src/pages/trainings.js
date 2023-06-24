@@ -52,6 +52,7 @@ const TrainingsPage = ({
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+
       <PublicSpeakingView
         markdown={publicSpeaking}
         img={imgProperties.TRAININGS.HERO.IMAGE}
@@ -94,6 +95,13 @@ const TrainingsPage = ({
 
 export const getStaticProps = async () => {
   const trainings = getData(folderPaths.TRAININGS);
+
+  if (!trainings) {
+    return {
+      notFound: true,
+    };
+  }
+
   const {
     conflictology,
     educationWithLove,

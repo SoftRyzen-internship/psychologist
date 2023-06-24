@@ -18,6 +18,7 @@ const NewsPage = ({ allNews }) => {
 
 export async function getStaticProps() {
   const { news } = await getNewsList();
+
   if (!news) {
     return {
       notFound: true,
