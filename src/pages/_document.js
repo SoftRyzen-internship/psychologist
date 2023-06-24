@@ -17,19 +17,17 @@ export default function Document() {
           content="майстер-класи та навчання для психологів, Психолог, психотерапевт, курси, ПСИХОЛОГ, ПСИХОТЕРАПЕВТ, КУРСИ, Лікування ментальних проблем, Реабілітація після ментальних травм, Профілактика сімейної гармонії, Індивідуальні консультації із психологом, Групові консультації, Навчання методам роботи з травмами, Навчання методу SEE-FAR-CBT для психологів, Психологія лідерства, Тайм менеджмент, Курси стресостійкості, Курси ораторського мистецтва, Курси психолога Тренінг для батьків, Курси з Конфліктології, Тренінги, Тренінги для психологів, Тренер–психолог"
         />
 
-        <meta property="og:image" content={'/images/meta-photo.png'} />
-
-        <meta property="og:image:width" content="970" />
-
-        <meta property="og:image:height" content="500" />
-
+        <meta
+          property="og:image"
+          content={'/images/meta-og-preview-1600-1260.jpg'}
+        />
+        <meta property="og:image:width" content="1600" />
+        <meta property="og:image:height" content="1260" />
         <meta property="og:type" content="website" />
-
         <meta
           property="og:description"
           content="Юлія Сулаєва | Психолог - психотерапевт"
         />
-
         <meta property="og:title" content="Психолог Юлія Сулаєва" />
 
         {/* <link rel="canonical" href="" />

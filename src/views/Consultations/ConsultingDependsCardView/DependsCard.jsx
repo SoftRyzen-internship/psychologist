@@ -19,45 +19,52 @@ export const DependsCard = ({ data }) => {
 
   return (
     <>
-      <section>
-        <Container>
-          <SectionTitle title={data.heading} />
-          <div className={s.contentAbsolute}>
-            <ul className={s.cardBox}>
-              {data.cards.map((item, i) => (
-                <li className={s.cardWrapper} key={i}>
-                  <ReactMarkdown>{item.title}</ReactMarkdown>
-                  <div className={s.contentWrapper}>
-                    <ReactMarkdown>{item.content}</ReactMarkdown>
-                  </div>
-                  <button onClick={() => handleOpen(i)}>
-                    <p>Читати більше</p>
-                  </button>
-                  {openIndex === i && (
-                    <ModalDependsCards
-                      data={item}
-                      onClose={handleClose}
-                      isOpen={openIndex}
-                    />
-                  )}
-                </li>
-              ))}
-            </ul>
-            <Image
-              className={s.image}
-              src="/images/consultation_modal-author.jpg"
-              alt="Юлія в процесі консультації"
-              width={592}
-              height={396}
-              quality={100}
-              placeholder="blur"
-              blurDataURL={`data:image/svg+xml;base64,${toBase64(
-                convertImage(220, 392),
-              )}`}
-            />
-          </div>
-        </Container>
-      </section>
+      {data && (
+        <section>
+          <Container>
+            <SectionTitle title={data?.heading} />
+
+            <div className={s.contentAbsolute}>
+              <ul className={s.cardBox}>
+                {data?.cards?.map((item, i) => (
+                  <li className={s.cardWrapper} key={i}>
+                    <ReactMarkdown>{item.title}</ReactMarkdown>
+
+                    <div className={s.contentWrapper}>
+                      <ReactMarkdown>{item.content}</ReactMarkdown>
+                    </div>
+
+                    <button onClick={() => handleOpen(i)}>
+                      <p>Читати більше</p>
+                    </button>
+
+                    {openIndex === i && (
+                      <ModalDependsCards
+                        data={item}
+                        onClose={handleClose}
+                        isOpen={openIndex}
+                      />
+                    )}
+                  </li>
+                ))}
+              </ul>
+
+              <Image
+                className={s.image}
+                src="/images/consultation_modal-author.jpg"
+                alt="Юлія в процесі консультації"
+                width={592}
+                height={396}
+                quality={100}
+                placeholder="blur"
+                blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                  convertImage(220, 392),
+                )}`}
+              />
+            </div>
+          </Container>
+        </section>
+      )}
     </>
   );
 };

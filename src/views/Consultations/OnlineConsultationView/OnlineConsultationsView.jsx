@@ -16,33 +16,41 @@ export const OnlineConsultationView = ({ data }) => {
 
   return (
     <>
-      <section className={s.utilityFinder}>
-        <Container>
-          <SectionTitle title={data.heading} />
-          <div
-            className={s.flexWrapper}
-            role="container for img and text content"
-            aria-label="wrapper for list and image"
-          >
-            <Image
-              className={s.image}
-              src="/icons/OnlineConsultVector.svg"
-              alt="Ілюстрація онлайн консультації"
-              width={287}
-              height={186}
-            />
-            <div className={s.textWrapper}>
-              <ReactMarkdown>{data.description}</ReactMarkdown>
-              {isDesktopShow && <ReactMarkdown>{data.list}</ReactMarkdown>}
+      {data && (
+        <section className={s.utilityFinder}>
+          <Container>
+            <SectionTitle title={data?.heading} />
+            <div
+              className={s.flexWrapper}
+              role="container for img and text content"
+              aria-label="wrapper for list and image"
+            >
+              <Image
+                className={s.image}
+                src="/icons/OnlineConsultVector.svg"
+                alt="Ілюстрація онлайн консультації"
+                width={287}
+                height={186}
+              />
+
+              <div className={s.textWrapper}>
+                <ReactMarkdown>{data?.description}</ReactMarkdown>
+
+                {isDesktopShow && <ReactMarkdown>{data?.list}</ReactMarkdown>}
+              </div>
             </div>
-          </div>
-          {!isDesktopShow && <ReactMarkdown>{data.list}</ReactMarkdown>}
-        </Container>
-        <BlueSectionComponent
-          data={data}
-          className={{ section: 'personalConsSection' }}
-        />
-      </section>
+
+            {!isDesktopShow && <ReactMarkdown>{data?.list}</ReactMarkdown>}
+          </Container>
+
+          {data && (
+            <BlueSectionComponent
+              data={data}
+              className={{ section: 'personalConsSection' }}
+            />
+          )}
+        </section>
+      )}
     </>
   );
 };

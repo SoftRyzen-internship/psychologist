@@ -4,22 +4,27 @@ import st from './Consult.module.css';
 
 export const Consult = () => {
   return (
-    <section className={st.section}>
-      <Container>
-        <SectionTitle
-          title={'Індивідуальні психологічні консультації, психотерапія:'}
-          className={st.title}
-        />
-        <ul className={st.list}>
-          {data.map(el => {
-            return (
-              <li className={st.item} key={el.id}>
-                <span className={st.content}>{el.text}</span>
-              </li>
-            );
-          })}
-        </ul>
-      </Container>
-    </section>
+    <>
+      {data && (
+        <section className={st.section}>
+          <Container>
+            <SectionTitle
+              title={'Індивідуальні психологічні консультації, психотерапія:'}
+              className={st.title}
+            />
+
+            <ul className={st.list}>
+              {data?.map(el => {
+                return (
+                  <li className={st.item} key={el?.id}>
+                    <span className={st.content}>{el?.text}</span>
+                  </li>
+                );
+              })}
+            </ul>
+          </Container>
+        </section>
+      )}
+    </>
   );
 };

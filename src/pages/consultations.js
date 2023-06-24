@@ -19,18 +19,25 @@ const ConsultationsPage = props => {
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+
       <PersonalConsultationsView data={props.individual} />
+
       <OnlineConsultationView data={props.online} />
+
       <GetPersonalConsultView data={props.requirements} />
+
       <ConsultationFAQComponent
         data={props.faq1}
         className={{ section: 'reusableSection', div: 'containerX' }}
       />
+
       <PersonalConsultationMethodView data={props.method} />
+
       <ConsultationFAQComponent
         data={props.faq2}
         className={{ section: 'reusableSection2', div: 'containerX' }}
       />
+
       <DependsCard data={props.factors} />
     </>
   );

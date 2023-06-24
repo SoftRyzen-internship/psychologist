@@ -11,6 +11,7 @@ const NewsPage = ({ allNews }) => {
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+
       <NewsView allNews={allNews} />
     </>
   );
@@ -18,6 +19,7 @@ const NewsPage = ({ allNews }) => {
 
 export async function getStaticProps() {
   const { news } = await getNewsList();
+
   if (!news) {
     return {
       notFound: true,
@@ -26,7 +28,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      allNews: news.news,
+      allNews: news?.news,
     },
   };
 }

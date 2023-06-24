@@ -16,15 +16,19 @@ export const TrainingsList = () => {
   };
 
   return (
-    <ul className={st.listTrainings}>
-      {homeTrainingsData?.map(el => {
-        return (
-          <li key={el.id.toString()} className={st.item}>
-            <span className={st.itemImg}>{Trainitems[el.id]}</span>
-            <span className={st.itemText}>{el.text}</span>
-          </li>
-        );
-      })}
-    </ul>
+    <>
+      {homeTrainingsData && (
+        <ul className={st.listTrainings}>
+          {homeTrainingsData?.map(el => {
+            return (
+              <li key={el.id.toString()} className={st.item}>
+                <span className={st.itemImg}>{Trainitems[el.id]}</span>
+                <span className={st.itemText}>{el?.text}</span>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </>
   );
 };
