@@ -58,6 +58,9 @@
       no-repeat;
     background-position: top right;
   }
+  .newsTitleDesktopWidth {
+    max-width: 903px;
+  }
   .newsInstance:not(:last-child) {
     padding-top: 100px;
     padding-bottom: 0;

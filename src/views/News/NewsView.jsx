@@ -9,6 +9,7 @@ import {
 } from '@/components';
 
 import s from './NewsView.module.css';
+import classNames from 'classnames';
 
 export function NewsView({ allNews }) {
   return (
@@ -22,7 +23,10 @@ export function NewsView({ allNews }) {
               <SectionTitle
                 h2
                 title={news?.title}
-                className={'sectionTitleH1'}
+                className={classNames(
+                  'sectionTitleH1',
+                  s.newsTitleDesktopWidth,
+                )}
               />
 
               <NewsText newsTextProp={news?.text} />
