@@ -20,7 +20,7 @@ export const DependsCard = ({ data }) => {
   return (
     <>
       {data && (
-        <section>
+        <section className={s.utilFinder}>
           <Container>
             <SectionTitle title={data?.heading} />
 

@@ -21,7 +21,7 @@ export const PersonalConsultationMethodView = ({ data }) => {
               <Image
                 className={classNames(s.image1, s.image)}
                 src="/icons/consultations-method1.svg"
-                alt="Робочий метод 1 опис"
+                alt="Векторний малюнок руки, яка вказує на синій лампочки"
                 width={320}
                 height={284}
               />
@@ -35,7 +35,7 @@ export const PersonalConsultationMethodView = ({ data }) => {
               <Image
                 className={classNames(s.image2, s.image)}
                 src="/icons/consultations-method2.svg"
-                alt="Робочий метод 2 опис"
+                alt="Векторно - абстрактна голова людини, у якої мозок підсвічений особливим синім кольором. Праворуч від людини - синя лампочка, що горить"
                 width={320}
                 height={249}
               />

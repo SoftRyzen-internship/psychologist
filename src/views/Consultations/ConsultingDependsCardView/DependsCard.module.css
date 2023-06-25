@@ -162,6 +162,16 @@
   }
 }
 
+@media screen and (max-width: 359.98px) {
+  .cardWrapper {
+    width: auto;
+  }
+
+  .contentWrapper {
+    width: auto;
+  }
+}
+
 /**
   |============================
   | 768px
@@ -248,5 +258,12 @@
 
   .contentAbsolute {
     position: relative;
+  }
+
+  .utilFinder h2 {
+    text-align: center;
+    width: 952px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

@@ -42,6 +42,14 @@
   color: var(--accent-text-color);
 }
 
+@media screen and (max-width: 359.98px) {
+  .subtitle p {
+    max-width: 220px;
+    min-width: auto;
+    top: -16px;
+  }
+}
+
 .listWrapper {
   margin-top: 24px;
 }
