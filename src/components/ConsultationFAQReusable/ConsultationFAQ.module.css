@@ -38,6 +38,12 @@
   width: 320px;
 }
 
+@media screen and (max-width: 359.98px) {
+  .universalWrapper p {
+    width: auto;
+  }
+}
+
 .universalWrapper > div:nth-child(2) > p:not(:last-of-type) {
   margin-bottom: 20px;
 }

@@ -50,7 +50,6 @@ body {
   font-size: 20px;
   line-height: 1.4;
   color: var(--main-text-color);
-  overflow-x: hidden;
 }
 
 body.noScroll {
@@ -195,6 +194,7 @@ section {
     font-size: 48px;
     line-height: calc(62 / 48);
   }
+
   .swiper-wrapper {
     width: 592px !important;
     overflow-x: visible;
@@ -244,6 +244,7 @@ section {
     font-size: 20px;
     line-height: calc(28 / 20);
   }
+
   .swiper-wrapper {
     width: 1280px !important;
   }
