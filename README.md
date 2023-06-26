@@ -148,3 +148,52 @@ can be found here
 ```bash
 src/utils/contactValidationSchema.js
 ```
+
+### Markdown files, how to use
+
+1. If you wanna to use components for building text sections, yo'll need to use
+   files in .md format.
+2. All markdown files needs to be stored in
+
+```bash
+src/content
+```
+
+3. After creating markdown file you'll need to pass the markdown to component
+   using
+   [**getStaticProps (nextjs)**](https://nextjs.org/docs/pages/building-your-application/data-fetching/get-static-props)
+   and **getData** function that receive a folder path (see
+   src/utils/folderPaths.js) and using such libraries as
+   [fs](https://nodejs.org/api/fs.html) and
+   [gray-matter](https://github.com/jonschlinkert/gray-matter) to return parsed
+   markdown as object with keys and values (located in src/lib directory).
+
+   ```javascript
+   export const getStaticProps = async () => {
+     const trainings = getData(folderPaths.TRAININGS);
+     const {
+       conflictology,
+       educationWithLove,
+       publicSpeaking,
+       selfHelp,
+       stressResistance,
+       strongSides,
+       timeManagement,
+     } = trainings;
+     return {
+       props: {
+         conflictology,
+         educationWithLove,
+         publicSpeaking,
+         selfHelp,
+         stressResistance,
+         strongSides,
+         timeManagement,
+       },
+     };
+   };
+   ```
+
+```
+
+```

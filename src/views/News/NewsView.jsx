@@ -9,21 +9,28 @@ import {
 } from '@/components';
 
 import s from './NewsView.module.css';
+import classNames from 'classnames';
 
 export function NewsView({ allNews }) {
   return (
     <div className={s.newsBackground}>
       <SectionTitle h1 className={s.visuallyHidden} title={'Новини'} />
+
       {allNews.length > 0 &&
         allNews.map(news => (
-          <section key={news.id} className={s.newsInstance}>
+          <section key={news?.id} className={s.newsInstance}>
             <Container>
               <SectionTitle
                 h2
-                title={news.title}
-                className={'sectionTitleH1'}
+                title={news?.title}
+                className={classNames(
+                  'sectionTitleH1',
+                  s.newsTitleDesktopWidth,
+                )}
               />
-              <NewsText newsTextProp={news.text} />
+
+              <NewsText newsTextProp={news?.text} />
+
               <OffsetImageBorder className={s.aspectRatio}>
                 <Image
                   src={news.image.url}

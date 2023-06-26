@@ -4,12 +4,17 @@ import { Container, SectionTitle } from '@/components';
 
 export function HomeNews({ allNews }) {
   return (
-    <section>
-      <Container>
-        <SectionTitle title={'Новини'} h2 centered />
-        <Slider allNews={allNews} />
-      </Container>
-    </section>
+    <>
+      {allNews && (
+        <section>
+          <Container>
+            <SectionTitle title={'Новини'} h2 centered />
+
+            <Slider allNews={allNews} />
+          </Container>
+        </section>
+      )}
+    </>
   );
 }
 

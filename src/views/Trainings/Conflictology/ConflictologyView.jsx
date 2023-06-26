@@ -16,46 +16,59 @@ export const ConflictologyView = ({ markdown, img, isDesktop }) => {
   const { heading, goal, timePeriod, list } = markdown;
 
   return (
-    <section className={`trainingSection ${vs.conflictologySection}`}>
-      <Container>
-        {isDesktop && (
-          <>
-            <SectionTitle title={heading} centered={true} />
-            <div className={s.contentDesktopContainer}>
-              <div>
-                <ReactMarkdown className={`${s.goal} ${s.textMargin}`}>
-                  {goal}
-                </ReactMarkdown>
-                <Image
-                  className={vs.image}
-                  src={img.PATH.DESKTOP}
-                  width={img.SIZES.WIDTH.DESKTOP}
-                  height={img.SIZES.HEIGHT.DESKTOP}
-                  alt={img.ALTERNATIVETEXT}
-                />
-              </div>
-              <div>
-                <p className={`${s.timePeriod} ${s.textMargin}`}>
-                  {timePeriod}
-                </p>
-                <h3 className={s.programTitle}>Програма:</h3>
-                <ReactMarkdown className={s.programList}>
-                  {list[0].content}
-                </ReactMarkdown>
-                <ModalButton />
-              </div>
-            </div>
-          </>
-        )}
-        {!isDesktop && (
-          <TrainingsSection
-            markdown={markdown}
-            img={img}
-            isTitleCentered={true}
-          />
-        )}
-      </Container>
-    </section>
+    <>
+      {markdown && (
+        <section className={`trainingSection ${vs.conflictologySection}`}>
+          <Container>
+            {isDesktop && (
+              <>
+                <SectionTitle title={heading} centered={true} />
+
+                <div className={s.contentDesktopContainer}>
+                  <div>
+                    <ReactMarkdown className={`${s.goal} ${s.textMargin}`}>
+                      {goal}
+                    </ReactMarkdown>
+
+                    {img && (
+                      <Image
+                        className={vs.image}
+                        src={img.PATH.DESKTOP}
+                        width={img.SIZES.WIDTH.DESKTOP}
+                        height={img.SIZES.HEIGHT.DESKTOP}
+                        alt={img.ALTERNATIVETEXT}
+                      />
+                    )}
+                  </div>
+
+                  <div>
+                    <p className={`${s.timePeriod} ${s.textMargin}`}>
+                      {timePeriod}
+                    </p>
+
+                    <h3 className={s.programTitle}>Програма:</h3>
+
+                    <ReactMarkdown className={s.programList}>
+                      {list[0].content}
+                    </ReactMarkdown>
+
+                    <ModalButton />
+                  </div>
+                </div>
+              </>
+            )}
+
+            {!isDesktop && (
+              <TrainingsSection
+                markdown={markdown}
+                img={img}
+                isTitleCentered={true}
+              />
+            )}
+          </Container>
+        </section>
+      )}
+    </>
   );
 };
 

@@ -33,10 +33,13 @@ export const Header = () => {
     <header className={st.header}>
       <Container className={st.headerBox}>
         <Logo />
+
         {isNavBarRendered && <NavBar setIsMenuOpen={setIsMenuOpen} />}
+
         {isMenuRendered && (
           <MobBurger setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
         )}
+
         {isMenuRendered && (
           <MobileMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
         )}

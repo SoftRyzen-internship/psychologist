@@ -13,40 +13,49 @@ import * as st from './HomeTrainings.module.css';
 
 export const HomeTrainings = ({ trainings }) => {
   return (
-    <section className={st.section}>
-      <Container>
-        <div className={st.descr}>
-          <SectionTitle title={trainings.heading} centered />
-          <p className={st.variant}>{trainings.variantFirst}</p>
-          <TrainingsList />
-          <div className={st.contentWrapper}>
-            <OffsetImageBorder className={st.imageBorder}>
-              <Image
-                alt="фото Юлії Сулаєвої"
-                src="/images/home_trainings.png"
-                className={st.image}
-                priority
-                width={308}
-                height={345}
-                quality={100}
-                placeholder="blur"
-                blurDataURL={`data:image/svg+xml;base64,${toBase64(
-                  convertImage(220, 392),
-                )}`}
-              />
-            </OffsetImageBorder>
-            <div>
-              <p className={st.variant}>{trainings.variantSecond}</p>
-              <ReactMarkdown className={st.listMasters}>
-                {trainings.content}
-              </ReactMarkdown>
+    <>
+      {trainings && (
+        <section className={st.section}>
+          <Container>
+            <div className={st.descr}>
+              <SectionTitle title={trainings?.heading} centered />
 
-              <ModalButton />
+              <p className={st.variant}>{trainings?.variantFirst}</p>
+
+              <TrainingsList />
+
+              <div className={st.contentWrapper}>
+                <OffsetImageBorder className={st.imageBorder}>
+                  <Image
+                    alt="фото Юлії Сулаєвої"
+                    src="/images/home_trainings.png"
+                    className={st.image}
+                    priority
+                    width={308}
+                    height={345}
+                    quality={100}
+                    placeholder="blur"
+                    blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                      convertImage(220, 392),
+                    )}`}
+                  />
+                </OffsetImageBorder>
+
+                <div>
+                  <p className={st.variant}>{trainings?.variantSecond}</p>
+
+                  <ReactMarkdown className={st.listMasters}>
+                    {trainings?.content}
+                  </ReactMarkdown>
+
+                  <ModalButton />
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </Container>
-    </section>
+          </Container>
+        </section>
+      )}
+    </>
   );
 };
 

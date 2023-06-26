@@ -49,11 +49,6 @@
   color: var(--accent-color);
 }
 
-.newsTextSection > p > a {
-  text-decoration: underline;
-  color: var(--accent-color);
-}
-
 @media screen and (min-width: 768px) {
   .newsText {
     margin-top: 0;

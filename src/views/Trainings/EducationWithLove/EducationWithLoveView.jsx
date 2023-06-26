@@ -17,43 +17,54 @@ export const EducationWithLoveView = ({ markdown, img, isDesktop }) => {
 
   return (
     <>
-      <section className={`trainingSection ${vs.educationWithLoveSection}`}>
-        <Container>
-          {isDesktop && (
-            <>
-              <SectionTitle title={heading} centered={true} />
-              <div className={s.contentDesktopContainer}>
-                <div>
-                  <ReactMarkdown className={`${s.goal} ${s.textMargin}`}>
-                    {goal}
-                  </ReactMarkdown>
-                  <p className={`${s.timePeriod} ${s.textMargin}`}>
-                    {timePeriod}
-                  </p>
-                  <h3 className={s.programTitle}>Програма:</h3>
-                  <ReactMarkdown className={s.programList}>
-                    {list[0].content}
-                  </ReactMarkdown>
-                  <ModalButton />{' '}
+      {markdown && (
+        <section className={`trainingSection ${vs.educationWithLoveSection}`}>
+          <Container>
+            {isDesktop && (
+              <>
+                <SectionTitle title={heading} centered={true} />
+                <div className={s.contentDesktopContainer}>
+                  <div>
+                    <ReactMarkdown className={`${s.goal} ${s.textMargin}`}>
+                      {goal}
+                    </ReactMarkdown>
+
+                    <p className={`${s.timePeriod} ${s.textMargin}`}>
+                      {timePeriod}
+                    </p>
+
+                    <h3 className={s.programTitle}>Програма:</h3>
+
+                    <ReactMarkdown className={s.programList}>
+                      {list[0].content}
+                    </ReactMarkdown>
+
+                    <ModalButton />
+                  </div>
+
+                  <div>
+                    {img && (
+                      <Image
+                        className={vs.image}
+                        src={img.PATH.DESKTOP}
+                        width={img.SIZES.WIDTH.DESKTOP}
+                        height={img.SIZES.HEIGHT.DESKTOP}
+                        alt={img.ALTERNATIVETEXT}
+                      />
+                    )}
+
+                    <ReactMarkdown className={s.programList}>
+                      {list[1].content}
+                    </ReactMarkdown>
+                  </div>
                 </div>
-                <div>
-                  <Image
-                    className={vs.image}
-                    src={img.PATH.DESKTOP}
-                    width={img.SIZES.WIDTH.DESKTOP}
-                    height={img.SIZES.HEIGHT.DESKTOP}
-                    alt={img.ALTERNATIVETEXT}
-                  />
-                  <ReactMarkdown className={s.programList}>
-                    {list[1].content}
-                  </ReactMarkdown>
-                </div>
-              </div>
-            </>
-          )}
-          {!isDesktop && <TrainingsSection markdown={markdown} img={img} />}
-        </Container>
-      </section>
+              </>
+            )}
+
+            {!isDesktop && <TrainingsSection markdown={markdown} img={img} />}
+          </Container>
+        </section>
+      )}
     </>
   );
 };

@@ -17,31 +17,38 @@ export const PublicSpeakingView = ({ markdown, img, isDesktop }) => {
   }, [isTabletSize]);
 
   return (
-    <section className={`trainingSection ${s.heroTrainingSection}`}>
-      <Container>
-        <TrainingsSection
-          markdown={markdown}
-          specialTitle={
-            isDesktop &&
-            '"Ораторське мистецтво" (групові\u00A0та індивідуальні заняття)'
-          }
-          isHeroSection={true}
-        />
-        {isTablet && (
-          <Image
-            className={s.heroImg}
-            src={isDesktop ? img.PATH.DESKTOP : img.PATH.MOBILE}
-            priority
-            quality={100}
-            width={isDesktop ? img.SIZES.WIDTH.DESKTOP : img.SIZES.WIDTH.TABLET}
-            height={
-              isDesktop ? img.SIZES.HEIGHT.DESKTOP : img.SIZES.HEIGHT.TABLET
-            }
-            alt={img.ALTERNATIVETEXT}
-          />
-        )}
-      </Container>
-    </section>
+    <>
+      {markdown && (
+        <section className={`trainingSection ${s.heroTrainingSection}`}>
+          <Container>
+            <TrainingsSection
+              markdown={markdown}
+              specialTitle={
+                isDesktop &&
+                '"Ораторське мистецтво" (групові\u00A0та індивідуальні заняття)'
+              }
+              isHeroSection={true}
+            />
+
+            {isTablet && (
+              <Image
+                className={s.heroImg}
+                src={isDesktop ? img.PATH.DESKTOP : img.PATH.MOBILE}
+                priority
+                quality={100}
+                width={
+                  isDesktop ? img.SIZES.WIDTH.DESKTOP : img.SIZES.WIDTH.TABLET
+                }
+                height={
+                  isDesktop ? img.SIZES.HEIGHT.DESKTOP : img.SIZES.HEIGHT.TABLET
+                }
+                alt={img.ALTERNATIVETEXT}
+              />
+            )}
+          </Container>
+        </section>
+      )}
+    </>
   );
 };
 

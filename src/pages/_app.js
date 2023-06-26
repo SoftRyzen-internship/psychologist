@@ -22,6 +22,7 @@ const alegreya = Alegreya({
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
+
   return (
     <>
       <style jsx global>
@@ -32,11 +33,13 @@ export default function App({ Component, pageProps }) {
           }
         `}
       </style>
+
       {router.pathname === '/404' && (
         <Hydrated>
           <Component {...pageProps} />
         </Hydrated>
       )}
+
       {router.pathname !== '/404' && (
         <Hydrated>
           <Layout data={pageProps} className={classNames('layout')}>

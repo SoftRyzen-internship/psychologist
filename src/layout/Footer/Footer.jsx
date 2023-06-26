@@ -1,14 +1,7 @@
 import { useMediaQuery } from 'react-responsive';
 import { useEffect, useState } from 'react';
-
 import { Container, NavBar, Socials } from '@/components';
-// import socials from 'utils/socials.json';
 import LogoIcon from 'public/icons/logoFooter.svg';
-// import FacebookIcon from 'public/icons/facebook.svg';
-// import TelegramIcon from 'public/icons/telegram.svg';
-// import YoutubeIcon from 'public/icons/youtube.svg';
-// import InstagramIcon from 'public/icons/instagram.svg';
-
 import s from './Footer.module.css';
 
 export const Footer = () => {
@@ -24,19 +17,6 @@ export const Footer = () => {
     setIsDesktop(isDesktopSize);
   }, [isTabletSize, setIsTablet, setIsDesktop, isDesktopSize]);
 
-  // const serveIcon = iconName => {
-  //   const lowCaseIconName = iconName.toLowerCase();
-  //   if (lowCaseIconName === 'telegram') {
-  //     return <TelegramIcon className={s.imgIcon} />;
-  //   } else if (lowCaseIconName === 'youtube') {
-  //     return <YoutubeIcon className={s.imgIcon} />;
-  //   } else if (lowCaseIconName === 'facebook') {
-  //     return <FacebookIcon className={s.imgIcon} />;
-  //   } else if (lowCaseIconName === 'instagram') {
-  //     return <InstagramIcon className={s.imgIcon} />;
-  //   }
-  // };
-
   return (
     <footer className={s.footer}>
       <Container>
@@ -47,23 +27,11 @@ export const Footer = () => {
 
               <NavBar footerVariant />
 
-              {/* <ul className={s.socialList}>
-                {socials.map(social => (
-                  <li key={social.name}>
-                    <a
-                      href={social.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {serveIcon(social.name)}
-                    </a>
-                  </li>
-                ))}
-              </ul> */}
               <Socials component="footer" />
               <p className={s.developmentYear}>Юлія Сулаєва &#169; 2023</p>
             </>
           )}
+
           {isTablet && !isDesktop && (
             <>
               <div className={s.mainTabletWrapper}>
@@ -79,6 +47,7 @@ export const Footer = () => {
               <p className={s.developmentYear}>Юлія Сулаєва &#169; 2023</p>
             </>
           )}
+
           {isDesktop && (
             <>
               <div className={s.desktopWrapper}>
