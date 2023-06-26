@@ -21,7 +21,7 @@ export const PersonalConsultationMethodView = ({ data }) => {
               <Image
                 className={classNames(s.image1, s.image)}
                 src="/icons/consultations-method1.svg"
-                alt="Векторний малюнок руки, яка вказує на синій лампочки"
+                alt="Векторний малюнок руки, яка вказує на синю лампочку"
                 width={320}
                 height={284}
               />
