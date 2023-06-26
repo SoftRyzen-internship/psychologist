@@ -30,7 +30,6 @@ export const HomeTrainings = ({ trainings }) => {
                     alt="фото Юлії Сулаєвої"
                     src="/images/home_trainings.png"
                     className={st.image}
-                    priority
                     width={308}
                     height={345}
                     quality={100}
