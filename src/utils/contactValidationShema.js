@@ -3,7 +3,8 @@ import * as Yup from 'yup';
 const nameRegexp = /^[A-Za-zА-Яа-яіІїЇєЄґҐ'\s-]+$/;
 const phoneRegexp = /^\+[0-9]*$/;
 const emailRegexp =
-  /^[A-Za-z0-9](?:[A-Za-z0-9._-]*[A-Za-z0-9])?@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*[^-]$/;
+  // /^[A-Za-z0-9](?:[A-Za-z0-9._-]*[A-Za-z0-9])?@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*[^-]$/u;
+  /^[A-Za-z0-9](?:[A-Za-z0-9._-]*[A-Za-z0-9])?@[A-Za-z0-9.-_]+(?:\.[A-Za-z0-9.-_]+)*[^-]$/u;
 
 export const contactValidationShema = () =>
   Yup.object({
