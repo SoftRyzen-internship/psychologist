@@ -22,13 +22,24 @@ export const Slider = ({ allNews }) => {
   const [showPagination, setShowPagination] = useState(false);
   const [showDesktopButtons, setShowDesktopButtons] = useState(false);
 
+  const transformData = string => {
+    // regex for markdown links
+    const regex1 = /\[(.*?)\]\((.*?)\)/g;
+    const regex2 = /(#)+/g;
+    const regex3 = /(\*)+/g;
+
+    return string.replace(regex1, '$1').replace(regex2, '').replace(regex3, '');
+  };
+
   useEffect(() => {
     if (isMobile) setShowPagination(true);
     else setShowPagination(false);
 
     if (isDesktop) setShowDesktopButtons(true);
     else setShowDesktopButtons(false);
-  }, [isMobile, isDesktop]);
+
+    allNews.map(newsContent => transformData(newsContent.text));
+  }, [isMobile, isDesktop, allNews]);
 
   const pagination = {
     clickable: true,
@@ -43,7 +54,6 @@ export const Slider = ({ allNews }) => {
             <Swiper
               modules={[Pagination, Mousewheel, Keyboard]}
               pagination={showPagination ? pagination : false}
-              mousewheel={true}
               keyboard={true}
               rewind={true}
               spaceBetween={32}

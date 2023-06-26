@@ -23,7 +23,7 @@ export const NewsCard = ({ image, title, text }) => {
         )}`}
       />
       <h3 className={classNames(s.newsTitle)}>{title}</h3>
-      <NewsText newsTextProp={text} section />
+      <NewsText newsTextProp={text} section components={{ a: 'span' }} />
       <Link href="/news" className={s.readMoreLink}>
         Читати більше
       </Link>
