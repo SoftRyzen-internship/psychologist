@@ -56,6 +56,16 @@
   background: var(--white-color);
 }
 
+.developerLink {
+  color: inherit;
+  transition: var(--fast-text-animation);
+}
+
+.developerLink:hover,
+.developerLink:focus {
+  color: var(--accent-text-color);
+}
+
 @media screen and (min-width: 768px) {
   .footerWrapper {
     padding-top: 36px;
@@ -74,6 +84,7 @@
 }
 @media screen and (min-width: 1280px) {
   .footerWrapper {
+    position: relative;
     padding-top: 32px;
   }
   .desktopWrapper {
@@ -89,5 +100,14 @@
   }
   .socialList {
     margin-right: 61px;
+  }
+
+  .developerCompany {
+    position: absolute;
+    bottom: 16px;
+    right: 0;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: calc(16 / 12);
   }
 }
