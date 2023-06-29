@@ -28,7 +28,18 @@ export const Footer = () => {
               <NavBar footerVariant />
 
               <Socials component="footer" />
-              <p className={s.developmentYear}>Юлія Сулаєва &#169; 2023</p>
+
+              <p className={s.developmentYear}>
+                Юлія Сулаєва &#169; 2023 | Created by{' '}
+                <a
+                  href="https://softryzen.com/"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className={s.developerLink}
+                >
+                  SoftRyzen
+                </a>
+              </p>
             </>
           )}
 
@@ -44,7 +55,18 @@ export const Footer = () => {
                   <NavBar footerVariant />
                 </div>
               </div>
-              <p className={s.developmentYear}>Юлія Сулаєва &#169; 2023</p>
+
+              <p className={s.developmentYear}>
+                Юлія Сулаєва &#169; 2023 | Created by{' '}
+                <a
+                  href="https://softryzen.com/"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className={s.developerLink}
+                >
+                  SoftRyzen
+                </a>
+              </p>
             </>
           )}
 
@@ -60,6 +82,17 @@ export const Footer = () => {
               </div>
 
               <p className={s.developmentYear}>Юлія Сулаєва &#169; 2023</p>
+              <p className={s.developerCompany}>
+                Created by{' '}
+                <a
+                  href="https://softryzen.com/"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className={s.developerLink}
+                >
+                  SoftRyzen
+                </a>
+              </p>
             </>
           )}
         </div>
