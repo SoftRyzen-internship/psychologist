@@ -9,7 +9,8 @@ export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMenuRendered, setIsMenuRendered] = useState(false);
   const [isNavBarRendered, setIsNavBarRendered] = useState(false);
-  const targetElement = document.querySelector('#mobile');
+  const targetElement =
+    typeof document !== 'undefined' && document.querySelector('#mobile');
 
   useEffect(() => {
     if (isDesktop) {
@@ -41,7 +42,11 @@ export const Header = () => {
         )}
 
         {isMenuRendered && (
-          <MobileMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+          <MobileMenu
+            isMenuOpen={isMenuOpen}
+            setIsMenuOpen={setIsMenuOpen}
+            id="mobile"
+          />
         )}
       </Container>
     </header>
