@@ -9,9 +9,9 @@ export default function Document() {
           content="Психолог, психотерапевт, тренер Юлія Сулаєва. Індивідуальні психологічні консультації, курси, майстер-класи та навчання для психологів"
         />
 
-        <meta name="googlebot" content="index, follow" />
-        <meta name="robots" content="index, follow" />
-        <meta name="slurp" content="index, follow" />
+        {/* <meta name="googlebot" content="index, follow" /> */}
+        {/* <meta name="robots" content="index, follow" /> */}
+        {/* <meta name="slurp" content="index, follow" /> */}
         <meta
           name="keywords"
           content="майстер-класи та навчання для психологів, Психолог, психотерапевт, курси, ПСИХОЛОГ, ПСИХОТЕРАПЕВТ, КУРСИ, Лікування ментальних проблем, Реабілітація після ментальних травм, Профілактика сімейної гармонії, Індивідуальні консультації із психологом, Групові консультації, Навчання методам роботи з травмами, Навчання методу SEE-FAR-CBT для психологів, Психологія лідерства, Тайм менеджмент, Курси стресостійкості, Курси ораторського мистецтва, Курси психолога Тренінг для батьків, Курси з Конфліктології, Тренінги, Тренінги для психологів, Тренер–психолог"
@@ -30,8 +30,8 @@ export default function Document() {
         />
         <meta property="og:title" content="Психолог Юлія Сулаєва" />
 
-        {/* <link rel="canonical" href="" />
-        <link rel="alternate" href="" /> */}
+        <link rel="canonical" href="https://www.sulaieva.com/" />
+        <link rel="alternate" href="https://www.sulaieva.com/" />
 
         <link
           rel="apple-touch-icon"
@@ -51,7 +51,7 @@ export default function Document() {
           href="/favicon/favicon-16x16.png"
         />
         <link rel="manifest" href="/favicon/site.webmanifest" />
-        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="msapplication-TileColor" content="#2670c4" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
 
