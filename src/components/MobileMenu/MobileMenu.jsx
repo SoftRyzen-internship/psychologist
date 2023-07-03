@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 import { Container, NavBar, Socials } from '..';
 import * as st from './MobileMenu.module.css';
 
-export const MobileMenu = ({ isMenuOpen, setIsMenuOpen }) => {
+export const MobileMenu = ({ isMenuOpen, setIsMenuOpen, id }) => {
   const wrapStat = isMenuOpen ? st.wrapperMenuOpen : st.wrapper;
   return (
-    <div className={wrapStat} id="mobile">
+    <div className={wrapStat} id={id}>
       <div className={st.transparentOverlay}>
         <Container className={st.menu}>
           <NavBar setIsMenuOpen={setIsMenuOpen} />

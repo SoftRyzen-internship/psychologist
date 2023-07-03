@@ -1,3 +1,7 @@
+.heroTrainingSection {
+  overflow-x: hidden;
+}
+
 .heroTrainingSection h2 {
   margin-bottom: 32px;
 }
