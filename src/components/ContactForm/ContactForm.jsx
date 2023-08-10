@@ -54,7 +54,7 @@ export const ContactForm = () => {
           <h3 className={s.title}>Записатися на прийом</h3>
           <form
             onSubmit={handleSubmit(onSubmitHandler)}
-            novalidate="novalidate"
+            noValidate="noValidate"
           >
             <div className={s.fieldsWrap}>
               <div className={s.inputWrap}>

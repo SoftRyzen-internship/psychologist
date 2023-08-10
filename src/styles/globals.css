@@ -50,7 +50,6 @@ body {
   font-size: 20px;
   line-height: 1.4;
   color: var(--main-text-color);
-  /* overflow-x: hidden; */
 }
 
 body.noScroll {
@@ -59,7 +58,7 @@ body.noScroll {
 
 body {
   margin: 0;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
 .layout {
@@ -129,6 +128,7 @@ img {
 section {
   padding-top: 60px;
   padding-bottom: 60px;
+  overflow-x: hidden;
 }
 
 .container {
@@ -175,6 +175,7 @@ section {
   section {
     padding-top: 80px;
     padding-bottom: 80px;
+    overflow-x: hidden;
   }
 
   .container {
