@@ -10,8 +10,7 @@ export default function Document() {
         />
 
         {/* <meta name="googlebot" content="index, follow" /> */}
-        {/* <meta name="robots" content="index, follow" /> */}
-        {/* <meta name="slurp" content="index, follow" /> */}
+        <meta name="robots" content="index, follow" />
         <meta
           name="keywords"
           content="майстер-класи та навчання для психологів, Психолог, психотерапевт, курси, ПСИХОЛОГ, ПСИХОТЕРАПЕВТ, КУРСИ, Лікування ментальних проблем, Реабілітація після ментальних травм, Профілактика сімейної гармонії, Індивідуальні консультації із психологом, Групові консультації, Навчання методам роботи з травмами, Навчання методу SEE-FAR-CBT для психологів, Психологія лідерства, Тайм менеджмент, Курси стресостійкості, Курси ораторського мистецтва, Курси психолога Тренінг для батьків, Курси з Конфліктології, Тренінги, Тренінги для психологів, Тренер–психолог"
@@ -29,6 +28,13 @@ export default function Document() {
           content="Юлія Сулаєва | Психолог - психотерапевт"
         />
         <meta property="og:title" content="Психолог Юлія Сулаєва" />
+
+        <meta
+          name="twitter:description"
+          content="Юлія Сулаєва | Психолог - психотерапевт"
+        />
+        <meta name="twitter:title" content="Психолог Юлія Сулаєва" />
+        <meta name="twitter:card" content="summary_large_image" />
 
         <link rel="canonical" href="https://www.sulaieva.com/" />
         <link rel="alternate" href="https://www.sulaieva.com/" />
