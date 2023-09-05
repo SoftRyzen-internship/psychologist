@@ -4,9 +4,14 @@
   |============================
 */
 
-.reusableSection > div > div:first-of-type > div > h2,
-.reusableSection2 > div > div:first-of-type > div > h2 {
+.reusableSection > div > div:first-of-type > div > h2 {
   width: 238px;
+}
+
+.reusableSection2 > div > div:first-of-type > div > h2 {
+  min-width: 238px;
+  width: 100%;
+  max-width: 320px;
 }
 
 .reusableSection p > strong {
@@ -63,6 +68,7 @@
   .reusableSection > div > div:first-of-type > div > h2,
   .reusableSection2 > div > div:first-of-type > div > h2 {
     width: auto;
+    max-width: 100%;
   }
 
   .reusableSection {
@@ -99,10 +105,6 @@
     gap: 48px;
     justify-content: center;
     align-items: center;
-  }
-
-  .universalWrapper > div:first-of-type {
-    padding-top: 42px;
   }
 }
 
@@ -149,13 +151,12 @@
     gap: 32px;
   }
 
-  .reusableSection > div > div:first-of-type > div > h2,
-  .reusableSection2 > div > div:first-of-type > div > h2 {
+  .reusableSection > div > div:first-of-type > div > h2 {
     width: 486px;
   }
 
-  .universalWrapper > div:first-of-type {
-    padding-top: 62px;
+  .reusableSection2 > div > div:first-of-type > div > h2 {
+    width: 624px;
   }
 
   .universalWrapper > div:nth-child(2) {

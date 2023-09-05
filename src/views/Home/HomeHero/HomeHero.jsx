@@ -23,7 +23,7 @@ export const HomeHero = ({ hero }) => {
   return (
     <>
       {hero && (
-        <section className={st.section}>
+        <section className={`section ${st.section}`}>
           <Container>
             {showElem && (
               <Image

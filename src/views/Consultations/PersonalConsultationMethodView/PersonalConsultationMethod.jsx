@@ -9,7 +9,7 @@ export const PersonalConsultationMethodView = ({ data }) => {
   return (
     <>
       {data && (
-        <section className={s.section}>
+        <section className={`section ${s.section}`}>
           <Container>
             <SectionTitle title={data?.heading} />
 

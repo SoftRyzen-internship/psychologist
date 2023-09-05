@@ -14,7 +14,7 @@ export const EducationProgramView = ({ program }) => {
   return (
     <>
       {program && (
-        <section className={s.section}>
+        <section className={`section ${s.section}`}>
           <Container>
             <SectionTitle title={program?.heading} />
 

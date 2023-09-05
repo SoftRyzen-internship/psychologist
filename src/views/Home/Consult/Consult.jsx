@@ -6,7 +6,7 @@ export const Consult = () => {
   return (
     <>
       {data && (
-        <section className={st.section}>
+        <section className={`section ${st.section}`}>
           <Container>
             <SectionTitle
               title={'Індивідуальні психологічні консультації, психотерапія:'}
