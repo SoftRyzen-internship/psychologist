@@ -68,6 +68,7 @@
   .reusableSection > div > div:first-of-type > div > h2,
   .reusableSection2 > div > div:first-of-type > div > h2 {
     width: auto;
+    max-width: 100%;
   }
 
   .reusableSection {

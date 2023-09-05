@@ -11,7 +11,7 @@ export const ConsultationFAQComponent = ({ data, className }) => {
           <>
             <div className={styles['universalWrapper']}>
               <div>
-                <SectionTitle title={data.heading} className={styles.title} />
+                <SectionTitle title={data.heading} />
               </div>
 
               <div>
