@@ -6,7 +6,7 @@ export function HomeNews({ allNews }) {
   return (
     <>
       {allNews && (
-        <section>
+        <section className="section">
           <Container>
             <SectionTitle title={'Новини'} h2 centered />
 

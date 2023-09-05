@@ -6,13 +6,14 @@ import * as styles from './ConsultationFAQ.module.css';
 export const ConsultationFAQComponent = ({ data, className }) => {
   return (
     <>
-      <section className={styles[className.section]}>
+      <section className={`section ${styles[className.section]}`}>
         <div className="container">
           <>
             <div className={styles['universalWrapper']}>
               <div>
                 <SectionTitle title={data.heading} />
               </div>
+
               <div>
                 <ReactMarkdown>{data.description}</ReactMarkdown>
               </div>

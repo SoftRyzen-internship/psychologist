@@ -18,7 +18,7 @@ export function NewsView({ allNews }) {
 
       {allNews.length > 0 &&
         allNews.map(news => (
-          <section key={news?.id} className={s.newsInstance}>
+          <section key={news?.id} className={`section ${s.newsInstance}`}>
             <Container>
               <SectionTitle
                 h2
