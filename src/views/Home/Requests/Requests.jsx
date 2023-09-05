@@ -28,7 +28,7 @@ export const Requests = ({ requests, mysection }) => {
   return (
     <>
       {requests && (
-        <section className={s.section}>
+        <section className={`section ${s.section}`}>
           <Container>
             <SectionTitle h2={true} title={requests?.heading} />
 

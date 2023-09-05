@@ -14,7 +14,7 @@ export const EducationMethodView = ({ method }) => {
   return (
     <>
       {method && (
-        <section className={s.section}>
+        <section className={`section ${s.section}`}>
           <Container>
             <SectionTitle
               title="Навчання роботі в методі SEE FAR CBT"

@@ -17,7 +17,7 @@ export const OnlineConsultationView = ({ data }) => {
   return (
     <>
       {data && (
-        <section className={s.utilityFinder}>
+        <section className={`section ${s.utilityFinder}`}>
           <Container>
             <SectionTitle title={data?.heading} />
             <div

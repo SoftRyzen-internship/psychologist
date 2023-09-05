@@ -9,7 +9,7 @@ export const PersonalConsultationsView = ({ data }) => {
   return (
     <>
       {data && (
-        <section className={s.sectionBG}>
+        <section className={`section ${s.sectionBG}`}>
           <Container>
             <SectionTitle title={data?.heading} />
 

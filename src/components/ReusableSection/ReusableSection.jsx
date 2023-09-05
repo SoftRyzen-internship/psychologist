@@ -14,7 +14,7 @@ export const ReusableSection = ({
   return (
     <>
       {data && (
-        <section className={classNames(s.utilityFinder, sectionClassName)}>
+        <section className={classNames('section', sectionClassName)}>
           <Container>
             <SectionTitle h2={true} title={data?.heading} />
 

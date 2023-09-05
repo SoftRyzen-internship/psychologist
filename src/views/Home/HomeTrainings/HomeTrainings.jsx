@@ -15,7 +15,7 @@ export const HomeTrainings = ({ trainings }) => {
   return (
     <>
       {trainings && (
-        <section className={st.section}>
+        <section className={`section ${st.section}`}>
           <Container>
             <div className={st.descr}>
               <SectionTitle title={trainings?.heading} centered />
