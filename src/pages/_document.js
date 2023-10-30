@@ -9,7 +9,6 @@ export default function Document() {
           content="Психолог, психотерапевт, тренер Юлія Сулаєва. Індивідуальні психологічні консультації, курси, майстер-класи та навчання для психологів"
         />
 
-        {/* <meta name="googlebot" content="index, follow" /> */}
         <meta name="robots" content="index, follow" />
         <meta
           name="keywords"
@@ -59,6 +58,15 @@ export default function Document() {
         <link rel="manifest" href="/favicon/site.webmanifest" />
         <meta name="msapplication-TileColor" content="#2670c4" />
         <meta name="theme-color" content="#ffffff" />
+
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            src={`https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID}&ev=PageView&noscript=1`}
+          />
+        </noscript>
       </Head>
 
       <body>

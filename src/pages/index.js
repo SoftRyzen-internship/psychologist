@@ -1,5 +1,8 @@
 import Head from 'next/head';
+import PropTypes from 'prop-types';
+
 import { getData } from '@/lib/getData';
+import { getNewsList } from '@/lib/request';
 import { folderPaths } from '@/utils/folderPaths';
 import {
   HomeHero,
@@ -10,8 +13,6 @@ import {
   WhatIDo,
   HomeNews,
 } from '@/views';
-import { getNewsList } from '@/lib/request';
-import PropTypes from 'prop-types';
 
 export default function Home({
   hero,
